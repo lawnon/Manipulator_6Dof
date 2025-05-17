@@ -13,8 +13,13 @@
 *.zip
 *.7z
 
+#Vs-Config Folders
+*.vscode
+*.vs
+*.code-workspace
 #Sample ingnor multiple files
 #DocProject/Help/*.HxT
 
 # Expert Files
 [Ee]xport/
+[Aa]chive/
