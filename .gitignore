@@ -24,6 +24,7 @@
 .vscode/c_cpp_properties.json
 .vscode/launch.json
 .vscode/ipch
+.Software/.gitignore
 
 # Expert Files
 [Ee]xport/
