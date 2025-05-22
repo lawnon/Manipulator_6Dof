@@ -1,12 +1,10 @@
 #include <BasicStepperDriver.h>
 #include "RobFrameWork.hpp"
 
-
 // Motor steps per revolution. Most steppers are 200 steps or 1.8 degrees/step
 #define MOTOR_STEPS 200
 #define RPM 30
 #define MICROSTEPS 16
-#define INCSTEPS 64
 
 long CycleCount = 0;
 int RotPosition = 0;
@@ -45,7 +43,7 @@ void setup()
 {
   // put your setup code here, to run once:
   Serial.begin(9600);
-  
+
   // Wait for Serial Monitor to Connect
   while (!Serial)
   {
@@ -55,13 +53,13 @@ void setup()
   RobArm.Setup();
 
   // Set Uö Primitive Stepper
-  Jt1.begin(10, MICROSTEPS);
+  Jt1.begin(5, MICROSTEPS);
   Jt2.begin(RPM, MICROSTEPS);
   Jt3.begin(RPM, MICROSTEPS);
-  Jt4.begin(RPM, MICROSTEPS);
+  Jt4.begin(5, MICROSTEPS);
   Jt5.begin(RPM, MICROSTEPS);
   Jt6.begin(RPM, MICROSTEPS);
-  
+
   Jt1.setEnableActiveState(LOW);
   Jt2.setEnableActiveState(LOW);
   Jt3.setEnableActiveState(LOW);
@@ -71,10 +69,10 @@ void setup()
 
   Jt1.disable();
   Jt2.disable();
-  Jt3.disable();
-  Jt4.disable();
-  Jt5.disable();
-  Jt6.disable();
+  Jt3.enable();
+  Jt4.enable();
+  Jt5.enable();
+  Jt6.enable();
 
   // Set Up Rotary Encoder
   pinMode(ENC_CLK_PIN, INPUT);
@@ -108,37 +106,45 @@ void loop()
     int step = 0;
     if (RotDirection >= 1)
     {
-      step = 1 * INCSTEPS;
+      step = 1;
     }
     else
     {
-      step = -1 * INCSTEPS;
+      step = -1;
     }
     switch (RobArm.Commands.GetParam(Commands::Rotate))
     {
     case Commands::Jt1:
       Jt1.enable();
-      Jt1.rotate(step);
+      Jt1.rotate(step * 16);
       delay(1);
-      Jt1.disable();
       break;
     case Commands::Jt2:
       Jt2.enable();
-      Jt2.rotate(step);
+      Jt2.rotate(step * 64);
       delay(1);
-      Jt2.disable();
       break;
     case Commands::Jt3:
       Jt3.enable();
-      Jt3.rotate(step);
+      Jt3.rotate(step * 128);
       delay(1);
-      Jt3.disable();
       break;
     case Commands::Jt4:
       Jt4.enable();
-      Jt4.rotate(step);
+      Jt4.rotate(step * 16) ;
       delay(1);
-      Jt4.disable();
+      break;
+    case Commands::Jt5:
+      Jt5.enable();
+      Jt5.rotate(step * 128);
+      delay(1);
+      Jt5.disable();
+      break;
+    case Commands::Jt6:
+      Jt6.enable();
+      Jt6.rotate(step * 16);
+      delay(1);
+      Jt6.disable();
       break;
     }
     RotDetected = -1;
