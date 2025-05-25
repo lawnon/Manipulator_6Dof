@@ -121,7 +121,7 @@ void loop()
       break;
     case Commands::Jt2:
       Jt2.enable();
-      Jt2.rotate(step * 64);
+      Jt2.rotate(step * 128);
       delay(1);
       break;
     case Commands::Jt3:
