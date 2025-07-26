@@ -14,3 +14,6 @@ Vref_Wantai_2BYGHW609L20P1_X2 = GetVref(1.7)
 %Current Limit for Stepper Online 17HS19-1684S-PG14
 Vref_Wantai_17HS19_1684S_PG14 = GetVref(1.68)
 
+%Current Limit for 2 Ampere Max 
+Vref_2AmpMax = GetVref(2.00)
+

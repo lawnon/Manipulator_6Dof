@@ -9,7 +9,7 @@
 #ifndef COMMANDS_H_
 #define COMMANDS_H_
 
-#define COMMAND_LEN 27
+#define COMMAND_LEN 28
 
 #include <Servo.h>
 #include <wiring_private.h>

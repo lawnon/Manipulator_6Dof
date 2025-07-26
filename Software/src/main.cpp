@@ -69,10 +69,10 @@ void setup()
 
   Jt1.disable();
   Jt2.disable();
-  Jt3.enable();
+  Jt3.disable();
   Jt4.enable();
-  Jt5.enable();
-  Jt6.enable();
+  Jt5.disable();
+  Jt6.disable();
 
   // Set Up Rotary Encoder
   pinMode(ENC_CLK_PIN, INPUT);
