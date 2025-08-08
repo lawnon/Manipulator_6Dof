@@ -19,16 +19,16 @@
 % Autor: Chukwunonso Bob-Anyeji
 % Datum: 27-07-2025@11-52
 %=========================================================================
-function [alpha beta a d] =  DhParams()
+function [alpha beta a d] =  DhParams2();
 alpha12 = 090; beta12 =  000; a12 = 000.000; d12 = 0.00;
 alpha23 = 000; beta23 =  000; a23 = 258.300; d23 = 0.00;
-alpha34 = 000; beta34 =  090; a34 = 281.516; d34 = 0.00;
+alpha34 = 000; beta34 =  090; a34 = 281.516; d34 = 074.00;
 alpha45 = 000; beta45 = -090; a45 = 000.000; d45 = 0.00;
 alpha56 = 000; beta56 =  090; a56 = 074.710; d56 = 0.00;
 alpha6E = 000; beta6E =  090; a6E = 000.000; d6E = 0.00;
 %
-alpha = [alpha12; alpha23; alpha34; alpha45; alpha56; alpha6E]
-beta = [beta12; beta23; beta34; beta45; beta56; beta6E]
-a = [a12; a23; a34; a45; a56; a6E]
-d = [d12; d23; d34; d45; d56; d6E]
+alpha = [alpha12; alpha23; alpha34; alpha45; alpha56; alpha6E];
+beta = [beta12; beta23; beta34; beta45; beta56; beta6E];
+a = [a12; a23; a34; a45; a56; a6E];
+d = [d12; d23; d34; d45; d56; d6E];
 end

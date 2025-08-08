@@ -18,7 +18,7 @@ view(rx, ry);
 xlabel('X');
 ylabel('Y');
 zlabel('Z');
-axis([-250 700 -700 700 -250 600]);
+axis([-650 650 -650 650 -650 650]);
 grid on;
 %
     if (drawPath)

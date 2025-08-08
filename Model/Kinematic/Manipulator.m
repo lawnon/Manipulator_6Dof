@@ -9,11 +9,15 @@
 %
 %% Auswertung der Vorwärtskinematik:
 clear
-VrwKinematik(30, 100, -60, -90, -90, 0, 'b', '-+', true);
+%Pos = VrwKinematik(30, 100, -60, -90, -90, 0, 'b', '-+', true)
+Pos = VrwKinematik(0, 0, 0, 0, 0, 0, 'b', '-+', true)
+PlotEndPoint(Pos, 'r', '-o');
 
 %% Auswertung der InverseKinematik:
-clear
-[td1,td2,td3] = InvKinematik(0, 400, 300, 0, 0, 0)
-VrwKinematik(td1,td2,td3,0,0,0,'b','-+',true);
-%InvKinematik(x,y,z,rx,ry,rz)
+%p = [0, -400, 300, 0, 0, 0];
+Pos(4:6) = [0,0,0]
+[td1,td2,td3,td4,td5,td6] = InvKinematik(Pos)
+VrwKinematik(td1,td2,td3,td4,td5,td6,'b','-+',true);
+PlotEndPoint(Pos, 'r', '-o');
+
 %% Hilfsfunktionene 
