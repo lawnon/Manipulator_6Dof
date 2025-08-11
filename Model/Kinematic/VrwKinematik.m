@@ -3,38 +3,50 @@
 % Autor: Chukwunonso Bob-Anyeji
 % Datum: 27-07-2025@11-52
 %=========================================================================
-function [Pos] = VrwKinematik(th1, th2, th3, th4, th5, th6, cl, zv, path)
-clc
-% Ermittlung der Manipulator Transformations-Matrix 
-TMat = ArmTrans(th1, th2, th3, th4, th5, th6);
+function [Pos,Pos5,TMat0_6,RMat] = VrwKinematik(...
+    th1,th2,th3,th4,th5,th6,cl,zv,sz,plot)
+% Ermittlung der Manipulator Transformations-Matrix
+[TMat0_1, TMat0_2, TMat0_3, TMat0_4, TMat0_5, TMat0_6] =...
+    ArmTrans(th1, th2, th3, th4, th5, th6)
 
-% Evaluation der Winkelwerte
+% Zuweistung der Manipulator Position und Orientierung
+Pos5 = TMat0_4(1:3,4);
+RMat = TMat0_6(1:3,1:3);
+
+% Winkelwerte Auswerten
+[alpha, beta, gamma] = ToAngles(TMat0_6,3);
+
+% Positions Werte Widergeben
 Pos = zeros(6,1);
-%Pos(1:3) = TMat(6)(1:3,4);
-%b = atan2(-TMat(6)(3,1), sqrt((TMat(6)(1,1))^2 + (TMat(6)(2,1)^2)));
+Pos(1:3) = round(TMat0_6(1:3,4),3);
+Pos(4)   = ToDeg(round(alpha,3));   %Yaw
+Pos(5)   = ToDeg(round(beta,3));    %Pitch
+Pos(6)   = ToDeg(round(gamma,3));   %Roll
 
-if (A1_E(1,1) == 0 && A1_E(2,1) == 0)
-    Pos(1,4) = rad2deg(atan2(A1_E(1,2), A1_E(2,2)));
-    Pos(1,5) = rad2deg(pi/2);
-    Pos(1,6) = rad2deg(0);
-else
-    Pos(1,4) = rad2deg(atan2(A1_E(3,2), A1_E(3,3)));
-    Pos(1,5) = rad2deg(atan2(-A1_E(3,1), sqrt(A1_E(1,1)^2 + A1_E(2,1)^2)));
-    Pos(1,6) = rad2deg(atan2(A1_E(2,1), A1_E(1,1)));
+switch plot
+    case 0
+        return;
+    case 1
+        PlotArmTrans(TMat0_1,TMat0_2,TMat0_3,TMat0_4,TMat0_5,TMat0_6...
+            ,cl, zv, 45, 45, sz, true);
+    case 2
+        
+        % Plot Graphs
+        %[1] Plot Posture of Robot
+        subplot(2,2,1);
+        PlotArmTrans(TMat0_1, TMat0_2, TMat0_3, TMat0_4, TMat0_5, TMat0_6,...
+            cl, zv, 90, 0, sz, true);
+        %[2] Plot Posture of Robot
+        subplot(2,2,2);
+        PlotArmTrans(TMat0_1, TMat0_2, TMat0_3, TMat0_4, TMat0_5, TMat0_6,...
+            cl, zv, 0, 0, sz, true);
+        %[3] Plot Posture of Robot
+        subplot(2,2,3);
+        PlotArmTrans(TMat0_1, TMat0_2, TMat0_3, TMat0_4, TMat0_5, TMat0_6,...
+            cl, zv, 90, 90, sz, true);
+        %[4] Plot Posture of Robot
+        subplot(2,2,4);
+        PlotArmTrans(TMat0_1, TMat0_2, TMat0_3, TMat0_4, TMat0_5, TMat0_6,...
+            cl, zv, 45, 45, sz, true);
 end
-
-% Plot Graphs
-clf
-%[1] Plot Posture of Robot
-subplot(2,2,1);
-PlotArmTrans(A1_2, A1_3, A1_4, A1_5, A1_6, A1_E, cl, zv, 90, 0, path);
-%[2] Plot Posture of Robot
-subplot(2,2,2);
-PlotArmTrans(A1_2, A1_3, A1_4, A1_5, A1_6, A1_E, cl, zv, 0, 0, path);
-%[3] Plot Posture of Robot
-subplot(2,2,3);
-PlotArmTrans(A1_2, A1_3, A1_4, A1_5, A1_6, A1_E, cl, zv, 90, 90, path);
-%[4] Plot Posture of Robot
-subplot(2,2,4);
-PlotArmTrans(A1_2, A1_3, A1_4, A1_5, A1_6, A1_E, cl, zv, 45, 45, path);
 end
