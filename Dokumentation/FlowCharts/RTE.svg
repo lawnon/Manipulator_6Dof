@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="RTE.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.51465132"
+     inkscape:cx="580.00434"
+     inkscape:cy="520.74091"
+     inkscape:window-width="1278"
+     inkscape:window-height="1000"
+     inkscape:window-x="-7"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <symbol
+       id="Comment">
+      <title
+         id="title25">Comment/Annotation</title>
+      <desc
+         id="desc25">Additional descriptive clarification (connect by dotted line).</desc>
+      <path
+         d="M 135,115 H 15 V 35 h 120"
+         style="stroke-width:2"
+         id="path25" />
+    </symbol>
+    <symbol
+       id="Core">
+      <title
+         id="title26">Core</title>
+      <desc
+         id="desc26">Core memory. (ISO)</desc>
+      <rect
+         x="35"
+         y="35"
+         width="80"
+         height="80"
+         style="stroke-width:2"
+         id="rect26" />
+      <path
+         d="m 35,50 h 80"
+         style="stroke-width:2"
+         id="path26" />
+      <path
+         d="m 50,35 v 80"
+         style="stroke-width:2"
+         id="path27" />
+    </symbol>
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 106.97822,149.67245 0,35.76657"
+       id="path50"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#g23"
+       inkscape:connection-end="#g21-9" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 106.97822,185.43902 0,43.42096"
+       id="path51"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#g21-9"
+       inkscape:connection-end="#g21-9-8" />
+    <g
+       id="g21-9"
+       transform="translate(47.782616,133.87583)">
+      <g
+         id="use1-1"
+         style="fill:#aaccee;stroke:#000000"
+         transform="matrix(0.73655354,0,0,0.42326295,3.9540924,18.239378)">
+        <title
+           id="title6">Process</title>
+        <desc
+           id="desc6">Any processing function.</desc>
+        <rect
+           x="15"
+           y="35"
+           width="120"
+           height="80"
+           style="stroke-width:2"
+           id="rect6" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#1e7fc9;stroke-width:0.264999;stroke-dasharray:none"
+         x="17.851917"
+         y="38.746082"
+         id="text4-4"><tspan
+           sodipodi:role="line"
+           id="tspan15-9"
+           x="17.851917"
+           y="38.746082"
+           style="fill:#000000">[210]  Schritt : Execute (Task.InProgress)</tspan><tspan
+           sodipodi:role="line"
+           x="17.851917"
+           y="44.037743"
+           style="fill:#000000"
+           id="tspan45">z.B.</tspan><tspan
+           sodipodi:role="line"
+           id="tspan17-2"
+           x="17.851917"
+           y="49.329407"
+           style="fill:#000000">=&gt; Set Param / Read Param</tspan><tspan
+           sodipodi:role="line"
+           x="17.851917"
+           y="54.621071"
+           style="fill:#000000"
+           id="tspan21-4">=&gt; IO Read / Write</tspan><tspan
+           sodipodi:role="line"
+           x="17.851917"
+           y="59.912731"
+           style="fill:#000000"
+           id="tspan37">=&gt; LMOVE</tspan><tspan
+           sodipodi:role="line"
+           x="17.851917"
+           y="65.204391"
+           style="fill:#000000"
+           id="tspan20-1">=&gt; JMOVE</tspan><tspan
+           sodipodi:role="line"
+           id="tspan18-8"
+           x="17.851917"
+           y="70.496056"
+           style="fill:#000000">  </tspan></text>
+    </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 106.97822,116.60803 -54.820169,0"
+       id="path42"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#g21"
+       inkscape:connection-end="#use1-6-2" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 106.97822,149.67245 52.22844,1e-5"
+       id="path48"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#g23"
+       inkscape:connection-end="#use1-6-6-7" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path24"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#g21"
+       inkscape:connection-end="#g23"
+       d="m 106.97822,116.60803 0,33.06442" />
+    <g
+       id="g21"
+       transform="translate(50.872361,68.819612)">
+      <g
+         id="use1"
+         style="fill:#aaccee;stroke:#000000"
+         transform="matrix(0.63698913,0,0,0.36964135,8.3316781,20.065315)">
+        <title
+           id="title7">Process</title>
+        <desc
+           id="desc7">Any processing function.</desc>
+        <rect
+           x="15"
+           y="35"
+           width="120"
+           height="80"
+           style="stroke-width:2"
+           id="rect7" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#1e7fc9;stroke-width:0.264999;stroke-dasharray:none"
+         x="20.639322"
+         y="38.746082"
+         id="text4"><tspan
+           sodipodi:role="line"
+           id="tspan15"
+           x="20.639322"
+           y="38.746082"
+           style="fill:#000000">[200]  Schritt : Idel</tspan><tspan
+           sodipodi:role="line"
+           x="20.639322"
+           y="44.037743"
+           style="fill:#000000"
+           id="tspan20">=&gt; Aktives [0]Task, auslesen und auf</tspan><tspan
+           sodipodi:role="line"
+           x="20.639322"
+           y="49.329407"
+           style="fill:#000000"
+           id="tspan40">     Zustands Veränderung prüfen </tspan><tspan
+           sodipodi:role="line"
+           x="20.639322"
+           y="54.621071"
+           style="fill:#000000"
+           id="tspan41">     d.h &quot;Open&quot;.</tspan><tspan
+           sodipodi:role="line"
+           id="tspan18"
+           x="20.639322"
+           y="59.912731"
+           style="fill:#000000">  </tspan></text>
+    </g>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path52"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-start="#use1-6-9"
+       inkscape:connection-end="#use1-6-2"
+       d="m 49.566237,226.75468 0,-107.81316" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="path39"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:connection-end="#g21-9-8"
+       d="m 52.157979,229.07787 54.820241,-0.21789"
+       inkscape:connection-start="#use1-6-9" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 161.79847,152.00595 v 76.85403 h -54.82025"
+       id="path49"
+       inkscape:connector-type="orthogonal"
+       inkscape:connector-curvature="0"
+       inkscape:connection-end="#g21-9-8"
+       inkscape:connection-start="#use1-6-6-7" />
+    <g
+       id="g21-9-8"
+       transform="translate(50.872361,177.60335)">
+      <g
+         id="use1-1-5"
+         style="fill:#aaccee;stroke:#000000"
+         transform="matrix(0.63698913,0,0,0.45639608,8.3316781,16.499732)">
+        <title
+           id="title8">Process</title>
+        <desc
+           id="desc8">Any processing function.</desc>
+        <rect
+           x="15"
+           y="35"
+           width="120"
+           height="80"
+           style="stroke-width:2"
+           id="rect8" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#1e7fc9;stroke-width:0.264999;stroke-dasharray:none"
+         x="20.639322"
+         y="38.746082"
+         id="text4-4-8"><tspan
+           sodipodi:role="line"
+           id="tspan15-9-9"
+           x="20.639322"
+           y="38.746082"
+           style="fill:#000000">[220]  Schritt : Validate </tspan><tspan
+           sodipodi:role="line"
+           id="tspan17-2-3"
+           x="20.639322"
+           y="44.037743"
+           style="fill:#000000">=&gt; Task auf Fertigstellung Prüfen.</tspan><tspan
+           sodipodi:role="line"
+           x="20.639322"
+           y="49.329407"
+           style="fill:#000000"
+           id="tspan42">=&gt; RAE zustand auswerten d.h.</tspan><tspan
+           sodipodi:role="line"
+           x="20.639322"
+           y="54.621071"
+           style="fill:#000000"
+           id="tspan43">      Ziel erreicht / Abbruch(Fehler)</tspan><tspan
+           sodipodi:role="line"
+           x="20.639322"
+           y="59.912731"
+           style="fill:#000000"
+           id="tspan36">=&gt; Task Zustand aktualisieren </tspan><tspan
+           sodipodi:role="line"
+           x="20.639322"
+           y="65.204391"
+           style="fill:#000000"
+           id="tspan44">     &quot;Done/Aborted&quot;</tspan><tspan
+           sodipodi:role="line"
+           id="tspan18-8-6"
+           x="20.639322"
+           y="70.496056"
+           style="fill:#000000">  </tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#000000;stroke-width:0.264999;stroke-dasharray:none"
+       x="72.568932"
+       y="25.823137"
+       id="text32"><tspan
+         sodipodi:role="line"
+         id="tspan32"
+         style="stroke-width:0.265"
+         x="72.568932"
+         y="25.823137">Roboter Task Execution System (RTE)</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.265"
+         x="72.568932"
+         y="31.114799"
+         id="tspan33">================================</tspan></text>
+    <g
+       id="use1-6-9"
+       style="fill:#aaccee;stroke:#000000"
+       transform="matrix(0.12959066,0,0,0.11667487,39.846937,220.33756)">
+      <title
+         id="title1">Connector</title>
+      <desc
+         id="desc1">Exit to or entry from another part of chart.</desc>
+      <circle
+         cx="75"
+         cy="75"
+         r="20"
+         style="stroke-width:2"
+         id="circle1" />
+    </g>
+    <g
+       id="g23"
+       transform="translate(-36.903656,87.676668)">
+      <g
+         id="use1-4"
+         style="fill:#aaccee;stroke:#000000"
+         transform="matrix(0.26458333,0,0,0.26458333,124.03813,42.152033)">
+        <title
+           id="title5">Decision</title>
+        <desc
+           id="desc5">A decision or switching type operation.</desc>
+        <path
+           d="M 15,75 75,35 135,75 75,115 Z"
+           style="stroke-width:2"
+           id="path5" />
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#000000;stroke-width:0.264999;stroke-dasharray:none"
+         x="132.62056"
+         y="63.091324"
+         id="text22"><tspan
+           sodipodi:role="line"
+           id="tspan22"
+           style="stroke-width:0.265"
+           x="132.62056"
+           y="63.091324">:Ja    | Nein:</tspan></text>
+    </g>
+    <g
+       id="use1-6-2"
+       style="fill:#aaccee;stroke:#000000"
+       transform="matrix(0.12959066,0,0,0.11667487,39.846938,107.85741)">
+      <title
+         id="title3">Connector</title>
+      <desc
+         id="desc3">Exit to or entry from another part of chart.</desc>
+      <circle
+         cx="75"
+         cy="75"
+         r="20"
+         style="stroke-width:2"
+         id="circle3" />
+    </g>
+    <g
+       id="use1-6-6-7"
+       style="fill:#aaccee;stroke:#000000"
+       transform="matrix(0.12959066,0,0,0.11667487,152.07917,140.92184)">
+      <title
+         id="title4">Connector</title>
+      <desc
+         id="desc4">Exit to or entry from another part of chart.</desc>
+      <circle
+         cx="75"
+         cy="75"
+         r="20"
+         style="stroke-width:2"
+         id="circle4" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';fill:#aaccee;fill-opacity:1;stroke-width:0"
+       x="38.2062"
+       y="38.897186"
+       id="text8"><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke-width:0"
+         x="38.2062"
+         y="38.897186"
+         id="tspan10">Task Execution Stack: Funktions aufrufe werden als Objekt mit </tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke-width:0"
+         x="38.2062"
+         y="44.18885"
+         id="tspan28">entsprechend Parameter und Verarbeitungszustand &quot;Open&quot; in eine Array von </tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke-width:0"
+         x="38.2062"
+         y="49.480511"
+         id="tspan26">Tasks eingereit. DieTaskliste wird entsprechend der FIFO Prinzip von RTE </tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke-width:0"
+         x="38.2062"
+         y="54.772171"
+         id="tspan31">System abgearbeitet und als Fertiggestellt markiert &quot;Done&quot;. Während der Task-</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke-width:0"
+         x="38.2062"
+         y="60.063835"
+         id="tspan34">bearbeitung wird der Zustand auf &quot;Inprogress&quot; gekennzeichnet.</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke-width:0"
+         x="38.2062"
+         y="65.355499"
+         id="tspan38" /><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke-width:0"
+         x="38.2062"
+         y="70.647156"
+         id="tspan11">Task Beispiel:</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke-width:0"
+         x="38.2062"
+         y="75.93882"
+         id="tspan27">=&gt;Set Param</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke-width:0"
+         x="38.2062"
+         y="81.230484"
+         id="tspan12">=&gt;Read Param </tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke-width:0"
+         x="38.2062"
+         y="86.522148"
+         id="tspan13">=&gt;JMove</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke-width:0"
+         x="38.2062"
+         y="91.813812"
+         id="tspan14">=&gt;LMove</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke-width:0"
+         x="38.2062"
+         y="97.105469"
+         id="tspan19">=&gt;IO-Read/Write.</tspan></text>
+  </g>
+</svg>
