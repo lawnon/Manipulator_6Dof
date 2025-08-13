@@ -29,9 +29,12 @@ Software/.gitignore
 #Siemans Nx Files
 *.prt
 
+#Matlab
+*.asv
+
 # Expert Files
-[Aa]chive/
-[Aa]chiv/
+[Aa]rchive/
+[Aa]rchiv/
 [Bb]uild/
 [Dd]okumentation/
 [Dd]ocumentation/
