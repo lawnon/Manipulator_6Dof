@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      -->
+<title>Datei: DhParams.m</title>
+<meta name="generator" content="MATLAB 24.1">
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+<meta name="DC.date" content="2025-08-12">
+<meta name="DC.source" content="DhParams.m">
+<style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; }
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+span.typesection { color:#A0522D }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style>
+</head>
+<body>
+<div class="content">
+<h1>Datei: DhParams.m</h1>
+<p>Beschreibung: Definition der Denavit Hartenberg Parameter ------------------------------------------- theta_i,i+1 = Beschreibt die vorgabe Rotation (Verdrehung) um die Z-Acshe, entlang der Achse i und i+1 z.B. Achse 1 und 2 beta_i,i+1 = Beschreibt die Rotation (Verdrehung) um die Y-Achse, entlang der Achse i und i+1 z.B. Achse 1 und 2 alpha_i,i+1 = Beschreibt die Rotation (Verdrehung) um die X-Achse, entlang der Achse i und i+1 z.B. Achse 1 und 2 a_i,i+1 = Beschreibt die Translation (Versatzt) Entlang der X-Acshe zwischen Achse i und i+1 z.B. Achse 1 und 2 d_i,i+1 = Beschreibt die Translation (Versatzt) Entlang der Y-Achse zwischen Achse i und i+1 z.B. Achse 1 und 2 Autor: Chukwunonso Bob-Anyeji Datum: 27-07-2025@11-52</p>
+<pre class="codeinput">
+<span class="comment">%=========================================================================</span>
+<span class="keyword">function</span> [alpha beta a d] =  DhParams()
+alpha12 = 090; beta12 =  000; a12 = 000.000; d12 = 0.00;
+alpha23 = 000; beta23 =  000; a23 = 258.300; d23 = 0.00;
+alpha34 = 000; beta34 =  090; a34 = 281.516; d34 = 0.00;
+alpha45 = 000; beta45 = -090; a45 = 000.000; d45 = 0.00;
+alpha56 = 000; beta56 =  090; a56 = 074.710; d56 = 0.00;
+alpha6E = 000; beta6E =  000; a6E = 000.000; d6E = 0.00;
+<span class="comment">%</span>
+alpha = [alpha12; alpha23; alpha34; alpha45; alpha56; alpha6E];
+beta = [beta12; beta23; beta34; beta45; beta56; beta6E];
+a = [a12; a23; a34; a45; a56; a6E];
+d = [d12; d23; d34; d45; d56; d6E];
+<span class="keyword">end</span>
+</pre>
+<pre class="codeoutput">
+ans =
+
+    90
+     0
+     0
+     0
+     0
+     0
+
+</pre>
+<p class="footer">
+<br>
+<a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2024a</a>
+<br>
+</p>
+</div>
+<!--
+##### SOURCE BEGIN #####
+%% Datei: DhParams.m
+% Beschreibung: Definition der Denavit Hartenberg Parameter
+%               REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+%               theta_i,i+1 = Beschreibt die vorgabe Rotation (Verdrehung) 
+%                             um die Z-Acshe, entlang der Achse i und i+1 
+%                             z.B. Achse 1 und 2
+%               beta_i,i+1 = Beschreibt die Rotation (Verdrehung) um die 
+%                            Y-Achse, entlang der Achse i und i+1 
+%                            z.B. Achse 1 und 2
+%               alpha_i,i+1 = Beschreibt die Rotation (Verdrehung) um die 
+%                             X-Achse, entlang der Achse i und i+1 
+%                             z.B. Achse 1 und 2
+%               a_i,i+1 = Beschreibt die Translation (Versatzt) Entlang 
+%                         der X-Acshe zwischen Achse i und i+1 
+%                         z.B. Achse 1 und 2
+%               d_i,i+1 = Beschreibt die Translation (Versatzt) Entlang 
+%                         der Y-Achse zwischen Achse i und i+1 
+%                         z.B. Achse 1 und 2
+% Autor: Chukwunonso Bob-Anyeji
+% Datum: 27-07-2025@11-52
+%=========================================================================
+function [alpha beta a d] =  DhParams()
+alpha12 = 090; beta12 =  000; a12 = 000.000; d12 = 0.00;
+alpha23 = 000; beta23 =  000; a23 = 258.300; d23 = 0.00;
+alpha34 = 000; beta34 =  090; a34 = 281.516; d34 = 0.00;
+alpha45 = 000; beta45 = -090; a45 = 000.000; d45 = 0.00;
+alpha56 = 000; beta56 =  090; a56 = 074.710; d56 = 0.00;
+alpha6E = 000; beta6E =  000; a6E = 000.000; d6E = 0.00;
+%
+alpha = [alpha12; alpha23; alpha34; alpha45; alpha56; alpha6E];
+beta = [beta12; beta23; beta34; beta45; beta56; beta6E];
+a = [a12; a23; a34; a45; a56; a6E];
+d = [d12; d23; d34; d45; d56; d6E];
+end
+##### SOURCE END #####
+-->
+</body>
+</html>

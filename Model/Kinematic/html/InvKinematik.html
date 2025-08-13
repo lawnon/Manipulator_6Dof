@@ -1,0 +1,259 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      -->
+<title>Datei: Invkinematik.m</title>
+<meta name="generator" content="MATLAB 24.1">
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+<meta name="DC.date" content="2025-08-12">
+<meta name="DC.source" content="InvKinematik.m">
+<style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; }
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+span.typesection { color:#A0522D }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style>
+</head>
+<body>
+<div class="content">
+<h1>Datei: Invkinematik.m</h1>
+<p>Beschreibung: Evaluation und Emittlung der Inverse-Kinematik Autor: Chukwunonso Bob-Anp(2)eji Datum: 27-07-2025@11-52</p>
+<pre class="codeinput">
+<span class="keyword">function</span> [th1,th2,th3,th4,th5,th6] = InvKinematik(x, y, z, rmat0_6)
+<span class="comment">% DH Parameter auslesen</span>
+[alpha, beta, a, d] =  DhParams();
+
+<span class="comment">% Berechnung der Positionsgebenden Gelenkstellung d.h. th1, th2 und th3</span>
+<span class="comment">%</span>
+<span class="comment">% TMat = |RotationsMatrix(3x3) Verschiebung(3,1)|</span>
+<span class="comment">%        |      0                     1         |</span>
+<span class="comment">%</span>
+<span class="comment">% TMat03 = TMat1*TMat2*TMat3</span>
+<span class="comment">% TMat03 =...</span>
+<span class="comment">%     |-sin(th1) -cos(th1)*sin(th2+th3) cos(th1)*cos(th2+th3) cos(th1)*(a(3)*cos(th2+th3)+a(2)*cos(th2)+a(1))|</span>
+<span class="comment">%     | cos(th1) -sin(th1)*sin(th2+th3) sin(th1)*cos(th2+th3) sin(th1)*(a(3)*cos(th2+th3)+a(2)*cos(th2)+a(1))|</span>
+<span class="comment">%     |    0          cos(th2+th3)           cos(th2+th3)            a(3)*sin(th2+th3)+a(2)*sin(th2)         |</span>
+<span class="comment">%     |    0              0                      0                                  1                        |</span>
+<span class="comment">%</span>
+[thr1,thr2,thr3] = Position(x,y,z,3);
+th1 = ToDeg(thr1);
+th2 = ToDeg(thr2);
+th3 = ToDeg(thr3);
+
+<span class="comment">% Berechnung der Orientierungsgebenden Gelenkstellung d.h. th4, th5 und th6</span>
+<span class="comment">% RMat0_6 = RMat0_3 * RMat3_6</span>
+<span class="comment">% (RMat0_3)^-1 * RMat0_6 = (RMat0_3)^-1 * RMat0_3 * RMat3_6</span>
+<span class="comment">% d.h.</span>
+<span class="comment">% RMat3_6 = (RMat0_3)^-1 * RMat0_6</span>
+<span class="comment">%</span>
+<span class="comment">% mit TMat0_6 = |RotationsMatrix(3x3) Verschiebung(3x1)|</span>
+<span class="comment">%               |      0(1x3)                1         |</span>
+<span class="comment">%</span>
+<span class="comment">% TMat36 = TMat4*TMat5*TMat6</span>
+<span class="comment">% TMat36 =...</span>
+<span class="comment">%     |-cos(th4)*cos(th6)-sin(th4)*cos(th5)*sin(th6) cos(th4)*sin(th6)-sin(th4)*cos(th5)*cos(th6) -sin(th4)*sin(th5) -a(6)*cos(th4)*cos(th6)-a(6)*sin(th4)*cos(th5)*sin(6)-a(5)*sin(th4)*sin(th5)+a(4)*cos(4)|</span>
+<span class="comment">%     |-sin(th4)*cos(th6)+cos(th4)*cos(th5)*sin(th6) sin(th4)*sin(th6)+cos(th4)*cos(th5)*cos(th6)  cos(th4)*sin(th5) -a(6)*sin(th4)*cos(th6)-a(6)*cos(th4)*cos(th5)*sin(6)-a(5)*cos(th4)*sin(th5)+a(4)*sin(4)|</span>
+<span class="comment">%     |            sin(th5)*sin(th6)                             sin(th5)*cos(th6)                    -cos(th5)                                a(6)*sin(th5)*sin(th6)-a(5)*cos(th5)                          |</span>
+<span class="comment">%     |                    0                                             0                                0                                                    0                                             |</span>
+<span class="comment">%</span>
+<span class="comment">% Ermittlung der Manipulator Transformations-Matrix entsprechend der</span>
+<span class="comment">% gegebenen Positions-Winkelwerten</span>
+[tmat0_1,tmat0_2,tmat0_3] = ArmTrans(th1,th2,th3,0,0,0);
+rmat0_3 = tmat0_3(1:3,1:3);
+rmat3_6 = (rmat0_3)^-1 * rmat0_6;
+
+<span class="comment">% Berechnung der Orientierung</span>
+[thr4,thr5,thr6] = Orientation(rmat3_6, 3);
+th4 = ToDeg(thr4);
+th5 = ToDeg(thr5);
+th6 = ToDeg(thr6);
+
+<span class="comment">% Ermittlung der Positions Difference zwischen Endeffektor und Gelenk 5</span>
+<span class="comment">% unterberucksichtigung der Nickung in Acshe 2, 3 oder 5</span>
+<span class="keyword">if</span> (th2 ~= 0 || th3 ~= 0 || th5 ~= 0)
+    <span class="comment">% Positions Difference berechnen</span>
+    [posVk,pos5Vk,tmat06v,rmatV0_6] = VrwKinematik(<span class="keyword">...</span>
+        th1,th2,th3,th4,th5,th6,<span class="string">'k'</span>,<span class="string">'-+'</span>,3,2);
+
+    <span class="comment">% Gelenk 5 entlang der Orientierungs Achse verschieben</span>
+    tmatd = tmat06v*TransFK(0,90,0,0,0)*TransFK(0,0,0,2*a(5),0);
+    PlotEndPoint(tmatd, 50, <span class="string">'-o'</span>);
+
+    <span class="comment">% Berechnung der Positionsgebenden Gelenkstellung d.h. th1, th2 und th3</span>
+    <span class="comment">% unter Ber&uuml;cksichtigung von Achse 56</span>
+    [thr1,thr2,thr3] = Position(tmatd(1,4),tmatd(2,4),tmatd(3,4),3);
+    th1 = ToDeg(thr1);
+    th2 = ToDeg(thr2);
+    th3 = ToDeg(thr3);
+
+    <span class="comment">% Ermittlung der Manipulator Transformations-Matrix entsprechend der</span>
+    <span class="comment">% gegebenen Positions-Winkelwerten</span>
+    [tmat0_1,tmat0_2,tmat0_3] = ArmTrans(th1,th2,th3,0,0,0);
+    rmat0_3 = tmat0_3(1:3,1:3);
+    rmat3_6 = (rmat0_3)^-1 * rmatV0_6;
+
+    <span class="comment">% Berechnung der Orientierung</span>
+    [thr4,thr5,thr6] = Orientation(rmat3_6, 3);
+    th4 = ToDeg(thr4);
+    th5 = ToDeg(thr5);
+    th6 = ToDeg(thr6);
+<span class="keyword">end</span>
+<span class="keyword">end</span>
+</pre>
+<img vspace="5" hspace="5" src="InvKinematik_01.png" alt=""> <p class="footer">
+<br>
+<a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2024a</a>
+<br>
+</p>
+</div>
+<!--
+##### SOURCE BEGIN #####
+%% Datei: Invkinematik.m
+% Beschreibung: Evaluation und Emittlung der Inverse-Kinematik
+% Autor: Chukwunonso Bob-Anp(2)eji
+% Datum: 27-07-2025@11-52
+%
+function [th1,th2,th3,th4,th5,th6] = InvKinematik(x, y, z, rmat0_6)
+% DH Parameter auslesen
+[alpha, beta, a, d] =  DhParams();
+
+% Berechnung der Positionsgebenden Gelenkstellung d.h. th1, th2 und th3
+% 
+% TMat = |RotationsMatrix(3x3) Verschiebung(3,1)|
+%        |      0                     1         |
+%        
+% TMat03 = TMat1*TMat2*TMat3 
+% TMat03 =...
+%     |-sin(th1) -cos(th1)*sin(th2+th3) cos(th1)*cos(th2+th3) cos(th1)*(a(3)*cos(th2+th3)+a(2)*cos(th2)+a(1))|
+%     | cos(th1) -sin(th1)*sin(th2+th3) sin(th1)*cos(th2+th3) sin(th1)*(a(3)*cos(th2+th3)+a(2)*cos(th2)+a(1))|
+%     |    0          cos(th2+th3)           cos(th2+th3)            a(3)*sin(th2+th3)+a(2)*sin(th2)         |
+%     |    0              0                      0                                  1                        |
+%                     
+[thr1,thr2,thr3] = Position(x,y,z,3);
+th1 = ToDeg(thr1);
+th2 = ToDeg(thr2);
+th3 = ToDeg(thr3);
+
+% Berechnung der Orientierungsgebenden Gelenkstellung d.h. th4, th5 und th6
+% RMat0_6 = RMat0_3 * RMat3_6
+% (RMat0_3)^-1 * RMat0_6 = (RMat0_3)^-1 * RMat0_3 * RMat3_6
+% d.h.
+% RMat3_6 = (RMat0_3)^-1 * RMat0_6
+%
+% mit TMat0_6 = |RotationsMatrix(3x3) Verschiebung(3x1)|
+%               |      0(1x3)                1         |
+%
+% TMat36 = TMat4*TMat5*TMat6 
+% TMat36 =...
+%     |-cos(th4)*cos(th6)-sin(th4)*cos(th5)*sin(th6) cos(th4)*sin(th6)-sin(th4)*cos(th5)*cos(th6) -sin(th4)*sin(th5) -a(6)*cos(th4)*cos(th6)-a(6)*sin(th4)*cos(th5)*sin(6)-a(5)*sin(th4)*sin(th5)+a(4)*cos(4)|
+%     |-sin(th4)*cos(th6)+cos(th4)*cos(th5)*sin(th6) sin(th4)*sin(th6)+cos(th4)*cos(th5)*cos(th6)  cos(th4)*sin(th5) -a(6)*sin(th4)*cos(th6)-a(6)*cos(th4)*cos(th5)*sin(6)-a(5)*cos(th4)*sin(th5)+a(4)*sin(4)|
+%     |            sin(th5)*sin(th6)                             sin(th5)*cos(th6)                    -cos(th5)                                a(6)*sin(th5)*sin(th6)-a(5)*cos(th5)                          |
+%     |                    0                                             0                                0                                                    0                                             |
+% 
+% Ermittlung der Manipulator Transformations-Matrix entsprechend der
+% gegebenen Positions-Winkelwerten
+[tmat0_1,tmat0_2,tmat0_3] = ArmTrans(th1,th2,th3,0,0,0);
+rmat0_3 = tmat0_3(1:3,1:3);
+rmat3_6 = (rmat0_3)^-1 * rmat0_6;
+
+% Berechnung der Orientierung
+[thr4,thr5,thr6] = Orientation(rmat3_6, 3);
+th4 = ToDeg(thr4);
+th5 = ToDeg(thr5);
+th6 = ToDeg(thr6);
+
+% Ermittlung der Positions Difference zwischen Endeffektor und Gelenk 5
+% unterberucksichtigung der Nickung in Acshe 2, 3 oder 5
+if (th2 ~= 0 || th3 ~= 0 || th5 ~= 0)
+    % Positions Difference berechnen
+    [posVk,pos5Vk,tmat06v,rmatV0_6] = VrwKinematik(...
+        th1,th2,th3,th4,th5,th6,'k','-+',3,2);
+    
+    % Gelenk 5 entlang der Orientierungs Achse verschieben
+    tmatd = tmat06v*TransFK(0,90,0,0,0)*TransFK(0,0,0,2*a(5),0);
+    PlotEndPoint(tmatd, 50, '-o');
+    
+    % Berechnung der Positionsgebenden Gelenkstellung d.h. th1, th2 und th3
+    % unter Berücksichtigung von Achse 56    
+    [thr1,thr2,thr3] = Position(tmatd(1,4),tmatd(2,4),tmatd(3,4),3);
+    th1 = ToDeg(thr1);
+    th2 = ToDeg(thr2);
+    th3 = ToDeg(thr3);
+    
+    % Ermittlung der Manipulator Transformations-Matrix entsprechend der
+    % gegebenen Positions-Winkelwerten
+    [tmat0_1,tmat0_2,tmat0_3] = ArmTrans(th1,th2,th3,0,0,0);
+    rmat0_3 = tmat0_3(1:3,1:3);
+    rmat3_6 = (rmat0_3)^-1 * rmatV0_6;
+
+    % Berechnung der Orientierung
+    [thr4,thr5,thr6] = Orientation(rmat3_6, 3);
+    th4 = ToDeg(thr4);
+    th5 = ToDeg(thr5);
+    th6 = ToDeg(thr6);
+end
+end
+##### SOURCE END #####
+-->
+</body>
+</html>

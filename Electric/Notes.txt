@@ -1,0 +1,5 @@
+Notes
+=============
+
+
+Servo Power Supply Jumper on RAMPS 1.4 board was taken from Power Supply Module 1PC (usb side) in Starter kit 
