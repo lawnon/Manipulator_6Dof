@@ -30,7 +30,6 @@ Software/.gitignore
 *.prt
 
 # Expert Files
-[Ee]xport/
 [Aa]chive/
 [Aa]chiv/
 [Bb]uild/
