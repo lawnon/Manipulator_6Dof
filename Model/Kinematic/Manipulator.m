@@ -10,17 +10,30 @@
 
 %% Auswertung der Vorwärtskinematik:
 clear; clc; clf;
-%[PosVk,Pos5Vk, TMat06v,RMatv] = VrwKinematik(...
-%   60, 100, -80, 45, 70, -220, [0 0.4470 0.7410], '-+', true)
+
+% Vorwärtskinematik
 [PosVk,Pos5Vk, TMat06v,RMatv] = VrwKinematik(...
-    26,63,-73,45,-5,60,[0 0.4470 0.7410],'-+',10,true);
+    0,0,0,0,0,0,[0 0.4470 0.7410],'-+',10,1);
 
 %% Auswertung der InverseKinematik:
-% [td1,td2,td3,td4,td5,td6] = InvKinematik(...
-%   Pos5Vk(1),Pos5Vk(2),Pos5Vk(3),RMatv);
-rmat = Rotation(-45,45,55); % Rotation(Yaw,Pitch,Roll)
-[td1,td2,td3,td4,td5,td6] = InvKinematik(-250,-255,250,rmat)
+clear; clc; clf;
+
+% Rotations(Yaw,Pitch,Roll) Vorgabe
+rmat = Rotation(0,0,0); 
+
+% Inverse Kinematik und Vorwärtskinematisch Validierung
+[td1,td2,td3,td4,td5,td6] = InvKinematik(300,300,300,rmat); 
+[PosIk,Pos5Ik,TMat06v,RMati] = VrwKinematik(...
+    td1,td2,td3,td4,td5,td6,[0.3010 0.7450 0.9330],'-x',10,1);
+
+%% Validierung der InverseKinematik anhand der Vorwärts-Kinemati:
+clear; clc; clf;
+
+% Vorwärts Kinematik
+[PosVk,Pos5Vk, TMat06v,RMatv] = VrwKinematik(...
+    60,100,-80,45,70,-220,[0 0.4470 0.7410], '-+',10,2);
+
+% Inverse Kinematik und Vorwärtskinematisch Validierung
+[td1,td2,td3,td4,td5,td6] = InvKinematik(PosVk(1),PosVk(2),PosVk(3),RMatv);
 [PosIk,Pos5Ik,TMat06v,RMati] = VrwKinematik(...
     td1,td2,td3,td4,td5,td6,[0.3010 0.7450 0.9330],'-x',10,2);
-
-%% Hilfsfunktionene 

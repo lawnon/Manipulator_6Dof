@@ -7,7 +7,7 @@ function [Pos,Pos5,TMat0_6,RMat] = VrwKinematik(...
     th1,th2,th3,th4,th5,th6,cl,zv,sz,plot)
 % Ermittlung der Manipulator Transformations-Matrix
 [TMat0_1, TMat0_2, TMat0_3, TMat0_4, TMat0_5, TMat0_6] =...
-    ArmTrans(th1, th2, th3, th4, th5, th6)
+    ArmTrans(th1, th2, th3, th4, th5, th6);
 
 % Zuweistung der Manipulator Position und Orientierung
 Pos5 = TMat0_4(1:3,4);

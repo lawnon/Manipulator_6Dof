@@ -57,7 +57,7 @@ th6 = ToDeg(thr6);
 if (th2 ~= 0 || th3 ~= 0 || th5 ~= 0)
     % Positions Difference berechnen
     [posVk,pos5Vk,tmat06v,rmatV0_6] = VrwKinematik(...
-        th1,th2,th3,th4,th5,th6,'k','-+',3,2);
+        th1,th2,th3,th4,th5,th6,'k','-+',3,1);
     
     % Gelenk 5 entlang der Orientierungs Achse verschieben
     tmatd = tmat06v*TransFK(0,90,0,0,0)*TransFK(0,0,0,2*a(5),0);

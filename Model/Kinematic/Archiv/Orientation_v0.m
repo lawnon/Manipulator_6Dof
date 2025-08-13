@@ -1,4 +1,4 @@
-function [th4,th5,th6] = Orientation(tmat4_6)
+function [th4,th5,th6] = Orientation_v0(tmat4_6)
 % Berechnung der Orientierungsgebenden Gelenkstellung d.h. th4, th5 und th6
 % TMat0_6 = TMat0_3 * TMat4_6
 % TMat0_6 * (TMat0_3)^-1 = TMat0_3 * TMat4_6 * (TMat0_3)^-1

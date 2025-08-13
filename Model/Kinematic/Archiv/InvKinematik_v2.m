@@ -3,7 +3,7 @@
 % Autor: Chukwunonso Bob-Anp(2)eji
 % Datum: 27-07-2025@11-52
 %
-function [th1,th2,th3,th4,th5,th6] = InvKinematik(x, y, z, roll, pitch, yaw)
+function [th1,th2,th3,th4,th5,th6] = InvKinematik_v2(x, y, z, roll, pitch, yaw)
 % DH Parameter auslesen
 [alpha, beta, a, d] =  DhParams();
 
