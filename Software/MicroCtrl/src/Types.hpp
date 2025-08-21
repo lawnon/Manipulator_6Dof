@@ -5,10 +5,38 @@
  * Date: 09.06.2024
  */
 
+// NOTE:
+// 1) Grosse eines Pointers im ATM-2560 Kontrollern sind 16bit
+// 2) Das System/Compiler basiert auf dem C++ 11 mit einem LP32 Daten Modell d.h.
+// 2.1) Charakter => 8 Bit
+// 2.2) Integer => 16 Bit
+// 2.3) Long Interger => 32 Bit
+// 2.4) Long Long Interger => 64 Bit
+
 #ifndef TYPES_H_
 #define TYPES_H_
 
+// Type Definitionen
+using int8 = signed char ;
+using uint8 = unsigned char;
+using byte = unsigned char;
+
+using int16 = short int;
+using uint16 = unsigned short int;
+using word = unsigned int;
+
+using int32 = long int;
+using uint32 = unsigned long int;
+
+using int64 = long long int;
+using uint64 = unsigned long long int;
+
+// Variable Definitionen
 #define IDENTIFIER_LEN 16
+#define OK 1
+#define NOK -1
+#define ON 1
+#define OFF 0
 
 #include <WString.h>
 

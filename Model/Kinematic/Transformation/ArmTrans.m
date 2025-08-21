@@ -3,9 +3,9 @@
 % <TMat0..i> Entspricht jeweils die Manipulator Transformations-Matrix bis
 % zum i-ten Gelenk.
 function [TMat0_1, TMat0_2, TMat0_3, TMat0_4, TMat0_5, TMat0_6] =...
-    ArmTrans(theta1, theta2, theta3, theta4, theta5, theta6)
+    ArmTrans(theta1, theta2, theta3, theta4, theta5, theta6, dhp)
 % DH Parameter auslesen
-[alpha, beta, a, d] =  DhParams();
+[alpha, beta, a, d] =  DhParams(dhp);
 %
 % Transformations-Matrix Ermitteln pro Gelenk
 tmat1_2 = TransFK(alpha(1), beta(1), theta1, a(1), d(1));

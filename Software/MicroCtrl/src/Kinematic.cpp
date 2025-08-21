@@ -9,6 +9,8 @@
 #include "RobFrameWork.hpp"
 #include "Kinematic.hpp"
 
+using namespace Logger;
+
 const float pi = 3.1416;
 
 // Degree to Radiant Conversion

@@ -11,14 +11,6 @@ start = eye(4,4);
 start(3,4) = -182.488;
 hold on;
 
-plot3([0,0]                      , [0,0]                      , [0,start(3,4)]             , zv, 'Color', cl, 'MarkerSize', sz, 'MarkerFaceColor', 'k', 'LineWidth', sz/2);
-plot3([0,tmat0_1(1,4)]           , [0,tmat0_1(2,4)]           , [0,tmat0_1(3,4)]           , zv, 'Color', cl, 'MarkerSize', sz, 'MarkerFaceColor', 'k', 'LineWidth', sz/2);
-plot3([tmat0_1(1,4),tmat0_2(1,4)], [tmat0_1(2,4),tmat0_2(2,4)], [tmat0_1(3,4),tmat0_2(3,4)], zv, 'Color', cl, 'MarkerSize', sz, 'MarkerFaceColor', 'k', 'LineWidth', sz/2);
-plot3([tmat0_2(1,4),tmat0_3(1,4)], [tmat0_2(2,4),tmat0_3(2,4)], [tmat0_2(3,4),tmat0_3(3,4)], zv, 'Color', cl, 'MarkerSize', sz, 'MarkerFaceColor', 'k', 'LineWidth', sz/2);
-plot3([tmat0_3(1,4),tmat0_4(1,4)], [tmat0_3(2,4),tmat0_4(2,4)], [tmat0_3(3,4),tmat0_4(3,4)], zv, 'Color', cl, 'MarkerSize', sz, 'MarkerFaceColor', 'k', 'LineWidth', sz/2);
-plot3([tmat0_4(1,4),tmat0_5(1,4)], [tmat0_4(2,4),tmat0_5(2,4)], [tmat0_4(3,4),tmat0_5(3,4)], zv, 'Color', cl, 'MarkerSize', sz, 'MarkerFaceColor', 'k', 'LineWidth', sz/2);
-plot3([tmat0_5(1,4),tmat0_6(1,4)], [tmat0_5(2,4),tmat0_6(2,4)], [tmat0_5(3,4),tmat0_6(3,4)], zv, 'Color', cl, 'MarkerSize', sz, 'MarkerFaceColor', 'k', 'LineWidth', sz/2);
-
 view(rx, ry);
 xlabel('X');
 ylabel('Y');
@@ -42,4 +34,12 @@ if (debug)
             round(linspace(origin(3),dest(3),10))];
     plot3(path(1,:), path(2,:), path(3,:), 'o','Color','c','MarkerSize',2, 'MarkerFaceColor','r');
 end
+
+plot3([0,0]                      , [0,0]                      , [0,start(3,4)]             , zv, 'Color', cl, 'MarkerSize', sz, 'MarkerFaceColor', 'k', 'LineWidth', sz/2);
+plot3([0,tmat0_1(1,4)]           , [0,tmat0_1(2,4)]           , [0,tmat0_1(3,4)]           , zv, 'Color', cl, 'MarkerSize', sz, 'MarkerFaceColor', 'k', 'LineWidth', sz/2);
+plot3([tmat0_1(1,4),tmat0_2(1,4)], [tmat0_1(2,4),tmat0_2(2,4)], [tmat0_1(3,4),tmat0_2(3,4)], zv, 'Color', cl, 'MarkerSize', sz, 'MarkerFaceColor', 'k', 'LineWidth', sz/2);
+plot3([tmat0_2(1,4),tmat0_3(1,4)], [tmat0_2(2,4),tmat0_3(2,4)], [tmat0_2(3,4),tmat0_3(3,4)], zv, 'Color', cl, 'MarkerSize', sz, 'MarkerFaceColor', 'k', 'LineWidth', sz/2);
+plot3([tmat0_3(1,4),tmat0_4(1,4)], [tmat0_3(2,4),tmat0_4(2,4)], [tmat0_3(3,4),tmat0_4(3,4)], zv, 'Color', cl, 'MarkerSize', sz, 'MarkerFaceColor', 'k', 'LineWidth', sz/2);
+plot3([tmat0_4(1,4),tmat0_5(1,4)], [tmat0_4(2,4),tmat0_5(2,4)], [tmat0_4(3,4),tmat0_5(3,4)], zv, 'Color', cl, 'MarkerSize', sz, 'MarkerFaceColor', 'k', 'LineWidth', sz/2);
+plot3([tmat0_5(1,4),tmat0_6(1,4)], [tmat0_5(2,4),tmat0_6(2,4)], [tmat0_5(3,4),tmat0_6(3,4)], zv, 'Color', cl, 'MarkerSize', sz, 'MarkerFaceColor', 'k', 'LineWidth', sz/2);
 end

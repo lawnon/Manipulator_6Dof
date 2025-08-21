@@ -8,6 +8,8 @@
 #include "RobFrameWork.hpp"
 #include "Commands.hpp"
 
+using namespace Logger;
+
 /* Command Functions */
 Commands::Commands()
 {

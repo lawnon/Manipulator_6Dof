@@ -9,6 +9,8 @@
 #include "RobFrameWork.hpp"
 #include "PositionFactory.hpp"
 
+using namespace Logger;
+
 PositionFactory::PositionFactory(){}
 PositionFactory::~PositionFactory()
 {

@@ -1,4 +1,4 @@
-function [thr1,thr2,thr3] = PositionCraig(x,y,z,accu)
+function [thr1,thr2,thr3] = PositionCraig(x,y,z,accu,dho)
 % Berechnung der Positionsgebenden Gelenkstellung d.h. th1, th2 und th3
 % 
 % TMat = |RotationsMatrix(3x3) Verschiebung(3,1)|
@@ -11,7 +11,7 @@ function [thr1,thr2,thr3] = PositionCraig(x,y,z,accu)
 %     |    0          cos(th2+th3)           cos(th2+th3)            a(3)*sin(th2+th3)+a(2)*sin(th2)         |
 %     |    0              0                      0                                  1                        |
 %                     
-[alpha, beta, a, d] =  DhParams();
+[alpha, beta, a, d] =  DhParams(dhp);
 
 % Berechnung von theta 1
 thr1 = atan2(y,x);

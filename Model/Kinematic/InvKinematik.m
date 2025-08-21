@@ -3,9 +3,9 @@
 % Autor: Chukwunonso Bob-Anp(2)eji
 % Datum: 27-07-2025@11-52
 %
-function [th1,th2,th3,th4,th5,th6] = InvKinematik(x, y, z, rmat0_6)
+function [th1,th2,th3,th4,th5,th6] = InvKinematik(x, y, z, rmat0_6, dhp, elbow)
 % DH Parameter auslesen
-[alpha, beta, a, d] =  DhParams();
+[alpha, beta, a, d] =  DhParams(dhp);
 
 % Berechnung der Positionsgebenden Gelenkstellung d.h. th1, th2 und th3
 % 
@@ -19,7 +19,7 @@ function [th1,th2,th3,th4,th5,th6] = InvKinematik(x, y, z, rmat0_6)
 %     |    0          cos(th2+th3)           cos(th2+th3)            a(3)*sin(th2+th3)+a(2)*sin(th2)         |
 %     |    0              0                      0                                  1                        |
 %                     
-[thr1,thr2,thr3] = Position(x,y,z,3);
+[thr1,thr2,thr3] = Position(x,y,z,3,dhp,elbow);
 th1 = ToDeg(thr1);
 th2 = ToDeg(thr2);
 th3 = ToDeg(thr3);
@@ -42,7 +42,7 @@ th3 = ToDeg(thr3);
 % 
 % Ermittlung der Manipulator Transformations-Matrix entsprechend der
 % gegebenen Positions-Winkelwerten
-[tmat0_1,tmat0_2,tmat0_3] = ArmTrans(th1,th2,th3,0,0,0);
+[tmat0_1,tmat0_2,tmat0_3] = ArmTrans(th1,th2,th3,0,0,0,dhp);
 rmat0_3 = tmat0_3(1:3,1:3);
 rmat3_6 = (rmat0_3)^-1 * rmat0_6;
 
@@ -57,7 +57,7 @@ th6 = ToDeg(thr6);
 if (th2 ~= 0 || th3 ~= 0 || th5 ~= 0)
     % Positions Difference berechnen
     [posVk,pos5Vk,tmat06v,rmatV0_6] = VrwKinematik(...
-        th1,th2,th3,th4,th5,th6,'k','-+',3,1);
+        th1,th2,th3,th4,th5,th6,'k','-+',3,1,dhp);
     
     % Gelenk 5 entlang der Orientierungs Achse verschieben
     tmatd = tmat06v*TransFK(0,90,0,0,0)*TransFK(0,0,0,2*a(5),0);
@@ -65,14 +65,14 @@ if (th2 ~= 0 || th3 ~= 0 || th5 ~= 0)
     
     % Berechnung der Positionsgebenden Gelenkstellung d.h. th1, th2 und th3
     % unter Berücksichtigung von Achse 56    
-    [thr1,thr2,thr3] = Position(tmatd(1,4),tmatd(2,4),tmatd(3,4),3);
+    [thr1,thr2,thr3] = Position(tmatd(1,4),tmatd(2,4),tmatd(3,4),3,dhp,elbow);
     th1 = ToDeg(thr1);
     th2 = ToDeg(thr2);
     th3 = ToDeg(thr3);
     
     % Ermittlung der Manipulator Transformations-Matrix entsprechend der
     % gegebenen Positions-Winkelwerten
-    [tmat0_1,tmat0_2,tmat0_3] = ArmTrans(th1,th2,th3,0,0,0);
+    [tmat0_1,tmat0_2,tmat0_3] = ArmTrans(th1,th2,th3,0,0,0,dhp);
     rmat0_3 = tmat0_3(1:3,1:3);
     rmat3_6 = (rmat0_3)^-1 * rmatV0_6;
 

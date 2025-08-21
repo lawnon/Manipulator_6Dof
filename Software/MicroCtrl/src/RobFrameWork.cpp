@@ -1,5 +1,7 @@
 #include "RobFrameWork.hpp"
 
+using namespace Logger;
+
 RobFrame::RobFrame(){
   Kinematics.Init(this);
   Commands.Init(this);
