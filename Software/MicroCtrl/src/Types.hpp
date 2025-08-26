@@ -44,18 +44,20 @@ using uint64 = unsigned long long int;
 
 /* Denavit Hartenberg-Parameter for all Joints */
 struct DhParameters{
-  float alpha[4] = {90.000, 180.000, -180.000,  0.000};
-  float link[4]  = {28.691,  58.000,   68.300, 66.539};
-  float disp[4]  = { 0.000,   0.000,    0.000,  0.000};
-  float theta[4] = { 0.000,   0.000,    0.000,  0.000};
+  float alpha[6] = { 90.000,   0.000,   0.000,   0.000,  0.000, 0.000};
+  float beta[6]  = {-90.000,   0.000,  90.000, -90.000, 90.000, 0.000};
+  float theta[6] = {  0.000,   0.000,   0.000,   0.000,  0.000, 0.000};
+  float link[6]  = {  0.000, 258.300, 281.516,   0.000, 74.710, 0.000};
+  float disp[6]  = {  0.000,   0.000,   0.000,   0.000,  0.000, 0.000};
 };
 
 /* Denavit Hartenberg_Parameter Discription */
 struct DhParam{
   float alpha;
+  float beta;
+  float theta;
   float link;
   float disp;
-  float theta;
 };
 
 /* Structs Containing a 4 by 4 Matrix */
@@ -98,6 +100,8 @@ struct Posture{
   float Jt2;
   float Jt3;
   float Jt4;
+  float Jt5;
+  float Jt6;
 };
 /* Angular Constelation of Joints */
 struct sPosture{
@@ -105,6 +109,8 @@ struct sPosture{
   short Jt2;
   short Jt3;
   short Jt4;
+  short Jt5;
+  short Jt6;
 };
 
 /* Position and Posture Data */

@@ -38,7 +38,7 @@ int16 Actuator::Id(){
 // Akuator Einrichtung
 // <gearRatio> Getriebeübersetzung
 // <accuracy> Positions-Tolerance
-int16 Actuator::SetUp(float gearRatio, int16 accuracy)
+int16 Actuator::SetUp(float gearRatio, int16 accuracy, int16 max, int16 min)
 {
   _stepper->setSpeedProfile(BasicStepperDriver::LINEAR_SPEED, 1000, 1000);
   _stepper->setEnableActiveState(LOW);
@@ -49,6 +49,8 @@ int16 Actuator::SetUp(float gearRatio, int16 accuracy)
   _previousSteps = 0;
   _gearRatio = int16(gearRatio);
   Accuracy = accuracy;
+  _max = max;
+  _min = min;
 
   _state = SetBit16(int16(_state), State::Stopped);
   _state = SetBit16(int16(_state), State::Referenced);
@@ -79,6 +81,9 @@ int32 Actuator::Activate(int8 ena, uint16 tof)
     _stepper->enable();
     _state = SetBit16(_state, State::Enabled);
     _timeOfDelay = tof;
+    //log(GetBit16(_state, State::InPosition), "Act:Inposition: ");
+    //log(_targetSteps, "Act:target: ");
+    //log(_actualSteps, "Act:Actual: ");
     if(GetBit16(_state, State::InPosition) <= OFF)
     {
       if(_stepper->nextAction() >= ON)
@@ -132,7 +137,6 @@ int32 Actuator::Write(int32 target)
   {
     target = _max;
   }
-
   _previousSteps = _actualSteps;
   _targetSteps = calcSteps(target);
 
@@ -145,15 +149,21 @@ int32 Actuator::Write(int32 target)
 
   // Fahrtrichtungs Validierung
   _dir = (_targetSteps >= _actualSteps) ? 1 : -1;
+  _stepper->startMove(_targetSteps);
+  log(_targetSteps, "Act:target: ");
+  log(_actualSteps, "Act:Actual: ");
+  log(_dir, "Act:Write dir ");
+  log(_stepper->getDirection(), "Act:Write: Stepper Dir: ");
   if(_dir != _stepper->getDirection())
   {
+    log(_id, "Act:Write Refernce Actor; ");
     _state = SetBit16(_state, State::Aborted);
     _state = ResetBit16(_state, State::Referenced);
+    _stepper->startMove(0);
     return NOK;
   }
 
   log(_targetSteps, "Ziel Schritte: ");
-  _stepper->startMove(_targetSteps);
   _state = ResetBit16(_state, State::InPosition);
 
   return _targetSteps;

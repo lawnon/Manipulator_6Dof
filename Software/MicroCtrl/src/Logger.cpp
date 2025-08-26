@@ -23,7 +23,6 @@ namespace Logger{
     return Serial.available();
   }
 
-
   void encode(String data){
     Serial.println(data); // Daten in Lokalen Serial Monitor ausgeben
     Serial2.write(10); // Neuer Zeilen Anfang Kodieren

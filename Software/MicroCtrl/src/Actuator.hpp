@@ -29,8 +29,8 @@ class Actuator
         int8  _dir = 1;
         int16 _id = 0;
         int16 _offset;
-        int16 _min = 1;
-        int16 _max = 180;
+        int16 _min = -90;
+        int16 _max = 90;
         int16 _gearRatio = 1;
         int32 _previousSteps = 0;
         int32 _actualSteps = 0;
@@ -48,7 +48,7 @@ class Actuator
         Actuator ();
         // Initialisierung
         int16 Id();
-        int16 SetUp(float gearRatio = 1, int16 accuracy = 5);
+        int16 SetUp(float gearRatio = 1, int16 accuracy = 5, int16 max = 90, int16 min = -90);
         int16 Attach(int16 dirPin, int16 stepPin, int16 enaPin);
         // Attribute
         int16 Accuracy;

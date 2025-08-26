@@ -12,9 +12,9 @@ start(3,4) = -182.488;
 hold on;
 
 view(rx, ry);
-xlabel('X');
-ylabel('Y');
-zlabel('Z');
+xlabel('X [mm]');
+ylabel('Y [mm]');
+zlabel('Z [mm]');
 axis([-850 850 -850 850 -850 850]);
 grid on;
 

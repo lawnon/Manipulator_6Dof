@@ -1,3 +1,8 @@
+%% Datei: Orientation.m
+% Beschreibung: Evaluation und Emittlung der Inverse-Kinematik
+% Autor: Chukwunonso Bob-Anp(2)eji
+% Datum: 27-07-2025@11-52
+%
 function [th4,th5,th6] = Orientation(tmat, accu)
 % Ermittlung der Orientierung/Gelenkstellung d.h. th4, th5 und th6
 %

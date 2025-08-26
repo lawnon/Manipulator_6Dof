@@ -1,3 +1,8 @@
+%% Datei: Position.m
+% Beschreibung: Evaluation und Emittlung der Inverse-Kinematik
+% Autor: Chukwunonso Bob-Anyeji
+% Datum: 27-07-2025@11-52
+%
 function [thr1,thr2,thr3] = Position(x,y,z,accu,dhp,elbow)
 % Berechnung der Positionsgebenden Gelenkstellung d.h. th1, th2 und th3
 % 
@@ -46,8 +51,8 @@ C = sign(A)*sqrt(A^2+B^2);
 D = -(a(3)^2)+((x^2)*(cos(thr1)^2))+((y^2)*(sin(thr1)^2))+(2*x*cos(thr1)*y*sin(thr1))-(2*x*cos(thr1)*a(1))-(2*y*sin(thr1)*a(1))+(a(2)^2)+(a(1)^2)+(z^2);
 Phi = atan2(-B,A);
 % d.h
-pthr2 = atan2(sqrt(1-(D/C)^2),(D/C)) - Phi;
-mthr2 = atan2(-sqrt(1-(D/C)^2),(D/C)) - Phi;
+pthr2 = atan2(real(sqrt(1-(D/C)^2)),(D/C)) - Phi;
+mthr2 = atan2(real(-sqrt(1-(D/C)^2)),(D/C)) - Phi;
 switch elbow
     case 2
         thr2 = real(mthr2);
