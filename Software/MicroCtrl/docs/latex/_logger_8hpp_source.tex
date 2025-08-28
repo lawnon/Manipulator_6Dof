@@ -1,0 +1,57 @@
+\doxysection{Logger.\+hpp}
+\hypertarget{_logger_8hpp_source}{}\label{_logger_8hpp_source}\index{Logger.hpp@{Logger.hpp}}
+\mbox{\hyperlink{_logger_8hpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Program:\ Logger.hpp}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ Description:\ header\ file\ containing\ \ procedures\ for\ fromating\ and\ writing}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ State\ Date\ to\ Serial\ port}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Autor:\ Chukwunonso\ Bob-\/Anyeji}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ Date:\ 09.06.2024}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ LOGGER\_H\_}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ LOGGER\_H\_}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <HardwareSerial.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <WString.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_types_8hpp}{Types.hpp}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ Current\ Naming\ convention\ clashes\ with\ logarithmic}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ fuctions\ from\ <math.h>\ C-\/header\ files\ ie.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ =>\ log(double\ arg);}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ =>\ logf(float\ arg);}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ =>\ logl(long\ double\ arg);}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ Todo:}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ +\ Update\ Encapsulat\ the\ below\ logging\ functions\ is\ in}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ \ \ seperate\ namespace.}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_logger}{Logger}}}
+\DoxyCodeLine{00030\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_logger_a51bcf1bdc798c5a0e7f79a8cd8baf7bd}{logInit}}(\textcolor{keywordtype}{long}\ baudRate);}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{namespace_logger_a8b18cdda6db26b1054d74fbe05d3699e}{Incoming}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(String\ text);}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_logger_a9f18249e59c4bf45798f70f8eed043d5}{logft}}(\textcolor{keywordtype}{float}\ dec);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_logger_abdb949727272ec720b9af17221ec04c5}{logInt}}(\textcolor{keywordtype}{int}\ digit);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(String\ text,\ String\ title);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_logger_a9f18249e59c4bf45798f70f8eed043d5}{logft}}(\textcolor{keywordtype}{float}\ dec,\ String\ title);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\textcolor{keywordtype}{int}\ digit,\ String\ titel);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9abfc18820466994dc2a2ed40ce8f92e62}{Posture}}\ pt);}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_logger_a5afb1d40a2ebd9f8bf08ff9527e60713}{logln}}(\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9abfc18820466994dc2a2ed40ce8f92e62}{Posture}}\ pt);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_logger_a5afb1d40a2ebd9f8bf08ff9527e60713}{logln}}(\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9abfc18820466994dc2a2ed40ce8f92e62}{Posture}}\ \ pt,\ String\ title);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_logger_a06f27eefa1ad22c5b6d4031e5e3c9eb7}{logToSerial}}(\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9abfc18820466994dc2a2ed40ce8f92e62}{Posture}}\ pt);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_logger_a06f27eefa1ad22c5b6d4031e5e3c9eb7}{logToSerial}}(String\ input);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9a52f5e0bc3859bc5f5e25130b6c7e8881}{Position}}\ ps);}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_logger_a5afb1d40a2ebd9f8bf08ff9527e60713}{logln}}(\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9a52f5e0bc3859bc5f5e25130b6c7e8881}{Position}}\ ps);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9a52f5e0bc3859bc5f5e25130b6c7e8881}{Position}}\ ps,\ String\ title);}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_logger_a5afb1d40a2ebd9f8bf08ff9527e60713}{logln}}(\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9a52f5e0bc3859bc5f5e25130b6c7e8881}{Position}}\ ps,\ String\ title);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(Command\ cmd);}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(PosData\ pdata,\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{PosState}}\ state);}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ LOGGER\_H\_}}
+
+\end{DoxyCode}

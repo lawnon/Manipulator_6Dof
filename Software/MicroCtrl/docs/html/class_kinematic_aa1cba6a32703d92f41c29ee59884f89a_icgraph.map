@@ -1,0 +1,5 @@
+<map id="Kinematic::ivPosition" name="Kinematic::ivPosition">
+<area shape="rect" id="Node000001" title="Positionsgebenden Winkeln Berechnen." alt="" coords="208,5,351,31"/>
+<area shape="rect" id="Node000002" href="$class_kinematic.html#ae03636412ecab6f5a53e8c3d9069e369" title="Inverskinematik berechnung." alt="" coords="5,5,160,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,21,160,21,160,15,194,15"/>
+</map>

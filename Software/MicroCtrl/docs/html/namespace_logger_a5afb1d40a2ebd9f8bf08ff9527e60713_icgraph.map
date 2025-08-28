@@ -1,0 +1,17 @@
+<map id="Logger::logln" name="Logger::logln">
+<area shape="rect" id="Node000001" title=" " alt="" coords="416,107,512,132"/>
+<area shape="rect" id="Node000002" href="$class_rob_frame.html#a40f13f5c1ce2baaaa77fc3eee9b98379" title="Punkt zu Punkt Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="237,5,356,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="435,100,367,52,328,33,331,28,369,48,438,96"/>
+<area shape="rect" id="Node000003" href="$class_kinematic.html#ae03636412ecab6f5a53e8c3d9069e369" title="Inverskinematik berechnung." alt="" coords="14,81,169,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="411,106,368,97,264,90,169,91,169,86,264,84,368,91,412,100"/>
+<area shape="rect" id="Node000004" href="$class_kinematic.html#aa1cba6a32703d92f41c29ee59884f89a" title="Positionsgebenden Winkeln Berechnen." alt="" coords="225,107,368,132"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="402,122,368,122,368,117,402,117"/>
+<area shape="rect" id="Node000005" href="$class_rob_frame.html#a3b51be372803d4960a457d2c03378314" title="Gradlinige Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="234,156,359,181"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="408,139,342,158,340,153,406,133"/>
+<area shape="rect" id="Node000007" href="$class_rob_frame.html#a56384fc3894ecdaf39252f703ee91873" title="Iteriere durch den Positionsdatensatz." alt="" coords="5,205,177,231"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="443,144,410,173,369,196,321,211,271,220,178,226,177,220,271,215,320,206,367,192,407,168,440,140"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="211,112,168,106,169,101,212,106"/>
+<area shape="rect" id="Node000006" href="$class_rob_frame.html#a0d79cee264204461c4445cf72c4481b7" title="Eingangsdaten Parsen." alt="" coords="24,156,159,181"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="220,171,159,171,159,166,220,166"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="231,187,146,208,144,203,229,182"/>
+</map>

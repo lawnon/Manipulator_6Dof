@@ -1,0 +1,365 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {ngerman}{}\relax 
+\contentsline {chapter}{\numberline {1}Verzeichnis der Namensbereiche}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Liste aller Namensbereiche}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Klassen-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Verzeichnis}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Auflistung der Klassen}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Datei-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Verzeichnis}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Auflistung der Dateien}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Dokumentation der Namensbereiche}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Logger-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Namensbereichsreferenz}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Dokumentation der Funktionen}{7}{subsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}encode()}{7}{subsubsection.4.1.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.2}Incoming()}{8}{subsubsection.4.1.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.1.3}log()\hspace {0.1cm}{\footnotesize \ttfamily [1/8]}}{8}{subsubsection.4.1.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.1.4}log()\hspace {0.1cm}{\footnotesize \ttfamily [2/8]}}{8}{subsubsection.4.1.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.1.5}log()\hspace {0.1cm}{\footnotesize \ttfamily [3/8]}}{8}{subsubsection.4.1.1.5}%
+\contentsline {subsubsection}{\numberline {4.1.1.6}log()\hspace {0.1cm}{\footnotesize \ttfamily [4/8]}}{8}{subsubsection.4.1.1.6}%
+\contentsline {subsubsection}{\numberline {4.1.1.7}log()\hspace {0.1cm}{\footnotesize \ttfamily [5/8]}}{8}{subsubsection.4.1.1.7}%
+\contentsline {subsubsection}{\numberline {4.1.1.8}log()\hspace {0.1cm}{\footnotesize \ttfamily [6/8]}}{9}{subsubsection.4.1.1.8}%
+\contentsline {subsubsection}{\numberline {4.1.1.9}log()\hspace {0.1cm}{\footnotesize \ttfamily [7/8]}}{9}{subsubsection.4.1.1.9}%
+\contentsline {subsubsection}{\numberline {4.1.1.10}log()\hspace {0.1cm}{\footnotesize \ttfamily [8/8]}}{9}{subsubsection.4.1.1.10}%
+\contentsline {subsubsection}{\numberline {4.1.1.11}logft()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{9}{subsubsection.4.1.1.11}%
+\contentsline {subsubsection}{\numberline {4.1.1.12}logft()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{10}{subsubsection.4.1.1.12}%
+\contentsline {subsubsection}{\numberline {4.1.1.13}logInit()}{10}{subsubsection.4.1.1.13}%
+\contentsline {subsubsection}{\numberline {4.1.1.14}logInt()}{10}{subsubsection.4.1.1.14}%
+\contentsline {subsubsection}{\numberline {4.1.1.15}logln()\hspace {0.1cm}{\footnotesize \ttfamily [1/4]}}{10}{subsubsection.4.1.1.15}%
+\contentsline {subsubsection}{\numberline {4.1.1.16}logln()\hspace {0.1cm}{\footnotesize \ttfamily [2/4]}}{10}{subsubsection.4.1.1.16}%
+\contentsline {subsubsection}{\numberline {4.1.1.17}logln()\hspace {0.1cm}{\footnotesize \ttfamily [3/4]}}{11}{subsubsection.4.1.1.17}%
+\contentsline {subsubsection}{\numberline {4.1.1.18}logln()\hspace {0.1cm}{\footnotesize \ttfamily [4/4]}}{11}{subsubsection.4.1.1.18}%
+\contentsline {subsubsection}{\numberline {4.1.1.19}logToSerial()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{11}{subsubsection.4.1.1.19}%
+\contentsline {subsubsection}{\numberline {4.1.1.20}logToSerial()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{12}{subsubsection.4.1.1.20}%
+\contentsline {subsubsection}{\numberline {4.1.1.21}ptEncode()}{12}{subsubsection.4.1.1.21}%
+\contentsline {section}{\numberline {4.2}Utils-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Namensbereichsreferenz}{12}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Dokumentation der Funktionen}{13}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}GetBit16()}{13}{subsubsection.4.2.1.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}ResetBit16()}{13}{subsubsection.4.2.1.2}%
+\contentsline {subsubsection}{\numberline {4.2.1.3}SetBit16()}{14}{subsubsection.4.2.1.3}%
+\contentsline {chapter}{\numberline {5}Klassen-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dokumentation}{15}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Actuator Klassenreferenz}{15}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Dokumentation der Aufzählungstypen}{17}{subsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.1}State}{17}{subsubsection.5.1.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Beschreibung der Konstruktoren und Destruktoren}{17}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}Actuator()}{17}{subsubsection.5.1.2.1}%
+\contentsline {subsection}{\numberline {5.1.3}Dokumentation der Elementfunktionen}{17}{subsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.3.1}Activate()}{17}{subsubsection.5.1.3.1}%
+\contentsline {subsubsection}{\numberline {5.1.3.2}Attach()}{18}{subsubsection.5.1.3.2}%
+\contentsline {subsubsection}{\numberline {5.1.3.3}calcPosition()}{18}{subsubsection.5.1.3.3}%
+\contentsline {subsubsection}{\numberline {5.1.3.4}calcSteps()}{19}{subsubsection.5.1.3.4}%
+\contentsline {subsubsection}{\numberline {5.1.3.5}Delta()}{19}{subsubsection.5.1.3.5}%
+\contentsline {subsubsection}{\numberline {5.1.3.6}Id()}{20}{subsubsection.5.1.3.6}%
+\contentsline {subsubsection}{\numberline {5.1.3.7}Init()}{20}{subsubsection.5.1.3.7}%
+\contentsline {subsubsection}{\numberline {5.1.3.8}Read()}{21}{subsubsection.5.1.3.8}%
+\contentsline {subsubsection}{\numberline {5.1.3.9}Refernce()}{21}{subsubsection.5.1.3.9}%
+\contentsline {subsubsection}{\numberline {5.1.3.10}SetUp()}{22}{subsubsection.5.1.3.10}%
+\contentsline {subsubsection}{\numberline {5.1.3.11}Write()}{22}{subsubsection.5.1.3.11}%
+\contentsline {subsection}{\numberline {5.1.4}Dokumentation der Datenelemente}{23}{subsection.5.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.4.1}\_actualSteps}{23}{subsubsection.5.1.4.1}%
+\contentsline {subsubsection}{\numberline {5.1.4.2}\_dir}{23}{subsubsection.5.1.4.2}%
+\contentsline {subsubsection}{\numberline {5.1.4.3}\_enabled}{23}{subsubsection.5.1.4.3}%
+\contentsline {subsubsection}{\numberline {5.1.4.4}\_gearRatio}{24}{subsubsection.5.1.4.4}%
+\contentsline {subsubsection}{\numberline {5.1.4.5}\_id}{24}{subsubsection.5.1.4.5}%
+\contentsline {subsubsection}{\numberline {5.1.4.6}\_max}{24}{subsubsection.5.1.4.6}%
+\contentsline {subsubsection}{\numberline {5.1.4.7}\_microSteps}{24}{subsubsection.5.1.4.7}%
+\contentsline {subsubsection}{\numberline {5.1.4.8}\_min}{24}{subsubsection.5.1.4.8}%
+\contentsline {subsubsection}{\numberline {5.1.4.9}\_motorSteps}{24}{subsubsection.5.1.4.9}%
+\contentsline {subsubsection}{\numberline {5.1.4.10}\_offset}{24}{subsubsection.5.1.4.10}%
+\contentsline {subsubsection}{\numberline {5.1.4.11}\_previousSteps}{24}{subsubsection.5.1.4.11}%
+\contentsline {subsubsection}{\numberline {5.1.4.12}\_robFrame}{24}{subsubsection.5.1.4.12}%
+\contentsline {subsubsection}{\numberline {5.1.4.13}\_rpm}{24}{subsubsection.5.1.4.13}%
+\contentsline {subsubsection}{\numberline {5.1.4.14}\_state}{25}{subsubsection.5.1.4.14}%
+\contentsline {subsubsection}{\numberline {5.1.4.15}\_stepper}{25}{subsubsection.5.1.4.15}%
+\contentsline {subsubsection}{\numberline {5.1.4.16}\_targetSteps}{25}{subsubsection.5.1.4.16}%
+\contentsline {subsubsection}{\numberline {5.1.4.17}\_timeOfDelay}{25}{subsubsection.5.1.4.17}%
+\contentsline {subsubsection}{\numberline {5.1.4.18}Accuracy}{25}{subsubsection.5.1.4.18}%
+\contentsline {section}{\numberline {5.2}Command Strukturreferenz}{25}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Dokumentation der Datenelemente}{25}{subsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.1}Content}{25}{subsubsection.5.2.1.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.2}Id}{26}{subsubsection.5.2.1.2}%
+\contentsline {subsubsection}{\numberline {5.2.1.3}Name}{26}{subsubsection.5.2.1.3}%
+\contentsline {subsubsection}{\numberline {5.2.1.4}Value}{26}{subsubsection.5.2.1.4}%
+\contentsline {section}{\numberline {5.3}Commands Klassenreferenz}{26}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Dokumentation der Aufzählungstypen}{27}{subsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.1.1}Tags}{27}{subsubsection.5.3.1.1}%
+\contentsline {subsection}{\numberline {5.3.2}Beschreibung der Konstruktoren und Destruktoren}{28}{subsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.1}Commands()}{28}{subsubsection.5.3.2.1}%
+\contentsline {subsection}{\numberline {5.3.3}Dokumentation der Elementfunktionen}{28}{subsection.5.3.3}%
+\contentsline {subsubsection}{\numberline {5.3.3.1}Delay()}{28}{subsubsection.5.3.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.3.2}Get()}{28}{subsubsection.5.3.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.3.3}GetParam()}{28}{subsubsection.5.3.3.3}%
+\contentsline {subsubsection}{\numberline {5.3.3.4}Init()}{28}{subsubsection.5.3.3.4}%
+\contentsline {subsubsection}{\numberline {5.3.3.5}List()}{29}{subsubsection.5.3.3.5}%
+\contentsline {subsubsection}{\numberline {5.3.3.6}operator[]()}{29}{subsubsection.5.3.3.6}%
+\contentsline {subsubsection}{\numberline {5.3.3.7}Parse()}{29}{subsubsection.5.3.3.7}%
+\contentsline {subsubsection}{\numberline {5.3.3.8}SetParam()}{29}{subsubsection.5.3.3.8}%
+\contentsline {subsection}{\numberline {5.3.4}Dokumentation der Datenelemente}{30}{subsection.5.3.4}%
+\contentsline {subsubsection}{\numberline {5.3.4.1}\_list}{30}{subsubsection.5.3.4.1}%
+\contentsline {subsubsection}{\numberline {5.3.4.2}\_range}{30}{subsubsection.5.3.4.2}%
+\contentsline {subsubsection}{\numberline {5.3.4.3}\_robFrame}{30}{subsubsection.5.3.4.3}%
+\contentsline {section}{\numberline {5.4}Dh\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Param Strukturreferenz}{30}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Dokumentation der Datenelemente}{30}{subsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.1}alpha}{30}{subsubsection.5.4.1.1}%
+\contentsline {subsubsection}{\numberline {5.4.1.2}beta}{30}{subsubsection.5.4.1.2}%
+\contentsline {subsubsection}{\numberline {5.4.1.3}disp}{31}{subsubsection.5.4.1.3}%
+\contentsline {subsubsection}{\numberline {5.4.1.4}link}{31}{subsubsection.5.4.1.4}%
+\contentsline {subsubsection}{\numberline {5.4.1.5}theta}{31}{subsubsection.5.4.1.5}%
+\contentsline {section}{\numberline {5.5}Dh\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Parameters Strukturreferenz}{31}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Dokumentation der Datenelemente}{31}{subsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.1.1}alpha}{31}{subsubsection.5.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.5.1.2}beta}{31}{subsubsection.5.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.5.1.3}disp}{31}{subsubsection.5.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.5.1.4}link}{32}{subsubsection.5.5.1.4}%
+\contentsline {subsubsection}{\numberline {5.5.1.5}theta}{32}{subsubsection.5.5.1.5}%
+\contentsline {section}{\numberline {5.6}Joint Klassenreferenz}{32}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Beschreibung der Konstruktoren und Destruktoren}{33}{subsection.5.6.1}%
+\contentsline {subsubsection}{\numberline {5.6.1.1}Joint()}{33}{subsubsection.5.6.1.1}%
+\contentsline {subsection}{\numberline {5.6.2}Dokumentation der Elementfunktionen}{33}{subsection.5.6.2}%
+\contentsline {subsubsection}{\numberline {5.6.2.1}attach()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{33}{subsubsection.5.6.2.1}%
+\contentsline {subsubsection}{\numberline {5.6.2.2}attach()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{33}{subsubsection.5.6.2.2}%
+\contentsline {subsubsection}{\numberline {5.6.2.3}attach()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{33}{subsubsection.5.6.2.3}%
+\contentsline {subsubsection}{\numberline {5.6.2.4}delta()}{33}{subsubsection.5.6.2.4}%
+\contentsline {subsubsection}{\numberline {5.6.2.5}Init()}{34}{subsubsection.5.6.2.5}%
+\contentsline {subsubsection}{\numberline {5.6.2.6}limit()}{34}{subsubsection.5.6.2.6}%
+\contentsline {subsubsection}{\numberline {5.6.2.7}read()}{34}{subsubsection.5.6.2.7}%
+\contentsline {subsubsection}{\numberline {5.6.2.8}read2()}{34}{subsubsection.5.6.2.8}%
+\contentsline {subsubsection}{\numberline {5.6.2.9}readMicroseconds()}{34}{subsubsection.5.6.2.9}%
+\contentsline {subsubsection}{\numberline {5.6.2.10}write()}{34}{subsubsection.5.6.2.10}%
+\contentsline {subsection}{\numberline {5.6.3}Dokumentation der Datenelemente}{34}{subsection.5.6.3}%
+\contentsline {subsubsection}{\numberline {5.6.3.1}\_offset}{34}{subsubsection.5.6.3.1}%
+\contentsline {subsubsection}{\numberline {5.6.3.2}\_robFrame}{35}{subsubsection.5.6.3.2}%
+\contentsline {subsubsection}{\numberline {5.6.3.3}id}{35}{subsubsection.5.6.3.3}%
+\contentsline {subsubsection}{\numberline {5.6.3.4}max}{35}{subsubsection.5.6.3.4}%
+\contentsline {subsubsection}{\numberline {5.6.3.5}min}{35}{subsubsection.5.6.3.5}%
+\contentsline {subsubsection}{\numberline {5.6.3.6}offset}{35}{subsubsection.5.6.3.6}%
+\contentsline {subsubsection}{\numberline {5.6.3.7}servo}{35}{subsubsection.5.6.3.7}%
+\contentsline {section}{\numberline {5.7}Kinematic Klassenreferenz}{35}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Beschreibung der Konstruktoren und Destruktoren}{37}{subsection.5.7.1}%
+\contentsline {subsubsection}{\numberline {5.7.1.1}Kinematic()}{37}{subsubsection.5.7.1.1}%
+\contentsline {subsection}{\numberline {5.7.2}Dokumentation der Elementfunktionen}{37}{subsection.5.7.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.1}armTMatrix()}{37}{subsubsection.5.7.2.1}%
+\contentsline {subsubsection}{\numberline {5.7.2.2}fdKinematic()}{38}{subsubsection.5.7.2.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.3}Init()}{39}{subsubsection.5.7.2.3}%
+\contentsline {subsubsection}{\numberline {5.7.2.4}ivKinematic()}{39}{subsubsection.5.7.2.4}%
+\contentsline {subsubsection}{\numberline {5.7.2.5}ivOrientation()}{40}{subsubsection.5.7.2.5}%
+\contentsline {subsubsection}{\numberline {5.7.2.6}ivPosition()}{41}{subsubsection.5.7.2.6}%
+\contentsline {subsubsection}{\numberline {5.7.2.7}jointTMatrix()}{42}{subsubsection.5.7.2.7}%
+\contentsline {subsubsection}{\numberline {5.7.2.8}printMatrix()}{43}{subsubsection.5.7.2.8}%
+\contentsline {subsubsection}{\numberline {5.7.2.9}read3x3()}{43}{subsubsection.5.7.2.9}%
+\contentsline {subsection}{\numberline {5.7.3}Dokumentation der Datenelemente}{44}{subsection.5.7.3}%
+\contentsline {subsubsection}{\numberline {5.7.3.1}\_robFrame}{44}{subsubsection.5.7.3.1}%
+\contentsline {subsubsection}{\numberline {5.7.3.2}dhPar1}{44}{subsubsection.5.7.3.2}%
+\contentsline {subsubsection}{\numberline {5.7.3.3}dhPar2}{44}{subsubsection.5.7.3.3}%
+\contentsline {subsubsection}{\numberline {5.7.3.4}dhPar3}{44}{subsubsection.5.7.3.4}%
+\contentsline {subsubsection}{\numberline {5.7.3.5}dhPar4}{44}{subsubsection.5.7.3.5}%
+\contentsline {subsubsection}{\numberline {5.7.3.6}dhPar5}{45}{subsubsection.5.7.3.6}%
+\contentsline {subsubsection}{\numberline {5.7.3.7}dhPar6}{45}{subsubsection.5.7.3.7}%
+\contentsline {subsubsection}{\numberline {5.7.3.8}tMat01}{45}{subsubsection.5.7.3.8}%
+\contentsline {subsubsection}{\numberline {5.7.3.9}tMat02}{45}{subsubsection.5.7.3.9}%
+\contentsline {subsubsection}{\numberline {5.7.3.10}tMat03}{45}{subsubsection.5.7.3.10}%
+\contentsline {subsubsection}{\numberline {5.7.3.11}tMat04}{45}{subsubsection.5.7.3.11}%
+\contentsline {subsubsection}{\numberline {5.7.3.12}tMat05}{45}{subsubsection.5.7.3.12}%
+\contentsline {subsubsection}{\numberline {5.7.3.13}tMat06}{45}{subsubsection.5.7.3.13}%
+\contentsline {subsubsection}{\numberline {5.7.3.14}tMat12}{46}{subsubsection.5.7.3.14}%
+\contentsline {subsubsection}{\numberline {5.7.3.15}tMat23}{46}{subsubsection.5.7.3.15}%
+\contentsline {subsubsection}{\numberline {5.7.3.16}tMat34}{46}{subsubsection.5.7.3.16}%
+\contentsline {subsubsection}{\numberline {5.7.3.17}tMat45}{46}{subsubsection.5.7.3.17}%
+\contentsline {subsubsection}{\numberline {5.7.3.18}tMat56}{46}{subsubsection.5.7.3.18}%
+\contentsline {section}{\numberline {5.8}Matrix4x4 Strukturreferenz}{46}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Dokumentation der Datenelemente}{47}{subsection.5.8.1}%
+\contentsline {subsubsection}{\numberline {5.8.1.1}m11}{47}{subsubsection.5.8.1.1}%
+\contentsline {subsubsection}{\numberline {5.8.1.2}m12}{47}{subsubsection.5.8.1.2}%
+\contentsline {subsubsection}{\numberline {5.8.1.3}m13}{47}{subsubsection.5.8.1.3}%
+\contentsline {subsubsection}{\numberline {5.8.1.4}m14}{47}{subsubsection.5.8.1.4}%
+\contentsline {section}{\numberline {5.9}Pos\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data Strukturreferenz}{47}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Dokumentation der Datenelemente}{48}{subsection.5.9.1}%
+\contentsline {subsubsection}{\numberline {5.9.1.1}Identifier}{48}{subsubsection.5.9.1.1}%
+\contentsline {subsubsection}{\numberline {5.9.1.2}Position}{48}{subsubsection.5.9.1.2}%
+\contentsline {subsubsection}{\numberline {5.9.1.3}Posture}{48}{subsubsection.5.9.1.3}%
+\contentsline {section}{\numberline {5.10}Position Strukturreferenz}{48}{section.5.10}%
+\contentsline {subsection}{\numberline {5.10.1}Dokumentation der Datenelemente}{48}{subsection.5.10.1}%
+\contentsline {subsubsection}{\numberline {5.10.1.1}A}{48}{subsubsection.5.10.1.1}%
+\contentsline {subsubsection}{\numberline {5.10.1.2}B}{48}{subsubsection.5.10.1.2}%
+\contentsline {subsubsection}{\numberline {5.10.1.3}C}{49}{subsubsection.5.10.1.3}%
+\contentsline {subsubsection}{\numberline {5.10.1.4}X}{49}{subsubsection.5.10.1.4}%
+\contentsline {subsubsection}{\numberline {5.10.1.5}Y}{49}{subsubsection.5.10.1.5}%
+\contentsline {subsubsection}{\numberline {5.10.1.6}Z}{49}{subsubsection.5.10.1.6}%
+\contentsline {section}{\numberline {5.11}Position\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Factory Klassenreferenz}{49}{section.5.11}%
+\contentsline {subsection}{\numberline {5.11.1}Beschreibung der Konstruktoren und Destruktoren}{51}{subsection.5.11.1}%
+\contentsline {subsubsection}{\numberline {5.11.1.1}PositionFactory()}{51}{subsubsection.5.11.1.1}%
+\contentsline {subsubsection}{\numberline {5.11.1.2}$\sim $PositionFactory()}{51}{subsubsection.5.11.1.2}%
+\contentsline {subsection}{\numberline {5.11.2}Dokumentation der Elementfunktionen}{51}{subsection.5.11.2}%
+\contentsline {subsubsection}{\numberline {5.11.2.1}AddPosition()}{51}{subsubsection.5.11.2.1}%
+\contentsline {subsubsection}{\numberline {5.11.2.2}Count()}{52}{subsubsection.5.11.2.2}%
+\contentsline {subsubsection}{\numberline {5.11.2.3}Decode()}{52}{subsubsection.5.11.2.3}%
+\contentsline {subsubsection}{\numberline {5.11.2.4}DecodePosition()}{52}{subsubsection.5.11.2.4}%
+\contentsline {subsubsection}{\numberline {5.11.2.5}DecodePosture()}{53}{subsubsection.5.11.2.5}%
+\contentsline {subsubsection}{\numberline {5.11.2.6}Del()}{54}{subsubsection.5.11.2.6}%
+\contentsline {subsubsection}{\numberline {5.11.2.7}Get()}{54}{subsubsection.5.11.2.7}%
+\contentsline {subsubsection}{\numberline {5.11.2.8}Init()}{54}{subsubsection.5.11.2.8}%
+\contentsline {subsubsection}{\numberline {5.11.2.9}LogInfo()}{55}{subsubsection.5.11.2.9}%
+\contentsline {subsubsection}{\numberline {5.11.2.10}LogPositions()}{55}{subsubsection.5.11.2.10}%
+\contentsline {subsubsection}{\numberline {5.11.2.11}operator[]()}{56}{subsubsection.5.11.2.11}%
+\contentsline {subsubsection}{\numberline {5.11.2.12}RangeCheck()}{56}{subsubsection.5.11.2.12}%
+\contentsline {subsubsection}{\numberline {5.11.2.13}Setup()}{57}{subsubsection.5.11.2.13}%
+\contentsline {subsubsection}{\numberline {5.11.2.14}TosPosition()}{57}{subsubsection.5.11.2.14}%
+\contentsline {subsubsection}{\numberline {5.11.2.15}TosPosture()}{57}{subsubsection.5.11.2.15}%
+\contentsline {subsubsection}{\numberline {5.11.2.16}Update()}{58}{subsubsection.5.11.2.16}%
+\contentsline {subsection}{\numberline {5.11.3}Dokumentation der Datenelemente}{59}{subsection.5.11.3}%
+\contentsline {subsubsection}{\numberline {5.11.3.1}\_data}{59}{subsubsection.5.11.3.1}%
+\contentsline {subsubsection}{\numberline {5.11.3.2}\_definedCount}{59}{subsubsection.5.11.3.2}%
+\contentsline {subsubsection}{\numberline {5.11.3.3}\_robFrame}{59}{subsubsection.5.11.3.3}%
+\contentsline {section}{\numberline {5.12}Posture Strukturreferenz}{59}{section.5.12}%
+\contentsline {subsection}{\numberline {5.12.1}Dokumentation der Datenelemente}{60}{subsection.5.12.1}%
+\contentsline {subsubsection}{\numberline {5.12.1.1}Jt1}{60}{subsubsection.5.12.1.1}%
+\contentsline {subsubsection}{\numberline {5.12.1.2}Jt2}{60}{subsubsection.5.12.1.2}%
+\contentsline {subsubsection}{\numberline {5.12.1.3}Jt3}{60}{subsubsection.5.12.1.3}%
+\contentsline {subsubsection}{\numberline {5.12.1.4}Jt4}{60}{subsubsection.5.12.1.4}%
+\contentsline {subsubsection}{\numberline {5.12.1.5}Jt5}{60}{subsubsection.5.12.1.5}%
+\contentsline {subsubsection}{\numberline {5.12.1.6}Jt6}{60}{subsubsection.5.12.1.6}%
+\contentsline {section}{\numberline {5.13}Rob\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Frame Klassenreferenz}{60}{section.5.13}%
+\contentsline {subsection}{\numberline {5.13.1}Beschreibung der Konstruktoren und Destruktoren}{62}{subsection.5.13.1}%
+\contentsline {subsubsection}{\numberline {5.13.1.1}RobFrame()}{62}{subsubsection.5.13.1.1}%
+\contentsline {subsection}{\numberline {5.13.2}Dokumentation der Elementfunktionen}{62}{subsection.5.13.2}%
+\contentsline {subsubsection}{\numberline {5.13.2.1}Decode()}{62}{subsubsection.5.13.2.1}%
+\contentsline {subsubsection}{\numberline {5.13.2.2}Drive()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{62}{subsubsection.5.13.2.2}%
+\contentsline {subsubsection}{\numberline {5.13.2.3}Drive()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{63}{subsubsection.5.13.2.3}%
+\contentsline {subsubsection}{\numberline {5.13.2.4}GotoDeg()}{64}{subsubsection.5.13.2.4}%
+\contentsline {subsubsection}{\numberline {5.13.2.5}Increment()}{65}{subsubsection.5.13.2.5}%
+\contentsline {subsubsection}{\numberline {5.13.2.6}Interpolate()}{66}{subsubsection.5.13.2.6}%
+\contentsline {subsubsection}{\numberline {5.13.2.7}LDrive()}{66}{subsubsection.5.13.2.7}%
+\contentsline {subsubsection}{\numberline {5.13.2.8}LoopPositions()}{67}{subsubsection.5.13.2.8}%
+\contentsline {subsubsection}{\numberline {5.13.2.9}Setup()}{67}{subsubsection.5.13.2.9}%
+\contentsline {subsubsection}{\numberline {5.13.2.10}Sweep()}{67}{subsubsection.5.13.2.10}%
+\contentsline {subsubsection}{\numberline {5.13.2.11}Validate()}{68}{subsubsection.5.13.2.11}%
+\contentsline {subsection}{\numberline {5.13.3}Dokumentation der Datenelemente}{69}{subsection.5.13.3}%
+\contentsline {subsubsection}{\numberline {5.13.3.1}\_loopCount}{69}{subsubsection.5.13.3.1}%
+\contentsline {subsubsection}{\numberline {5.13.3.2}Commands}{69}{subsubsection.5.13.3.2}%
+\contentsline {subsubsection}{\numberline {5.13.3.3}Joint1}{69}{subsubsection.5.13.3.3}%
+\contentsline {subsubsection}{\numberline {5.13.3.4}Joint2}{69}{subsubsection.5.13.3.4}%
+\contentsline {subsubsection}{\numberline {5.13.3.5}Joint3}{69}{subsubsection.5.13.3.5}%
+\contentsline {subsubsection}{\numberline {5.13.3.6}Joint4}{70}{subsubsection.5.13.3.6}%
+\contentsline {subsubsection}{\numberline {5.13.3.7}Joint5}{70}{subsubsection.5.13.3.7}%
+\contentsline {subsubsection}{\numberline {5.13.3.8}Joint6}{70}{subsubsection.5.13.3.8}%
+\contentsline {subsubsection}{\numberline {5.13.3.9}Kinematics}{70}{subsubsection.5.13.3.9}%
+\contentsline {subsubsection}{\numberline {5.13.3.10}PosFactory}{70}{subsubsection.5.13.3.10}%
+\contentsline {subsubsection}{\numberline {5.13.3.11}PtHome}{70}{subsubsection.5.13.3.11}%
+\contentsline {section}{\numberline {5.14}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Position Strukturreferenz}{70}{section.5.14}%
+\contentsline {subsection}{\numberline {5.14.1}Dokumentation der Datenelemente}{71}{subsection.5.14.1}%
+\contentsline {subsubsection}{\numberline {5.14.1.1}A}{71}{subsubsection.5.14.1.1}%
+\contentsline {subsubsection}{\numberline {5.14.1.2}B}{71}{subsubsection.5.14.1.2}%
+\contentsline {subsubsection}{\numberline {5.14.1.3}C}{71}{subsubsection.5.14.1.3}%
+\contentsline {subsubsection}{\numberline {5.14.1.4}X}{71}{subsubsection.5.14.1.4}%
+\contentsline {subsubsection}{\numberline {5.14.1.5}Y}{71}{subsubsection.5.14.1.5}%
+\contentsline {subsubsection}{\numberline {5.14.1.6}Z}{71}{subsubsection.5.14.1.6}%
+\contentsline {section}{\numberline {5.15}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Posture Strukturreferenz}{71}{section.5.15}%
+\contentsline {subsection}{\numberline {5.15.1}Dokumentation der Datenelemente}{72}{subsection.5.15.1}%
+\contentsline {subsubsection}{\numberline {5.15.1.1}Jt1}{72}{subsubsection.5.15.1.1}%
+\contentsline {subsubsection}{\numberline {5.15.1.2}Jt2}{72}{subsubsection.5.15.1.2}%
+\contentsline {subsubsection}{\numberline {5.15.1.3}Jt3}{72}{subsubsection.5.15.1.3}%
+\contentsline {subsubsection}{\numberline {5.15.1.4}Jt4}{72}{subsubsection.5.15.1.4}%
+\contentsline {subsubsection}{\numberline {5.15.1.5}Jt5}{72}{subsubsection.5.15.1.5}%
+\contentsline {subsubsection}{\numberline {5.15.1.6}Jt6}{72}{subsubsection.5.15.1.6}%
+\contentsline {chapter}{\numberline {6}Datei-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dokumentation}{73}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Actuator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp-\/Dateireferenz}{73}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Actuator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp-\/Dateireferenz}{73}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Actuator.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{74}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Commands.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp-\/Dateireferenz}{75}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Commands.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp-\/Dateireferenz}{76}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Makro-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dokumentation}{76}{subsection.6.5.1}%
+\contentsline {subsubsection}{\numberline {6.5.1.1}COMMAND\_LEN}{76}{subsubsection.6.5.1.1}%
+\contentsline {section}{\numberline {6.6}Commands.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{77}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Joint.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp-\/Dateireferenz}{78}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Joint.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp-\/Dateireferenz}{78}{section.6.8}%
+\contentsline {section}{\numberline {6.9}Joint.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{79}{section.6.9}%
+\contentsline {section}{\numberline {6.10}Kinematic.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp-\/Dateireferenz}{80}{section.6.10}%
+\contentsline {subsection}{\numberline {6.10.1}Dokumentation der Funktionen}{80}{subsection.6.10.1}%
+\contentsline {subsubsection}{\numberline {6.10.1.1}getDeg()}{80}{subsubsection.6.10.1.1}%
+\contentsline {subsubsection}{\numberline {6.10.1.2}getRad()}{81}{subsubsection.6.10.1.2}%
+\contentsline {subsubsection}{\numberline {6.10.1.3}sign()}{81}{subsubsection.6.10.1.3}%
+\contentsline {subsection}{\numberline {6.10.2}Variablen-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dokumentation}{82}{subsection.6.10.2}%
+\contentsline {subsubsection}{\numberline {6.10.2.1}pi}{82}{subsubsection.6.10.2.1}%
+\contentsline {section}{\numberline {6.11}Kinematic.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp-\/Dateireferenz}{82}{section.6.11}%
+\contentsline {subsection}{\numberline {6.11.1}Dokumentation der Funktionen}{83}{subsection.6.11.1}%
+\contentsline {subsubsection}{\numberline {6.11.1.1}getDeg()}{83}{subsubsection.6.11.1.1}%
+\contentsline {subsubsection}{\numberline {6.11.1.2}getRad()}{83}{subsubsection.6.11.1.2}%
+\contentsline {subsubsection}{\numberline {6.11.1.3}sign()}{84}{subsubsection.6.11.1.3}%
+\contentsline {section}{\numberline {6.12}Kinematic.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{85}{section.6.12}%
+\contentsline {section}{\numberline {6.13}Logger.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp-\/Dateireferenz}{86}{section.6.13}%
+\contentsline {section}{\numberline {6.14}Logger.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp-\/Dateireferenz}{87}{section.6.14}%
+\contentsline {section}{\numberline {6.15}Logger.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{88}{section.6.15}%
+\contentsline {section}{\numberline {6.16}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp-\/Dateireferenz}{89}{section.6.16}%
+\contentsline {subsection}{\numberline {6.16.1}Dokumentation der Funktionen}{89}{subsection.6.16.1}%
+\contentsline {subsubsection}{\numberline {6.16.1.1}loop()}{89}{subsubsection.6.16.1.1}%
+\contentsline {subsubsection}{\numberline {6.16.1.2}setup()}{90}{subsubsection.6.16.1.2}%
+\contentsline {subsection}{\numberline {6.16.2}Variablen-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dokumentation}{90}{subsection.6.16.2}%
+\contentsline {subsubsection}{\numberline {6.16.2.1}CycleCount}{90}{subsubsection.6.16.2.1}%
+\contentsline {subsubsection}{\numberline {6.16.2.2}RobArm}{90}{subsubsection.6.16.2.2}%
+\contentsline {section}{\numberline {6.17}pins.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h-\/Dateireferenz}{90}{section.6.17}%
+\contentsline {subsection}{\numberline {6.17.1}Makro-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dokumentation}{91}{subsection.6.17.1}%
+\contentsline {subsubsection}{\numberline {6.17.1.1}BOARD\_INFO\_NAME}{91}{subsubsection.6.17.1.1}%
+\contentsline {subsubsection}{\numberline {6.17.1.2}ENC\_BTN\_PIN}{91}{subsubsection.6.17.1.2}%
+\contentsline {subsubsection}{\numberline {6.17.1.3}ENC\_CLK\_PIN}{91}{subsubsection.6.17.1.3}%
+\contentsline {subsubsection}{\numberline {6.17.1.4}ENC\_DIR\_PIN}{92}{subsubsection.6.17.1.4}%
+\contentsline {subsubsection}{\numberline {6.17.1.5}ENC\_INTP\_ID}{92}{subsubsection.6.17.1.5}%
+\contentsline {subsubsection}{\numberline {6.17.1.6}JT1\_DIR\_PIN}{92}{subsubsection.6.17.1.6}%
+\contentsline {subsubsection}{\numberline {6.17.1.7}JT1\_ENA\_PIN}{92}{subsubsection.6.17.1.7}%
+\contentsline {subsubsection}{\numberline {6.17.1.8}JT1\_LIM\_PIN}{92}{subsubsection.6.17.1.8}%
+\contentsline {subsubsection}{\numberline {6.17.1.9}JT1\_STP\_PIN}{92}{subsubsection.6.17.1.9}%
+\contentsline {subsubsection}{\numberline {6.17.1.10}JT2\_DIR\_PIN}{92}{subsubsection.6.17.1.10}%
+\contentsline {subsubsection}{\numberline {6.17.1.11}JT2\_ENA\_PIN}{92}{subsubsection.6.17.1.11}%
+\contentsline {subsubsection}{\numberline {6.17.1.12}JT2\_LIM\_PIN}{92}{subsubsection.6.17.1.12}%
+\contentsline {subsubsection}{\numberline {6.17.1.13}JT2\_STP\_PIN}{92}{subsubsection.6.17.1.13}%
+\contentsline {subsubsection}{\numberline {6.17.1.14}JT3\_DIR\_PIN}{93}{subsubsection.6.17.1.14}%
+\contentsline {subsubsection}{\numberline {6.17.1.15}JT3\_ENA\_PIN}{93}{subsubsection.6.17.1.15}%
+\contentsline {subsubsection}{\numberline {6.17.1.16}JT3\_LIM\_PIN}{93}{subsubsection.6.17.1.16}%
+\contentsline {subsubsection}{\numberline {6.17.1.17}JT3\_STP\_PIN}{93}{subsubsection.6.17.1.17}%
+\contentsline {subsubsection}{\numberline {6.17.1.18}JT4\_DIR\_PIN}{93}{subsubsection.6.17.1.18}%
+\contentsline {subsubsection}{\numberline {6.17.1.19}JT4\_ENA\_PIN}{93}{subsubsection.6.17.1.19}%
+\contentsline {subsubsection}{\numberline {6.17.1.20}JT4\_LIM\_PIN}{93}{subsubsection.6.17.1.20}%
+\contentsline {subsubsection}{\numberline {6.17.1.21}JT4\_STP\_PIN}{93}{subsubsection.6.17.1.21}%
+\contentsline {subsubsection}{\numberline {6.17.1.22}JT5\_DIR\_PIN}{93}{subsubsection.6.17.1.22}%
+\contentsline {subsubsection}{\numberline {6.17.1.23}JT5\_ENA\_PIN}{93}{subsubsection.6.17.1.23}%
+\contentsline {subsubsection}{\numberline {6.17.1.24}JT5\_LIM\_PIN}{94}{subsubsection.6.17.1.24}%
+\contentsline {subsubsection}{\numberline {6.17.1.25}JT5\_STP\_PIN}{94}{subsubsection.6.17.1.25}%
+\contentsline {subsubsection}{\numberline {6.17.1.26}JT6\_DIR\_PIN}{94}{subsubsection.6.17.1.26}%
+\contentsline {subsubsection}{\numberline {6.17.1.27}JT6\_ENA\_PIN}{94}{subsubsection.6.17.1.27}%
+\contentsline {subsubsection}{\numberline {6.17.1.28}JT6\_LIM\_PIN}{94}{subsubsection.6.17.1.28}%
+\contentsline {subsubsection}{\numberline {6.17.1.29}JT6\_STP\_PIN}{94}{subsubsection.6.17.1.29}%
+\contentsline {subsubsection}{\numberline {6.17.1.30}SERVO1\_PIN}{94}{subsubsection.6.17.1.30}%
+\contentsline {subsubsection}{\numberline {6.17.1.31}SERVO2\_PIN}{94}{subsubsection.6.17.1.31}%
+\contentsline {subsubsection}{\numberline {6.17.1.32}SERVO3\_PIN}{94}{subsubsection.6.17.1.32}%
+\contentsline {subsubsection}{\numberline {6.17.1.33}SERVO4\_PIN}{94}{subsubsection.6.17.1.33}%
+\contentsline {section}{\numberline {6.18}pins.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{95}{section.6.18}%
+\contentsline {section}{\numberline {6.19}Position\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Factory.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp-\/Dateireferenz}{95}{section.6.19}%
+\contentsline {section}{\numberline {6.20}Position\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Factory.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp-\/Dateireferenz}{96}{section.6.20}%
+\contentsline {subsection}{\numberline {6.20.1}Makro-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dokumentation}{97}{subsection.6.20.1}%
+\contentsline {subsubsection}{\numberline {6.20.1.1}POS\_LIMIT}{97}{subsubsection.6.20.1.1}%
+\contentsline {section}{\numberline {6.21}Position\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Factory.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{97}{section.6.21}%
+\contentsline {section}{\numberline {6.22}README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md-\/Dateireferenz}{98}{section.6.22}%
+\contentsline {section}{\numberline {6.23}Rob\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Frame\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Work.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp-\/Dateireferenz}{98}{section.6.23}%
+\contentsline {section}{\numberline {6.24}Rob\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Frame\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Work.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp-\/Dateireferenz}{98}{section.6.24}%
+\contentsline {section}{\numberline {6.25}Rob\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Frame\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Work.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{99}{section.6.25}%
+\contentsline {section}{\numberline {6.26}Types.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp-\/Dateireferenz}{100}{section.6.26}%
+\contentsline {subsection}{\numberline {6.26.1}Makro-\/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dokumentation}{102}{subsection.6.26.1}%
+\contentsline {subsubsection}{\numberline {6.26.1.1}IDENTIFIER\_LEN}{102}{subsubsection.6.26.1.1}%
+\contentsline {subsubsection}{\numberline {6.26.1.2}NOK}{102}{subsubsection.6.26.1.2}%
+\contentsline {subsubsection}{\numberline {6.26.1.3}OFF}{102}{subsubsection.6.26.1.3}%
+\contentsline {subsubsection}{\numberline {6.26.1.4}OK}{102}{subsubsection.6.26.1.4}%
+\contentsline {subsubsection}{\numberline {6.26.1.5}ON}{102}{subsubsection.6.26.1.5}%
+\contentsline {subsection}{\numberline {6.26.2}Dokumentation der benutzerdefinierten Typen}{102}{subsection.6.26.2}%
+\contentsline {subsubsection}{\numberline {6.26.2.1}byte}{102}{subsubsection.6.26.2.1}%
+\contentsline {subsubsection}{\numberline {6.26.2.2}int16}{102}{subsubsection.6.26.2.2}%
+\contentsline {subsubsection}{\numberline {6.26.2.3}int32}{102}{subsubsection.6.26.2.3}%
+\contentsline {subsubsection}{\numberline {6.26.2.4}int64}{103}{subsubsection.6.26.2.4}%
+\contentsline {subsubsection}{\numberline {6.26.2.5}int8}{103}{subsubsection.6.26.2.5}%
+\contentsline {subsubsection}{\numberline {6.26.2.6}uint16}{103}{subsubsection.6.26.2.6}%
+\contentsline {subsubsection}{\numberline {6.26.2.7}uint32}{103}{subsubsection.6.26.2.7}%
+\contentsline {subsubsection}{\numberline {6.26.2.8}uint64}{103}{subsubsection.6.26.2.8}%
+\contentsline {subsubsection}{\numberline {6.26.2.9}uint8}{103}{subsubsection.6.26.2.9}%
+\contentsline {subsubsection}{\numberline {6.26.2.10}word}{103}{subsubsection.6.26.2.10}%
+\contentsline {subsection}{\numberline {6.26.3}Dokumentation der Aufzählungstypen}{103}{subsection.6.26.3}%
+\contentsline {subsubsection}{\numberline {6.26.3.1}PosState}{103}{subsubsection.6.26.3.1}%
+\contentsline {section}{\numberline {6.27}Types.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{104}{section.6.27}%
+\contentsline {section}{\numberline {6.28}Utilities.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp-\/Dateireferenz}{106}{section.6.28}%
+\contentsline {section}{\numberline {6.29}Utilities.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp-\/Dateireferenz}{106}{section.6.29}%
+\contentsline {section}{\numberline {6.30}Utilities.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{108}{section.6.30}%

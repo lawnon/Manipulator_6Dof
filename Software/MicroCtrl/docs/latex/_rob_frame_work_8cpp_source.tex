@@ -1,0 +1,346 @@
+\doxysection{Rob\+Frame\+Work.\+cpp}
+\hypertarget{_rob_frame_work_8cpp_source}{}\label{_rob_frame_work_8cpp_source}\index{RobFrameWork.cpp@{RobFrameWork.cpp}}
+\mbox{\hyperlink{_rob_frame_work_8cpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_rob_frame_work_8hpp}{RobFrameWork.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00003}00003\ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespace_logger}{Logger}};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00005}\mbox{\hyperlink{class_rob_frame_a0109bec096c54541b961148c78dce119}{00005}}\ \mbox{\hyperlink{class_rob_frame_a0109bec096c54541b961148c78dce119}{RobFrame::RobFrame}}()\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00006}00006\ \ \ \mbox{\hyperlink{class_rob_frame_a1599e8f613fd7b7196758cae7fce017b}{Kinematics}}.Init(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00007}00007\ \ \ \mbox{\hyperlink{class_rob_frame_a24209acf7cbbbf1cb2147a15068ccf28}{Commands}}.Init(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00008}00008\ \ \ \mbox{\hyperlink{class_rob_frame_a5e76a9553b0bc1c9d3dfd7f0c003f322}{PosFactory}}.Init(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00010}00010\ \ \ \mbox{\hyperlink{class_rob_frame_a06fc734ade46594b938fa3401ec83531}{Joint1}}.Init(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00011}00011\ \ \ \mbox{\hyperlink{class_rob_frame_ab97cde618ef57b02cde2c811895491a2}{Joint2}}.Init(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00012}00012\ \ \ \mbox{\hyperlink{class_rob_frame_a032b295eeb12e02d54ca629bdaab99be}{Joint3}}.Init(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00013}00013\ \ \ \mbox{\hyperlink{class_rob_frame_aad62150931dd77f06f9f8ddb2dcd1c2a}{Joint4}}.Init(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00014}00014\ \ \ \mbox{\hyperlink{class_rob_frame_ad59a1128c31affac8f4e49a91e7e3ecb}{Joint5}}.Init(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00015}00015\ \ \ \mbox{\hyperlink{class_rob_frame_a74ec840797d60e9da02277ac88dbe1b3}{Joint6}}.Init(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00016}00016\ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00018}\mbox{\hyperlink{class_rob_frame_a23c099f0ed25c01099b53fa0d05150ed}{00018}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rob_frame_a23c099f0ed25c01099b53fa0d05150ed}{RobFrame::Setup}}()\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00019}00019\ \ \ \textcolor{comment}{//\ Attach\ Joint\ Parameters}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00020}00020\ \ \ \mbox{\hyperlink{class_rob_frame_a06fc734ade46594b938fa3401ec83531}{Joint1}}.Attach(\mbox{\hyperlink{pins_8h_aa628810dda61ec41ac7fc4f4a468ac97}{JT1\_DIR\_PIN}},\ \mbox{\hyperlink{pins_8h_a3abed1a9716dcd37f31d5880480166ed}{JT1\_STP\_PIN}},\ \mbox{\hyperlink{pins_8h_ace3c373fdd790aadb14c046383f89f4f}{JT1\_ENA\_PIN}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00021}00021\ \ \ \mbox{\hyperlink{class_rob_frame_ab97cde618ef57b02cde2c811895491a2}{Joint2}}.Attach(\mbox{\hyperlink{pins_8h_aa7f4fe01e8bac0248a70386f2d1bc85f}{JT2\_DIR\_PIN}},\ \mbox{\hyperlink{pins_8h_a45f6f8e0b88bb5f337a3224255926544}{JT2\_STP\_PIN}},\ \mbox{\hyperlink{pins_8h_ab7808a7eae4ac7e1da07bec4ae4c333d}{JT2\_ENA\_PIN}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00022}00022\ \ \ \mbox{\hyperlink{class_rob_frame_a032b295eeb12e02d54ca629bdaab99be}{Joint3}}.Attach(\mbox{\hyperlink{pins_8h_a6cf439730c0645093b0b879d5bc611e4}{JT3\_DIR\_PIN}},\ \mbox{\hyperlink{pins_8h_a2cf83c4479ad2af249bc7fce03688487}{JT3\_STP\_PIN}},\ \mbox{\hyperlink{pins_8h_aa956e3e01ef21b6d5445239dd8e51692}{JT3\_ENA\_PIN}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00023}00023\ \ \ \mbox{\hyperlink{class_rob_frame_aad62150931dd77f06f9f8ddb2dcd1c2a}{Joint4}}.Attach(\mbox{\hyperlink{pins_8h_a09f0687ff3074a0b5acdf6f68d191160}{JT4\_DIR\_PIN}},\ \mbox{\hyperlink{pins_8h_a67963ea79592d9ac26b43e3104718dd7}{JT4\_STP\_PIN}},\ \mbox{\hyperlink{pins_8h_a9574c0a2c170f9619d42a3a3516845cf}{JT4\_ENA\_PIN}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00024}00024\ \ \ \mbox{\hyperlink{class_rob_frame_ad59a1128c31affac8f4e49a91e7e3ecb}{Joint5}}.Attach(\mbox{\hyperlink{pins_8h_af01d569d0c40d8168293dc101cde93ea}{JT5\_DIR\_PIN}},\ \mbox{\hyperlink{pins_8h_ab10f847dbc0c8fcc4a367816d208bc14}{JT5\_STP\_PIN}},\ \mbox{\hyperlink{pins_8h_a93ea097904707cd97ebd18ad1387d22b}{JT5\_ENA\_PIN}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00025}00025\ \ \ \mbox{\hyperlink{class_rob_frame_a74ec840797d60e9da02277ac88dbe1b3}{Joint6}}.Attach(\mbox{\hyperlink{pins_8h_adbdb756273f11c887cfd69ce6d1c7f57}{JT6\_DIR\_PIN}},\ \mbox{\hyperlink{pins_8h_a68309cee7e70f9891bbcfbd9954280a5}{JT6\_STP\_PIN}},\ \mbox{\hyperlink{pins_8h_a4c79a0a4eb81e27d28c6b7534b340fc3}{JT6\_ENA\_PIN}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00026}00026\ \ \ \textcolor{comment}{//\ Set\ Up\ Joints}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00027}00027\ \ \ \mbox{\hyperlink{class_rob_frame_a06fc734ade46594b938fa3401ec83531}{Joint1}}.SetUp(\ 1,\ \ \ \ 5,\ \ 90,\ -\/90);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00028}00028\ \ \ \mbox{\hyperlink{class_rob_frame_ab97cde618ef57b02cde2c811895491a2}{Joint2}}.SetUp(13.73,\ 5,\ \ 90,\ -\/90);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00029}00029\ \ \ \mbox{\hyperlink{class_rob_frame_a032b295eeb12e02d54ca629bdaab99be}{Joint3}}.SetUp(10,\ \ \ \ 5,\ \ 90,\ -\/90);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00030}00030\ \ \ \mbox{\hyperlink{class_rob_frame_aad62150931dd77f06f9f8ddb2dcd1c2a}{Joint4}}.SetUp(\ 1,\ \ \ \ 5,\ \ 90,\ -\/90);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00031}00031\ \ \ \mbox{\hyperlink{class_rob_frame_ad59a1128c31affac8f4e49a91e7e3ecb}{Joint5}}.SetUp(10,\ \ \ \ 5,\ \ 90,\ -\/90);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00032}00032\ \ \ \mbox{\hyperlink{class_rob_frame_a74ec840797d60e9da02277ac88dbe1b3}{Joint6}}.SetUp(\ 1,\ \ \ \ 5,\ 180,\ -\/180);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00033}00033\ \ \ \textcolor{comment}{//\ Set\ Up\ Initial\ Configurations}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00034}00034\ \ \ \mbox{\hyperlink{class_rob_frame_a06fc734ade46594b938fa3401ec83531}{Joint1}}.Write(\mbox{\hyperlink{class_rob_frame_ac24967ede35dcc595ca8f720f421bb70}{PtHome}}.Jt1);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00035}00035\ \ \ \mbox{\hyperlink{class_rob_frame_ab97cde618ef57b02cde2c811895491a2}{Joint2}}.Write(\mbox{\hyperlink{class_rob_frame_ac24967ede35dcc595ca8f720f421bb70}{PtHome}}.Jt2);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00036}00036\ \ \ \mbox{\hyperlink{class_rob_frame_a032b295eeb12e02d54ca629bdaab99be}{Joint3}}.Write(\mbox{\hyperlink{class_rob_frame_ac24967ede35dcc595ca8f720f421bb70}{PtHome}}.Jt3);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00037}00037\ \ \ \mbox{\hyperlink{class_rob_frame_aad62150931dd77f06f9f8ddb2dcd1c2a}{Joint4}}.Write(\mbox{\hyperlink{class_rob_frame_ac24967ede35dcc595ca8f720f421bb70}{PtHome}}.Jt4);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00038}00038\ \ \ \mbox{\hyperlink{class_rob_frame_ad59a1128c31affac8f4e49a91e7e3ecb}{Joint5}}.Write(\mbox{\hyperlink{class_rob_frame_ac24967ede35dcc595ca8f720f421bb70}{PtHome}}.Jt5);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00039}00039\ \ \ \mbox{\hyperlink{class_rob_frame_a74ec840797d60e9da02277ac88dbe1b3}{Joint6}}.Write(\mbox{\hyperlink{class_rob_frame_ac24967ede35dcc595ca8f720f421bb70}{PtHome}}.Jt6);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00041}00041\ \ \ \textcolor{comment}{//\ Allocation\ of\ Static\ Position\ Data}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00042}00042\ \ \ \mbox{\hyperlink{class_rob_frame_a5e76a9553b0bc1c9d3dfd7f0c003f322}{PosFactory}}.Setup();}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00043}00043\ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00045}00045\ \textcolor{comment}{/*Drive\ Joint\ to\ given\ Position*/}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00046}\mbox{\hyperlink{class_rob_frame_a92a99cf7219b60ab8d2c349fd2eef6a8}{00046}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rob_frame_a92a99cf7219b60ab8d2c349fd2eef6a8}{RobFrame::GotoDeg}}(\mbox{\hyperlink{class_actuator}{Actuator}}\&\ jt,\ \textcolor{keywordtype}{int}\ dest)\ \{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00047}00047\ \ \ \textcolor{keywordtype}{float}\ origin\ =\ jt.\mbox{\hyperlink{class_actuator_a81ea3f4dae18ab70413b8da2a419601b}{Read}}();}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00048}00048\ \ \ \mbox{\hyperlink{class_rob_frame_a208ae2ae7cdbe80dba28e4d0ad29857b}{Sweep}}(jt,\ origin,\ dest);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00049}00049\ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00051}\mbox{\hyperlink{class_rob_frame_a208ae2ae7cdbe80dba28e4d0ad29857b}{00051}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rob_frame_a208ae2ae7cdbe80dba28e4d0ad29857b}{RobFrame::Sweep}}(\mbox{\hyperlink{class_actuator}{Actuator}}\&\ jt,\ \textcolor{keywordtype}{int}\ origin,\ \textcolor{keywordtype}{int}\ dest)\ \{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00052}00052\ \ \ \textcolor{comment}{//log("{}Sweep\ Started"{});}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00053}00053\ \ \ \textcolor{comment}{//log("{}Jt"{}\ +\ String(jt.id)\ +\ "{}\ at\ "{}\ +\ String(origin));}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00054}00054\ \ \ \textcolor{comment}{//log("{}Jt"{}\ +\ String(jt.id)\ +\ "{}\ goto\ "{}\ +\ String(dest));}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00056}00056\ \ \ \textcolor{keywordflow}{if}\ (dest\ >=\ origin)\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ origin;\ i\ <=\ dest;\ i\ +=\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00058}00058\ \ \ \ \ \ \ \textcolor{comment}{//\ in\ steps\ of\ 1\ degree}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00059}00059\ \ \ \ \ \ \ jt.\mbox{\hyperlink{class_actuator_ae786a505db189182b2fec42f1bb82445}{Write}}(i);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00060}00060\ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a24209acf7cbbbf1cb2147a15068ccf28}{Commands}}.Delay();}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00062}00062\ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ origin;\ i\ >=\ dest;\ i\ -\/=\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00064}00064\ \ \ \ \ \ \ jt.\mbox{\hyperlink{class_actuator_ae786a505db189182b2fec42f1bb82445}{Write}}(i);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00065}00065\ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a24209acf7cbbbf1cb2147a15068ccf28}{Commands}}.Delay();}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00066}00066\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00067}00067\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00068}00068\ \ \ \textcolor{comment}{//log("{}Sweep\ Done"{});}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00069}00069\ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00071}\mbox{\hyperlink{class_rob_frame_aa358b505e48c8ea8efa6f069dab67520}{00071}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rob_frame_aa358b505e48c8ea8efa6f069dab67520}{RobFrame::Increment}}(\mbox{\hyperlink{class_actuator}{Actuator}}\&\ jt,\ \textcolor{keywordtype}{int}\ origin,\ \textcolor{keywordtype}{int}\ dest,\ \textcolor{keywordtype}{int}\ itr)\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00072}00072\ \ \ \textcolor{keywordflow}{if}\ (origin\ <=\ dest)\ \{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00073}00073\ \ \ \ \ \textcolor{keywordflow}{if}\ (origin\ +\ itr\ <=\ dest)\ \{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00074}00074\ \ \ \ \ \ \ jt.\mbox{\hyperlink{class_actuator_ae786a505db189182b2fec42f1bb82445}{Write}}(origin\ +\ itr);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00075}00075\ \ \ \ \ \ \ \textcolor{comment}{//log(origin\ +\ itr,\ "{}Fwd\ JT"{}\ +\ String(jt.id));}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00076}00076\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00077}00077\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00078}00078\ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00079}00079\ \ \ \ \ \textcolor{keywordflow}{if}\ (origin\ \ -\/\ itr\ >=\ dest)\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00080}00080\ \ \ \ \ \ \ jt.\mbox{\hyperlink{class_actuator_ae786a505db189182b2fec42f1bb82445}{Write}}(origin\ -\/\ itr);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00081}00081\ \ \ \ \ \ \ \textcolor{comment}{//log(origin\ -\/\ itr,\ "{}Bwd\ JT"{}\ +\ String(jt.id));}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00082}00082\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00083}00083\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00084}00084\ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00086}\mbox{\hyperlink{class_rob_frame_a194090d0e0cbb371b0af3a7728a41a49}{00086}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rob_frame_a194090d0e0cbb371b0af3a7728a41a49}{RobFrame::Validate}}(\mbox{\hyperlink{struct_position}{Position}}\&\ origin,}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_position}{Position}}\&\ dest,}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\&\ range,}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\&\ valid,}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{PosState}}\ state\ =\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9ad4104c9463be0f246699a116eb647a63}{PosState::PosAndPost}})\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00091}00091\ \ \ valid\ =\ (fabs(dest.\mbox{\hyperlink{struct_position_a85da30ee51269b4fec802f1a788fcf67}{X}}\ -\/\ origin.\mbox{\hyperlink{struct_position_a85da30ee51269b4fec802f1a788fcf67}{X}})\ <=\ range);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00092}00092\ \ \ valid\ =\ valid\ \&\&\ (fabs(dest.\mbox{\hyperlink{struct_position_adf2e52dcab744085e856f384924b2483}{Y}}\ -\/\ origin.\mbox{\hyperlink{struct_position_adf2e52dcab744085e856f384924b2483}{Y}})\ <=\ range);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00093}00093\ \ \ valid\ =\ valid\ \&\&\ (fabs(dest.\mbox{\hyperlink{struct_position_abe77f45f9c332325fe4f7bedde4e1ced}{Z}}\ -\/\ origin.\mbox{\hyperlink{struct_position_abe77f45f9c332325fe4f7bedde4e1ced}{Z}})\ <=\ range);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00094}00094\ \ \ \textcolor{keywordflow}{if}(state\ !=\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9a52f5e0bc3859bc5f5e25130b6c7e8881}{PosState::Position}})\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00095}00095\ \ \ \ \ valid\ =\ valid\ \&\&\ (fabs(dest.\mbox{\hyperlink{struct_position_a1876a6b841e39865bda05d782408e543}{B}}\ -\/\ origin.\mbox{\hyperlink{struct_position_a1876a6b841e39865bda05d782408e543}{B}})\ <=\ range);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00096}00096\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00097}00097\ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00099}\mbox{\hyperlink{class_rob_frame_a6e0cd7ffcb6222818a7fed8d7033f6af}{00099}}\ \mbox{\hyperlink{struct_position}{Position}}\ \mbox{\hyperlink{class_rob_frame_a6e0cd7ffcb6222818a7fed8d7033f6af}{RobFrame::Interpolate}}(\mbox{\hyperlink{struct_position}{Position}}\&\ origin,}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_position}{Position}}\&\ dest,}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ range,}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ step\ =\ 1)\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00103}00103\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_position}{Position}}\ \{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00104}00104\ \ \ \ \ ((dest.\mbox{\hyperlink{struct_position_a85da30ee51269b4fec802f1a788fcf67}{X}}\ -\/\ origin.\mbox{\hyperlink{struct_position_a85da30ee51269b4fec802f1a788fcf67}{X}})\ >\ range)\ ?\ origin.\mbox{\hyperlink{struct_position_a85da30ee51269b4fec802f1a788fcf67}{X}}\ +\ step*((dest.\mbox{\hyperlink{struct_position_a85da30ee51269b4fec802f1a788fcf67}{X}}\ -\/\ origin.\mbox{\hyperlink{struct_position_a85da30ee51269b4fec802f1a788fcf67}{X}})/abs(dest.\mbox{\hyperlink{struct_position_a85da30ee51269b4fec802f1a788fcf67}{X}}\ -\/\ origin.\mbox{\hyperlink{struct_position_a85da30ee51269b4fec802f1a788fcf67}{X}}))\ :\ dest.\mbox{\hyperlink{struct_position_a85da30ee51269b4fec802f1a788fcf67}{X}},}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00105}00105\ \ \ \ \ ((dest.\mbox{\hyperlink{struct_position_adf2e52dcab744085e856f384924b2483}{Y}}\ -\/\ origin.\mbox{\hyperlink{struct_position_adf2e52dcab744085e856f384924b2483}{Y}})\ >\ range)\ ?\ origin.\mbox{\hyperlink{struct_position_adf2e52dcab744085e856f384924b2483}{Y}}\ +\ step*((dest.\mbox{\hyperlink{struct_position_adf2e52dcab744085e856f384924b2483}{Y}}\ -\/\ origin.\mbox{\hyperlink{struct_position_adf2e52dcab744085e856f384924b2483}{Y}})/abs(dest.\mbox{\hyperlink{struct_position_adf2e52dcab744085e856f384924b2483}{Y}}\ -\/\ origin.\mbox{\hyperlink{struct_position_adf2e52dcab744085e856f384924b2483}{Y}}))\ :\ dest.\mbox{\hyperlink{struct_position_adf2e52dcab744085e856f384924b2483}{Y}},}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00106}00106\ \ \ \ \ ((dest.\mbox{\hyperlink{struct_position_abe77f45f9c332325fe4f7bedde4e1ced}{Z}}\ -\/\ origin.\mbox{\hyperlink{struct_position_abe77f45f9c332325fe4f7bedde4e1ced}{Z}})\ >\ range)\ ?\ origin.\mbox{\hyperlink{struct_position_abe77f45f9c332325fe4f7bedde4e1ced}{Z}}\ +\ step*((dest.\mbox{\hyperlink{struct_position_abe77f45f9c332325fe4f7bedde4e1ced}{Z}}\ -\/\ origin.\mbox{\hyperlink{struct_position_abe77f45f9c332325fe4f7bedde4e1ced}{Z}})/abs(dest.\mbox{\hyperlink{struct_position_abe77f45f9c332325fe4f7bedde4e1ced}{Z}}\ -\/\ origin.\mbox{\hyperlink{struct_position_abe77f45f9c332325fe4f7bedde4e1ced}{Z}}))\ :\ dest.\mbox{\hyperlink{struct_position_abe77f45f9c332325fe4f7bedde4e1ced}{Z}},}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00107}00107\ \ \ \ \ ((dest.\mbox{\hyperlink{struct_position_a6a47e47fa19ad8df653d8e9aff385220}{A}}\ -\/\ origin.\mbox{\hyperlink{struct_position_a6a47e47fa19ad8df653d8e9aff385220}{A}})\ >\ range)\ ?\ origin.\mbox{\hyperlink{struct_position_a6a47e47fa19ad8df653d8e9aff385220}{A}}\ +\ step*((dest.\mbox{\hyperlink{struct_position_a6a47e47fa19ad8df653d8e9aff385220}{A}}\ -\/\ origin.\mbox{\hyperlink{struct_position_a6a47e47fa19ad8df653d8e9aff385220}{A}})/abs(dest.\mbox{\hyperlink{struct_position_a6a47e47fa19ad8df653d8e9aff385220}{A}}\ -\/\ origin.\mbox{\hyperlink{struct_position_a6a47e47fa19ad8df653d8e9aff385220}{A}}))\ :\ dest.\mbox{\hyperlink{struct_position_a6a47e47fa19ad8df653d8e9aff385220}{A}},}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00108}00108\ \ \ \ \ ((dest.\mbox{\hyperlink{struct_position_a1876a6b841e39865bda05d782408e543}{B}}\ -\/\ origin.\mbox{\hyperlink{struct_position_a1876a6b841e39865bda05d782408e543}{B}})\ >\ range)\ ?\ origin.\mbox{\hyperlink{struct_position_a1876a6b841e39865bda05d782408e543}{B}}\ +\ step*((dest.\mbox{\hyperlink{struct_position_a1876a6b841e39865bda05d782408e543}{B}}\ -\/\ origin.\mbox{\hyperlink{struct_position_a1876a6b841e39865bda05d782408e543}{B}})/abs(dest.\mbox{\hyperlink{struct_position_a1876a6b841e39865bda05d782408e543}{B}}\ -\/\ origin.\mbox{\hyperlink{struct_position_a1876a6b841e39865bda05d782408e543}{B}}))\ :\ dest.\mbox{\hyperlink{struct_position_a1876a6b841e39865bda05d782408e543}{B}},}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00109}00109\ \ \ \ \ ((dest.\mbox{\hyperlink{struct_position_aeb2497fe30b3eea2d734e7181d8f6296}{C}}\ -\/\ origin.\mbox{\hyperlink{struct_position_aeb2497fe30b3eea2d734e7181d8f6296}{C}})\ >\ range)\ ?\ origin.\mbox{\hyperlink{struct_position_aeb2497fe30b3eea2d734e7181d8f6296}{C}}\ +\ step*((dest.\mbox{\hyperlink{struct_position_aeb2497fe30b3eea2d734e7181d8f6296}{C}}\ -\/\ origin.\mbox{\hyperlink{struct_position_aeb2497fe30b3eea2d734e7181d8f6296}{C}})/abs(dest.\mbox{\hyperlink{struct_position_aeb2497fe30b3eea2d734e7181d8f6296}{C}}\ -\/\ origin.\mbox{\hyperlink{struct_position_aeb2497fe30b3eea2d734e7181d8f6296}{C}}))\ :\ dest.\mbox{\hyperlink{struct_position_aeb2497fe30b3eea2d734e7181d8f6296}{C}}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00110}00110\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00111}00111\ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00113}00113\ \textcolor{comment}{/*\ Drive\ all\ Axis\ Simultanously\ to\ given\ Posture\ */}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00114}\mbox{\hyperlink{class_rob_frame_ae5ef3c45bc8b82d75e47f422addeb56f}{00114}}\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{PosState}}\ \mbox{\hyperlink{class_rob_frame_ae5ef3c45bc8b82d75e47f422addeb56f}{RobFrame::Drive}}(\mbox{\hyperlink{struct_posture}{Posture}}\ pt)\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00115}00115\ \ \ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\textcolor{stringliteral}{"{}Drive\ Data:\ "{}}\ +\ String(pt.\mbox{\hyperlink{struct_posture_aa657326ae64de0d97caa2d74934079ad}{Jt1}})\ +}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00116}00116\ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ String(pt.\mbox{\hyperlink{struct_posture_a8c6ccfdd2d40eaefd6f0e115f1267a85}{Jt2}})\ +}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00117}00117\ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ String(pt.\mbox{\hyperlink{struct_posture_a7cb39876480dfd8af6af66c468eb4056}{Jt3}})\ +}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00118}00118\ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ String(pt.\mbox{\hyperlink{struct_posture_a5cac789f8d04273ba0972cb314764d51}{Jt4}})\ +}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00119}00119\ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ String(pt.\mbox{\hyperlink{struct_posture_ad6e76120ace64086025a5aa2273c6fd7}{Jt5}})\ +}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00120}00120\ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ String(pt.\mbox{\hyperlink{struct_posture_a2716d150602c4a8e58e1c1221fc3ca4f}{Jt6}}));}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00122}00122\ \ \ \textcolor{keywordflow}{if}(pt.\mbox{\hyperlink{struct_posture_aa657326ae64de0d97caa2d74934079ad}{Jt1}}\ ==\ 0\ \&\&\ pt.\mbox{\hyperlink{struct_posture_a8c6ccfdd2d40eaefd6f0e115f1267a85}{Jt2}}\ ==\ 0\ \&\&\ pt.\mbox{\hyperlink{struct_posture_a7cb39876480dfd8af6af66c468eb4056}{Jt3}}\ ==\ 0}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00123}00123\ \ \ \ \ \ \&\&\ pt.\mbox{\hyperlink{struct_posture_a5cac789f8d04273ba0972cb314764d51}{Jt4}}\ ==\ 0\ \&\&\ pt.\mbox{\hyperlink{struct_posture_ad6e76120ace64086025a5aa2273c6fd7}{Jt5}}\ ==\ 0\ \&\&\ pt.\mbox{\hyperlink{struct_posture_a2716d150602c4a8e58e1c1221fc3ca4f}{Jt6}}\ ==\ 0)\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00124}00124\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00125}00125\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00127}00127\ \ \ \textcolor{keywordtype}{int}\ origin1\ =\ \mbox{\hyperlink{class_rob_frame_a06fc734ade46594b938fa3401ec83531}{Joint1}}.Read();}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00128}00128\ \ \ \textcolor{keywordtype}{int}\ origin2\ =\ \mbox{\hyperlink{class_rob_frame_ab97cde618ef57b02cde2c811895491a2}{Joint2}}.Read();}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00129}00129\ \ \ \textcolor{keywordtype}{int}\ origin3\ =\ \mbox{\hyperlink{class_rob_frame_a032b295eeb12e02d54ca629bdaab99be}{Joint3}}.Read();}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00130}00130\ \ \ \textcolor{keywordtype}{int}\ origin4\ =\ \mbox{\hyperlink{class_rob_frame_aad62150931dd77f06f9f8ddb2dcd1c2a}{Joint4}}.Read();}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00131}00131\ \ \ \textcolor{keywordtype}{int}\ origin5\ =\ \mbox{\hyperlink{class_rob_frame_ad59a1128c31affac8f4e49a91e7e3ecb}{Joint5}}.Read();}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00132}00132\ \ \ \textcolor{keywordtype}{int}\ origin6\ =\ \mbox{\hyperlink{class_rob_frame_a74ec840797d60e9da02277ac88dbe1b3}{Joint6}}.Read();}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00134}00134\ \ \ \textcolor{keywordtype}{int}\ delta1\ =\ \mbox{\hyperlink{class_rob_frame_a06fc734ade46594b938fa3401ec83531}{Joint1}}.Delta(pt.\mbox{\hyperlink{struct_posture_aa657326ae64de0d97caa2d74934079ad}{Jt1}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00135}00135\ \ \ \textcolor{keywordtype}{int}\ delta2\ =\ \mbox{\hyperlink{class_rob_frame_ab97cde618ef57b02cde2c811895491a2}{Joint2}}.Delta(pt.\mbox{\hyperlink{struct_posture_a8c6ccfdd2d40eaefd6f0e115f1267a85}{Jt2}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00136}00136\ \ \ \textcolor{keywordtype}{int}\ delta3\ =\ \mbox{\hyperlink{class_rob_frame_a032b295eeb12e02d54ca629bdaab99be}{Joint3}}.Delta(pt.\mbox{\hyperlink{struct_posture_a7cb39876480dfd8af6af66c468eb4056}{Jt3}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00137}00137\ \ \ \textcolor{keywordtype}{int}\ delta4\ =\ \mbox{\hyperlink{class_rob_frame_aad62150931dd77f06f9f8ddb2dcd1c2a}{Joint4}}.Delta(pt.\mbox{\hyperlink{struct_posture_a5cac789f8d04273ba0972cb314764d51}{Jt4}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00138}00138\ \ \ \textcolor{keywordtype}{int}\ delta5\ =\ \mbox{\hyperlink{class_rob_frame_ad59a1128c31affac8f4e49a91e7e3ecb}{Joint5}}.Delta(pt.\mbox{\hyperlink{struct_posture_ad6e76120ace64086025a5aa2273c6fd7}{Jt5}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00139}00139\ \ \ \textcolor{keywordtype}{int}\ delta6\ =\ \mbox{\hyperlink{class_rob_frame_a74ec840797d60e9da02277ac88dbe1b3}{Joint6}}.Delta(pt.\mbox{\hyperlink{struct_posture_a2716d150602c4a8e58e1c1221fc3ca4f}{Jt6}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00140}00140\ \ \ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\textcolor{stringliteral}{"{}Drive\ Delta:\ "{}}\ +\ String(delta1)\ +}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00141}00141\ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ String(delta2)\ +}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00142}00142\ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ String(delta3)\ +}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00143}00143\ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ String(delta4)\ +}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00144}00144\ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ String(delta5)\ +}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00145}00145\ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ |\ "{}}\ +\ String(delta6));}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00147}00147\ \ \ \textcolor{comment}{//\ Get\ max\ delta}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00148}00148\ \ \ \textcolor{keywordtype}{int}\ delta\ =\ (abs(delta1)\ >=\ abs(delta2))\ ?\ abs(delta1)\ :\ abs(delta2);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00149}00149\ \ \ delta\ =\ (abs(delta)\ >=\ abs(delta3))\ ?\ abs(delta)\ :\ abs(delta3);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00150}00150\ \ \ delta\ =\ (abs(delta)\ >=\ abs(delta4))\ ?\ abs(delta)\ :\ abs(delta4);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00151}00151\ \ \ delta\ =\ (abs(delta)\ >=\ abs(delta5))\ ?\ abs(delta)\ :\ abs(delta5);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00152}00152\ \ \ delta\ =\ (abs(delta)\ >=\ abs(delta6))\ ?\ abs(delta)\ :\ abs(delta6);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00154}00154\ \ \ \textcolor{comment}{//\ Iterate\ Through\ delta\ Range\ and\ Increment}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00155}00155\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ itr\ =\ 1;\ itr\ <=\ delta;\ itr++)\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00156}00156\ \ \ \ \ \textcolor{comment}{//log(itr,\ "{}iterator"{});}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00157}00157\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_aa358b505e48c8ea8efa6f069dab67520}{Increment}}(\mbox{\hyperlink{class_rob_frame_a06fc734ade46594b938fa3401ec83531}{Joint1}},\ origin1,\ pt.\mbox{\hyperlink{struct_posture_aa657326ae64de0d97caa2d74934079ad}{Jt1}},\ itr);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00158}00158\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_aa358b505e48c8ea8efa6f069dab67520}{Increment}}(\mbox{\hyperlink{class_rob_frame_ab97cde618ef57b02cde2c811895491a2}{Joint2}},\ origin2,\ pt.\mbox{\hyperlink{struct_posture_a8c6ccfdd2d40eaefd6f0e115f1267a85}{Jt2}},\ itr);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00159}00159\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_aa358b505e48c8ea8efa6f069dab67520}{Increment}}(\mbox{\hyperlink{class_rob_frame_a032b295eeb12e02d54ca629bdaab99be}{Joint3}},\ origin3,\ pt.\mbox{\hyperlink{struct_posture_a7cb39876480dfd8af6af66c468eb4056}{Jt3}},\ itr);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00160}00160\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_aa358b505e48c8ea8efa6f069dab67520}{Increment}}(\mbox{\hyperlink{class_rob_frame_aad62150931dd77f06f9f8ddb2dcd1c2a}{Joint4}},\ origin4,\ pt.\mbox{\hyperlink{struct_posture_a5cac789f8d04273ba0972cb314764d51}{Jt4}},\ itr);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00161}00161\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_aa358b505e48c8ea8efa6f069dab67520}{Increment}}(\mbox{\hyperlink{class_rob_frame_ad59a1128c31affac8f4e49a91e7e3ecb}{Joint5}},\ origin5,\ pt.\mbox{\hyperlink{struct_posture_ad6e76120ace64086025a5aa2273c6fd7}{Jt5}},\ itr);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00162}00162\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_aa358b505e48c8ea8efa6f069dab67520}{Increment}}(\mbox{\hyperlink{class_rob_frame_a74ec840797d60e9da02277ac88dbe1b3}{Joint6}},\ origin6,\ pt.\mbox{\hyperlink{struct_posture_a2716d150602c4a8e58e1c1221fc3ca4f}{Jt6}},\ itr);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00163}00163\ \ \ \ \ \textcolor{comment}{//\ Delay\ with\ respect\ to\ Speed}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00164}00164\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a24209acf7cbbbf1cb2147a15068ccf28}{Commands}}.Delay();}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00165}00165\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00166}00166\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9ac4e9522d7b3c8c652f7f0333ff436eec}{PosState::Defined}};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00167}00167\ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00168}00168\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00169}00169\ \textcolor{comment}{/*\ Drive\ all\ Axis\ Simultanously\ to\ given\ position\ */}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00170}\mbox{\hyperlink{class_rob_frame_a40f13f5c1ce2baaaa77fc3eee9b98379}{00170}}\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{PosState}}\ \mbox{\hyperlink{class_rob_frame_ae5ef3c45bc8b82d75e47f422addeb56f}{RobFrame::Drive}}(\mbox{\hyperlink{struct_position}{Position}}\ ps)\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00171}00171\ \ \ \mbox{\hyperlink{struct_posture}{Posture}}\ pt\ =\ \mbox{\hyperlink{class_rob_frame_a1599e8f613fd7b7196758cae7fce017b}{Kinematics}}.ivKinematic(ps);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00172}00172\ \ \ \mbox{\hyperlink{struct_position}{Position}}\ psCheck\ =\ \mbox{\hyperlink{class_rob_frame_a1599e8f613fd7b7196758cae7fce017b}{Kinematics}}.fdKinematic(pt);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00174}00174\ \ \ \textcolor{keywordtype}{int}\ range\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00175}00175\ \ \ \textcolor{keywordtype}{int}\ valid\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00177}00177\ \ \ \mbox{\hyperlink{class_rob_frame_a194090d0e0cbb371b0af3a7728a41a49}{Validate}}(ps,\ psCheck,\ range,\ valid);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00178}00178\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00179}00179\ \ \ \textcolor{keywordflow}{if}(valid\ !=\ 1)\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00180}00180\ \ \ \ \ \mbox{\hyperlink{namespace_logger_a5afb1d40a2ebd9f8bf08ff9527e60713}{logln}}(ps,\textcolor{stringliteral}{"{}Validation\ of\ target\ Position\ failed"{}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00181}00181\ \ \ \ \ \mbox{\hyperlink{namespace_logger_a5afb1d40a2ebd9f8bf08ff9527e60713}{logln}}(psCheck,\textcolor{stringliteral}{"{}psChect"{}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00182}00182\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9a4bbb8f967da6d1a610596d7257179c2b}{PosState::Invalid}};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00183}00183\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00184}00184\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_rob_frame_ae5ef3c45bc8b82d75e47f422addeb56f}{Drive}}(pt);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00185}00185\ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00186}00186\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00187}00187\ \textcolor{comment}{/*\ Drive\ all\ Axis\ Simultanously\ to\ given\ position\ */}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00188}\mbox{\hyperlink{class_rob_frame_a3b51be372803d4960a457d2c03378314}{00188}}\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{PosState}}\ \mbox{\hyperlink{class_rob_frame_a3b51be372803d4960a457d2c03378314}{RobFrame::LDrive}}(\mbox{\hyperlink{struct_position}{Position}}\ ps)\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00189}00189\ \ \ \textcolor{keywordtype}{int}\ valid\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00190}00190\ \ \ \textcolor{keywordtype}{int}\ counter\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00191}00191\ \ \ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{PosState}}\ result\ =\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9aec0fc0100c4fc1ce4eea230c3dc10360}{PosState::Undefined}};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00192}00192\ \ \ \textcolor{keywordtype}{int}\ range\ =\ \mbox{\hyperlink{class_rob_frame_a24209acf7cbbbf1cb2147a15068ccf28}{Commands}}[\mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a71ca5e22b97fcd0d5b9374cb01f03013}{Commands::Accuracy}}].Value;}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00193}00193\ \ \ \mbox{\hyperlink{struct_position}{Position}}\ origin\ \{\};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00194}00194\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00195}00195\ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00196}00196\ \ \ \ \ origin\ =\ \mbox{\hyperlink{class_rob_frame_a1599e8f613fd7b7196758cae7fce017b}{Kinematics}}.fdKinematic(\mbox{\hyperlink{struct_posture}{Posture}}\ \{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00197}00197\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a06fc734ade46594b938fa3401ec83531}{Joint1}}.Read(),}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00198}00198\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_ab97cde618ef57b02cde2c811895491a2}{Joint2}}.Read(),}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00199}00199\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a032b295eeb12e02d54ca629bdaab99be}{Joint3}}.Read(),}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00200}00200\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_aad62150931dd77f06f9f8ddb2dcd1c2a}{Joint4}}.Read(),}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00201}00201\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_ad59a1128c31affac8f4e49a91e7e3ecb}{Joint5}}.Read(),}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00202}00202\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a74ec840797d60e9da02277ac88dbe1b3}{Joint6}}.Read()}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00203}00203\ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00204}00204\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00205}00205\ \ \ \ \ \mbox{\hyperlink{namespace_logger_a5afb1d40a2ebd9f8bf08ff9527e60713}{logln}}(origin,\ \textcolor{stringliteral}{"{}RF::LDrive:\ origin"{}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00206}00206\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00207}00207\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a194090d0e0cbb371b0af3a7728a41a49}{Validate}}(origin,\ ps,\ range,\ valid,\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9a52f5e0bc3859bc5f5e25130b6c7e8881}{PosState::Position}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00208}00208\ \ \ \ \ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(valid,\textcolor{stringliteral}{"{}RF:LDrive:\ Valid"{}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00209}00209\ \ \ \ \ \textcolor{keywordflow}{if}(valid\ <=\ 0)\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00210}00210\ \ \ \ \ \ \ \mbox{\hyperlink{struct_position}{Position}}\ itp\ =\ \mbox{\hyperlink{class_rob_frame_a6e0cd7ffcb6222818a7fed8d7033f6af}{Interpolate}}(origin,\ ps,\ range);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00211}00211\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_rob_frame_a24209acf7cbbbf1cb2147a15068ccf28}{Commands}}[\mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a517b6fe9ec7127c62dc976b17cac82e4}{Commands::Debug}}].Value\ >\ 0)\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00212}00212\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespace_logger_a5afb1d40a2ebd9f8bf08ff9527e60713}{logln}}(itp,\ \textcolor{stringliteral}{"{}RF::LDrive:\ Intp"{}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00213}00213\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00214}00214\ \ \ \ \ \ \ result\ =\ \mbox{\hyperlink{class_rob_frame_ae5ef3c45bc8b82d75e47f422addeb56f}{Drive}}(itp);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00215}00215\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00216}00216\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00217}00217\ \ \ \ \ counter++;}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00218}00218\ \ \ \}\textcolor{keywordflow}{while}(valid\ <=\ 0\ \&\&\ counter\ <\ 1000000\ \&\&\ result\ !=\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9a4bbb8f967da6d1a610596d7257179c2b}{PosState::Invalid}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00219}00219\ \ \ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(counter,\ \textcolor{stringliteral}{"{}RF::LDrive:\ Counter\ "{}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00220}00220\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00221}00221\ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00222}00222\ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00224}\mbox{\hyperlink{class_rob_frame_a56384fc3894ecdaf39252f703ee91873}{00224}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rob_frame_a56384fc3894ecdaf39252f703ee91873}{RobFrame::LoopPositions}}()\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00225}00225\ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_rob_frame_a24209acf7cbbbf1cb2147a15068ccf28}{Commands}}[\mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a82bc031095e4373d632bb1d2d6ed15b5}{Commands::JLoop}}].Value\ >\ 0\ \&\&}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00226}00226\ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a24209acf7cbbbf1cb2147a15068ccf28}{Commands}}[\mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a99cb87104125f3ac687c48db3921fe8e}{Commands::LLoop}}].Value\ <=\ 0)\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00227}00227\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_rob_frame_a82029fc7e2f3a0923be121a826dc72cc}{\_loopCount}}\ <\ \mbox{\hyperlink{class_rob_frame_a5e76a9553b0bc1c9d3dfd7f0c003f322}{PosFactory}}.Count())\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00228}00228\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_logger_a5afb1d40a2ebd9f8bf08ff9527e60713}{logln}}(\mbox{\hyperlink{class_rob_frame_a5e76a9553b0bc1c9d3dfd7f0c003f322}{PosFactory}}[\mbox{\hyperlink{class_rob_frame_a82029fc7e2f3a0923be121a826dc72cc}{\_loopCount}}],\ \textcolor{stringliteral}{"{}RF::LoopPos:\ ["{}}\ +\ String(\mbox{\hyperlink{class_rob_frame_a82029fc7e2f3a0923be121a826dc72cc}{\_loopCount}})\ +\ \textcolor{stringliteral}{"{}]"{}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00229}00229\ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_ae5ef3c45bc8b82d75e47f422addeb56f}{Drive}}(\mbox{\hyperlink{class_rob_frame_a5e76a9553b0bc1c9d3dfd7f0c003f322}{PosFactory}}[\mbox{\hyperlink{class_rob_frame_a82029fc7e2f3a0923be121a826dc72cc}{\_loopCount}}]);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00230}00230\ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a82029fc7e2f3a0923be121a826dc72cc}{\_loopCount}}++;}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00231}00231\ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a24209acf7cbbbf1cb2147a15068ccf28}{Commands}}.Delay();}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00232}00232\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00233}00233\ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a82029fc7e2f3a0923be121a826dc72cc}{\_loopCount}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00234}00234\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00235}00235\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00236}00236\ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_rob_frame_a24209acf7cbbbf1cb2147a15068ccf28}{Commands}}[\mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a99cb87104125f3ac687c48db3921fe8e}{Commands::LLoop}}].Value\ >\ 0\ \&\&}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00237}00237\ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a24209acf7cbbbf1cb2147a15068ccf28}{Commands}}[\mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a82bc031095e4373d632bb1d2d6ed15b5}{Commands::JLoop}}].Value\ <=\ 0)\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00238}00238\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_rob_frame_a82029fc7e2f3a0923be121a826dc72cc}{\_loopCount}}\ <\ \mbox{\hyperlink{class_rob_frame_a5e76a9553b0bc1c9d3dfd7f0c003f322}{PosFactory}}.Count())\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00239}00239\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_logger_a5afb1d40a2ebd9f8bf08ff9527e60713}{logln}}(\mbox{\hyperlink{class_rob_frame_a5e76a9553b0bc1c9d3dfd7f0c003f322}{PosFactory}}[\mbox{\hyperlink{class_rob_frame_a82029fc7e2f3a0923be121a826dc72cc}{\_loopCount}}],\ \textcolor{stringliteral}{"{}RF::LoopPos:\ ["{}}\ +\ String(\mbox{\hyperlink{class_rob_frame_a82029fc7e2f3a0923be121a826dc72cc}{\_loopCount}})\ +\ \textcolor{stringliteral}{"{}]"{}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00240}00240\ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a3b51be372803d4960a457d2c03378314}{LDrive}}(\mbox{\hyperlink{class_rob_frame_a5e76a9553b0bc1c9d3dfd7f0c003f322}{PosFactory}}[\mbox{\hyperlink{class_rob_frame_a82029fc7e2f3a0923be121a826dc72cc}{\_loopCount}}]);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00241}00241\ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a82029fc7e2f3a0923be121a826dc72cc}{\_loopCount}}++;}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00242}00242\ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a24209acf7cbbbf1cb2147a15068ccf28}{Commands}}.Delay();}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00243}00243\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00244}00244\ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a82029fc7e2f3a0923be121a826dc72cc}{\_loopCount}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00245}00245\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00246}00246\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00247}00247\ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00248}00248\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00249}00249\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00250}00250\ \textcolor{comment}{\ *\ Eingangs\ Daten\ aus\ Serialle\ Port\ lesen}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00251}00251\ \textcolor{comment}{\ *\ Auswerten\ und\ entsprechend\ aus\ führen.}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00252}00252\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00253}\mbox{\hyperlink{class_rob_frame_a0d79cee264204461c4445cf72c4481b7}{00253}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rob_frame_a0d79cee264204461c4445cf72c4481b7}{RobFrame::Decode}}(String\ data)\ \{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00254}00254\ \ \ \textcolor{comment}{//\ Eingangs\ Daten\ lesen}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00255}00255\ \ \ \mbox{\hyperlink{struct_command}{Command}}\ inputCmd\ =\ \mbox{\hyperlink{class_rob_frame_a24209acf7cbbbf1cb2147a15068ccf28}{Commands}}.Parse(data);}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00256}00256\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00257}00257\ \ \ \textcolor{keywordflow}{switch}\ (inputCmd.\mbox{\hyperlink{struct_command_ae56ad83cd1907266d529308f83dbea64}{Id}})\ \{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00258}00258\ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a83c15d30aed7a3bf490200691870347e}{Commands::World}}:}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00259}00259\ \ \ \ \ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\textcolor{stringliteral}{"{}World\ Command\ not\ yet\ Implemented"{}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00260}00260\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00261}00261\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00262}00262\ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a839dfe7cc3e6524eb3c0c37766fab859}{Commands::Jt1}}:}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00263}00263\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a92a99cf7219b60ab8d2c349fd2eef6a8}{GotoDeg}}(\mbox{\hyperlink{class_rob_frame_a06fc734ade46594b938fa3401ec83531}{Joint1}},\ inputCmd.\mbox{\hyperlink{struct_command_a08d4c67eac067ef43f5c67d063956fc7}{Value}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00264}00264\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00265}00265\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00266}00266\ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a9e18b666fd06fd56e85751cd0e5ff685}{Commands::Jt2}}:}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00267}00267\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a92a99cf7219b60ab8d2c349fd2eef6a8}{GotoDeg}}(\mbox{\hyperlink{class_rob_frame_ab97cde618ef57b02cde2c811895491a2}{Joint2}},\ inputCmd.\mbox{\hyperlink{struct_command_a08d4c67eac067ef43f5c67d063956fc7}{Value}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00268}00268\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00269}00269\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00270}00270\ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a413cd3b50d5bdcce8299fdca041fcfa2}{Commands::Jt3}}:}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00271}00271\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a92a99cf7219b60ab8d2c349fd2eef6a8}{GotoDeg}}(\mbox{\hyperlink{class_rob_frame_a032b295eeb12e02d54ca629bdaab99be}{Joint3}},\ inputCmd.\mbox{\hyperlink{struct_command_a08d4c67eac067ef43f5c67d063956fc7}{Value}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00272}00272\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00273}00273\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00274}00274\ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a41b6071684e3d828d014a827ca895f5b}{Commands::Jt4}}:}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00275}00275\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a92a99cf7219b60ab8d2c349fd2eef6a8}{GotoDeg}}(\mbox{\hyperlink{class_rob_frame_aad62150931dd77f06f9f8ddb2dcd1c2a}{Joint4}},\ inputCmd.\mbox{\hyperlink{struct_command_a08d4c67eac067ef43f5c67d063956fc7}{Value}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00276}00276\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00277}00277\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00278}00278\ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a7f69d9bffd1fae17cfa19249a815b787}{Commands::Joints}}:}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00279}00279\ \ \ \ \ \textcolor{comment}{//\ Get\ Angular\ Positoin\ of\ each\ Joint}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00280}00280\ \ \ \ \ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\mbox{\hyperlink{struct_posture}{Posture}}\ \{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00281}00281\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a06fc734ade46594b938fa3401ec83531}{Joint1}}.Read(),}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00282}00282\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_ab97cde618ef57b02cde2c811895491a2}{Joint2}}.Read(),}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00283}00283\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a032b295eeb12e02d54ca629bdaab99be}{Joint3}}.Read(),}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00284}00284\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_aad62150931dd77f06f9f8ddb2dcd1c2a}{Joint4}}.Read(),}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00285}00285\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_ad59a1128c31affac8f4e49a91e7e3ecb}{Joint5}}.Read(),}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00286}00286\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a74ec840797d60e9da02277ac88dbe1b3}{Joint6}}.Read()}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00287}00287\ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00288}00288\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00289}00289\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00290}00290\ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8aa326387b63cc946f4693116b52647a0f}{Commands::Here}}:}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00291}00291\ \ \ \ \ \textcolor{comment}{//\ Get\ Carthesian\ Koordinates}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00292}00292\ \ \ \ \ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\mbox{\hyperlink{class_rob_frame_a1599e8f613fd7b7196758cae7fce017b}{Kinematics}}.fdKinematic(\mbox{\hyperlink{struct_posture}{Posture}}\ \{}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00293}00293\ \ \ \ \ \ \ \ \ \ \ Joint1.Read(),}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00294}00294\ \ \ \ \ \ \ \ \ \ \ Joint2.Read(),}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00295}00295\ \ \ \ \ \ \ \ \ \ \ Joint3.Read(),}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00296}00296\ \ \ \ \ \ \ \ \ \ \ Joint4.Read(),}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00297}00297\ \ \ \ \ \ \ \ \ \ \ Joint5.Read(),}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00298}00298\ \ \ \ \ \ \ \ \ \ \ Joint6.Read()}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00299}00299\ \ \ \ \ \ \ \ \ \}));}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00300}00300\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00301}00301\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00302}00302\ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a1ce07b1ff3fd4a6bb1a59e8f21fb5c62}{Commands::GoHome}}:}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00303}00303\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_ae5ef3c45bc8b82d75e47f422addeb56f}{Drive}}(\mbox{\hyperlink{struct_posture}{Posture}}\ \{\mbox{\hyperlink{class_rob_frame_ac24967ede35dcc595ca8f720f421bb70}{PtHome}}.Jt1,\ \mbox{\hyperlink{class_rob_frame_ac24967ede35dcc595ca8f720f421bb70}{PtHome}}.Jt2,\ \mbox{\hyperlink{class_rob_frame_ac24967ede35dcc595ca8f720f421bb70}{PtHome}}.Jt3,\ \mbox{\hyperlink{class_rob_frame_ac24967ede35dcc595ca8f720f421bb70}{PtHome}}.Jt4,\ \mbox{\hyperlink{class_rob_frame_ac24967ede35dcc595ca8f720f421bb70}{PtHome}}.Jt5,\ \mbox{\hyperlink{class_rob_frame_ac24967ede35dcc595ca8f720f421bb70}{PtHome}}.Jt6\});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00304}00304\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00305}00305\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00306}00306\ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8ab22ab8aa9a4b0d0485d55ea59a7914d2}{Commands::Drive}}:}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00307}00307\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_ae5ef3c45bc8b82d75e47f422addeb56f}{Drive}}(\mbox{\hyperlink{class_rob_frame_a5e76a9553b0bc1c9d3dfd7f0c003f322}{PosFactory}}.DecodePosition(inputCmd.\mbox{\hyperlink{struct_command_abd7816abfb531a1aa1b34ba3dffaf452}{Content}}));}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00308}00308\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00309}00309\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00310}00310\ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a40d42d3ebae2009070e171083ce39418}{Commands::JDrive}}:}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00311}00311\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_ae5ef3c45bc8b82d75e47f422addeb56f}{Drive}}(\mbox{\hyperlink{class_rob_frame_a5e76a9553b0bc1c9d3dfd7f0c003f322}{PosFactory}}.DecodePosture(inputCmd.\mbox{\hyperlink{struct_command_abd7816abfb531a1aa1b34ba3dffaf452}{Content}}));}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00312}00312\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00313}00313\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00314}00314\ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a2cb935c7ff03805fbc8484d50994d93d}{Commands::LDrive}}:}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00315}00315\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a3b51be372803d4960a457d2c03378314}{LDrive}}(\mbox{\hyperlink{class_rob_frame_a5e76a9553b0bc1c9d3dfd7f0c003f322}{PosFactory}}.DecodePosition(inputCmd.\mbox{\hyperlink{struct_command_abd7816abfb531a1aa1b34ba3dffaf452}{Content}}));}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00316}00316\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00317}00317\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00318}00318\ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a029deda531b0768cfa1e7395f078a1b9}{Commands::Position}}:}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00319}00319\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a5e76a9553b0bc1c9d3dfd7f0c003f322}{PosFactory}}.AddPosition(inputCmd.\mbox{\hyperlink{struct_command_abd7816abfb531a1aa1b34ba3dffaf452}{Content}},\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9a52f5e0bc3859bc5f5e25130b6c7e8881}{PosState::Position}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00320}00320\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00321}00321\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00322}00322\ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8af67582c3ddb70c5225f4177ac38c1263}{Commands::Posture}}:}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00323}00323\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a5e76a9553b0bc1c9d3dfd7f0c003f322}{PosFactory}}.AddPosition(inputCmd.\mbox{\hyperlink{struct_command_abd7816abfb531a1aa1b34ba3dffaf452}{Content}},\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9abfc18820466994dc2a2ed40ce8f92e62}{PosState::Posture}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00324}00324\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00325}00325\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00326}00326\ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a9644bfae156574d9c9807384b2d31a92}{Commands::ListPositions}}:}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00327}00327\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a5e76a9553b0bc1c9d3dfd7f0c003f322}{PosFactory}}.LogPositions(\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9a52f5e0bc3859bc5f5e25130b6c7e8881}{PosState::Position}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00328}00328\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00329}00329\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00330}00330\ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8aafae696d182efbbb5f041310edf1f1ad}{Commands::ListPostures}}:}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00331}00331\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a5e76a9553b0bc1c9d3dfd7f0c003f322}{PosFactory}}.LogPositions(\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9abfc18820466994dc2a2ed40ce8f92e62}{PosState::Posture}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00332}00332\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00333}00333\ }
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00334}00334\ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8abe0d6ad7cd5cd9c54077f6644a93ab76}{Commands::ListAllPositions}}:}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00335}00335\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a5e76a9553b0bc1c9d3dfd7f0c003f322}{PosFactory}}.LogPositions(\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9ad4104c9463be0f246699a116eb647a63}{PosState::PosAndPost}});}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00336}00336\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00337}00337\ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a813be1d187bea6ea03e3282ecf497b17}{Commands::Help}}:}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00338}00338\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a24209acf7cbbbf1cb2147a15068ccf28}{Commands}}.List();}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00339}00339\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_rob_frame_work_8cpp_source_l00340}00340\ \}}
+
+\end{DoxyCode}

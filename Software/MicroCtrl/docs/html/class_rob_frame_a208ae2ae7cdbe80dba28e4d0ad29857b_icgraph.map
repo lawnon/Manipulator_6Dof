@@ -1,0 +1,7 @@
+<map id="RobFrame::Sweep" name="RobFrame::Sweep">
+<area shape="rect" id="Node000001" title="Aktor Synchron Ansteuern." alt="" coords="377,5,507,31"/>
+<area shape="rect" id="Node000002" href="$class_rob_frame.html#a92a99cf7219b60ab8d2c349fd2eef6a8" title="Glenk Einzelverfahren." alt="" coords="188,5,329,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="364,21,330,21,330,15,364,15"/>
+<area shape="rect" id="Node000003" href="$class_rob_frame.html#a0d79cee264204461c4445cf72c4481b7" title="Eingangsdaten Parsen." alt="" coords="5,5,140,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="174,21,140,21,140,15,174,15"/>
+</map>

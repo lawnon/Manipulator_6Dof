@@ -1,0 +1,8 @@
+<map id="PositionFactory::Setup" name="PositionFactory::Setup">
+<area shape="rect" id="Node000001" title="Initialisierung." alt="" coords="5,5,160,31"/>
+<area shape="rect" id="Node000002" href="$namespace_logger.html#a83c3562c93d0101fc7fadc86e0482b2d" title=" " alt="" coords="419,5,505,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,15,405,15,405,21,160,21"/>
+<area shape="rect" id="Node000003" href="$class_position_factory.html#a14c9e06045694d07b9ba26427199708d" title="Debug info ausgeben." alt="" coords="208,31,371,56"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="161,25,195,29,194,34,160,30"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="370,29,405,24,405,29,371,34"/>
+</map>

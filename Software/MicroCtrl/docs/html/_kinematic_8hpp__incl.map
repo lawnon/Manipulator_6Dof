@@ -1,0 +1,20 @@
+<map id="Kinematic.hpp" name="Kinematic.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="123,5,229,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="22,152,85,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="168,33,74,143,70,140,164,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="111,225,191,251"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="152,33,117,51,78,78,40,112,12,153,8,167,10,179,18,189,29,199,62,214,98,225,97,230,60,219,27,203,14,193,6,181,3,167,7,151,36,108,75,73,115,47,149,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="267,152,387,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="203,28,239,49,275,77,300,107,318,138,313,141,295,110,272,81,236,53,200,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="336,79,472,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="213,28,355,72,353,77,212,33"/>
+<area shape="rect" id="Node000006" href="$_types_8hpp.html" title=" " alt="" coords="109,152,192,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="176,32,165,79,156,139,151,138,160,78,171,31"/>
+<area shape="rect" id="Node000007" href="$_logger_8hpp.html" title=" " alt="" coords="174,79,261,104"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="185,30,206,65,201,68,181,32"/>
+<area shape="poly" id="edge6_Node000006_Node000003" title=" " alt="" coords="153,178,153,212,148,212,148,178"/>
+<area shape="poly" id="edge10_Node000007_Node000002" title=" " alt="" coords="192,106,94,149,91,144,190,102"/>
+<area shape="poly" id="edge9_Node000007_Node000003" title=" " alt="" coords="220,104,218,139,206,178,193,200,177,218,173,214,189,196,202,176,212,138,215,104"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="236,102,299,142,296,147,233,106"/>
+<area shape="poly" id="edge11_Node000007_Node000006" title=" " alt="" coords="208,106,173,144,169,140,204,103"/>
+</map>

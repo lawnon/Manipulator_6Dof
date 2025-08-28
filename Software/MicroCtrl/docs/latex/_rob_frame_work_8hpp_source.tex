@@ -1,0 +1,53 @@
+\doxysection{Rob\+Frame\+Work.\+hpp}
+\hypertarget{_rob_frame_work_8hpp_source}{}\label{_rob_frame_work_8hpp_source}\index{RobFrameWork.hpp@{RobFrameWork.hpp}}
+\mbox{\hyperlink{_rob_frame_work_8hpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ File:\ RobFramWork.hpp}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Beschreibung:\ Klassen\ Objekt\ zur\ Verwaltung,\ Steuerung\ und\ ausführung}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Des\ Manipulators}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Autor:\ Chukwunonso\ Bob-\/Anyeji}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Datum:\ 18.08.2025@12-\/00}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ Aktualisiert:\ 27.08.2025@11-\/46}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ ROBFRAMEWORK\_H\_}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ ROBFRAMEWORK\_H\_}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{pins_8h}{pins.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_actuator_8hpp}{Actuator.hpp}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_commands_8hpp}{Commands.hpp}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_kinematic_8hpp}{Kinematic.hpp}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_position_factory_8hpp}{PositionFactory.hpp}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_rob_frame_a0109bec096c54541b961148c78dce119}{RobFrame}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_rob_frame_a82029fc7e2f3a0923be121a826dc72cc}{\_loopCount}}\ =\ 0;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rob_frame_aa358b505e48c8ea8efa6f069dab67520}{Increment}}(\mbox{\hyperlink{class_actuator}{Actuator}}\&\ jt,\ \textcolor{keywordtype}{int}\ origin,\ \textcolor{keywordtype}{int}\ dest,\ \textcolor{keywordtype}{int}\ itr);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rob_frame_a208ae2ae7cdbe80dba28e4d0ad29857b}{Sweep}}(\mbox{\hyperlink{class_actuator}{Actuator}}\&\ jt,\ \textcolor{keywordtype}{int}\ origin,\ \textcolor{keywordtype}{int}\ dest);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rob_frame_a194090d0e0cbb371b0af3a7728a41a49}{Validate}}(\mbox{\hyperlink{struct_position}{Position}}\&\ origin,\ \mbox{\hyperlink{struct_position}{Position}}\&\ dest,\ \textcolor{keywordtype}{int}\&\ range,\ \textcolor{keywordtype}{int}\&\ valid,\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{PosState}}\ state\ =\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9ad4104c9463be0f246699a116eb647a63}{PosState::PosAndPost}});}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{struct_position}{Position}}\ \mbox{\hyperlink{class_rob_frame_a6e0cd7ffcb6222818a7fed8d7033f6af}{Interpolate}}(\mbox{\hyperlink{struct_position}{Position}}\&\ origin,\ \mbox{\hyperlink{struct_position}{Position}}\&\ dest,\ \textcolor{keywordtype}{int}\ range,\ \textcolor{keywordtype}{int}\ step\ =\ 1);}
+\DoxyCodeLine{00049\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a0109bec096c54541b961148c78dce119}{RobFrame}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{struct_posture}{Posture}}\ \mbox{\hyperlink{class_rob_frame_ac24967ede35dcc595ca8f720f421bb70}{PtHome}}\ \{0,\ 45,\ -\/90,\ 0,\ -\/45,\ 0\};}
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{class_rob_frame_a24209acf7cbbbf1cb2147a15068ccf28}{Commands}}\ \mbox{\hyperlink{class_rob_frame_a24209acf7cbbbf1cb2147a15068ccf28}{Commands}};}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_kinematic}{Kinematic}}\ \mbox{\hyperlink{class_rob_frame_a1599e8f613fd7b7196758cae7fce017b}{Kinematics}};}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{class_position_factory}{PositionFactory}}\ \mbox{\hyperlink{class_rob_frame_a5e76a9553b0bc1c9d3dfd7f0c003f322}{PosFactory}};}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{class_actuator}{Actuator}}\ \mbox{\hyperlink{class_rob_frame_a06fc734ade46594b938fa3401ec83531}{Joint1}};}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{class_actuator}{Actuator}}\ \mbox{\hyperlink{class_rob_frame_ab97cde618ef57b02cde2c811895491a2}{Joint2}};}
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{class_actuator}{Actuator}}\ \mbox{\hyperlink{class_rob_frame_a032b295eeb12e02d54ca629bdaab99be}{Joint3}};}
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{class_actuator}{Actuator}}\ \mbox{\hyperlink{class_rob_frame_aad62150931dd77f06f9f8ddb2dcd1c2a}{Joint4}};}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{class_actuator}{Actuator}}\ \mbox{\hyperlink{class_rob_frame_ad59a1128c31affac8f4e49a91e7e3ecb}{Joint5}};}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{class_actuator}{Actuator}}\ \mbox{\hyperlink{class_rob_frame_a74ec840797d60e9da02277ac88dbe1b3}{Joint6}};}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rob_frame_a23c099f0ed25c01099b53fa0d05150ed}{Setup}}();}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rob_frame_a0d79cee264204461c4445cf72c4481b7}{Decode}}(String\ data);}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rob_frame_a92a99cf7219b60ab8d2c349fd2eef6a8}{GotoDeg}}(\mbox{\hyperlink{class_actuator}{Actuator}}\&\ jt,\ \textcolor{keywordtype}{int}\ dest);}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_rob_frame_a56384fc3894ecdaf39252f703ee91873}{LoopPositions}}();}
+\DoxyCodeLine{00089\ \ \ \ \ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{PosState}}\ \mbox{\hyperlink{class_rob_frame_ae5ef3c45bc8b82d75e47f422addeb56f}{Drive}}(\mbox{\hyperlink{struct_posture}{Posture}}\ pt);}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{PosState}}\ \mbox{\hyperlink{class_rob_frame_ae5ef3c45bc8b82d75e47f422addeb56f}{Drive}}(\mbox{\hyperlink{struct_position}{Position}}\ ps);}
+\DoxyCodeLine{00097\ \ \ \ \ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{PosState}}\ \mbox{\hyperlink{class_rob_frame_a3b51be372803d4960a457d2c03378314}{LDrive}}(\mbox{\hyperlink{struct_position}{Position}}\ ps);}
+\DoxyCodeLine{00098\ \};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ROBFRAMEWORK\_H\_}}
+
+\end{DoxyCode}

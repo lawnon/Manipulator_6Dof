@@ -1,0 +1,35 @@
+var _types_8hpp =
+[
+    [ "DhParameters", "struct_dh_parameters.html", "struct_dh_parameters" ],
+    [ "DhParam", "struct_dh_param.html", "struct_dh_param" ],
+    [ "Matrix4x4", "struct_matrix4x4.html", "struct_matrix4x4" ],
+    [ "Position", "struct_position.html", "struct_position" ],
+    [ "sPosition", "structs_position.html", "structs_position" ],
+    [ "Posture", "struct_posture.html", "struct_posture" ],
+    [ "sPosture", "structs_posture.html", "structs_posture" ],
+    [ "PosData", "struct_pos_data.html", "struct_pos_data" ],
+    [ "Command", "struct_command.html", "struct_command" ],
+    [ "IDENTIFIER_LEN", "_types_8hpp.html#a43bd60836203349a1c745d0d29bf7706", null ],
+    [ "NOK", "_types_8hpp.html#aa915e8300da7583ca4d3b00103a7575f", null ],
+    [ "OFF", "_types_8hpp.html#a29e413f6725b2ba32d165ffaa35b01e5", null ],
+    [ "OK", "_types_8hpp.html#aba51915c87d64af47fb1cc59348961c9", null ],
+    [ "ON", "_types_8hpp.html#ad76d1750a6cdeebd506bfcd6752554d2", null ],
+    [ "byte", "_types_8hpp.html#a7528222f65ad403ee1a88ff2b56f9fb7", null ],
+    [ "int16", "_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7", null ],
+    [ "int32", "_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb", null ],
+    [ "int64", "_types_8hpp.html#a94809bdb48183ff3ef62935d56f5c1e0", null ],
+    [ "int8", "_types_8hpp.html#a07fb256c1077eea7a7726e948cc8ff0e", null ],
+    [ "uint16", "_types_8hpp.html#ab7078bf13036f3e78534da3ad4149dc2", null ],
+    [ "uint32", "_types_8hpp.html#a64f26d016a5425e1ebd955aba74def0e", null ],
+    [ "uint64", "_types_8hpp.html#aeefdb2888fa3c58f2454ef004419e6a5", null ],
+    [ "uint8", "_types_8hpp.html#a34ecedcf03a70dc91e4616212d79267d", null ],
+    [ "word", "_types_8hpp.html#a7472db64fa0f8253f82d7452d6786968", null ],
+    [ "PosState", "_types_8hpp.html#a3bb467bb1e8d9236bdea09a4367a11a9", [
+      [ "Invalid", "_types_8hpp.html#a3bb467bb1e8d9236bdea09a4367a11a9a4bbb8f967da6d1a610596d7257179c2b", null ],
+      [ "Undefined", "_types_8hpp.html#a3bb467bb1e8d9236bdea09a4367a11a9aec0fc0100c4fc1ce4eea230c3dc10360", null ],
+      [ "Defined", "_types_8hpp.html#a3bb467bb1e8d9236bdea09a4367a11a9ac4e9522d7b3c8c652f7f0333ff436eec", null ],
+      [ "Position", "_types_8hpp.html#a3bb467bb1e8d9236bdea09a4367a11a9a52f5e0bc3859bc5f5e25130b6c7e8881", null ],
+      [ "Posture", "_types_8hpp.html#a3bb467bb1e8d9236bdea09a4367a11a9abfc18820466994dc2a2ed40ce8f92e62", null ],
+      [ "PosAndPost", "_types_8hpp.html#a3bb467bb1e8d9236bdea09a4367a11a9ad4104c9463be0f246699a116eb647a63", null ]
+    ] ]
+];

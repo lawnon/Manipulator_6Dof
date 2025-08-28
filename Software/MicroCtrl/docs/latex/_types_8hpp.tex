@@ -1,0 +1,224 @@
+\doxysection{Types.\+hpp-\/Dateireferenz}
+\hypertarget{_types_8hpp}{}\label{_types_8hpp}\index{Types.hpp@{Types.hpp}}
+{\ttfamily \#include $<$WString.\+h$>$}\newline
+Include-\/\+Abhängigkeitsdiagramm für Types.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{_types_8hpp__incl}
+\end{center}
+\end{figure}
+Dieser Graph zeigt, welche Datei direkt oder indirekt diese Datei enthält\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_types_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Klassen}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_dh_parameters}{Dh\+Parameters}}
+\item 
+struct \mbox{\hyperlink{struct_dh_param}{Dh\+Param}}
+\item 
+struct \mbox{\hyperlink{struct_matrix4x4}{Matrix4x4}}
+\item 
+struct \mbox{\hyperlink{struct_position}{Position}}
+\item 
+struct \mbox{\hyperlink{structs_position}{s\+Position}}
+\item 
+struct \mbox{\hyperlink{struct_posture}{Posture}}
+\item 
+struct \mbox{\hyperlink{structs_posture}{s\+Posture}}
+\item 
+struct \mbox{\hyperlink{struct_pos_data}{Pos\+Data}}
+\item 
+struct \mbox{\hyperlink{struct_command}{Command}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Makrodefinitionen}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_types_8hpp_a43bd60836203349a1c745d0d29bf7706}{IDENTIFIER\+\_\+\+LEN}}~16
+\item 
+\#define \mbox{\hyperlink{_types_8hpp_aba51915c87d64af47fb1cc59348961c9}{OK}}~1
+\item 
+\#define \mbox{\hyperlink{_types_8hpp_aa915e8300da7583ca4d3b00103a7575f}{NOK}}~-\/1
+\item 
+\#define \mbox{\hyperlink{_types_8hpp_ad76d1750a6cdeebd506bfcd6752554d2}{ON}}~1
+\item 
+\#define \mbox{\hyperlink{_types_8hpp_a29e413f6725b2ba32d165ffaa35b01e5}{OFF}}~0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typdefinitionen}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{_types_8hpp_a07fb256c1077eea7a7726e948cc8ff0e}{int8}} = signed char
+\item 
+using \mbox{\hyperlink{_types_8hpp_a34ecedcf03a70dc91e4616212d79267d}{uint8}} = unsigned char
+\item 
+using \mbox{\hyperlink{_types_8hpp_a7528222f65ad403ee1a88ff2b56f9fb7}{byte}} = unsigned char
+\item 
+using \mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} = short int
+\item 
+using \mbox{\hyperlink{_types_8hpp_ab7078bf13036f3e78534da3ad4149dc2}{uint16}} = unsigned short int
+\item 
+using \mbox{\hyperlink{_types_8hpp_a7472db64fa0f8253f82d7452d6786968}{word}} = unsigned int
+\item 
+using \mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} = long int
+\item 
+using \mbox{\hyperlink{_types_8hpp_a64f26d016a5425e1ebd955aba74def0e}{uint32}} = unsigned long int
+\item 
+using \mbox{\hyperlink{_types_8hpp_a94809bdb48183ff3ef62935d56f5c1e0}{int64}} = long long int
+\item 
+using \mbox{\hyperlink{_types_8hpp_aeefdb2888fa3c58f2454ef004419e6a5}{uint64}} = unsigned long long int
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Aufzählungen}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{Pos\+State}} \{ \newline
+\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9a4bbb8f967da6d1a610596d7257179c2b}{Invalid}} = -\/1
+, \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9aec0fc0100c4fc1ce4eea230c3dc10360}{Undefined}} = 0
+, \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9ac4e9522d7b3c8c652f7f0333ff436eec}{Defined}} = 1
+, \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9a52f5e0bc3859bc5f5e25130b6c7e8881}{Position}} = 4
+, \newline
+\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9abfc18820466994dc2a2ed40ce8f92e62}{Posture}} = 8
+, \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9ad4104c9463be0f246699a116eb647a63}{Pos\+And\+Post}} = 16
+ \}
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{_types_8hpp_doc-define-members}
+\doxysubsection{Makro-\/\+Dokumentation}
+\Hypertarget{_types_8hpp_a43bd60836203349a1c745d0d29bf7706}\index{Types.hpp@{Types.hpp}!IDENTIFIER\_LEN@{IDENTIFIER\_LEN}}
+\index{IDENTIFIER\_LEN@{IDENTIFIER\_LEN}!Types.hpp@{Types.hpp}}
+\doxysubsubsection{\texorpdfstring{IDENTIFIER\_LEN}{IDENTIFIER\_LEN}}
+{\footnotesize\ttfamily \label{_types_8hpp_a43bd60836203349a1c745d0d29bf7706} 
+\#define IDENTIFIER\+\_\+\+LEN~16}
+
+\Hypertarget{_types_8hpp_aa915e8300da7583ca4d3b00103a7575f}\index{Types.hpp@{Types.hpp}!NOK@{NOK}}
+\index{NOK@{NOK}!Types.hpp@{Types.hpp}}
+\doxysubsubsection{\texorpdfstring{NOK}{NOK}}
+{\footnotesize\ttfamily \label{_types_8hpp_aa915e8300da7583ca4d3b00103a7575f} 
+\#define NOK~-\/1}
+
+\Hypertarget{_types_8hpp_a29e413f6725b2ba32d165ffaa35b01e5}\index{Types.hpp@{Types.hpp}!OFF@{OFF}}
+\index{OFF@{OFF}!Types.hpp@{Types.hpp}}
+\doxysubsubsection{\texorpdfstring{OFF}{OFF}}
+{\footnotesize\ttfamily \label{_types_8hpp_a29e413f6725b2ba32d165ffaa35b01e5} 
+\#define OFF~0}
+
+\Hypertarget{_types_8hpp_aba51915c87d64af47fb1cc59348961c9}\index{Types.hpp@{Types.hpp}!OK@{OK}}
+\index{OK@{OK}!Types.hpp@{Types.hpp}}
+\doxysubsubsection{\texorpdfstring{OK}{OK}}
+{\footnotesize\ttfamily \label{_types_8hpp_aba51915c87d64af47fb1cc59348961c9} 
+\#define OK~1}
+
+\Hypertarget{_types_8hpp_ad76d1750a6cdeebd506bfcd6752554d2}\index{Types.hpp@{Types.hpp}!ON@{ON}}
+\index{ON@{ON}!Types.hpp@{Types.hpp}}
+\doxysubsubsection{\texorpdfstring{ON}{ON}}
+{\footnotesize\ttfamily \label{_types_8hpp_ad76d1750a6cdeebd506bfcd6752554d2} 
+\#define ON~1}
+
+
+
+\label{doc-typedef-members}
+\Hypertarget{_types_8hpp_doc-typedef-members}
+\doxysubsection{Dokumentation der benutzerdefinierten Typen}
+\Hypertarget{_types_8hpp_a7528222f65ad403ee1a88ff2b56f9fb7}\index{Types.hpp@{Types.hpp}!byte@{byte}}
+\index{byte@{byte}!Types.hpp@{Types.hpp}}
+\doxysubsubsection{\texorpdfstring{byte}{byte}}
+{\footnotesize\ttfamily \label{_types_8hpp_a7528222f65ad403ee1a88ff2b56f9fb7} 
+using \mbox{\hyperlink{_types_8hpp_a7528222f65ad403ee1a88ff2b56f9fb7}{byte}} = unsigned char}
+
+\Hypertarget{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}\index{Types.hpp@{Types.hpp}!int16@{int16}}
+\index{int16@{int16}!Types.hpp@{Types.hpp}}
+\doxysubsubsection{\texorpdfstring{int16}{int16}}
+{\footnotesize\ttfamily \label{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7} 
+using \mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} = short int}
+
+\Hypertarget{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}\index{Types.hpp@{Types.hpp}!int32@{int32}}
+\index{int32@{int32}!Types.hpp@{Types.hpp}}
+\doxysubsubsection{\texorpdfstring{int32}{int32}}
+{\footnotesize\ttfamily \label{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb} 
+using \mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} = long int}
+
+\Hypertarget{_types_8hpp_a94809bdb48183ff3ef62935d56f5c1e0}\index{Types.hpp@{Types.hpp}!int64@{int64}}
+\index{int64@{int64}!Types.hpp@{Types.hpp}}
+\doxysubsubsection{\texorpdfstring{int64}{int64}}
+{\footnotesize\ttfamily \label{_types_8hpp_a94809bdb48183ff3ef62935d56f5c1e0} 
+using \mbox{\hyperlink{_types_8hpp_a94809bdb48183ff3ef62935d56f5c1e0}{int64}} = long long int}
+
+\Hypertarget{_types_8hpp_a07fb256c1077eea7a7726e948cc8ff0e}\index{Types.hpp@{Types.hpp}!int8@{int8}}
+\index{int8@{int8}!Types.hpp@{Types.hpp}}
+\doxysubsubsection{\texorpdfstring{int8}{int8}}
+{\footnotesize\ttfamily \label{_types_8hpp_a07fb256c1077eea7a7726e948cc8ff0e} 
+using \mbox{\hyperlink{_types_8hpp_a07fb256c1077eea7a7726e948cc8ff0e}{int8}} = signed char}
+
+\Hypertarget{_types_8hpp_ab7078bf13036f3e78534da3ad4149dc2}\index{Types.hpp@{Types.hpp}!uint16@{uint16}}
+\index{uint16@{uint16}!Types.hpp@{Types.hpp}}
+\doxysubsubsection{\texorpdfstring{uint16}{uint16}}
+{\footnotesize\ttfamily \label{_types_8hpp_ab7078bf13036f3e78534da3ad4149dc2} 
+using \mbox{\hyperlink{_types_8hpp_ab7078bf13036f3e78534da3ad4149dc2}{uint16}} = unsigned short int}
+
+\Hypertarget{_types_8hpp_a64f26d016a5425e1ebd955aba74def0e}\index{Types.hpp@{Types.hpp}!uint32@{uint32}}
+\index{uint32@{uint32}!Types.hpp@{Types.hpp}}
+\doxysubsubsection{\texorpdfstring{uint32}{uint32}}
+{\footnotesize\ttfamily \label{_types_8hpp_a64f26d016a5425e1ebd955aba74def0e} 
+using \mbox{\hyperlink{_types_8hpp_a64f26d016a5425e1ebd955aba74def0e}{uint32}} = unsigned long int}
+
+\Hypertarget{_types_8hpp_aeefdb2888fa3c58f2454ef004419e6a5}\index{Types.hpp@{Types.hpp}!uint64@{uint64}}
+\index{uint64@{uint64}!Types.hpp@{Types.hpp}}
+\doxysubsubsection{\texorpdfstring{uint64}{uint64}}
+{\footnotesize\ttfamily \label{_types_8hpp_aeefdb2888fa3c58f2454ef004419e6a5} 
+using \mbox{\hyperlink{_types_8hpp_aeefdb2888fa3c58f2454ef004419e6a5}{uint64}} = unsigned long long int}
+
+\Hypertarget{_types_8hpp_a34ecedcf03a70dc91e4616212d79267d}\index{Types.hpp@{Types.hpp}!uint8@{uint8}}
+\index{uint8@{uint8}!Types.hpp@{Types.hpp}}
+\doxysubsubsection{\texorpdfstring{uint8}{uint8}}
+{\footnotesize\ttfamily \label{_types_8hpp_a34ecedcf03a70dc91e4616212d79267d} 
+using \mbox{\hyperlink{_types_8hpp_a34ecedcf03a70dc91e4616212d79267d}{uint8}} = unsigned char}
+
+\Hypertarget{_types_8hpp_a7472db64fa0f8253f82d7452d6786968}\index{Types.hpp@{Types.hpp}!word@{word}}
+\index{word@{word}!Types.hpp@{Types.hpp}}
+\doxysubsubsection{\texorpdfstring{word}{word}}
+{\footnotesize\ttfamily \label{_types_8hpp_a7472db64fa0f8253f82d7452d6786968} 
+using \mbox{\hyperlink{_types_8hpp_a7472db64fa0f8253f82d7452d6786968}{word}} = unsigned int}
+
+
+
+\label{doc-enum-members}
+\Hypertarget{_types_8hpp_doc-enum-members}
+\doxysubsection{Dokumentation der Aufzählungstypen}
+\Hypertarget{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}\index{Types.hpp@{Types.hpp}!PosState@{PosState}}
+\index{PosState@{PosState}!Types.hpp@{Types.hpp}}
+\doxysubsubsection{\texorpdfstring{PosState}{PosState}}
+{\footnotesize\ttfamily \label{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9} 
+enum class \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{Pos\+State}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}[2]{Aufzählungswerte}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Invalid@{Invalid}!Types.hpp@{Types.hpp}}\index{Types.hpp@{Types.hpp}!Invalid@{Invalid}}}\Hypertarget{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9a4bbb8f967da6d1a610596d7257179c2b}\label{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9a4bbb8f967da6d1a610596d7257179c2b} 
+Invalid&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Undefined@{Undefined}!Types.hpp@{Types.hpp}}\index{Types.hpp@{Types.hpp}!Undefined@{Undefined}}}\Hypertarget{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9aec0fc0100c4fc1ce4eea230c3dc10360}\label{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9aec0fc0100c4fc1ce4eea230c3dc10360} 
+Undefined&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Defined@{Defined}!Types.hpp@{Types.hpp}}\index{Types.hpp@{Types.hpp}!Defined@{Defined}}}\Hypertarget{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9ac4e9522d7b3c8c652f7f0333ff436eec}\label{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9ac4e9522d7b3c8c652f7f0333ff436eec} 
+Defined&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Position@{Position}!Types.hpp@{Types.hpp}}\index{Types.hpp@{Types.hpp}!Position@{Position}}}\Hypertarget{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9a52f5e0bc3859bc5f5e25130b6c7e8881}\label{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9a52f5e0bc3859bc5f5e25130b6c7e8881} 
+Position&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Posture@{Posture}!Types.hpp@{Types.hpp}}\index{Types.hpp@{Types.hpp}!Posture@{Posture}}}\Hypertarget{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9abfc18820466994dc2a2ed40ce8f92e62}\label{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9abfc18820466994dc2a2ed40ce8f92e62} 
+Posture&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PosAndPost@{PosAndPost}!Types.hpp@{Types.hpp}}\index{Types.hpp@{Types.hpp}!PosAndPost@{PosAndPost}}}\Hypertarget{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9ad4104c9463be0f246699a116eb647a63}\label{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9ad4104c9463be0f246699a116eb647a63} 
+Pos\+And\+Post&\\
+\hline
+
+\end{DoxyEnumFields}

@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Manipulator mit sechs Freiheitsgraden: Commands Klassenreferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Manipulator mit sechs Freiheitsgraden<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Konstruktion, Modellierung und Programmierung der inversen Kinematik eines experimentellen Manipulators mit sechs Freiheitsgraden</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_commands.html','','class_commands-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Commands Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_commands_8hpp_source.html">Commands.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Zusammengehörigkeiten von Commands:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_commands__coll__graph.png" border="0" usemap="#a_commands_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_commands_coll__map" id="a_commands_coll__map">
+<area shape="rect" title=" " alt="" coords="427,101,515,127"/>
+<area shape="rect" href="class_rob_frame.html" title=" " alt="" coords="369,197,452,223"/>
+<area shape="poly" title=" " alt="" coords="425,135,409,152,405,163,404,174,409,197,404,198,399,175,400,162,404,149,422,132"/>
+<area shape="poly" title=" " alt="" coords="463,191,475,183,484,172,488,161,487,150,477,128,481,126,492,149,493,162,489,175,479,187,466,195"/>
+<area shape="rect" href="class_kinematic.html" title=" " alt="" coords="611,393,691,419"/>
+<area shape="poly" title=" " alt="" coords="466,211,556,221,597,231,623,245,632,268,640,310,652,393,647,394,635,311,627,270,619,248,595,236,556,226,465,216"/>
+<area shape="rect" href="class_position_factory.html" title=" " alt="" coords="107,393,221,419"/>
+<area shape="poly" title=" " alt="" coords="356,214,301,216,243,221,193,232,174,239,162,248,151,265,145,284,144,325,152,363,162,392,157,394,147,365,139,325,140,283,147,263,158,245,172,235,191,227,242,216,301,210,356,208"/>
+<area shape="rect" href="class_actuator.html" title=" " alt="" coords="373,393,443,419"/>
+<area shape="poly" title=" " alt="" coords="418,236,419,246,422,308,419,370,414,394,409,392,413,369,417,308,413,247,412,237"/>
+<area shape="rect" href="struct_posture.html" title=" " alt="" coords="291,101,357,127"/>
+<area shape="poly" title=" " alt="" coords="329,139,334,156,342,172,357,185,375,195,373,200,354,189,338,175,329,158,324,141"/>
+<area shape="poly" title=" " alt="" coords="597,398,570,387,546,371,533,356,525,340,518,309,512,279,505,264,493,249,473,234,451,224,453,219,476,230,497,245,510,261,517,277,523,308,530,338,537,353,550,367,573,383,599,393"/>
+<area shape="rect" href="struct_dh_param.html" title=" " alt="" coords="714,197,790,223"/>
+<area shape="poly" title=" " alt="" coords="757,237,756,266,752,301,743,338,725,371,709,386,691,396,688,391,706,381,721,368,738,336,747,300,751,266,751,236"/>
+<area shape="poly" title=" " alt="" coords="212,385,234,368,244,352,250,337,252,306,255,276,262,260,274,245,296,229,320,219,369,209,370,215,322,224,298,234,278,249,266,263,260,277,257,307,255,338,249,354,238,371,215,389"/>
+<area shape="rect" href="struct_pos_data.html" title=" " alt="" coords="56,197,128,223"/>
+<area shape="poly" title=" " alt="" coords="87,236,82,265,79,300,83,335,96,368,108,381,124,391,122,396,105,385,91,371,77,336,74,300,77,265,82,235"/>
+<area shape="rect" href="structs_position.html" title=" " alt="" coords="105,101,181,127"/>
+<area shape="poly" title=" " alt="" coords="134,140,116,175,102,198,97,196,111,172,129,138"/>
+<area shape="rect" href="structs_posture.html" title=" " alt="" coords="5,101,80,127"/>
+<area shape="poly" title=" " alt="" coords="50,139,62,172,81,196,77,199,58,175,45,141"/>
+<area shape="poly" title=" " alt="" coords="380,385,371,370,359,337,355,308,359,279,371,245,380,232,391,221,395,225,384,235,376,248,364,280,360,308,364,335,376,368,385,382"/>
+<area shape="rect" href="struct_command.html" title=" " alt="" coords="430,5,511,31"/>
+<area shape="poly" title=" " alt="" coords="473,45,473,101,468,101,468,45"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">Legende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Öffentliche Typen</h2></td></tr>
+<tr class="memitem:a6fd45c4fef16717c5216deb15e7804a8" id="r_a6fd45c4fef16717c5216deb15e7804a8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8">Tags</a> { <br />
+&#160;&#160;<a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8a83c15d30aed7a3bf490200691870347e">World</a>
+, <a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8a839dfe7cc3e6524eb3c0c37766fab859">Jt1</a>
+, <a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8a9e18b666fd06fd56e85751cd0e5ff685">Jt2</a>
+, <a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8a413cd3b50d5bdcce8299fdca041fcfa2">Jt3</a>
+, <br />
+&#160;&#160;<a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8a41b6071684e3d828d014a827ca895f5b">Jt4</a>
+, <a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8a0f7a0e2cc6a45f928f14ca47ea15b0c2">Jt5</a>
+, <a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8aaa904b547f29d578cc70d546bfd70189">Jt6</a>
+, <a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8ac6abec7ef2494cfff7c0ede418fa6b86">Jt7</a>
+, <br />
+&#160;&#160;<a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8aa326387b63cc946f4693116b52647a0f">Here</a>
+, <a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8a7f69d9bffd1fae17cfa19249a815b787">Joints</a>
+, <a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8a1ce07b1ff3fd4a6bb1a59e8f21fb5c62">GoHome</a>
+, <a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8ab22ab8aa9a4b0d0485d55ea59a7914d2">Drive</a>
+, <br />
+&#160;&#160;<a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8a40d42d3ebae2009070e171083ce39418">JDrive</a>
+, <a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8a2cb935c7ff03805fbc8484d50994d93d">LDrive</a>
+, <a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8a7f0979ce08131c167a9e5a87b249e954">Speed</a>
+, <a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8a71ca5e22b97fcd0d5b9374cb01f03013">Accuracy</a>
+, <br />
+&#160;&#160;<a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8a517b6fe9ec7127c62dc976b17cac82e4">Debug</a>
+, <a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8a0e57b84f7471c2169059f738bac35ffb">Voltage</a>
+, <a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8a029deda531b0768cfa1e7395f078a1b9">Position</a>
+, <a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8af67582c3ddb70c5225f4177ac38c1263">Posture</a>
+, <br />
+&#160;&#160;<a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8a9644bfae156574d9c9807384b2d31a92">ListPositions</a>
+, <a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8aafae696d182efbbb5f041310edf1f1ad">ListPostures</a>
+, <a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8abe0d6ad7cd5cd9c54077f6644a93ab76">ListAllPositions</a>
+, <a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8a82bc031095e4373d632bb1d2d6ed15b5">JLoop</a>
+, <br />
+&#160;&#160;<a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8a99cb87104125f3ac687c48db3921fe8e">LLoop</a>
+, <a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8afc4b882541ff39ef3ddff62e640c21d8">Rotate</a>
+, <a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8ae0ab2b51d34a5b768dbcf012133bc2f5">RotStep</a>
+, <a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8a813be1d187bea6ea03e3282ecf497b17">Help</a>
+<br />
+ }</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:a0d24ef48a276e134b924730025a8e310" id="r_a0d24ef48a276e134b924730025a8e310"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d24ef48a276e134b924730025a8e310">Commands</a> ()</td></tr>
+<tr class="memitem:a7fd840c6e665a1ab1a69890d518decfc" id="r_a7fd840c6e665a1ab1a69890d518decfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_command.html">Command</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7fd840c6e665a1ab1a69890d518decfc">operator[]</a> (int index)</td></tr>
+<tr class="memitem:a8e62a64369c9015c34dcb3d2f099f8b1" id="r_a8e62a64369c9015c34dcb3d2f099f8b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_command.html">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e62a64369c9015c34dcb3d2f099f8b1">Parse</a> (String &amp;input)</td></tr>
+<tr class="memitem:acc6d0ec106077f9e68db8025dbc8ba2f" id="r_acc6d0ec106077f9e68db8025dbc8ba2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_command.html">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acc6d0ec106077f9e68db8025dbc8ba2f">Get</a> (<a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8">Tags</a> tag)</td></tr>
+<tr class="memitem:a1241df0a3683b61993b113257d1fa6a0" id="r_a1241df0a3683b61993b113257d1fa6a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1241df0a3683b61993b113257d1fa6a0">Init</a> (<a class="el" href="class_rob_frame.html">RobFrame</a> *robFrame)</td></tr>
+<tr class="memitem:ac7b086b85506ae1adc8c1376210dcd19" id="r_ac7b086b85506ae1adc8c1376210dcd19"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7b086b85506ae1adc8c1376210dcd19">GetParam</a> (int cIndex)</td></tr>
+<tr class="memitem:a74bd542f1e4ef1007d20b981efcfa6cd" id="r_a74bd542f1e4ef1007d20b981efcfa6cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a74bd542f1e4ef1007d20b981efcfa6cd">SetParam</a> (int cIndex, float val)</td></tr>
+<tr class="memitem:a225d04681a6a503bf17f4d029d12d0aa" id="r_a225d04681a6a503bf17f4d029d12d0aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a225d04681a6a503bf17f4d029d12d0aa">Delay</a> ()</td></tr>
+<tr class="memitem:ac0b1b48d52f46ddae311724604b8ded3" id="r_ac0b1b48d52f46ddae311724604b8ded3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac0b1b48d52f46ddae311724604b8ded3">List</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attribute</h2></td></tr>
+<tr class="memitem:abd11dc46852631dacaf892620d29d94d" id="r_abd11dc46852631dacaf892620d29d94d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd11dc46852631dacaf892620d29d94d">_range</a> = 0</td></tr>
+<tr class="memitem:a17911699addf8637b700a00637c7ccdb" id="r_a17911699addf8637b700a00637c7ccdb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_rob_frame.html">RobFrame</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a17911699addf8637b700a00637c7ccdb">_robFrame</a></td></tr>
+<tr class="memitem:a5455e825e9de10b97988dae5744e678c" id="r_a5455e825e9de10b97988dae5744e678c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_command.html">Command</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5455e825e9de10b97988dae5744e678c">_list</a> [<a class="el" href="_commands_8hpp.html#a263a398098e98c047598d65206325186">COMMAND_LEN</a>]</td></tr>
+</table>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Dokumentation der Aufzählungstypen</h2>
+<a id="a6fd45c4fef16717c5216deb15e7804a8" name="a6fd45c4fef16717c5216deb15e7804a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fd45c4fef16717c5216deb15e7804a8">&#9670;&#160;</a></span>Tags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8">Commands::Tags</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8a83c15d30aed7a3bf490200691870347e" name="a6fd45c4fef16717c5216deb15e7804a8a83c15d30aed7a3bf490200691870347e"></a>World&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8a839dfe7cc3e6524eb3c0c37766fab859" name="a6fd45c4fef16717c5216deb15e7804a8a839dfe7cc3e6524eb3c0c37766fab859"></a>Jt1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8a9e18b666fd06fd56e85751cd0e5ff685" name="a6fd45c4fef16717c5216deb15e7804a8a9e18b666fd06fd56e85751cd0e5ff685"></a>Jt2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8a413cd3b50d5bdcce8299fdca041fcfa2" name="a6fd45c4fef16717c5216deb15e7804a8a413cd3b50d5bdcce8299fdca041fcfa2"></a>Jt3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8a41b6071684e3d828d014a827ca895f5b" name="a6fd45c4fef16717c5216deb15e7804a8a41b6071684e3d828d014a827ca895f5b"></a>Jt4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8a0f7a0e2cc6a45f928f14ca47ea15b0c2" name="a6fd45c4fef16717c5216deb15e7804a8a0f7a0e2cc6a45f928f14ca47ea15b0c2"></a>Jt5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8aaa904b547f29d578cc70d546bfd70189" name="a6fd45c4fef16717c5216deb15e7804a8aaa904b547f29d578cc70d546bfd70189"></a>Jt6&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8ac6abec7ef2494cfff7c0ede418fa6b86" name="a6fd45c4fef16717c5216deb15e7804a8ac6abec7ef2494cfff7c0ede418fa6b86"></a>Jt7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8aa326387b63cc946f4693116b52647a0f" name="a6fd45c4fef16717c5216deb15e7804a8aa326387b63cc946f4693116b52647a0f"></a>Here&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8a7f69d9bffd1fae17cfa19249a815b787" name="a6fd45c4fef16717c5216deb15e7804a8a7f69d9bffd1fae17cfa19249a815b787"></a>Joints&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8a1ce07b1ff3fd4a6bb1a59e8f21fb5c62" name="a6fd45c4fef16717c5216deb15e7804a8a1ce07b1ff3fd4a6bb1a59e8f21fb5c62"></a>GoHome&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8ab22ab8aa9a4b0d0485d55ea59a7914d2" name="a6fd45c4fef16717c5216deb15e7804a8ab22ab8aa9a4b0d0485d55ea59a7914d2"></a>Drive&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8a40d42d3ebae2009070e171083ce39418" name="a6fd45c4fef16717c5216deb15e7804a8a40d42d3ebae2009070e171083ce39418"></a>JDrive&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8a2cb935c7ff03805fbc8484d50994d93d" name="a6fd45c4fef16717c5216deb15e7804a8a2cb935c7ff03805fbc8484d50994d93d"></a>LDrive&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8a7f0979ce08131c167a9e5a87b249e954" name="a6fd45c4fef16717c5216deb15e7804a8a7f0979ce08131c167a9e5a87b249e954"></a>Speed&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8a71ca5e22b97fcd0d5b9374cb01f03013" name="a6fd45c4fef16717c5216deb15e7804a8a71ca5e22b97fcd0d5b9374cb01f03013"></a>Accuracy&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8a517b6fe9ec7127c62dc976b17cac82e4" name="a6fd45c4fef16717c5216deb15e7804a8a517b6fe9ec7127c62dc976b17cac82e4"></a>Debug&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8a0e57b84f7471c2169059f738bac35ffb" name="a6fd45c4fef16717c5216deb15e7804a8a0e57b84f7471c2169059f738bac35ffb"></a>Voltage&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8a029deda531b0768cfa1e7395f078a1b9" name="a6fd45c4fef16717c5216deb15e7804a8a029deda531b0768cfa1e7395f078a1b9"></a>Position&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8af67582c3ddb70c5225f4177ac38c1263" name="a6fd45c4fef16717c5216deb15e7804a8af67582c3ddb70c5225f4177ac38c1263"></a>Posture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8a9644bfae156574d9c9807384b2d31a92" name="a6fd45c4fef16717c5216deb15e7804a8a9644bfae156574d9c9807384b2d31a92"></a>ListPositions&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8aafae696d182efbbb5f041310edf1f1ad" name="a6fd45c4fef16717c5216deb15e7804a8aafae696d182efbbb5f041310edf1f1ad"></a>ListPostures&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8abe0d6ad7cd5cd9c54077f6644a93ab76" name="a6fd45c4fef16717c5216deb15e7804a8abe0d6ad7cd5cd9c54077f6644a93ab76"></a>ListAllPositions&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8a82bc031095e4373d632bb1d2d6ed15b5" name="a6fd45c4fef16717c5216deb15e7804a8a82bc031095e4373d632bb1d2d6ed15b5"></a>JLoop&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8a99cb87104125f3ac687c48db3921fe8e" name="a6fd45c4fef16717c5216deb15e7804a8a99cb87104125f3ac687c48db3921fe8e"></a>LLoop&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8afc4b882541ff39ef3ddff62e640c21d8" name="a6fd45c4fef16717c5216deb15e7804a8afc4b882541ff39ef3ddff62e640c21d8"></a>Rotate&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8ae0ab2b51d34a5b768dbcf012133bc2f5" name="a6fd45c4fef16717c5216deb15e7804a8ae0ab2b51d34a5b768dbcf012133bc2f5"></a>RotStep&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6fd45c4fef16717c5216deb15e7804a8a813be1d187bea6ea03e3282ecf497b17" name="a6fd45c4fef16717c5216deb15e7804a8a813be1d187bea6ea03e3282ecf497b17"></a>Help&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="a0d24ef48a276e134b924730025a8e310" name="a0d24ef48a276e134b924730025a8e310"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d24ef48a276e134b924730025a8e310">&#9670;&#160;</a></span>Commands()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Commands::Commands </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="a225d04681a6a503bf17f4d029d12d0aa" name="a225d04681a6a503bf17f4d029d12d0aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a225d04681a6a503bf17f4d029d12d0aa">&#9670;&#160;</a></span>Delay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Commands::Delay </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acc6d0ec106077f9e68db8025dbc8ba2f" name="acc6d0ec106077f9e68db8025dbc8ba2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc6d0ec106077f9e68db8025dbc8ba2f">&#9670;&#160;</a></span>Get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_command.html">Command</a> Commands::Get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a6fd45c4fef16717c5216deb15e7804a8">Commands::Tags</a></td>          <td class="paramname"><span class="paramname"><em>tag</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7b086b85506ae1adc8c1376210dcd19" name="ac7b086b85506ae1adc8c1376210dcd19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7b086b85506ae1adc8c1376210dcd19">&#9670;&#160;</a></span>GetParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Commands::GetParam </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cIndex</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_commands_ac7b086b85506ae1adc8c1376210dcd19_cgraph.png" border="0" usemap="#aclass_commands_ac7b086b85506ae1adc8c1376210dcd19_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_commands_ac7b086b85506ae1adc8c1376210dcd19_cgraph" id="aclass_commands_ac7b086b85506ae1adc8c1376210dcd19_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,160,31"/>
+<area shape="rect" href="namespace_logger.html#a83c3562c93d0101fc7fadc86e0482b2d" title=" " alt="" coords="208,5,295,31"/>
+<area shape="poly" title=" " alt="" coords="160,15,194,15,194,21,160,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1241df0a3683b61993b113257d1fa6a0" name="a1241df0a3683b61993b113257d1fa6a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1241df0a3683b61993b113257d1fa6a0">&#9670;&#160;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Commands::Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_rob_frame.html">RobFrame</a> *</td>          <td class="paramname"><span class="paramname"><em>robFrame</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0b1b48d52f46ddae311724604b8ded3" name="ac0b1b48d52f46ddae311724604b8ded3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0b1b48d52f46ddae311724604b8ded3">&#9670;&#160;</a></span>List()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Commands::List </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_commands_ac0b1b48d52f46ddae311724604b8ded3_cgraph.png" border="0" usemap="#aclass_commands_ac0b1b48d52f46ddae311724604b8ded3_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_commands_ac0b1b48d52f46ddae311724604b8ded3_cgraph" id="aclass_commands_ac0b1b48d52f46ddae311724604b8ded3_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,123,31"/>
+<area shape="rect" href="namespace_logger.html#a83c3562c93d0101fc7fadc86e0482b2d" title=" " alt="" coords="171,5,257,31"/>
+<area shape="poly" title=" " alt="" coords="123,15,157,15,157,21,123,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7fd840c6e665a1ab1a69890d518decfc" name="a7fd840c6e665a1ab1a69890d518decfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fd840c6e665a1ab1a69890d518decfc">&#9670;&#160;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_command.html">Command</a> &amp; Commands::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e62a64369c9015c34dcb3d2f099f8b1" name="a8e62a64369c9015c34dcb3d2f099f8b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e62a64369c9015c34dcb3d2f099f8b1">&#9670;&#160;</a></span>Parse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_command.html">Command</a> Commands::Parse </td>
+          <td>(</td>
+          <td class="paramtype">String &amp;</td>          <td class="paramname"><span class="paramname"><em>input</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_commands_a8e62a64369c9015c34dcb3d2f099f8b1_cgraph.png" border="0" usemap="#aclass_commands_a8e62a64369c9015c34dcb3d2f099f8b1_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_commands_a8e62a64369c9015c34dcb3d2f099f8b1_cgraph" id="aclass_commands_a8e62a64369c9015c34dcb3d2f099f8b1_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,136,31"/>
+<area shape="rect" href="namespace_logger.html#a83c3562c93d0101fc7fadc86e0482b2d" title=" " alt="" coords="184,5,271,31"/>
+<area shape="poly" title=" " alt="" coords="136,15,170,15,170,21,136,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a74bd542f1e4ef1007d20b981efcfa6cd" name="a74bd542f1e4ef1007d20b981efcfa6cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74bd542f1e4ef1007d20b981efcfa6cd">&#9670;&#160;</a></span>SetParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Commands::SetParam </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>cIndex</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_commands_a74bd542f1e4ef1007d20b981efcfa6cd_cgraph.png" border="0" usemap="#aclass_commands_a74bd542f1e4ef1007d20b981efcfa6cd_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_commands_a74bd542f1e4ef1007d20b981efcfa6cd_cgraph" id="aclass_commands_a74bd542f1e4ef1007d20b981efcfa6cd_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,160,31"/>
+<area shape="rect" href="namespace_logger.html#a83c3562c93d0101fc7fadc86e0482b2d" title=" " alt="" coords="208,5,295,31"/>
+<area shape="poly" title=" " alt="" coords="160,15,194,15,194,21,160,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="a5455e825e9de10b97988dae5744e678c" name="a5455e825e9de10b97988dae5744e678c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5455e825e9de10b97988dae5744e678c">&#9670;&#160;</a></span>_list</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_command.html">Command</a> Commands::_list[<a class="el" href="_commands_8hpp.html#a263a398098e98c047598d65206325186">COMMAND_LEN</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd11dc46852631dacaf892620d29d94d" name="abd11dc46852631dacaf892620d29d94d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd11dc46852631dacaf892620d29d94d">&#9670;&#160;</a></span>_range</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Commands::_range = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a17911699addf8637b700a00637c7ccdb" name="a17911699addf8637b700a00637c7ccdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17911699addf8637b700a00637c7ccdb">&#9670;&#160;</a></span>_robFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_rob_frame.html">RobFrame</a>* Commands::_robFrame</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien:<ul>
+<li><a class="el" href="_commands_8hpp_source.html">Commands.hpp</a></li>
+<li><a class="el" href="_commands_8cpp.html">Commands.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_commands.html">Commands</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

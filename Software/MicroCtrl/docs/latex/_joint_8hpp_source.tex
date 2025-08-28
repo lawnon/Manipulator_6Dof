@@ -1,0 +1,48 @@
+\doxysection{Joint.\+hpp}
+\hypertarget{_joint_8hpp_source}{}\label{_joint_8hpp_source}\index{Joint.hpp@{Joint.hpp}}
+\mbox{\hyperlink{_joint_8hpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Program:\ Joint.hpp}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ Description:\ header\ file\ with\ wrapper\ fucktions}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for\ Servo.h\ class\ object}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Autor:\ Chukwunonso\ Bob-\/Anyeji}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ Date:\ 09.06.2024}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ JOINT\_H\_}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ JOINT\_H\_}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <Servo.h>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_rob_frame}{RobFrame}};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_joint_a79a7a4715b2166714e039d7c7c5ea3b4}{Joint}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_joint_a6df676c80853e1567f78bff9227b73c7}{\_offset}};}
+\DoxyCodeLine{00019\ \ \ \mbox{\hyperlink{class_rob_frame}{RobFrame}}*\ \mbox{\hyperlink{class_joint_a02d80f85bd7239163cc13e96a1f0c9c3}{\_robFrame}};}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \mbox{\hyperlink{class_joint_a79a7a4715b2166714e039d7c7c5ea3b4}{Joint}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_joint_a5beaba330e590d9401e0301bbc534cbd}{Init}}(\mbox{\hyperlink{class_rob_frame}{RobFrame}}*\ robFrame);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_joint_a5e71dc39bfb2d34d92177dc5c63c4154}{write}}(\textcolor{keywordtype}{int}\ degree);}
+\DoxyCodeLine{00026\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_joint_a12e015bded7c6d7a14172cb1645b0085}{attach}}(\textcolor{keywordtype}{int}\ pin);}
+\DoxyCodeLine{00027\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_joint_a12e015bded7c6d7a14172cb1645b0085}{attach}}(\textcolor{keywordtype}{int}\ pin,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_joint_a510105955cbc83cfcd47be5a4e9ec36f}{min}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_joint_ae8caba5de6f6cde9037860321efc185f}{max}});}
+\DoxyCodeLine{00028\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_joint_a12e015bded7c6d7a14172cb1645b0085}{attach}}(\textcolor{keywordtype}{int}\ pin,\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_joint_a510105955cbc83cfcd47be5a4e9ec36f}{min}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_joint_ae8caba5de6f6cde9037860321efc185f}{max}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_joint_a96b640f487cf0a5b08c46c4d80b9cb8c}{offset}});}
+\DoxyCodeLine{00029\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_joint_a7a0926696f1999a60c7b8744daa47575}{limit}}(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_joint_a510105955cbc83cfcd47be5a4e9ec36f}{min}},\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_joint_ae8caba5de6f6cde9037860321efc185f}{max}});}
+\DoxyCodeLine{00030\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_joint_a595af6dcf0b3affd8ba7d6adce3e4a96}{read}}();}
+\DoxyCodeLine{00031\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_joint_a0d059496cb456da255b4b0efe471acc7}{read2}}();}
+\DoxyCodeLine{00032\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_joint_a793aee2829d81b31a374c01bbca80087}{readMicroseconds}}();}
+\DoxyCodeLine{00033\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_joint_ae7bda5750f3439adb895f08000a9c1e3}{delta}}(\textcolor{keywordtype}{int}\ dest);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id}\ =\ 0;}
+\DoxyCodeLine{00036\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_joint_a96b640f487cf0a5b08c46c4d80b9cb8c}{offset}}\ =\ 0;}
+\DoxyCodeLine{00037\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_joint_a510105955cbc83cfcd47be5a4e9ec36f}{min}}\ =\ 1;}
+\DoxyCodeLine{00038\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_joint_ae8caba5de6f6cde9037860321efc185f}{max}}\ =\ 180;}
+\DoxyCodeLine{00039\ \ \ Servo\ \mbox{\hyperlink{class_joint_a197b816f370ab6dda8f4b65e29a62d2f}{servo}};}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ JOINT\_H\_}}
+
+\end{DoxyCode}

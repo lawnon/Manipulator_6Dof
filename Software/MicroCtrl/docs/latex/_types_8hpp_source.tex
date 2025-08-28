@@ -1,0 +1,137 @@
+\doxysection{Types.\+hpp}
+\hypertarget{_types_8hpp_source}{}\label{_types_8hpp_source}\index{Types.hpp@{Types.hpp}}
+\mbox{\hyperlink{_types_8hpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Program:\ Types.hpp}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ Description:\ header\ file\ containing\ Global\ Structs}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Autor:\ Chukwunonso\ Bob-\/Anyeji}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Date:\ 09.06.2024}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ NOTE:}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ 1)\ Grosse\ eines\ Pointers\ im\ ATM-\/2560\ Kontrollern\ sind\ 16bit}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ 2)\ Das\ System/Compiler\ basiert\ auf\ dem\ C++\ 11\ mit\ einem\ LP32\ Daten\ Modell\ d.h.}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ 2.1)\ Charakter\ =>\ 8\ Bit}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ 2.2)\ Integer\ =>\ 16\ Bit}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ 2.3)\ Long\ Interger\ =>\ 32\ Bit}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ 2.4)\ Long\ Long\ Interger\ =>\ 64\ Bit}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#ifndef\ TYPES\_H\_}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ TYPES\_H\_}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ Type\ Definitionen}}
+\DoxyCodeLine{00020\ \textcolor{keyword}{using\ }\mbox{\hyperlink{_types_8hpp_a07fb256c1077eea7a7726e948cc8ff0e}{int8}}\ =\ \textcolor{keywordtype}{signed}\ char\ ;}
+\DoxyCodeLine{00021\ \textcolor{keyword}{using\ }\mbox{\hyperlink{_types_8hpp_a34ecedcf03a70dc91e4616212d79267d}{uint8}}\ =\ \textcolor{keywordtype}{unsigned}\ char;}
+\DoxyCodeLine{00022\ \textcolor{keyword}{using\ }\mbox{\hyperlink{_types_8hpp_a7528222f65ad403ee1a88ff2b56f9fb7}{byte}}\ =\ \textcolor{keywordtype}{unsigned}\ char;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{using\ }\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}}\ =\ \textcolor{keywordtype}{short}\ int;}
+\DoxyCodeLine{00025\ \textcolor{keyword}{using\ }\mbox{\hyperlink{_types_8hpp_ab7078bf13036f3e78534da3ad4149dc2}{uint16}}\ =\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{short}\ int;}
+\DoxyCodeLine{00026\ \textcolor{keyword}{using\ }\mbox{\hyperlink{_types_8hpp_a7472db64fa0f8253f82d7452d6786968}{word}}\ =\ \textcolor{keywordtype}{unsigned}\ int;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{using\ }\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}}\ =\ \textcolor{keywordtype}{long}\ int;}
+\DoxyCodeLine{00029\ \textcolor{keyword}{using\ }\mbox{\hyperlink{_types_8hpp_a64f26d016a5425e1ebd955aba74def0e}{uint32}}\ =\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ int;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{using\ }\mbox{\hyperlink{_types_8hpp_a94809bdb48183ff3ef62935d56f5c1e0}{int64}}\ =\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ int;}
+\DoxyCodeLine{00032\ \textcolor{keyword}{using\ }\mbox{\hyperlink{_types_8hpp_aeefdb2888fa3c58f2454ef004419e6a5}{uint64}}\ =\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{long}\ \textcolor{keywordtype}{long}\ int;}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{//\ Variable\ Definitionen}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ IDENTIFIER\_LEN\ 16}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ OK\ 1}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ NOK\ -\/1}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ ON\ 1}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ OFF\ 0}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#include\ <WString.h>}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{/*\ Kinematik\ Struct\ */}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{comment}{/*\ Denavit\ Hartenberg-\/Parameter\ for\ all\ Joints\ */}}
+\DoxyCodeLine{00046\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_dh_parameters}{DhParameters}}\{}
+\DoxyCodeLine{00047\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_dh_parameters_a988d7891c59732ade4cd43cc9957ef1b}{alpha}}[6]\ =\ \{\ 90.000,\ \ \ 0.000,\ \ \ 0.000,\ \ \ 0.000,\ \ 0.000,\ 0.000\};}
+\DoxyCodeLine{00048\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_dh_parameters_adb5c2f2bc462fbffbb0b50c3fe15d466}{beta}}[6]\ \ =\ \{-\/90.000,\ \ \ 0.000,\ \ 90.000,\ -\/90.000,\ 90.000,\ 0.000\};}
+\DoxyCodeLine{00049\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_dh_parameters_abe94f1558b8bfb0e15d93e2288d262c8}{theta}}[6]\ =\ \{\ \ 0.000,\ \ \ 0.000,\ \ \ 0.000,\ \ \ 0.000,\ \ 0.000,\ 0.000\};}
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_dh_parameters_a375792ff5f70009c06b7bc8a9c4b4beb}{link}}[6]\ \ =\ \{\ \ 0.000,\ 258.300,\ 281.516,\ \ \ 0.000,\ 74.710,\ 0.000\};}
+\DoxyCodeLine{00051\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_dh_parameters_ab77830c6d903b7c8ba473dc78024ff8b}{disp}}[6]\ \ =\ \{\ \ 0.000,\ \ \ 0.000,\ \ \ 0.000,\ \ \ 0.000,\ \ 0.000,\ 0.000\};}
+\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{comment}{/*\ Denavit\ Hartenberg\_Parameter\ Discription\ */}}
+\DoxyCodeLine{00055\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_dh_param}{DhParam}}\{}
+\DoxyCodeLine{00056\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_dh_param_abd19e60ce902d191bdf76ebee1fdc799}{alpha}};}
+\DoxyCodeLine{00057\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_dh_param_a99833329fa1558c845f895acaca2dadb}{beta}};}
+\DoxyCodeLine{00058\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_dh_param_aed032bb1822e5b121dc0ef0371503803}{theta}};}
+\DoxyCodeLine{00059\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_dh_param_a63eabaae890a35a87289ec2bfa08ebb4}{link}};}
+\DoxyCodeLine{00060\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_dh_param_aff89356c98f664268ff01b5729a3668e}{disp}};}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{comment}{/*\ Structs\ Containing\ a\ 4\ by\ 4\ Matrix\ */}}
+\DoxyCodeLine{00064\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_matrix4x4}{Matrix4x4}}\{}
+\DoxyCodeLine{00065\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_matrix4x4_a0bfa818afb3d78b7f72c287fceb2de3a}{m11}}[4];\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_matrix4x4_ad7a5e2c4d1d91900e490666bd821e2d8}{m12}}[4];\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_matrix4x4_ae6287773933b0488a0571fb5b7d7c59d}{m13}}[4];\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_matrix4x4_ac70287966e523f1c975d23259e245ece}{m14}}[4];}
+\DoxyCodeLine{00066\ \};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \textcolor{comment}{/*\ Position\ Data\ State\ */}}
+\DoxyCodeLine{00069\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{PosState}}\{}
+\DoxyCodeLine{00070\ \ \ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9a4bbb8f967da6d1a610596d7257179c2b}{Invalid}}\ =\ -\/1,}
+\DoxyCodeLine{00071\ \ \ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9aec0fc0100c4fc1ce4eea230c3dc10360}{Undefined}}\ =\ 0,}
+\DoxyCodeLine{00072\ \ \ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9ac4e9522d7b3c8c652f7f0333ff436eec}{Defined}}\ =\ 1,}
+\DoxyCodeLine{00073\ \ \ \mbox{\hyperlink{struct_position}{Position}}\ =\ 4,}
+\DoxyCodeLine{00074\ \ \ \mbox{\hyperlink{struct_posture}{Posture}}\ =\ 8,}
+\DoxyCodeLine{00075\ \ \ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9ad4104c9463be0f246699a116eb647a63}{PosAndPost}}\ =\ 16}
+\DoxyCodeLine{00076\ \};}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \textcolor{comment}{/*\ Location\ and\ Orientation\ Struct\ */}}
+\DoxyCodeLine{00079\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_position}{Position}}\{}
+\DoxyCodeLine{00080\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_position_a85da30ee51269b4fec802f1a788fcf67}{X}};}
+\DoxyCodeLine{00081\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_position_adf2e52dcab744085e856f384924b2483}{Y}};}
+\DoxyCodeLine{00082\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_position_abe77f45f9c332325fe4f7bedde4e1ced}{Z}};}
+\DoxyCodeLine{00083\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_position_a6a47e47fa19ad8df653d8e9aff385220}{A}};}
+\DoxyCodeLine{00084\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_position_a1876a6b841e39865bda05d782408e543}{B}};}
+\DoxyCodeLine{00085\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_position_aeb2497fe30b3eea2d734e7181d8f6296}{C}};}
+\DoxyCodeLine{00086\ \};}
+\DoxyCodeLine{00087\ \textcolor{comment}{/*\ Location\ and\ Orientation\ Struct\ */}}
+\DoxyCodeLine{00088\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structs_position}{sPosition}}\{}
+\DoxyCodeLine{00089\ \ \ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{structs_position_ae673736f0af31cf0966bf9272c5b702e}{X}};}
+\DoxyCodeLine{00090\ \ \ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{structs_position_ac3572f4b223bd294c8902df0856508a6}{Y}};}
+\DoxyCodeLine{00091\ \ \ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{structs_position_ab640d89486920654dc39171feb169eb7}{Z}};}
+\DoxyCodeLine{00092\ \ \ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{structs_position_ac5cc91079b0f35d20fd6e52e52b7ae7b}{A}};}
+\DoxyCodeLine{00093\ \ \ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{structs_position_ab4e627859378adf1b0f072f6ff0aa116}{B}};}
+\DoxyCodeLine{00094\ \ \ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{structs_position_aa0e4db392ba44ea4a2b29e096ef4f75f}{C}};}
+\DoxyCodeLine{00095\ \};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{comment}{/*\ Angular\ Constelation\ of\ Joints\ */}}
+\DoxyCodeLine{00098\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_posture}{Posture}}\{}
+\DoxyCodeLine{00099\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_posture_aa657326ae64de0d97caa2d74934079ad}{Jt1}};}
+\DoxyCodeLine{00100\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_posture_a8c6ccfdd2d40eaefd6f0e115f1267a85}{Jt2}};}
+\DoxyCodeLine{00101\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_posture_a7cb39876480dfd8af6af66c468eb4056}{Jt3}};}
+\DoxyCodeLine{00102\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_posture_a5cac789f8d04273ba0972cb314764d51}{Jt4}};}
+\DoxyCodeLine{00103\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_posture_ad6e76120ace64086025a5aa2273c6fd7}{Jt5}};}
+\DoxyCodeLine{00104\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_posture_a2716d150602c4a8e58e1c1221fc3ca4f}{Jt6}};}
+\DoxyCodeLine{00105\ \};}
+\DoxyCodeLine{00106\ \textcolor{comment}{/*\ Angular\ Constelation\ of\ Joints\ */}}
+\DoxyCodeLine{00107\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structs_posture}{sPosture}}\{}
+\DoxyCodeLine{00108\ \ \ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{structs_posture_ab41461aacc674dc4b6ca6319351715c7}{Jt1}};}
+\DoxyCodeLine{00109\ \ \ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{structs_posture_af81bfc2572430241a6b030a5101dec08}{Jt2}};}
+\DoxyCodeLine{00110\ \ \ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{structs_posture_a402cea424567a2c9387bd1dd5e73a6f5}{Jt3}};}
+\DoxyCodeLine{00111\ \ \ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{structs_posture_a588ac2d54968ee3edef726844eb5a3d7}{Jt4}};}
+\DoxyCodeLine{00112\ \ \ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{structs_posture_a548579433233644fc008f6cdbc3f76ba}{Jt5}};}
+\DoxyCodeLine{00113\ \ \ \textcolor{keywordtype}{short}\ \mbox{\hyperlink{structs_posture_a601d52aca6c419b681aa43cd967f86ce}{Jt6}};}
+\DoxyCodeLine{00114\ \};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \textcolor{comment}{/*\ Position\ and\ Posture\ Data\ */}}
+\DoxyCodeLine{00117\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_pos_data}{PosData}}\{}
+\DoxyCodeLine{00118\ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{struct_pos_data_adf95ed530e50d8737cc9bafa091f4bdd}{Identifier}}[\mbox{\hyperlink{_types_8hpp_a43bd60836203349a1c745d0d29bf7706}{IDENTIFIER\_LEN}}];}
+\DoxyCodeLine{00119\ \ \ \mbox{\hyperlink{structs_position}{sPosition}}\ \mbox{\hyperlink{struct_pos_data_a313e8463420ef07f60733b34c373938a}{Position}};}
+\DoxyCodeLine{00120\ \ \ \mbox{\hyperlink{structs_posture}{sPosture}}\ \mbox{\hyperlink{struct_pos_data_af3af4ca44d95624c12882f1830af4916}{Posture}};}
+\DoxyCodeLine{00121\ \};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \textcolor{comment}{/*\ Command\ Struct\ */}}
+\DoxyCodeLine{00124\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_command}{Command}}\ \{}
+\DoxyCodeLine{00125\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_command_ae56ad83cd1907266d529308f83dbea64}{Id}};}
+\DoxyCodeLine{00126\ \ \ String\ \mbox{\hyperlink{struct_command_a337af97298443cda98e268a6954d71f9}{Name}};}
+\DoxyCodeLine{00127\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_command_a08d4c67eac067ef43f5c67d063956fc7}{Value}};}
+\DoxyCodeLine{00128\ \ \ String\ \mbox{\hyperlink{struct_command_abd7816abfb531a1aa1b34ba3dffaf452}{Content}};}
+\DoxyCodeLine{00129\ \};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TYPES\_H\_}}
+
+\end{DoxyCode}

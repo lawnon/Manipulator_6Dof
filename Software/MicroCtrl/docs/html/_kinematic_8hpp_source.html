@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Manipulator mit sechs Freiheitsgraden: Kinematic.hpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Manipulator mit sechs Freiheitsgraden<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Konstruktion, Modellierung und Programmierung der inversen Kinematik eines experimentellen Manipulators mit sechs Freiheitsgraden</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_kinematic_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Kinematic.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_kinematic_8hpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// Datei: Kinematic.hpp</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">//</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// Beschreibung: Berechnungen und Prozeduren zur Ermittlung der Vor- und</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//               Inverskinematik.</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//               Dieser Klasser die TinyMatrixMath Klasse von &quot;Micah Mundy&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//               https://github.com/m516/TinyMatrixMath?tab=MIT-1-ov-file</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">//               zu handhaben von Matrizen</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// Autor: Chukwunonso Bob-Anyeji</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// Datum: 09.06.2024@12-00</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// Akualisert: 27.08.2025@16-54</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifndef KINEMATIC_H_</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#define KINEMATIC_H_</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;WString.h&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;HardwareSerial.h&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;TinyMatrixMath.hpp&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="_types_8hpp.html">Types.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="_logger_8hpp.html">Logger.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keywordtype">float</span> <a class="code hl_function" href="_kinematic_8hpp.html#a339acfaac605b5bd73624297f191cc39">getRad</a>(<span class="keywordtype">float</span> deg);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">float</span> <a class="code hl_function" href="_kinematic_8hpp.html#ac5b83beb5fe73e1a9f3d2fe3166f3d53">getDeg</a>(<span class="keywordtype">float</span> rad);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">float</span> <a class="code hl_function" href="_kinematic_8hpp.html#a8e014290d3f9707d1c2d06717e815a8b">sign</a>(<span class="keywordtype">float</span> value);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">class </span><a class="code hl_class" href="class_rob_frame.html">RobFrame</a>;</div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_kinematic.html">   44</a></span><span class="keyword">class </span><a class="code hl_function" href="class_kinematic.html#a0265e971c0ac4a847df7d625553becc2">Kinematic</a></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>{</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>   <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_kinematic.html#a821c9777b72f62efc15efc0f3fd9ebb6">   48</a></span>        <a class="code hl_class" href="class_rob_frame.html">RobFrame</a>* <a class="code hl_variable" href="class_kinematic.html#a821c9777b72f62efc15efc0f3fd9ebb6">_robFrame</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        tmm::Matrix&lt;4,4&gt; <a class="code hl_function" href="class_kinematic.html#aeed737d1bf66f66d517f2907eb02c907">jointTMatrix</a>(<a class="code hl_struct" href="struct_dh_param.html">DhParam</a> dhPar);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        tmm::Matrix&lt;4,4&gt; <a class="code hl_function" href="class_kinematic.html#aed35a0f15575c44ba0f62a42059e69c9">armTMatrix</a>(<a class="code hl_struct" href="struct_posture.html">Posture</a> posture);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        tmm::Matrix&lt;3,3&gt; <a class="code hl_function" href="class_kinematic.html#abe03b372a5c961fd58f5fe5b66eacaea">read3x3</a>(tmm::Matrix&lt;4,4&gt; tMat);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <a class="code hl_function" href="class_kinematic.html#a0265e971c0ac4a847df7d625553becc2">Kinematic</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_kinematic.html#a457c2d43f95669a6b1e4f901d6060d12">Init</a>(<a class="code hl_class" href="class_rob_frame.html">RobFrame</a>* robFrame);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_kinematic.html#ac7021e76ae9927bcb2d17dbe8ef6a75a">printMatrix</a>(tmm::Matrix&lt;4,4&gt; mat, String heading);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <a class="code hl_struct" href="struct_position.html">Position</a> <a class="code hl_function" href="class_kinematic.html#aef4876851b52873dff6f8b9e0d388121">fdKinematic</a>(<a class="code hl_struct" href="struct_posture.html">Posture</a> posture);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <a class="code hl_struct" href="struct_posture.html">Posture</a> <a class="code hl_function" href="class_kinematic.html#ae03636412ecab6f5a53e8c3d9069e369">ivKinematic</a>(<a class="code hl_struct" href="struct_position.html">Position</a> position);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <a class="code hl_struct" href="struct_posture.html">Posture</a> <a class="code hl_function" href="class_kinematic.html#aa1cba6a32703d92f41c29ee59884f89a">ivPosition</a>(<a class="code hl_struct" href="struct_position.html">Position</a> position);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <a class="code hl_struct" href="struct_posture.html">Posture</a> <a class="code hl_function" href="class_kinematic.html#aff4c2e3469d83e34b80eb8afe3b48a62">ivOrientation</a>(<a class="code hl_struct" href="struct_posture.html">Posture</a> posture, <a class="code hl_struct" href="struct_position.html">Position</a> ps);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_kinematic.html#aca4dfca1bccd583a780fcde8f165300f">   91</a></span>        <a class="code hl_struct" href="struct_dh_param.html">DhParam</a> <a class="code hl_variable" href="class_kinematic.html#aca4dfca1bccd583a780fcde8f165300f">dhPar1</a> = {};</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_kinematic.html#a416e1ad35dbd73a70e9f9b7e6687fc2e">   93</a></span>        <a class="code hl_struct" href="struct_dh_param.html">DhParam</a> <a class="code hl_variable" href="class_kinematic.html#a416e1ad35dbd73a70e9f9b7e6687fc2e">dhPar2</a> = {};</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="class_kinematic.html#ab2b575c21bb6fa8f244b6a8323ff1d01">   95</a></span>        <a class="code hl_struct" href="struct_dh_param.html">DhParam</a> <a class="code hl_variable" href="class_kinematic.html#ab2b575c21bb6fa8f244b6a8323ff1d01">dhPar3</a> = {};</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_kinematic.html#a6fbd761660db59f6ef4502d1c4ff4373">   97</a></span>        <a class="code hl_struct" href="struct_dh_param.html">DhParam</a> <a class="code hl_variable" href="class_kinematic.html#a6fbd761660db59f6ef4502d1c4ff4373">dhPar4</a> = {};</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_kinematic.html#af210936436479006efd37a2015aa1f88">   99</a></span>        <a class="code hl_struct" href="struct_dh_param.html">DhParam</a> <a class="code hl_variable" href="class_kinematic.html#af210936436479006efd37a2015aa1f88">dhPar5</a> = {};</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_kinematic.html#a68c34857a9669241e219e4103769929d">  101</a></span>        <a class="code hl_struct" href="struct_dh_param.html">DhParam</a> <a class="code hl_variable" href="class_kinematic.html#a68c34857a9669241e219e4103769929d">dhPar6</a> = {};</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_kinematic.html#a296ed2287e766671dc62fa9efd987e0d">  104</a></span>        tmm::Matrix&lt;4,4&gt; <a class="code hl_variable" href="class_kinematic.html#a296ed2287e766671dc62fa9efd987e0d">tMat01</a> = {};</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="class_kinematic.html#a75840e5338b0c2ee8f38b046d5871786">  106</a></span>        tmm::Matrix&lt;4,4&gt; <a class="code hl_variable" href="class_kinematic.html#a75840e5338b0c2ee8f38b046d5871786">tMat12</a> = {};</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="class_kinematic.html#a8d4db42c4c7a644b3300f1ed41da16fe">  108</a></span>        tmm::Matrix&lt;4,4&gt; <a class="code hl_variable" href="class_kinematic.html#a8d4db42c4c7a644b3300f1ed41da16fe">tMat23</a> = {};</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="class_kinematic.html#afb57ce4e7710ce443246b03eee1d18f0">  110</a></span>        tmm::Matrix&lt;4,4&gt; <a class="code hl_variable" href="class_kinematic.html#afb57ce4e7710ce443246b03eee1d18f0">tMat34</a> = {};</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="class_kinematic.html#ae936eb9caf1d13a5693fd3f2c6aa4189">  112</a></span>        tmm::Matrix&lt;4,4&gt; <a class="code hl_variable" href="class_kinematic.html#ae936eb9caf1d13a5693fd3f2c6aa4189">tMat45</a> = {};</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="class_kinematic.html#a18651a831e84c4d5f16b3ef6f74de1a4">  114</a></span>        tmm::Matrix&lt;4,4&gt; <a class="code hl_variable" href="class_kinematic.html#a18651a831e84c4d5f16b3ef6f74de1a4">tMat56</a> = {};</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="class_kinematic.html#af8bb55ae1bbbf02056f9b725a8305290">  117</a></span>        tmm::Matrix&lt;4,4&gt; <a class="code hl_variable" href="class_kinematic.html#af8bb55ae1bbbf02056f9b725a8305290">tMat02</a> = {};</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="class_kinematic.html#a1c929ef6e6f83f273e0837cc8b63fad5">  119</a></span>        tmm::Matrix&lt;4,4&gt; <a class="code hl_variable" href="class_kinematic.html#a1c929ef6e6f83f273e0837cc8b63fad5">tMat03</a> = {};</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="class_kinematic.html#a9718bcbc57735496c88fa89be250c6c0">  121</a></span>        tmm::Matrix&lt;4,4&gt; <a class="code hl_variable" href="class_kinematic.html#a9718bcbc57735496c88fa89be250c6c0">tMat04</a> = {};</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="class_kinematic.html#a4e45d9b1d954d4df521780898a0ba4c5">  123</a></span>        tmm::Matrix&lt;4,4&gt; <a class="code hl_variable" href="class_kinematic.html#a4e45d9b1d954d4df521780898a0ba4c5">tMat05</a> = {};</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="class_kinematic.html#a924f5c0bc876c87ebe92b6ddfb0a5310">  125</a></span>        tmm::Matrix&lt;4,4&gt; <a class="code hl_variable" href="class_kinematic.html#a924f5c0bc876c87ebe92b6ddfb0a5310">tMat06</a> = {};</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>};</div>
+</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="preprocessor">#endif </span><span class="comment">// KINEMATIC_H_</span></div>
+<div class="ttc" id="a_kinematic_8hpp_html_a339acfaac605b5bd73624297f191cc39"><div class="ttname"><a href="_kinematic_8hpp.html#a339acfaac605b5bd73624297f191cc39">getRad</a></div><div class="ttdeci">float getRad(float deg)</div><div class="ttdoc">Grad zu Radiant.</div><div class="ttdef"><b>Definition</b> Kinematic.cpp:26</div></div>
+<div class="ttc" id="a_kinematic_8hpp_html_a8e014290d3f9707d1c2d06717e815a8b"><div class="ttname"><a href="_kinematic_8hpp.html#a8e014290d3f9707d1c2d06717e815a8b">sign</a></div><div class="ttdeci">float sign(float value)</div><div class="ttdoc">Signum Funktion.</div><div class="ttdef"><b>Definition</b> Kinematic.cpp:36</div></div>
+<div class="ttc" id="a_kinematic_8hpp_html_ac5b83beb5fe73e1a9f3d2fe3166f3d53"><div class="ttname"><a href="_kinematic_8hpp.html#ac5b83beb5fe73e1a9f3d2fe3166f3d53">getDeg</a></div><div class="ttdeci">float getDeg(float rad)</div><div class="ttdoc">Radiant zu Grad.</div><div class="ttdef"><b>Definition</b> Kinematic.cpp:31</div></div>
+<div class="ttc" id="a_logger_8hpp_html"><div class="ttname"><a href="_logger_8hpp.html">Logger.hpp</a></div></div>
+<div class="ttc" id="a_types_8hpp_html"><div class="ttname"><a href="_types_8hpp.html">Types.hpp</a></div></div>
+<div class="ttc" id="aclass_kinematic_html_a0265e971c0ac4a847df7d625553becc2"><div class="ttname"><a href="class_kinematic.html#a0265e971c0ac4a847df7d625553becc2">Kinematic::Kinematic</a></div><div class="ttdeci">Kinematic()</div><div class="ttdoc">Kinematic Klassen-Objekt.</div><div class="ttdef"><b>Definition</b> Kinematic.cpp:41</div></div>
+<div class="ttc" id="aclass_kinematic_html_a18651a831e84c4d5f16b3ef6f74de1a4"><div class="ttname"><a href="class_kinematic.html#a18651a831e84c4d5f16b3ef6f74de1a4">Kinematic::tMat56</a></div><div class="ttdeci">tmm::Matrix&lt; 4, 4 &gt; tMat56</div><div class="ttdoc">Achsen-Transformations-Matrix 6.</div><div class="ttdef"><b>Definition</b> Kinematic.hpp:114</div></div>
+<div class="ttc" id="aclass_kinematic_html_a1c929ef6e6f83f273e0837cc8b63fad5"><div class="ttname"><a href="class_kinematic.html#a1c929ef6e6f83f273e0837cc8b63fad5">Kinematic::tMat03</a></div><div class="ttdeci">tmm::Matrix&lt; 4, 4 &gt; tMat03</div><div class="ttdoc">Verkettet Transformations-Matrix 03.</div><div class="ttdef"><b>Definition</b> Kinematic.hpp:119</div></div>
+<div class="ttc" id="aclass_kinematic_html_a296ed2287e766671dc62fa9efd987e0d"><div class="ttname"><a href="class_kinematic.html#a296ed2287e766671dc62fa9efd987e0d">Kinematic::tMat01</a></div><div class="ttdeci">tmm::Matrix&lt; 4, 4 &gt; tMat01</div><div class="ttdoc">Achsen-Transformations-Matrix 1.</div><div class="ttdef"><b>Definition</b> Kinematic.hpp:104</div></div>
+<div class="ttc" id="aclass_kinematic_html_a416e1ad35dbd73a70e9f9b7e6687fc2e"><div class="ttname"><a href="class_kinematic.html#a416e1ad35dbd73a70e9f9b7e6687fc2e">Kinematic::dhPar2</a></div><div class="ttdeci">DhParam dhPar2</div><div class="ttdoc">D-H Parameter Gelenk 2.</div><div class="ttdef"><b>Definition</b> Kinematic.hpp:93</div></div>
+<div class="ttc" id="aclass_kinematic_html_a457c2d43f95669a6b1e4f901d6060d12"><div class="ttname"><a href="class_kinematic.html#a457c2d43f95669a6b1e4f901d6060d12">Kinematic::Init</a></div><div class="ttdeci">void Init(RobFrame *robFrame)</div><div class="ttdoc">Initialisierung Zeiger zuweisung.</div><div class="ttdef"><b>Definition</b> Kinematic.cpp:51</div></div>
+<div class="ttc" id="aclass_kinematic_html_a4e45d9b1d954d4df521780898a0ba4c5"><div class="ttname"><a href="class_kinematic.html#a4e45d9b1d954d4df521780898a0ba4c5">Kinematic::tMat05</a></div><div class="ttdeci">tmm::Matrix&lt; 4, 4 &gt; tMat05</div><div class="ttdoc">Verkettet Transformations-Matrix 05.</div><div class="ttdef"><b>Definition</b> Kinematic.hpp:123</div></div>
+<div class="ttc" id="aclass_kinematic_html_a68c34857a9669241e219e4103769929d"><div class="ttname"><a href="class_kinematic.html#a68c34857a9669241e219e4103769929d">Kinematic::dhPar6</a></div><div class="ttdeci">DhParam dhPar6</div><div class="ttdoc">D-H Parameter Gelenk 6.</div><div class="ttdef"><b>Definition</b> Kinematic.hpp:101</div></div>
+<div class="ttc" id="aclass_kinematic_html_a6fbd761660db59f6ef4502d1c4ff4373"><div class="ttname"><a href="class_kinematic.html#a6fbd761660db59f6ef4502d1c4ff4373">Kinematic::dhPar4</a></div><div class="ttdeci">DhParam dhPar4</div><div class="ttdoc">D-H Parameter Gelenk 4.</div><div class="ttdef"><b>Definition</b> Kinematic.hpp:97</div></div>
+<div class="ttc" id="aclass_kinematic_html_a75840e5338b0c2ee8f38b046d5871786"><div class="ttname"><a href="class_kinematic.html#a75840e5338b0c2ee8f38b046d5871786">Kinematic::tMat12</a></div><div class="ttdeci">tmm::Matrix&lt; 4, 4 &gt; tMat12</div><div class="ttdoc">Achsen-Transformations-Matrix 2.</div><div class="ttdef"><b>Definition</b> Kinematic.hpp:106</div></div>
+<div class="ttc" id="aclass_kinematic_html_a821c9777b72f62efc15efc0f3fd9ebb6"><div class="ttname"><a href="class_kinematic.html#a821c9777b72f62efc15efc0f3fd9ebb6">Kinematic::_robFrame</a></div><div class="ttdeci">RobFrame * _robFrame</div><div class="ttdoc">Zeiger zu RobFrame.</div><div class="ttdef"><b>Definition</b> Kinematic.hpp:48</div></div>
+<div class="ttc" id="aclass_kinematic_html_a8d4db42c4c7a644b3300f1ed41da16fe"><div class="ttname"><a href="class_kinematic.html#a8d4db42c4c7a644b3300f1ed41da16fe">Kinematic::tMat23</a></div><div class="ttdeci">tmm::Matrix&lt; 4, 4 &gt; tMat23</div><div class="ttdoc">Achsen-Transformations-Matrix 3.</div><div class="ttdef"><b>Definition</b> Kinematic.hpp:108</div></div>
+<div class="ttc" id="aclass_kinematic_html_a924f5c0bc876c87ebe92b6ddfb0a5310"><div class="ttname"><a href="class_kinematic.html#a924f5c0bc876c87ebe92b6ddfb0a5310">Kinematic::tMat06</a></div><div class="ttdeci">tmm::Matrix&lt; 4, 4 &gt; tMat06</div><div class="ttdoc">Verkettet Transformations-Matrix 06.</div><div class="ttdef"><b>Definition</b> Kinematic.hpp:125</div></div>
+<div class="ttc" id="aclass_kinematic_html_a9718bcbc57735496c88fa89be250c6c0"><div class="ttname"><a href="class_kinematic.html#a9718bcbc57735496c88fa89be250c6c0">Kinematic::tMat04</a></div><div class="ttdeci">tmm::Matrix&lt; 4, 4 &gt; tMat04</div><div class="ttdoc">Verkettet Transformations-Matrix 04.</div><div class="ttdef"><b>Definition</b> Kinematic.hpp:121</div></div>
+<div class="ttc" id="aclass_kinematic_html_aa1cba6a32703d92f41c29ee59884f89a"><div class="ttname"><a href="class_kinematic.html#aa1cba6a32703d92f41c29ee59884f89a">Kinematic::ivPosition</a></div><div class="ttdeci">Posture ivPosition(Position position)</div><div class="ttdoc">Positionsgebenden Winkeln Berechnen.</div><div class="ttdef"><b>Definition</b> Kinematic.cpp:91</div></div>
+<div class="ttc" id="aclass_kinematic_html_ab2b575c21bb6fa8f244b6a8323ff1d01"><div class="ttname"><a href="class_kinematic.html#ab2b575c21bb6fa8f244b6a8323ff1d01">Kinematic::dhPar3</a></div><div class="ttdeci">DhParam dhPar3</div><div class="ttdoc">D-H Parameter Gelenk 3.</div><div class="ttdef"><b>Definition</b> Kinematic.hpp:95</div></div>
+<div class="ttc" id="aclass_kinematic_html_abe03b372a5c961fd58f5fe5b66eacaea"><div class="ttname"><a href="class_kinematic.html#abe03b372a5c961fd58f5fe5b66eacaea">Kinematic::read3x3</a></div><div class="ttdeci">tmm::Matrix&lt; 3, 3 &gt; read3x3(tmm::Matrix&lt; 4, 4 &gt; tMat)</div><div class="ttdoc">Rotations-Matrix auslesen.</div><div class="ttdef"><b>Definition</b> Kinematic.cpp:137</div></div>
+<div class="ttc" id="aclass_kinematic_html_ac7021e76ae9927bcb2d17dbe8ef6a75a"><div class="ttname"><a href="class_kinematic.html#ac7021e76ae9927bcb2d17dbe8ef6a75a">Kinematic::printMatrix</a></div><div class="ttdeci">void printMatrix(tmm::Matrix&lt; 4, 4 &gt; mat, String heading)</div><div class="ttdoc">Matrix drucken.</div><div class="ttdef"><b>Definition</b> Kinematic.cpp:56</div></div>
+<div class="ttc" id="aclass_kinematic_html_aca4dfca1bccd583a780fcde8f165300f"><div class="ttname"><a href="class_kinematic.html#aca4dfca1bccd583a780fcde8f165300f">Kinematic::dhPar1</a></div><div class="ttdeci">DhParam dhPar1</div><div class="ttdoc">D-H Parameter Gelenk 1.</div><div class="ttdef"><b>Definition</b> Kinematic.hpp:91</div></div>
+<div class="ttc" id="aclass_kinematic_html_ae03636412ecab6f5a53e8c3d9069e369"><div class="ttname"><a href="class_kinematic.html#ae03636412ecab6f5a53e8c3d9069e369">Kinematic::ivKinematic</a></div><div class="ttdeci">Posture ivKinematic(Position position)</div><div class="ttdoc">Inverskinematik berechnung.</div><div class="ttdef"><b>Definition</b> Kinematic.cpp:184</div></div>
+<div class="ttc" id="aclass_kinematic_html_ae936eb9caf1d13a5693fd3f2c6aa4189"><div class="ttname"><a href="class_kinematic.html#ae936eb9caf1d13a5693fd3f2c6aa4189">Kinematic::tMat45</a></div><div class="ttdeci">tmm::Matrix&lt; 4, 4 &gt; tMat45</div><div class="ttdoc">Achsen-Transformations-Matrix 5.</div><div class="ttdef"><b>Definition</b> Kinematic.hpp:112</div></div>
+<div class="ttc" id="aclass_kinematic_html_aed35a0f15575c44ba0f62a42059e69c9"><div class="ttname"><a href="class_kinematic.html#aed35a0f15575c44ba0f62a42059e69c9">Kinematic::armTMatrix</a></div><div class="ttdeci">tmm::Matrix&lt; 4, 4 &gt; armTMatrix(Posture posture)</div><div class="ttdoc">Homogenen Transformations-Matrix des Manipulators.</div><div class="ttdef"><b>Definition</b> Kinematic.cpp:300</div></div>
+<div class="ttc" id="aclass_kinematic_html_aeed737d1bf66f66d517f2907eb02c907"><div class="ttname"><a href="class_kinematic.html#aeed737d1bf66f66d517f2907eb02c907">Kinematic::jointTMatrix</a></div><div class="ttdeci">tmm::Matrix&lt; 4, 4 &gt; jointTMatrix(DhParam dhPar)</div><div class="ttdoc">Homogenen Transformations-Matrix des gelenks.</div><div class="ttdef"><b>Definition</b> Kinematic.cpp:256</div></div>
+<div class="ttc" id="aclass_kinematic_html_aef4876851b52873dff6f8b9e0d388121"><div class="ttname"><a href="class_kinematic.html#aef4876851b52873dff6f8b9e0d388121">Kinematic::fdKinematic</a></div><div class="ttdeci">Position fdKinematic(Posture posture)</div><div class="ttdoc">Vorwaertskinematik berechnung.</div><div class="ttdef"><b>Definition</b> Kinematic.cpp:64</div></div>
+<div class="ttc" id="aclass_kinematic_html_af210936436479006efd37a2015aa1f88"><div class="ttname"><a href="class_kinematic.html#af210936436479006efd37a2015aa1f88">Kinematic::dhPar5</a></div><div class="ttdeci">DhParam dhPar5</div><div class="ttdoc">D-H Parameter Gelenk 5.</div><div class="ttdef"><b>Definition</b> Kinematic.hpp:99</div></div>
+<div class="ttc" id="aclass_kinematic_html_af8bb55ae1bbbf02056f9b725a8305290"><div class="ttname"><a href="class_kinematic.html#af8bb55ae1bbbf02056f9b725a8305290">Kinematic::tMat02</a></div><div class="ttdeci">tmm::Matrix&lt; 4, 4 &gt; tMat02</div><div class="ttdoc">Verkettet Transformations-Matrix 02.</div><div class="ttdef"><b>Definition</b> Kinematic.hpp:117</div></div>
+<div class="ttc" id="aclass_kinematic_html_afb57ce4e7710ce443246b03eee1d18f0"><div class="ttname"><a href="class_kinematic.html#afb57ce4e7710ce443246b03eee1d18f0">Kinematic::tMat34</a></div><div class="ttdeci">tmm::Matrix&lt; 4, 4 &gt; tMat34</div><div class="ttdoc">Achsen-Transformations-Matrix 4.</div><div class="ttdef"><b>Definition</b> Kinematic.hpp:110</div></div>
+<div class="ttc" id="aclass_kinematic_html_aff4c2e3469d83e34b80eb8afe3b48a62"><div class="ttname"><a href="class_kinematic.html#aff4c2e3469d83e34b80eb8afe3b48a62">Kinematic::ivOrientation</a></div><div class="ttdeci">Posture ivOrientation(Posture posture, Position ps)</div><div class="ttdoc">Orientierungsgebeden Winkeln Berechnen.</div><div class="ttdef"><b>Definition</b> Kinematic.cpp:149</div></div>
+<div class="ttc" id="aclass_rob_frame_html"><div class="ttname"><a href="class_rob_frame.html">RobFrame</a></div><div class="ttdef"><b>Definition</b> RobFrameWork.hpp:21</div></div>
+<div class="ttc" id="astruct_dh_param_html"><div class="ttname"><a href="struct_dh_param.html">DhParam</a></div><div class="ttdef"><b>Definition</b> Types.hpp:55</div></div>
+<div class="ttc" id="astruct_position_html"><div class="ttname"><a href="struct_position.html">Position</a></div><div class="ttdef"><b>Definition</b> Types.hpp:79</div></div>
+<div class="ttc" id="astruct_posture_html"><div class="ttname"><a href="struct_posture.html">Posture</a></div><div class="ttdef"><b>Definition</b> Types.hpp:98</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="_kinematic_8hpp.html">Kinematic.hpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

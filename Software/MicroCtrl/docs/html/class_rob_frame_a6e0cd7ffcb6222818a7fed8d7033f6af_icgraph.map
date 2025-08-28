@@ -1,0 +1,9 @@
+<map id="RobFrame::Interpolate" name="RobFrame::Interpolate">
+<area shape="rect" id="Node000001" title="Gradlinige Interpolation zwischen Zwei Punkte." alt="" coords="399,31,549,56"/>
+<area shape="rect" id="Node000002" href="$class_rob_frame.html#a3b51be372803d4960a457d2c03378314" title="Gradlinige Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="225,31,351,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="385,46,351,46,351,41,385,41"/>
+<area shape="rect" id="Node000003" href="$class_rob_frame.html#a0d79cee264204461c4445cf72c4481b7" title="Eingangsdaten Parsen." alt="" coords="24,5,159,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="211,36,158,29,159,24,212,31"/>
+<area shape="rect" id="Node000004" href="$class_rob_frame.html#a56384fc3894ecdaf39252f703ee91873" title="Iteriere durch den Positionsdatensatz." alt="" coords="5,55,177,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="212,55,178,59,177,54,211,50"/>
+</map>

@@ -1,0 +1,29 @@
+<map id="Utils::SetBit16" name="Utils::SetBit16">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1115,158,1221,184"/>
+<area shape="rect" id="Node000002" href="$class_actuator.html#aa8005479f1c593783dd74c6ebf7ade6b" title="Aktoransteuerung." alt="" coords="941,158,1067,184"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1101,174,1067,174,1067,168,1101,168"/>
+<area shape="rect" id="Node000003" href="$class_actuator.html#ae786a505db189182b2fec42f1bb82445" title="Aktuator Sollwert Schreiben." alt="" coords="783,133,893,158"/>
+<area shape="poly" id="edge15_Node000001_Node000003" title=" " alt="" coords="1110,158,1066,150,975,144,894,145,894,140,976,139,1067,144,1111,152"/>
+<area shape="rect" id="Node000012" href="$class_actuator.html#a9f1b744baa308c5c9fed6895a8816798" title="Hardwareeinrichten." alt="" coords="947,208,1061,233"/>
+<area shape="poly" id="edge14_Node000001_Node000012" title=" " alt="" coords="1113,190,1048,210,1047,205,1112,185"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="927,162,893,157,894,152,928,157"/>
+<area shape="rect" id="Node000004" href="$class_rob_frame.html#aa358b505e48c8ea8efa6f069dab67520" title="Aktor Asynchron ansteuern." alt="" coords="588,96,735,121"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="769,134,722,124,723,119,770,129"/>
+<area shape="rect" id="Node000010" href="$class_rob_frame.html#a208ae2ae7cdbe80dba28e4d0ad29857b" title="Aktor Synchron Ansteuern." alt="" coords="597,157,726,182"/>
+<area shape="poly" id="edge11_Node000003_Node000010" title=" " alt="" coords="770,158,727,164,726,158,769,152"/>
+<area shape="rect" id="Node000005" href="$class_rob_frame.html#ae5ef3c45bc8b82d75e47f422addeb56f" title="Punkt zu Punkt Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="410,82,529,108"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="574,105,529,102,529,96,575,100"/>
+<area shape="rect" id="Node000006" href="$class_rob_frame.html#a0d79cee264204461c4445cf72c4481b7" title="Eingangsdaten Parsen." alt="" coords="24,133,159,158"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="403,113,351,123,250,136,159,144,158,139,250,131,350,118,402,108"/>
+<area shape="rect" id="Node000007" href="$class_rob_frame.html#a40f13f5c1ce2baaaa77fc3eee9b98379" title="Punkt zu Punkt Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="229,82,347,108"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="397,98,348,98,348,92,397,92"/>
+<area shape="rect" id="Node000008" href="$class_rob_frame.html#a3b51be372803d4960a457d2c03378314" title="Gradlinige Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="225,33,351,58"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="408,81,335,61,337,56,409,76"/>
+<area shape="rect" id="Node000009" href="$class_rob_frame.html#a56384fc3894ecdaf39252f703ee91873" title="Iteriere durch den Positionsdatensatz." alt="" coords="5,8,177,33"/>
+<area shape="poly" id="edge10_Node000005_Node000009" title=" " alt="" coords="442,75,400,46,376,33,350,23,307,14,262,9,177,11,177,6,262,4,308,8,351,18,378,28,403,42,445,71"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="240,66,227,72,165,105,114,135,111,131,162,100,224,67,237,61"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="211,39,177,34,178,29,212,33"/>
+<area shape="rect" id="Node000011" href="$class_rob_frame.html#a92a99cf7219b60ab8d2c349fd2eef6a8" title="Glenk Einzelverfahren." alt="" coords="399,157,540,182"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="583,172,540,172,540,167,583,167"/>
+<area shape="poly" id="edge13_Node000011_Node000006" title=" " alt="" coords="385,173,225,167,159,159,159,154,226,162,385,168"/>
+</map>

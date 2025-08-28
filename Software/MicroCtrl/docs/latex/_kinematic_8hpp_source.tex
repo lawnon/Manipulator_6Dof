@@ -1,0 +1,76 @@
+\doxysection{Kinematic.\+hpp}
+\hypertarget{_kinematic_8hpp_source}{}\label{_kinematic_8hpp_source}\index{Kinematic.hpp@{Kinematic.hpp}}
+\mbox{\hyperlink{_kinematic_8hpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Datei:\ Kinematic.hpp}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ Beschreibung:\ Berechnungen\ und\ Prozeduren\ zur\ Ermittlung\ der\ Vor-\/\ und}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Inverskinematik.}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Dieser\ Klasser\ die\ TinyMatrixMath\ Klasse\ von\ "{}Micah\ Mundy"{}}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ https://github.com/m516/TinyMatrixMath?tab=MIT-\/1-\/ov-\/file}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ zu\ handhaben\ von\ Matrizen}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ Autor:\ Chukwunonso\ Bob-\/Anyeji}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ Datum:\ 09.06.2024@12-\/00}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ Akualisert:\ 27.08.2025@16-\/54}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#ifndef\ KINEMATIC\_H\_}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ KINEMATIC\_H\_}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <WString.h>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <HardwareSerial.h>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <TinyMatrixMath.hpp>}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_types_8hpp}{Types.hpp}}"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_logger_8hpp}{Logger.hpp}}"{}}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_kinematic_8hpp_a339acfaac605b5bd73624297f191cc39}{getRad}}(\textcolor{keywordtype}{float}\ deg);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_kinematic_8hpp_ac5b83beb5fe73e1a9f3d2fe3166f3d53}{getDeg}}(\textcolor{keywordtype}{float}\ rad);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{_kinematic_8hpp_a8e014290d3f9707d1c2d06717e815a8b}{sign}}(\textcolor{keywordtype}{float}\ value);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_rob_frame}{RobFrame}};}
+\DoxyCodeLine{00044\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_kinematic_a0265e971c0ac4a847df7d625553becc2}{Kinematic}}}
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00046\ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame}{RobFrame}}*\ \mbox{\hyperlink{class_kinematic_a821c9777b72f62efc15efc0f3fd9ebb6}{\_robFrame}};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ tmm::Matrix<4,4>\ \mbox{\hyperlink{class_kinematic_aeed737d1bf66f66d517f2907eb02c907}{jointTMatrix}}(\mbox{\hyperlink{struct_dh_param}{DhParam}}\ dhPar);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ tmm::Matrix<4,4>\ \mbox{\hyperlink{class_kinematic_aed35a0f15575c44ba0f62a42059e69c9}{armTMatrix}}(\mbox{\hyperlink{struct_posture}{Posture}}\ posture);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ tmm::Matrix<3,3>\ \mbox{\hyperlink{class_kinematic_abe03b372a5c961fd58f5fe5b66eacaea}{read3x3}}(tmm::Matrix<4,4>\ tMat);}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_kinematic_a0265e971c0ac4a847df7d625553becc2}{Kinematic}}();}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_kinematic_a457c2d43f95669a6b1e4f901d6060d12}{Init}}(\mbox{\hyperlink{class_rob_frame}{RobFrame}}*\ robFrame);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_kinematic_ac7021e76ae9927bcb2d17dbe8ef6a75a}{printMatrix}}(tmm::Matrix<4,4>\ mat,\ String\ heading);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_position}{Position}}\ \mbox{\hyperlink{class_kinematic_aef4876851b52873dff6f8b9e0d388121}{fdKinematic}}(\mbox{\hyperlink{struct_posture}{Posture}}\ posture);}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_posture}{Posture}}\ \mbox{\hyperlink{class_kinematic_ae03636412ecab6f5a53e8c3d9069e369}{ivKinematic}}(\mbox{\hyperlink{struct_position}{Position}}\ position);}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_posture}{Posture}}\ \mbox{\hyperlink{class_kinematic_aa1cba6a32703d92f41c29ee59884f89a}{ivPosition}}(\mbox{\hyperlink{struct_position}{Position}}\ position);}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_posture}{Posture}}\ \mbox{\hyperlink{class_kinematic_aff4c2e3469d83e34b80eb8afe3b48a62}{ivOrientation}}(\mbox{\hyperlink{struct_posture}{Posture}}\ posture,\ \mbox{\hyperlink{struct_position}{Position}}\ ps);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_dh_param}{DhParam}}\ \mbox{\hyperlink{class_kinematic_aca4dfca1bccd583a780fcde8f165300f}{dhPar1}}\ =\ \{\};}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_dh_param}{DhParam}}\ \mbox{\hyperlink{class_kinematic_a416e1ad35dbd73a70e9f9b7e6687fc2e}{dhPar2}}\ =\ \{\};}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_dh_param}{DhParam}}\ \mbox{\hyperlink{class_kinematic_ab2b575c21bb6fa8f244b6a8323ff1d01}{dhPar3}}\ =\ \{\};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_dh_param}{DhParam}}\ \mbox{\hyperlink{class_kinematic_a6fbd761660db59f6ef4502d1c4ff4373}{dhPar4}}\ =\ \{\};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_dh_param}{DhParam}}\ \mbox{\hyperlink{class_kinematic_af210936436479006efd37a2015aa1f88}{dhPar5}}\ =\ \{\};}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_dh_param}{DhParam}}\ \mbox{\hyperlink{class_kinematic_a68c34857a9669241e219e4103769929d}{dhPar6}}\ =\ \{\};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ tmm::Matrix<4,4>\ \mbox{\hyperlink{class_kinematic_a296ed2287e766671dc62fa9efd987e0d}{tMat01}}\ =\ \{\};}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ tmm::Matrix<4,4>\ \mbox{\hyperlink{class_kinematic_a75840e5338b0c2ee8f38b046d5871786}{tMat12}}\ =\ \{\};}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ tmm::Matrix<4,4>\ \mbox{\hyperlink{class_kinematic_a8d4db42c4c7a644b3300f1ed41da16fe}{tMat23}}\ =\ \{\};}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ tmm::Matrix<4,4>\ \mbox{\hyperlink{class_kinematic_afb57ce4e7710ce443246b03eee1d18f0}{tMat34}}\ =\ \{\};}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ tmm::Matrix<4,4>\ \mbox{\hyperlink{class_kinematic_ae936eb9caf1d13a5693fd3f2c6aa4189}{tMat45}}\ =\ \{\};}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ tmm::Matrix<4,4>\ \mbox{\hyperlink{class_kinematic_a18651a831e84c4d5f16b3ef6f74de1a4}{tMat56}}\ =\ \{\};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ tmm::Matrix<4,4>\ \mbox{\hyperlink{class_kinematic_af8bb55ae1bbbf02056f9b725a8305290}{tMat02}}\ =\ \{\};}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ tmm::Matrix<4,4>\ \mbox{\hyperlink{class_kinematic_a1c929ef6e6f83f273e0837cc8b63fad5}{tMat03}}\ =\ \{\};}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ tmm::Matrix<4,4>\ \mbox{\hyperlink{class_kinematic_a9718bcbc57735496c88fa89be250c6c0}{tMat04}}\ =\ \{\};}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ tmm::Matrix<4,4>\ \mbox{\hyperlink{class_kinematic_a4e45d9b1d954d4df521780898a0ba4c5}{tMat05}}\ =\ \{\};}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ tmm::Matrix<4,4>\ \mbox{\hyperlink{class_kinematic_a924f5c0bc876c87ebe92b6ddfb0a5310}{tMat06}}\ =\ \{\};}
+\DoxyCodeLine{00126\ \};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ KINEMATIC\_H\_}}
+
+\end{DoxyCode}

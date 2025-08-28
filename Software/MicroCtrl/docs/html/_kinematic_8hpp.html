@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Manipulator mit sechs Freiheitsgraden: Kinematic.hpp-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Manipulator mit sechs Freiheitsgraden<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Konstruktion, Modellierung und Programmierung der inversen Kinematik eines experimentellen Manipulators mit sechs Freiheitsgraden</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_kinematic_8hpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Kinematic.hpp-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;WString.h&gt;</code><br />
+<code>#include &lt;HardwareSerial.h&gt;</code><br />
+<code>#include &lt;TinyMatrixMath.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="_types_8hpp_source.html">Types.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_logger_8hpp_source.html">Logger.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für Kinematic.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="_kinematic_8hpp__incl.png" border="0" usemap="#a_kinematic_8hpp" loading="lazy" alt=""/></div>
+<map name="a_kinematic_8hpp" id="a_kinematic_8hpp">
+<area shape="rect" title=" " alt="" coords="123,5,229,31"/>
+<area shape="rect" title=" " alt="" coords="22,152,85,177"/>
+<area shape="poly" title=" " alt="" coords="168,33,74,143,70,140,164,29"/>
+<area shape="rect" title=" " alt="" coords="111,225,191,251"/>
+<area shape="poly" title=" " alt="" coords="152,33,117,51,78,78,40,112,12,153,8,167,10,179,18,189,29,199,62,214,98,225,97,230,60,219,27,203,14,193,6,181,3,167,7,151,36,108,75,73,115,47,149,28"/>
+<area shape="rect" title=" " alt="" coords="267,152,387,177"/>
+<area shape="poly" title=" " alt="" coords="203,28,239,49,275,77,300,107,318,138,313,141,295,110,272,81,236,53,200,33"/>
+<area shape="rect" title=" " alt="" coords="336,79,472,104"/>
+<area shape="poly" title=" " alt="" coords="213,28,355,72,353,77,212,33"/>
+<area shape="rect" href="_types_8hpp.html" title=" " alt="" coords="109,152,192,177"/>
+<area shape="poly" title=" " alt="" coords="176,32,165,79,156,139,151,138,160,78,171,31"/>
+<area shape="rect" href="_logger_8hpp.html" title=" " alt="" coords="174,79,261,104"/>
+<area shape="poly" title=" " alt="" coords="185,30,206,65,201,68,181,32"/>
+<area shape="poly" title=" " alt="" coords="153,178,153,212,148,212,148,178"/>
+<area shape="poly" title=" " alt="" coords="192,106,94,149,91,144,190,102"/>
+<area shape="poly" title=" " alt="" coords="220,104,218,139,206,178,193,200,177,218,173,214,189,196,202,176,212,138,215,104"/>
+<area shape="poly" title=" " alt="" coords="236,102,299,142,296,147,233,106"/>
+<area shape="poly" title=" " alt="" coords="208,106,173,144,169,140,204,103"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Dieser Graph zeigt, welche Datei direkt oder indirekt diese Datei enthält:</div>
+<div class="dyncontent">
+<div class="center"><img src="_kinematic_8hpp__dep__incl.png" border="0" usemap="#a_kinematic_8hppdep" loading="lazy" alt=""/></div>
+<map name="a_kinematic_8hppdep" id="a_kinematic_8hppdep">
+<area shape="rect" title=" " alt="" coords="369,5,475,31"/>
+<area shape="rect" href="_commands_8hpp.html" title=" " alt="" coords="271,79,384,104"/>
+<area shape="poly" title=" " alt="" coords="397,41,344,81,341,76,394,37"/>
+<area shape="rect" href="_rob_frame_work_8hpp.html" title=" " alt="" coords="306,152,445,177"/>
+<area shape="poly" title=" " alt="" coords="417,45,398,105,382,153,377,151,393,103,412,43"/>
+<area shape="rect" href="_kinematic_8cpp.html" title=" " alt="" coords="568,225,673,251"/>
+<area shape="poly" title=" " alt="" coords="444,39,612,223,608,227,440,43"/>
+<area shape="rect" href="_commands_8cpp.html" title=" " alt="" coords="5,225,119,251"/>
+<area shape="poly" title=" " alt="" coords="295,113,84,228,82,223,293,108"/>
+<area shape="poly" title=" " alt="" coords="345,114,370,150,365,153,341,117"/>
+<area shape="poly" title=" " alt="" coords="312,183,113,228,112,223,311,178"/>
+<area shape="poly" title=" " alt="" coords="428,179,582,223,580,228,427,184"/>
+<area shape="rect" href="_position_factory_8cpp.html" title=" " alt="" coords="143,225,282,251"/>
+<area shape="poly" title=" " alt="" coords="338,185,240,228,238,223,336,180"/>
+<area shape="rect" href="_rob_frame_work_8cpp.html" title=" " alt="" coords="306,225,445,251"/>
+<area shape="poly" title=" " alt="" coords="378,191,378,225,373,225,373,191"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="469,225,543,251"/>
+<area shape="poly" title=" " alt="" coords="410,182,486,223,483,227,407,186"/>
+</map>
+</div>
+</div>
+<p><a href="_kinematic_8hpp_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Klassen</h2></td></tr>
+<tr class="memitem:Kinematic" id="r_Kinematic"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_kinematic.html">Kinematic</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr class="memitem:a339acfaac605b5bd73624297f191cc39" id="r_a339acfaac605b5bd73624297f191cc39"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a339acfaac605b5bd73624297f191cc39">getRad</a> (float deg)</td></tr>
+<tr class="memdesc:a339acfaac605b5bd73624297f191cc39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Grad zu Radiant.  <br /></td></tr>
+<tr class="memitem:ac5b83beb5fe73e1a9f3d2fe3166f3d53" id="r_ac5b83beb5fe73e1a9f3d2fe3166f3d53"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5b83beb5fe73e1a9f3d2fe3166f3d53">getDeg</a> (float rad)</td></tr>
+<tr class="memdesc:ac5b83beb5fe73e1a9f3d2fe3166f3d53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Radiant zu Grad.  <br /></td></tr>
+<tr class="memitem:a8e014290d3f9707d1c2d06717e815a8b" id="r_a8e014290d3f9707d1c2d06717e815a8b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e014290d3f9707d1c2d06717e815a8b">sign</a> (float value)</td></tr>
+<tr class="memdesc:a8e014290d3f9707d1c2d06717e815a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signum Funktion.  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Funktionen</h2>
+<a id="ac5b83beb5fe73e1a9f3d2fe3166f3d53" name="ac5b83beb5fe73e1a9f3d2fe3166f3d53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5b83beb5fe73e1a9f3d2fe3166f3d53">&#9670;&#160;</a></span>getDeg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getDeg </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>rad</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Radiant zu Grad. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rad</td><td>Radiant </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Grad</dd></dl>
+<p>Radiant zu Grad. </p>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="_kinematic_8hpp_ac5b83beb5fe73e1a9f3d2fe3166f3d53_icgraph.png" border="0" usemap="#a_kinematic_8hpp_ac5b83beb5fe73e1a9f3d2fe3166f3d53_icgraph" loading="lazy" alt=""/></div>
+<map name="a_kinematic_8hpp_ac5b83beb5fe73e1a9f3d2fe3166f3d53_icgraph" id="a_kinematic_8hpp_ac5b83beb5fe73e1a9f3d2fe3166f3d53_icgraph">
+<area shape="rect" title="Radiant zu Grad." alt="" coords="415,55,477,80"/>
+<area shape="rect" href="class_kinematic.html#aef4876851b52873dff6f8b9e0d388121" title="Vorwaertskinematik berechnung." alt="" coords="209,5,365,31"/>
+<area shape="poly" title=" " alt="" coords="401,56,366,45,330,33,331,28,367,39,402,51"/>
+<area shape="rect" href="class_kinematic.html#aff4c2e3469d83e34b80eb8afe3b48a62" title="Orientierungsgebeden Winkeln Berechnen." alt="" coords="208,55,367,80"/>
+<area shape="poly" title=" " alt="" coords="401,70,367,70,367,65,401,65"/>
+<area shape="rect" href="class_kinematic.html#aa1cba6a32703d92f41c29ee59884f89a" title="Positionsgebenden Winkeln Berechnen." alt="" coords="216,104,359,129"/>
+<area shape="poly" title=" " alt="" coords="402,84,330,106,328,101,400,79"/>
+<area shape="rect" href="class_kinematic.html#ae03636412ecab6f5a53e8c3d9069e369" title="Inverskinematik berechnung." alt="" coords="5,80,160,105"/>
+<area shape="poly" title=" " alt="" coords="195,81,161,86,160,80,194,76"/>
+<area shape="poly" title=" " alt="" coords="202,109,160,104,160,99,203,104"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a339acfaac605b5bd73624297f191cc39" name="a339acfaac605b5bd73624297f191cc39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a339acfaac605b5bd73624297f191cc39">&#9670;&#160;</a></span>getRad()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float getRad </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>deg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Grad zu Radiant. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deg</td><td>Grad wert </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Radiant</dd></dl>
+<p>Grad zu Radiant. </p>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="_kinematic_8hpp_a339acfaac605b5bd73624297f191cc39_icgraph.png" border="0" usemap="#a_kinematic_8hpp_a339acfaac605b5bd73624297f191cc39_icgraph" loading="lazy" alt=""/></div>
+<map name="a_kinematic_8hpp_a339acfaac605b5bd73624297f191cc39_icgraph" id="a_kinematic_8hpp_a339acfaac605b5bd73624297f191cc39_icgraph">
+<area shape="rect" title="Grad zu Radiant." alt="" coords="619,31,681,56"/>
+<area shape="rect" href="class_kinematic.html#aef4876851b52873dff6f8b9e0d388121" title="Vorwaertskinematik berechnung." alt="" coords="5,5,161,31"/>
+<area shape="poly" title=" " alt="" coords="605,41,497,30,368,21,162,19,162,13,368,15,498,25,605,36"/>
+<area shape="rect" href="class_kinematic.html#aeed737d1bf66f66d517f2907eb02c907" title="Homogenen Transformations&#45;Matrix des gelenks." alt="" coords="416,56,571,81"/>
+<area shape="poly" title=" " alt="" coords="606,53,572,59,571,53,605,48"/>
+<area shape="rect" href="class_kinematic.html#aed35a0f15575c44ba0f62a42059e69c9" title="Homogenen Transformations&#45;Matrix des Manipulators." alt="" coords="212,31,365,56"/>
+<area shape="poly" title=" " alt="" coords="402,60,365,55,366,50,403,55"/>
+<area shape="rect" href="class_kinematic.html#ae03636412ecab6f5a53e8c3d9069e369" title="Inverskinematik berechnung." alt="" coords="6,81,161,107"/>
+<area shape="poly" title=" " alt="" coords="402,77,161,92,161,87,402,72"/>
+<area shape="rect" href="class_kinematic.html#aff4c2e3469d83e34b80eb8afe3b48a62" title="Orientierungsgebeden Winkeln Berechnen." alt="" coords="209,132,368,157"/>
+<area shape="poly" title=" " alt="" coords="447,89,325,134,323,129,445,84"/>
+<area shape="poly" title=" " alt="" coords="198,35,161,30,162,25,199,30"/>
+<area shape="poly" title=" " alt="" coords="224,62,136,84,135,79,222,57"/>
+<area shape="poly" title=" " alt="" coords="222,131,135,109,136,104,224,126"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8e014290d3f9707d1c2d06717e815a8b" name="a8e014290d3f9707d1c2d06717e815a8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e014290d3f9707d1c2d06717e815a8b">&#9670;&#160;</a></span>sign()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float sign </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>val</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Signum Funktion. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>1 oder -1</dd></dl>
+<p>Signum Funktion. </p>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="_kinematic_8hpp_a8e014290d3f9707d1c2d06717e815a8b_icgraph.png" border="0" usemap="#a_kinematic_8hpp_a8e014290d3f9707d1c2d06717e815a8b_icgraph" loading="lazy" alt=""/></div>
+<map name="a_kinematic_8hpp_a8e014290d3f9707d1c2d06717e815a8b_icgraph" id="a_kinematic_8hpp_a8e014290d3f9707d1c2d06717e815a8b_icgraph">
+<area shape="rect" title="Signum Funktion." alt="" coords="399,5,445,31"/>
+<area shape="rect" href="class_kinematic.html#aa1cba6a32703d92f41c29ee59884f89a" title="Positionsgebenden Winkeln Berechnen." alt="" coords="208,5,351,31"/>
+<area shape="poly" title=" " alt="" coords="385,21,351,21,351,15,385,15"/>
+<area shape="rect" href="class_kinematic.html#ae03636412ecab6f5a53e8c3d9069e369" title="Inverskinematik berechnung." alt="" coords="5,5,160,31"/>
+<area shape="poly" title=" " alt="" coords="194,21,160,21,160,15,194,15"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="_kinematic_8hpp.html">Kinematic.hpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

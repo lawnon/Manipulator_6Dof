@@ -1,0 +1,25 @@
+<map id="RobFrame::Drive" name="RobFrame::Drive">
+<area shape="rect" id="Node000001" title="Punkt zu Punkt Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="5,207,124,232"/>
+<area shape="rect" id="Node000002" href="$class_rob_frame.html#aa358b505e48c8ea8efa6f069dab67520" title="Aktor Asynchron ansteuern." alt="" coords="172,181,319,207"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,208,158,204,159,209,125,214"/>
+<area shape="rect" id="Node000010" href="$namespace_logger.html#a83c3562c93d0101fc7fadc86e0482b2d" title=" " alt="" coords="557,257,644,283"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="124,222,544,262,543,267,124,228"/>
+<area shape="rect" id="Node000003" href="$class_actuator.html#ae786a505db189182b2fec42f1bb82445" title="Aktuator Sollwert Schreiben." alt="" coords="367,157,477,183"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="319,181,353,177,353,182,319,187"/>
+<area shape="rect" id="Node000004" href="$class_actuator.html#aa8005479f1c593783dd74c6ebf7ade6b" title="Aktoransteuerung." alt="" coords="538,107,663,132"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="467,155,541,133,543,138,468,160"/>
+<area shape="rect" id="Node000006" href="$namespace_utils.html#a34f4c27f7a4bfc7f366e9c3fdaa366e0" title=" " alt="" coords="724,56,844,81"/>
+<area shape="poly" id="edge11_Node000003_Node000006" title=" " alt="" coords="434,155,472,122,497,105,524,92,571,77,620,69,710,63,711,68,621,74,573,82,526,96,500,110,475,126,438,159"/>
+<area shape="rect" id="Node000007" href="$namespace_utils.html#a85b751974bf0c2c272eaec7bc89bd742" title=" " alt="" coords="731,157,837,183"/>
+<area shape="poly" id="edge12_Node000003_Node000007" title=" " alt="" coords="478,167,717,167,717,173,478,173"/>
+<area shape="rect" id="Node000008" href="$class_actuator.html#ae4705f5263847ab234ef5d9f630753df" title="Schritte zu Winkel." alt="" coords="525,208,676,233"/>
+<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="468,180,543,202,541,207,467,185"/>
+<area shape="rect" id="Node000009" href="$class_actuator.html#a04116bc5ec0ca19fdf8bbe30b5f24754" title="Winkelwerte in Grad zu Schritte konvertieren." alt="" coords="532,5,669,31"/>
+<area shape="poly" id="edge9_Node000003_Node000009" title=" " alt="" coords="429,156,466,105,493,75,524,48,547,34,550,39,527,52,497,78,470,108,434,159"/>
+<area shape="poly" id="edge10_Node000003_Node000010" title=" " alt="" coords="439,181,477,212,527,244,546,252,544,257,524,248,474,216,436,185"/>
+<area shape="rect" id="Node000005" href="$namespace_utils.html#a857ea2cb01ca027105c2aae4e67b6c07" title=" " alt="" coords="892,81,999,107"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="663,112,878,96,879,102,664,117"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="647,104,723,83,725,88,648,109"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="648,130,725,151,723,156,647,135"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="845,75,879,81,878,86,844,81"/>
+</map>

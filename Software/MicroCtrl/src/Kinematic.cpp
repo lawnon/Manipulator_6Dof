@@ -1,34 +1,43 @@
-/*
- * Program: Kinematic.cpp
- * Description: Class-Object containing prcedures
- *               for Forward and Backward Kinematics
- * Autor: Chukwunonso Bob-Anyeji
- * Date: 09.06.2024
- */
+
+///////////////////////////////////////////////////////////////////////////
+/// Datei: Kinematic.cpp
+///
+/// Beschreibung: Berechnungen und Prozeduren zur Ermittlung der Vor- und
+///               Inverskinematik.
+///
+///               Dieser Klasser die TinyMatrixMath Klasse von "Micah Mundy"
+///               https://github.com/m516/TinyMatrixMath?tab=MIT-1-ov-file
+///               zu handhaben von Matrizen
+///
+/// Autor: Chukwunonso Bob-Anyeji
+/// Datum: 09.06.2024@12-00
+/// Akualisert: 27.08.2025@16-54
+///////////////////////////////////////////////////////////////////////////
 
 #include "RobFrameWork.hpp"
 #include "Kinematic.hpp"
 
 using namespace Logger;
 
+/// pi Definition
 const float pi = 3.1416;
 
-// Degree to Radiant Conversion
+/// Grad zu Radiant konvertieren
 float getRad(float deg){
   return deg * (pi/180);
 }
 
-// Radiant to Degree Conversion
+/// Radiant zu Grad konvertieren
 float getDeg(float rad){
   return rad * (180/pi);
 }
 
-// Sign Function
+/// Signal Wert des Eingangs wiedergeben
 float sign(float val){
   return val/abs(val);
 }
 
-// Assignment of D-H Parameters
+/// Klassen-Objekt instanzieren und Denavite-Hartenberg Parameter zuweisen
 Kinematic::Kinematic(){
   Kinematic::dhPar1 = {90.000, -90.000, 0.000,   0.000, 0.000};
   Kinematic::dhPar2 = { 0.000,   0.000, 0.000, 258.300, 0.000};
@@ -38,54 +47,47 @@ Kinematic::Kinematic(){
   Kinematic::dhPar6 = { 0.000,   0.000, 0.000,   0.000, 0.000};
 }
 
+/// Initialisierung Roboter-Framework Zeiger zuweisen
 void Kinematic::Init(RobFrame* robFrame){
   _robFrame = robFrame;
 }
 
-// Print 4x4 Matrix to Serial Monitor
-void Kinematic::printMatrix(Matrix4x4 mat, String heading){
+/// 4x4 Matrix in Seriellen Monitor ausgeben
+void Kinematic::printMatrix(tmm::Matrix<4,4> mat, String heading){
   //log("=============================");
   log(heading);
-
-  for(int i = 0; i <= 3; i++){
-    log("Mat" + String(i+1) + "1: " + String(mat.m11[i]) +
-        "| Mat" + String(i+1) + "2: " + String(mat.m12[i]) +
-        "| Mat" + String(i+1) + "3: " + String(mat.m13[i]) +
-        "| Mat" + String(i+1) + "4: " + String(mat.m14[i]));
-  }
+  mat.printTo(Serial);
 }
 
-// Forward-Kinematics calculation with respect to given Posture
+/// Vorwaertskinematik berechnung anhand der
+/// Denavite-Hartenberg Konvention
 Position Kinematic::fdKinematic(Posture pt){
-  //Matrix4x4 mat = armTMatrix(pt);
-  //printMatrix(mat, "Arm Transformation Matrix");
+  tmm::Matrix<4,4> mat = armTMatrix(pt);
+  printMatrix(mat, "Arm Transformation Matrix");
 
   Position ps {};
-  //ps.X = mat.m14[0];
-  //ps.Y = mat.m14[1];
-  //ps.Z = mat.m14[2];
+  ps.X = mat[0][3];
+  ps.Y = mat[1][3];
+  ps.Z = mat[2][3];
 
-  //ps.B = getDeg(atan2(-mat.m11[2], sqrtf(powf(mat.m11[0],2) + powf(mat.m11[1],2))));
-  //ps.A = getDeg(atan2(mat.m11[1]/cos(getRad(ps.B)), mat.m11[0]/cos(getRad(ps.B))));
-  //ps.C = getDeg(atan2(mat.m12[2]/cos(getRad(ps.B)), mat.m13[3]/cos(getRad(ps.B))));
+  ps.B = getDeg(atan2(-mat[2][0], sqrtf(powf(mat[0][0],2) + powf(mat[1][0],2))));
+  ps.A = getDeg(atan2(mat[1][0]/cos(getRad(ps.B)), mat[0][0]/cos(getRad(ps.B))));
+  ps.C = getDeg(atan2(mat[2][1]/cos(getRad(ps.B)), mat[2][2]/cos(getRad(ps.B))));
 
   if(ps.B == (getDeg(pi)/2)){
     ps.A = 0;
-    //ps.C = getDeg(atan2(mat.m12[0], mat.m12[1]));
+    ps.C = getDeg(atan2(mat[0][1], mat[1][1]));
   }
   if((ps.B == -(getDeg(pi)/2))) {
     ps.A = 0;
-    //ps.C = getDeg(-atan2(mat.m12[0], mat.m12[1]));
+    ps.C = getDeg(-atan2(mat[0][1], mat[2][2]));
   }
 
   return ps;
 }
 
-// Ermittlung von theta2 durch Anwendung der Linear Kombination von Sinus
-// und Kosinus wellen
-// ie. A*cos(x) + B*sin(x) = C*cos(x + phi) with
-// C = sgn(A).Sqrt(A^2 + B^2) ie. sgn(A) = (A/|A|)
-// phi = arctan(-B/A)
+/// Berechung der Positionsgebenden Winkelstellungen
+///  d.h. th1, th2 und th3
 Posture Kinematic::ivPosition(Position ps){
   Posture pt = {};
   logln(ps, "ivPosition: Target Position");
@@ -97,6 +99,12 @@ Posture Kinematic::ivPosition(Position ps){
   logft(jt1, "jt1");
   logft(pt.Jt1, "pt.jt1");
 
+  // Ermittlung von theta2 durch Anwendung der Linear Kombination von Sinus
+  // und Kosinus wellen
+  // ie. A*cos(x) + B*sin(x) = C*cos(x + phi) with
+  // C = sgn(A).Sqrt(A^2 + B^2) ie. sgn(A) = (A/|A|)
+  // phi = arctan(-B/A)
+  //
   // Berechnung von theta 2
   float A = 2*ps.Z*dhPar2.link;
   float B = -2*ps.X*cos(jt1)*dhPar2.link-2*ps.Y*sin(jt1)*dhPar2.link+2*dhPar1.link*dhPar2.link;
@@ -120,31 +128,59 @@ Posture Kinematic::ivPosition(Position ps){
 
   logft(jt3, "jt3");
   logft(pt.Jt3, "pt.jt3");
-}
-
-// Ermittlung der Orientierung/Gelenkstellung d.h. th4, th5 und th6
-//
-// mit TMati_j = |RotationsMatrix(3x3) Verschiebung(3x1)|
-//               |      0(1x3)               1(1x1)     |
-//
-// Berechnung von theta 4
-Posture Kinematic::ivOrientation(Posture pt, Position ps){
-  DhParam rmatPar = {ps.A, ps.B, ps.C, 0.000, 0.000};
-  //Matrix4x4 rmat = jointTMatrix(rmatPar);
-
-  // Berechnung von theta 4
-  //pt.Jt4 = getDeg(atan2(-rmat.m13[0],rmat.m13[1]));
-
-  // Berechnung von theta 5
-  //pt.Jt5 = getDeg(atan2(sqrt(powf(rmat.m13[0],2)+powf(rmat.m13[1],2)),rmat.m13[2]));
-
-  // Berechnung von theta 6
-  //pt.Jt6 = getDeg(atan2(rmat.m11[2],rmat.m12[2]));
 
   return pt;
 }
 
-// Inverse-Kinematics calculation with respect to given Position
+/// 3x3 Rotations-Matrix aus gegebenen 4x4 Transformations-Matrix
+/// auslesen.
+tmm::Matrix<3,3> Kinematic::read3x3(tmm::Matrix<4,4> tMat){
+  tmm::Matrix<3,3> rMat;
+
+  rMat[0][0] = tMat[0][0]; rMat[0][1] = tMat[0][1]; rMat[0][2] = tMat[0][2];
+  rMat[1][0] = tMat[1][0]; rMat[1][1] = tMat[1][1]; rMat[1][2] = tMat[1][2];
+  rMat[2][0] = tMat[2][0]; rMat[2][1] = tMat[2][1]; rMat[2][2] = tMat[2][2];
+
+  return rMat;
+}
+
+/// Ermittlung der Orientierung/Gelenkstellung
+/// d.h. th4, th5 und th6
+Posture Kinematic::ivOrientation(Posture pt, Position ps){
+  // D-H Parameter Zuweisen
+  dhPar1.theta = pt.Jt1;
+  dhPar2.theta = pt.Jt2;
+  dhPar3.theta = pt.Jt3;
+  // Achsen-Transformations Matrizen Ermittlen
+  tMat01 = jointTMatrix(dhPar1);
+  tMat12 = jointTMatrix(dhPar2);
+  tMat23 = jointTMatrix(dhPar3);
+  // Positins-Transformations Matrizen Ermittlen
+  tMat03 = tMat01*tMat12*tMat23;
+  tmm::Matrix<3,3> rMat03 = read3x3(tMat03);
+
+  // Ziel Rotations Matrix bauen
+  DhParam dhp = {ps.A, ps.B, ps.C,0,0};
+  tmm::Matrix<4,4> tMat06 = jointTMatrix(dhp);
+  tmm::Matrix<3,3> rMat06 = read3x3(tMat06);
+
+  // Orientierungs Winkeln
+  tmm::Matrix<3,3> rMat36 = rMat03.inverse() * rMat06;
+
+  // Berechnung von theta 4
+  pt.Jt4 = getDeg(atan2(-rMat36[0][2],rMat36[1][2]));
+
+  // Berechnung von theta 5
+  pt.Jt5 = getDeg(atan2(sqrt(powf(rMat36[0][2],2)+powf(rMat36[1][2],2)),rMat36[2][2]));
+
+  // Berechnung von theta 6
+  pt.Jt6 = getDeg(atan2(rMat36[2][0],rMat36[2][1]));
+
+  return pt;
+}
+
+/// Inverskinematik Berechnund anhand der
+/// Denavite-Hartenberge Konvention
 Posture Kinematic::ivKinematic(Position p6){
   Posture pt = {};
 
@@ -181,33 +217,33 @@ Posture Kinematic::ivKinematic(Position p6){
   //
   // Ermittlung der Manipulator Transformations-Matrix entsprechend der
   // gegebenen Positions-Winkelwerten
-  pt = ivOrientation(pt,p6);
+  pt = ivOrientation(pt, p6);
 
   // Ermittlung der Positions Difference zwischen Endeffektor und Gelenk 5
   // unterberucksichtigung der Nickung in Acshe 2, 3 oder 5
   if(pt.Jt2 || pt.Jt3 || pt.Jt5){
-    // Positions Difference berechnen
-    Position psFwd1 = fdKinematic(pt);
-
     // Gelenk 5 entlang der Orientierungs Achse verschieben
     // Matrix4x4  = tmat06v*TransFK(0,90,0,0,0)*TransFK(0,0,0,2*a(5),0);
-    //DhParam tOpp = {0.000, 90.000, 0.000, 0.000, 0.000};
-    //Matrix
-    //DhParam tDis = {0.000,  0.000, 0.000, 2*dhPar5.link, 0.000};
-    //Matrix4x4 arm = armTMatrix(pt);
-    //Matrix4x4 armOpp = matrixMulp(arm, tOpp);
-    //Matrix4x4 armOppDis = matrixMulp(armOpp, tDis);
+    //
+    // NOTE: Validiere beide Matrizen dhParOpp und tMatDis zusammen
+    // getragen werden kann.
+    DhParam dhParOpp = {0.000, 90.000, 0.000, 0.000, 0.000};
+    DhParam dhParDis = {0.000,  0.000, 0.000, 2*dhPar5.link, 0.000};
+    tmm::Matrix<4,4> tMat06 = armTMatrix(pt);
+    tmm::Matrix<4,4> tMatOpp = jointTMatrix(dhParOpp);
+    tmm::Matrix<4,4> tMatDis = jointTMatrix(dhParDis);
+
+    // Neuer Ziel Position Berechnen
+    tmm::Matrix<4,4> tMat06Corr = tMat06*tMatOpp*tMatDis;
 
     // Berechnung der Positionsgebenden Gelenkstellung d.h. th1, th2 und th3
     // unter Berücksichtigung von Achse 56
-    //Position psFwd2 = {armOppDis.m14[0], armOppDis.m14[1], armOppDis.m14[2],0,0,0};
-    //Posture ptFwd = Position(psFwd2);
+    Position p6Corr =
+      {tMat06Corr[0][3], tMat06Corr[1][3], tMat06Corr[2][3], p6.A, p6.B, p6.C};
+    pt = ivPosition(p6Corr);
 
     //// Berechnung der Orientierung
-    //ptFwd = Orientation(ptFwd, );
-    //th4 = ToDeg(thr4);
-    //th5 = ToDeg(thr5);
-    //th6 = ToDeg(thr6);
+    pt = ivOrientation(pt, p6Corr);
   }
 
 
@@ -215,39 +251,8 @@ Posture Kinematic::ivKinematic(Position p6){
   return pt;
 }
 
-// Returns the product of given Matrices matA and matB
-Matrix4x4 Kinematic::matrixMulp(Matrix4x4 matA, Matrix4x4 matB){
-  Matrix4x4 matAB;
-
-  float Mat[4][4] = {};
-
-  // Matrix m11 bis m41
-  matAB.m11[0] = matA.m11[0]*matB.m11[0] + matA.m12[0]*matB.m11[1] + matA.m13[0]*matB.m11[2] + matA.m14[0]*matB.m11[3];
-  matAB.m11[1] = matA.m11[1]*matB.m11[0] + matA.m12[1]*matB.m11[1] + matA.m13[1]*matB.m11[2] + matA.m14[1]*matB.m11[3];
-  matAB.m11[2] = matA.m11[2]*matB.m11[0] + matA.m12[2]*matB.m11[1] + matA.m13[2]*matB.m11[2] + matA.m14[2]*matB.m11[3];
-  matAB.m11[3] = matA.m11[3]*matB.m11[0] + matA.m12[3]*matB.m11[1] + matA.m13[3]*matB.m11[2] + matA.m14[3]*matB.m11[3];
-  // Matrix m12 bis m42
-  matAB.m12[0] = matA.m11[0]*matB.m12[0] + matA.m12[0]*matB.m12[1] + matA.m13[0]*matB.m12[2] + matA.m14[0]*matB.m12[3];
-  matAB.m12[1] = matA.m11[1]*matB.m12[0] + matA.m12[1]*matB.m12[1] + matA.m13[1]*matB.m12[2] + matA.m14[1]*matB.m12[3];
-  matAB.m12[2] = matA.m11[2]*matB.m12[0] + matA.m12[2]*matB.m12[1] + matA.m13[2]*matB.m12[2] + matA.m14[2]*matB.m12[3];
-  matAB.m12[3] = matA.m11[3]*matB.m12[0] + matA.m12[3]*matB.m12[1] + matA.m13[3]*matB.m12[2] + matA.m14[3]*matB.m12[3];
-  // Matrix m13 bis m43
-  matAB.m13[0] = matA.m11[0]*matB.m13[0] + matA.m12[0]*matB.m13[1] + matA.m13[0]*matB.m13[2] + matA.m14[0]*matB.m13[3];
-  matAB.m13[1] = matA.m11[1]*matB.m13[0] + matA.m12[1]*matB.m13[1] + matA.m13[1]*matB.m13[2] + matA.m14[1]*matB.m13[3];
-  matAB.m13[2] = matA.m11[2]*matB.m13[0] + matA.m12[2]*matB.m13[1] + matA.m13[2]*matB.m13[2] + matA.m14[2]*matB.m13[3];
-  matAB.m13[3] = matA.m11[3]*matB.m13[0] + matA.m12[3]*matB.m13[1] + matA.m13[3]*matB.m13[2] + matA.m14[3]*matB.m13[3];
-  // Matrix m12 bis m42
-  matAB.m14[0] = matA.m11[0]*matB.m14[0] + matA.m12[0]*matB.m14[1] + matA.m13[0]*matB.m14[2] + matA.m14[0]*matB.m14[3];
-  matAB.m14[1] = matA.m11[1]*matB.m14[0] + matA.m12[1]*matB.m14[1] + matA.m13[1]*matB.m14[2] + matA.m14[1]*matB.m14[3];
-  matAB.m14[2] = matA.m11[2]*matB.m14[0] + matA.m12[2]*matB.m14[1] + matA.m13[2]*matB.m14[2] + matA.m14[2]*matB.m14[3];
-  matAB.m14[3] = matA.m11[3]*matB.m14[0] + matA.m12[3]*matB.m14[1] + matA.m13[3]*matB.m14[2] + matA.m14[3]*matB.m14[3];
-
-  return matAB;
-}
-
-
-// Returns Joint-Transformation Matrix with respect
-// to given of Dh-Parameters
+/// Homogenen Transformations-Matrix des Gelenks Aufstellen
+/// und wiedergeben mit bezug auf die Denavite-Hartenberg Parameter
 tmm::Matrix<4,4> Kinematic::jointTMatrix(DhParam dhPar){
   // Denavit-Hartenberg-Transformationmatrix (a alpha beta d theta)
   //
@@ -289,8 +294,9 @@ tmm::Matrix<4,4> Kinematic::jointTMatrix(DhParam dhPar){
   return mat;
 }
 
-/*Returns Linked Transformation-Matrix of Robotic-Arm
-  with respect to given Posture */
+/// Homogenen Transformations-Matrix des Manipulators
+/// aufstellen und wiedergeben mit bezug zu Gelenkwinkeln
+/// theta 1 bis 6
 tmm::Matrix<4,4> Kinematic::armTMatrix(Posture p){
   // D-H Parameter Zuweisen
   dhPar1.theta = p.Jt1;
@@ -319,27 +325,27 @@ tmm::Matrix<4,4> Kinematic::armTMatrix(Posture p){
   tMat56 = jointTMatrix(dhPar6);
 
   // Achsen Transformationen Loggen
-  //printMatrix(tMat01, "TMatrix01");
-  //printMatrix(tMat12, "TMatrix12");
-  //printMatrix(tMat23, "TMatrix23");
-  //printMatrix(tMat34, "TMatrix34");
-  //printMatrix(tMat45, "TMatrix45");
-  //printMatrix(tMat56, "TMatrix56");
+  printMatrix(tMat01, "TMatrix01");
+  printMatrix(tMat12, "TMatrix12");
+  printMatrix(tMat23, "TMatrix23");
+  printMatrix(tMat34, "TMatrix34");
+  printMatrix(tMat45, "TMatrix45");
+  printMatrix(tMat56, "TMatrix56");
 
   // Verkettet-Transformations Matrizen Ermittlen
-  //tMat02 = matrixMulp(tMat01, tMat12);
-  //tMat03 = matrixMulp(tMat02, tMat23);
-  //tMat04 = matrixMulp(tMat03, tMat34);
-  //tMat05 = matrixMulp(tMat04, tMat45);
-  //tMat06 = matrixMulp(tMat05, tMat56);
+  tMat02 = tMat01*tMat12;
+  tMat03 = tMat02*tMat23;
+  tMat04 = tMat03*tMat34;
+  tMat05 = tMat04*tMat45;
+  tMat06 = tMat05*tMat56;
 
 
   // Transformationen Loggen
-  //printMatrix(tMat02, "TMatrix02");
-  //printMatrix(tMat03, "TMatrix03");
-  //printMatrix(tMat04, "TMatrix04");
-  //printMatrix(tMat05, "TMatrix05");
-  //printMatrix(tMat06, "TMatrix06");
+  printMatrix(tMat02, "TMatrix02");
+  printMatrix(tMat03, "TMatrix03");
+  printMatrix(tMat04, "TMatrix04");
+  printMatrix(tMat05, "TMatrix05");
+  printMatrix(tMat06, "TMatrix06");
 
   return tMat06;
 }

@@ -1,0 +1,9 @@
+<map id="Actuator::Read" name="Actuator::Read">
+<area shape="rect" id="Node000001" title="lese Istposition" alt="" coords="377,31,487,56"/>
+<area shape="rect" id="Node000002" href="$class_actuator.html#a4438639840978376b4e689edcac42db7" title="Soll&#45;Ist Differenze bilden." alt="" coords="204,5,313,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="364,36,313,29,314,23,364,31"/>
+<area shape="rect" id="Node000003" href="$class_rob_frame.html#a92a99cf7219b60ab8d2c349fd2eef6a8" title="Glenk Einzelverfahren." alt="" coords="188,55,329,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="364,55,330,60,329,55,363,50"/>
+<area shape="rect" id="Node000004" href="$class_rob_frame.html#a0d79cee264204461c4445cf72c4481b7" title="Eingangsdaten Parsen." alt="" coords="5,55,140,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="174,70,140,70,140,65,174,65"/>
+</map>

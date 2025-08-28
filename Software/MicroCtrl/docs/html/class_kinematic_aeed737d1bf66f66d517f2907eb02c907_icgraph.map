@@ -1,0 +1,13 @@
+<map id="Kinematic::jointTMatrix" name="Kinematic::jointTMatrix">
+<area shape="rect" id="Node000001" title="Homogenen Transformations&#45;Matrix des gelenks." alt="" coords="416,56,571,81"/>
+<area shape="rect" id="Node000002" href="$class_kinematic.html#aed35a0f15575c44ba0f62a42059e69c9" title="Homogenen Transformations&#45;Matrix des Manipulators." alt="" coords="212,5,365,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="427,55,340,33,341,28,429,50"/>
+<area shape="rect" id="Node000004" href="$class_kinematic.html#ae03636412ecab6f5a53e8c3d9069e369" title="Inverskinematik berechnung." alt="" coords="6,56,161,81"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="402,71,161,71,161,66,402,66"/>
+<area shape="rect" id="Node000005" href="$class_kinematic.html#aff4c2e3469d83e34b80eb8afe3b48a62" title="Orientierungsgebeden Winkeln Berechnen." alt="" coords="209,107,368,132"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="429,87,341,109,340,104,427,82"/>
+<area shape="rect" id="Node000003" href="$class_kinematic.html#aef4876851b52873dff6f8b9e0d388121" title="Vorwaertskinematik berechnung." alt="" coords="5,5,161,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="198,21,162,21,162,15,198,15"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="224,37,136,59,135,53,222,31"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="222,106,135,84,136,79,224,101"/>
+</map>

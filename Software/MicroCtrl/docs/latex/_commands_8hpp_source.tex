@@ -1,0 +1,93 @@
+\doxysection{Commands.\+hpp}
+\hypertarget{_commands_8hpp_source}{}\label{_commands_8hpp_source}\index{Commands.hpp@{Commands.hpp}}
+\mbox{\hyperlink{_commands_8hpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ Program:\ Commands.hpp}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ Description:\ header\ file\ containing\ prcedures}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for\ Parsing\ and\ validating\ Commands}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Autor:\ Chukwunonso\ Bob-\/Anyeji}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ Date:\ 09.06.2024}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ COMMANDS\_H\_}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ COMMANDS\_H\_}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ COMMAND\_LEN\ 28}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <Servo.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <wiring\_private.h>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_types_8hpp}{Types.hpp}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_logger_8hpp}{Logger.hpp}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_joint_8hpp}{Joint.hpp}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_kinematic_8hpp}{Kinematic.hpp}}"{}}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_rob_frame}{RobFrame}};}
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_commands_a0d24ef48a276e134b924730025a8e310}{Commands}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_commands_abd11dc46852631dacaf892620d29d94d}{\_range}}\ =\ 0;}
+\DoxyCodeLine{00027\ \ \ \mbox{\hyperlink{class_rob_frame}{RobFrame}}*\ \mbox{\hyperlink{class_commands_a17911699addf8637b700a00637c7ccdb}{\_robFrame}};}
+\DoxyCodeLine{00028\ \ \ \mbox{\hyperlink{struct_command}{Command}}\ \mbox{\hyperlink{class_commands_a5455e825e9de10b97988dae5744e678c}{\_list}}[\mbox{\hyperlink{_commands_8hpp_a263a398098e98c047598d65206325186}{COMMAND\_LEN}}];}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \mbox{\hyperlink{class_commands_a0d24ef48a276e134b924730025a8e310}{Commands}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \textcolor{comment}{//\ Const\ Difinitions}}
+\DoxyCodeLine{00034\ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8}{Tags}}\{}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{/*0\ */}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a83c15d30aed7a3bf490200691870347e}{World}},}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{/*\ \ */}\ \ \textcolor{comment}{//\ Read\ Set\ Joint\ Positions}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{/*1\ */}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a839dfe7cc3e6524eb3c0c37766fab859}{Jt1}},}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{/*2\ */}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a9e18b666fd06fd56e85751cd0e5ff685}{Jt2}},}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{/*3\ */}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a413cd3b50d5bdcce8299fdca041fcfa2}{Jt3}},}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{/*4\ */}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a41b6071684e3d828d014a827ca895f5b}{Jt4}},}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{/*5\ */}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a0f7a0e2cc6a45f928f14ca47ea15b0c2}{Jt5}},}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{/*6\ */}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8aaa904b547f29d578cc70d546bfd70189}{Jt6}},}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{/*7\ */}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8ac6abec7ef2494cfff7c0ede418fa6b86}{Jt7}},}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{/*\ \ */}\ \ \textcolor{comment}{//\ Get\ Rob\ Position\ Data}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{comment}{/*8\ */}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8aa326387b63cc946f4693116b52647a0f}{Here}},}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{/*9\ */}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a7f69d9bffd1fae17cfa19249a815b787}{Joints}},}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{/*\ \ */}\ \ \textcolor{comment}{//\ Drive\ to\ \ Given\ Configurations}}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{comment}{/*10*/}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a1ce07b1ff3fd4a6bb1a59e8f21fb5c62}{GoHome}},}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{/*11*/}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8ab22ab8aa9a4b0d0485d55ea59a7914d2}{Drive}},}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{/*12*/}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a40d42d3ebae2009070e171083ce39418}{JDrive}},}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{/*13*/}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a2cb935c7ff03805fbc8484d50994d93d}{LDrive}},}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{/*\ \ */}\ \ \textcolor{comment}{//\ Read\ Set\ Parameters}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{/*14*/}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a7f0979ce08131c167a9e5a87b249e954}{Speed}},}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{/*15*/}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a71ca5e22b97fcd0d5b9374cb01f03013}{Accuracy}},}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{/*16*/}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a517b6fe9ec7127c62dc976b17cac82e4}{Debug}},}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{/*17*/}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a0e57b84f7471c2169059f738bac35ffb}{Voltage}},}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{/*\ \ */}\ \ \textcolor{comment}{//\ Assignment\ and\ listing\ of\ Position\ Data}}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{comment}{/*18*/}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a029deda531b0768cfa1e7395f078a1b9}{Position}},}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{/*19*/}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8af67582c3ddb70c5225f4177ac38c1263}{Posture}},}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{/*\ \ */}\ \ \textcolor{comment}{//\ Listing\ of\ Parameter\ and\ Data}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{comment}{/*20*/}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a9644bfae156574d9c9807384b2d31a92}{ListPositions}},}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{comment}{/*21*/}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8aafae696d182efbbb5f041310edf1f1ad}{ListPostures}},}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{comment}{/*22*/}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8abe0d6ad7cd5cd9c54077f6644a93ab76}{ListAllPositions}},}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{comment}{/*\ \ */}\ \ \textcolor{comment}{//\ Loops}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{comment}{/*23*/}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a82bc031095e4373d632bb1d2d6ed15b5}{JLoop}},}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{/*24*/}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a99cb87104125f3ac687c48db3921fe8e}{LLoop}},}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{/*\ \ */}\ \ \textcolor{comment}{//\ Teach\ /\ Manual\ Functions}}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{comment}{/*25*/}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8afc4b882541ff39ef3ddff62e640c21d8}{Rotate}},}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{comment}{/*26*/}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8ae0ab2b51d34a5b768dbcf012133bc2f5}{RotStep}},}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{comment}{/*\ \ */}\ \ \textcolor{comment}{//\ List\ and\ Document\ Command\ Parameters}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{comment}{/*27*/}\ \ \mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a813be1d187bea6ea03e3282ecf497b17}{Help}}}
+\DoxyCodeLine{00072\ \ \ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \mbox{\hyperlink{struct_command}{Command}}\&\ \mbox{\hyperlink{class_commands_a7fd840c6e665a1ab1a69890d518decfc}{operator[]}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \mbox{\hyperlink{struct_command}{Command}}\ \mbox{\hyperlink{class_commands_a8e62a64369c9015c34dcb3d2f099f8b1}{Parse}}(String\&\ input);}
+\DoxyCodeLine{00077\ \ \ \mbox{\hyperlink{struct_command}{Command}}\ \mbox{\hyperlink{class_commands_acc6d0ec106077f9e68db8025dbc8ba2f}{Get}}(\mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8}{Tags}}\ tag);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_commands_a1241df0a3683b61993b113257d1fa6a0}{Init}}(\mbox{\hyperlink{class_rob_frame}{RobFrame}}*\ robFrame);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \textcolor{keywordtype}{int}\ \ \mbox{\hyperlink{class_commands_ac7b086b85506ae1adc8c1376210dcd19}{GetParam}}(\textcolor{keywordtype}{int}\ cIndex);}
+\DoxyCodeLine{00082\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_commands_a74bd542f1e4ef1007d20b981efcfa6cd}{SetParam}}(\textcolor{keywordtype}{int}\ cIndex,\ \textcolor{keywordtype}{float}\ val);}
+\DoxyCodeLine{00083\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_commands_a225d04681a6a503bf17f4d029d12d0aa}{Delay}}();}
+\DoxyCodeLine{00084\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_commands_ac0b1b48d52f46ddae311724604b8ded3}{List}}();}
+\DoxyCodeLine{00085\ \};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ COMMANDS\_H\_}}
+
+\end{DoxyCode}

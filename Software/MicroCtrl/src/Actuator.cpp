@@ -1,43 +1,50 @@
-/*
-** File: Actuator.cpp
-** Description: Funktionalität für die Ansteuerung des Aktuators
-** Autor: Chukwunonso Bob-Anyeji
-** Date: 18.08.2025
-*/
+
+//////////////////////////////////////////////////////////////////////////
+// Datei: Actuator.cpp
+// Beschreibung: Ansteuerungslogik des Aktuators
+// Autor: Chukwunonso Bob-Anyeji
+// Datum: 18.08.2025@12-00
+// Aktualisiert: 27.08.2025@11-46
+//////////////////////////////////////////////////////////////////////////
 
 #include "Actuator.hpp"
 
 using namespace Logger;
 using namespace Utils;
 
-/* Instanzierung der Actor Klassen-Objekts */
+/// Instanzierung des Aktuators bzw. Steppermotor Klassenobject
 Actuator::Actuator(){}
 
-//
-//Private Funktions / Prozeduren
-//
+/// RoboterFrameWork-Objekt Zeigerzuweisung
+void Actuator::Init(RobFrame* robFrame){
+  _robFrame = robFrame;
+}
 
+///
+/// Private Funktions / Prozeduren
+///
+
+/// Winkelwerte in Grad zu Schritte konvertieren
 int32 Actuator::calcSteps(int32 target)
 {
   return (target*_motorSteps*_microSteps*_gearRatio)/360;
 }
 
+/// Schritte zu Winkel
 int32 Actuator::calcPosition(int32 actSteps){
   return (actSteps*360)/(_motorSteps*_microSteps*_gearRatio);
 }
 
-//
-//Public Funktions / Prozeduren
-//
+///
+/// Public Funktions / Prozeduren
+///
 
-// Eindeutiges ID auslesen
+/// Eindeutiges ID auslesen
 int16 Actuator::Id(){
   return _id;
 }
 
-// Akuator Einrichtung
-// <gearRatio> Getriebeübersetzung
-// <accuracy> Positions-Tolerance
+/// Hardware eigenschaften einrichten
 int16 Actuator::SetUp(float gearRatio, int16 accuracy, int16 max, int16 min)
 {
   _stepper->setSpeedProfile(BasicStepperDriver::LINEAR_SPEED, 1000, 1000);
@@ -59,7 +66,8 @@ int16 Actuator::SetUp(float gearRatio, int16 accuracy, int16 max, int16 min)
   return OK;
 }
 
-// Anbinddung der Hardware-Ausgänge
+/// Anbindung der Hardwareausgänge am Klassen-Ojekt durch die Initialisierung
+/// der "BasicStepperDriver" Klasse
 int16 Actuator::Attach(int16 dirPin, int16 stepPin, int16 enaPin){
   _stepper = new BasicStepperDriver(_motorSteps, dirPin, stepPin, enaPin);
   _id = stepPin;
@@ -67,13 +75,13 @@ int16 Actuator::Attach(int16 dirPin, int16 stepPin, int16 enaPin){
   return int16(_stepper);
 }
 
- // IstPositionswert Referenzieren
+/// Referenziehung der gespeicherten Ist-Position
 int32 Actuator::Refernce(int32 value){
   _actualSteps = value;
   return _actualSteps;
 }
 
-// Asynchrones Aktoransteuerung Einschalten Freigeben
+/// Asynchrones Aktoransteuerung Einschalten bzw. Freigeben
 int32 Actuator::Activate(int8 ena, uint16 tof)
 {
   if(ena >= ON)
@@ -117,15 +125,13 @@ int32 Actuator::Activate(int8 ena, uint16 tof)
         _state = ResetBit16(_state, State::InMotion);
         _state = SetBit16(_state, State::Stopped);
       }
-      return OK;
+      return ON;
     }
   }
-  return NOK;
+  return OFF;
 }
 
-
-// Aktuator Sollwert Aynschrone Beschreiben
-// <target> Zielvorgabe in Grad
+/// Sollpositon Synchrone Schreiben
 int32 Actuator::Write(int32 target)
 {
   if (target < _min)
@@ -137,8 +143,18 @@ int32 Actuator::Write(int32 target)
   {
     target = _max;
   }
+  int16 actpos = calcPosition(_actualSteps);
+  if(target >= actpos)
+  {
+    target = target - actpos;
+  }
+  else
+  {
+    target = actpos - target;
+  }
+
   _previousSteps = _actualSteps;
-  _targetSteps = calcSteps(target);
+  _targetSteps = calcSteps(target);;
 
   // Delta ungleich Null Validierung
   if(_targetSteps == _actualSteps)
@@ -149,7 +165,7 @@ int32 Actuator::Write(int32 target)
 
   // Fahrtrichtungs Validierung
   _dir = (_targetSteps >= _actualSteps) ? 1 : -1;
-  _stepper->startMove(_targetSteps);
+  _stepper->startMove(_targetSteps*_dir);
   log(_targetSteps, "Act:target: ");
   log(_actualSteps, "Act:Actual: ");
   log(_dir, "Act:Write dir ");
@@ -166,14 +182,18 @@ int32 Actuator::Write(int32 target)
   log(_targetSteps, "Ziel Schritte: ");
   _state = ResetBit16(_state, State::InPosition);
 
+
+  while (Activate(ON)>OK);
   return _targetSteps;
 }
 
+/// Ist-Winkelwert von in Grad auslesen
 int32 Actuator::Read()
 {
   return calcPosition(_actualSteps);
 }
 
+/// Soll-Ist Differenze bilden in Grad
 int32 Actuator::Delta(int32 target){
   if (target < _min - _offset)
   {

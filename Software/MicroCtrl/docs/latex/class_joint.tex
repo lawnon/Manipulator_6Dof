@@ -1,0 +1,203 @@
+\doxysection{Joint Klassenreferenz}
+\hypertarget{class_joint}{}\label{class_joint}\index{Joint@{Joint}}
+
+
+{\ttfamily \#include $<$Joint.\+hpp$>$}
+
+
+
+Zusammengehörigkeiten von Joint\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_joint__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_joint_a79a7a4715b2166714e039d7c7c5ea3b4}{Joint}} ()
+\item 
+void \mbox{\hyperlink{class_joint_a5beaba330e590d9401e0301bbc534cbd}{Init}} (\mbox{\hyperlink{class_rob_frame}{Rob\+Frame}} \texorpdfstring{$\ast$}{*}rob\+Frame)
+\item 
+void \mbox{\hyperlink{class_joint_a5e71dc39bfb2d34d92177dc5c63c4154}{write}} (int degree)
+\item 
+void \mbox{\hyperlink{class_joint_a12e015bded7c6d7a14172cb1645b0085}{attach}} (int pin)
+\item 
+void \mbox{\hyperlink{class_joint_a4542d18ce087ab0367106fb9a29a2ed6}{attach}} (int pin, int \mbox{\hyperlink{class_joint_a510105955cbc83cfcd47be5a4e9ec36f}{min}}, int \mbox{\hyperlink{class_joint_ae8caba5de6f6cde9037860321efc185f}{max}})
+\item 
+void \mbox{\hyperlink{class_joint_a1dd0427ebc14cea8a370cad19d1357f8}{attach}} (int pin, int \mbox{\hyperlink{class_joint_a510105955cbc83cfcd47be5a4e9ec36f}{min}}, int \mbox{\hyperlink{class_joint_ae8caba5de6f6cde9037860321efc185f}{max}}, int \mbox{\hyperlink{class_joint_a96b640f487cf0a5b08c46c4d80b9cb8c}{offset}})
+\item 
+void \mbox{\hyperlink{class_joint_a7a0926696f1999a60c7b8744daa47575}{limit}} (int \mbox{\hyperlink{class_joint_a510105955cbc83cfcd47be5a4e9ec36f}{min}}, int \mbox{\hyperlink{class_joint_ae8caba5de6f6cde9037860321efc185f}{max}})
+\item 
+int \mbox{\hyperlink{class_joint_a595af6dcf0b3affd8ba7d6adce3e4a96}{read}} ()
+\item 
+int \mbox{\hyperlink{class_joint_a0d059496cb456da255b4b0efe471acc7}{read2}} ()
+\item 
+int \mbox{\hyperlink{class_joint_a793aee2829d81b31a374c01bbca80087}{read\+Microseconds}} ()
+\item 
+int \mbox{\hyperlink{class_joint_ae7bda5750f3439adb895f08000a9c1e3}{delta}} (int dest)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Öffentliche Attribute}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_joint_ae69e656935b6abbb13eeafe13fc9eb9f}{id}} = 0
+\item 
+int \mbox{\hyperlink{class_joint_a96b640f487cf0a5b08c46c4d80b9cb8c}{offset}} = 0
+\item 
+int \mbox{\hyperlink{class_joint_a510105955cbc83cfcd47be5a4e9ec36f}{min}} = 1
+\item 
+int \mbox{\hyperlink{class_joint_ae8caba5de6f6cde9037860321efc185f}{max}} = 180
+\item 
+Servo \mbox{\hyperlink{class_joint_a197b816f370ab6dda8f4b65e29a62d2f}{servo}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_joint_a6df676c80853e1567f78bff9227b73c7}{\+\_\+offset}}
+\item 
+\mbox{\hyperlink{class_rob_frame}{Rob\+Frame}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_joint_a02d80f85bd7239163cc13e96a1f0c9c3}{\+\_\+rob\+Frame}}
+\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_joint_doc-constructors}
+\doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
+\Hypertarget{class_joint_a79a7a4715b2166714e039d7c7c5ea3b4}\index{Joint@{Joint}!Joint@{Joint}}
+\index{Joint@{Joint}!Joint@{Joint}}
+\doxysubsubsection{\texorpdfstring{Joint()}{Joint()}}
+{\footnotesize\ttfamily \label{class_joint_a79a7a4715b2166714e039d7c7c5ea3b4} 
+Joint\+::\+Joint (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_joint_doc-func-members}
+\doxysubsection{Dokumentation der Elementfunktionen}
+\Hypertarget{class_joint_a12e015bded7c6d7a14172cb1645b0085}\index{Joint@{Joint}!attach@{attach}}
+\index{attach@{attach}!Joint@{Joint}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_joint_a12e015bded7c6d7a14172cb1645b0085} 
+void Joint\+::attach (\begin{DoxyParamCaption}\item[{int}]{pin}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_joint_a4542d18ce087ab0367106fb9a29a2ed6}\index{Joint@{Joint}!attach@{attach}}
+\index{attach@{attach}!Joint@{Joint}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_joint_a4542d18ce087ab0367106fb9a29a2ed6} 
+void Joint\+::attach (\begin{DoxyParamCaption}\item[{int}]{pin}{, }\item[{int}]{min}{, }\item[{int}]{max}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_joint_a1dd0427ebc14cea8a370cad19d1357f8}\index{Joint@{Joint}!attach@{attach}}
+\index{attach@{attach}!Joint@{Joint}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_joint_a1dd0427ebc14cea8a370cad19d1357f8} 
+void Joint\+::attach (\begin{DoxyParamCaption}\item[{int}]{pin}{, }\item[{int}]{min}{, }\item[{int}]{max}{, }\item[{int}]{offset}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_joint_ae7bda5750f3439adb895f08000a9c1e3}\index{Joint@{Joint}!delta@{delta}}
+\index{delta@{delta}!Joint@{Joint}}
+\doxysubsubsection{\texorpdfstring{delta()}{delta()}}
+{\footnotesize\ttfamily \label{class_joint_ae7bda5750f3439adb895f08000a9c1e3} 
+int Joint\+::delta (\begin{DoxyParamCaption}\item[{int}]{dest}{}\end{DoxyParamCaption})}
+
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{class_joint_ae7bda5750f3439adb895f08000a9c1e3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_joint_a5beaba330e590d9401e0301bbc534cbd}\index{Joint@{Joint}!Init@{Init}}
+\index{Init@{Init}!Joint@{Joint}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_joint_a5beaba330e590d9401e0301bbc534cbd} 
+void Joint\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_rob_frame}{Rob\+Frame}} \texorpdfstring{$\ast$}{*}}]{rob\+Frame}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_joint_a7a0926696f1999a60c7b8744daa47575}\index{Joint@{Joint}!limit@{limit}}
+\index{limit@{limit}!Joint@{Joint}}
+\doxysubsubsection{\texorpdfstring{limit()}{limit()}}
+{\footnotesize\ttfamily \label{class_joint_a7a0926696f1999a60c7b8744daa47575} 
+void Joint\+::limit (\begin{DoxyParamCaption}\item[{int}]{min}{, }\item[{int}]{max}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_joint_a595af6dcf0b3affd8ba7d6adce3e4a96}\index{Joint@{Joint}!read@{read}}
+\index{read@{read}!Joint@{Joint}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily \label{class_joint_a595af6dcf0b3affd8ba7d6adce3e4a96} 
+int Joint\+::read (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{class_joint_a595af6dcf0b3affd8ba7d6adce3e4a96_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_joint_a0d059496cb456da255b4b0efe471acc7}\index{Joint@{Joint}!read2@{read2}}
+\index{read2@{read2}!Joint@{Joint}}
+\doxysubsubsection{\texorpdfstring{read2()}{read2()}}
+{\footnotesize\ttfamily \label{class_joint_a0d059496cb456da255b4b0efe471acc7} 
+int Joint\+::read2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_joint_a793aee2829d81b31a374c01bbca80087}\index{Joint@{Joint}!readMicroseconds@{readMicroseconds}}
+\index{readMicroseconds@{readMicroseconds}!Joint@{Joint}}
+\doxysubsubsection{\texorpdfstring{readMicroseconds()}{readMicroseconds()}}
+{\footnotesize\ttfamily \label{class_joint_a793aee2829d81b31a374c01bbca80087} 
+int Joint\+::read\+Microseconds (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_joint_a5e71dc39bfb2d34d92177dc5c63c4154}\index{Joint@{Joint}!write@{write}}
+\index{write@{write}!Joint@{Joint}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily \label{class_joint_a5e71dc39bfb2d34d92177dc5c63c4154} 
+void Joint\+::write (\begin{DoxyParamCaption}\item[{int}]{degree}{}\end{DoxyParamCaption})}
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_joint_doc-variable-members}
+\doxysubsection{Dokumentation der Datenelemente}
+\Hypertarget{class_joint_a6df676c80853e1567f78bff9227b73c7}\index{Joint@{Joint}!\_offset@{\_offset}}
+\index{\_offset@{\_offset}!Joint@{Joint}}
+\doxysubsubsection{\texorpdfstring{\_offset}{\_offset}}
+{\footnotesize\ttfamily \label{class_joint_a6df676c80853e1567f78bff9227b73c7} 
+int Joint\+::\+\_\+offset\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_joint_a02d80f85bd7239163cc13e96a1f0c9c3}\index{Joint@{Joint}!\_robFrame@{\_robFrame}}
+\index{\_robFrame@{\_robFrame}!Joint@{Joint}}
+\doxysubsubsection{\texorpdfstring{\_robFrame}{\_robFrame}}
+{\footnotesize\ttfamily \label{class_joint_a02d80f85bd7239163cc13e96a1f0c9c3} 
+\mbox{\hyperlink{class_rob_frame}{Rob\+Frame}}\texorpdfstring{$\ast$}{*} Joint\+::\+\_\+rob\+Frame\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_joint_ae69e656935b6abbb13eeafe13fc9eb9f}\index{Joint@{Joint}!id@{id}}
+\index{id@{id}!Joint@{Joint}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{class_joint_ae69e656935b6abbb13eeafe13fc9eb9f} 
+int Joint\+::id = 0}
+
+\Hypertarget{class_joint_ae8caba5de6f6cde9037860321efc185f}\index{Joint@{Joint}!max@{max}}
+\index{max@{max}!Joint@{Joint}}
+\doxysubsubsection{\texorpdfstring{max}{max}}
+{\footnotesize\ttfamily \label{class_joint_ae8caba5de6f6cde9037860321efc185f} 
+int Joint\+::max = 180}
+
+\Hypertarget{class_joint_a510105955cbc83cfcd47be5a4e9ec36f}\index{Joint@{Joint}!min@{min}}
+\index{min@{min}!Joint@{Joint}}
+\doxysubsubsection{\texorpdfstring{min}{min}}
+{\footnotesize\ttfamily \label{class_joint_a510105955cbc83cfcd47be5a4e9ec36f} 
+int Joint\+::min = 1}
+
+\Hypertarget{class_joint_a96b640f487cf0a5b08c46c4d80b9cb8c}\index{Joint@{Joint}!offset@{offset}}
+\index{offset@{offset}!Joint@{Joint}}
+\doxysubsubsection{\texorpdfstring{offset}{offset}}
+{\footnotesize\ttfamily \label{class_joint_a96b640f487cf0a5b08c46c4d80b9cb8c} 
+int Joint\+::offset = 0}
+
+\Hypertarget{class_joint_a197b816f370ab6dda8f4b65e29a62d2f}\index{Joint@{Joint}!servo@{servo}}
+\index{servo@{servo}!Joint@{Joint}}
+\doxysubsubsection{\texorpdfstring{servo}{servo}}
+{\footnotesize\ttfamily \label{class_joint_a197b816f370ab6dda8f4b65e29a62d2f} 
+Servo Joint\+::servo}
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_joint_8hpp}{Joint.\+hpp}}\item 
+\mbox{\hyperlink{_joint_8cpp}{Joint.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,552 @@
+\doxysection{Kinematic Klassenreferenz}
+\hypertarget{class_kinematic}{}\label{class_kinematic}\index{Kinematic@{Kinematic}}
+
+
+{\ttfamily \#include $<$Kinematic.\+hpp$>$}
+
+
+
+Zusammengehörigkeiten von Kinematic\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_kinematic__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_kinematic_a0265e971c0ac4a847df7d625553becc2}{Kinematic}} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_kinematic}{Kinematic} Klassen-\/\+Objekt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_kinematic_a457c2d43f95669a6b1e4f901d6060d12}{Init}} (\mbox{\hyperlink{class_rob_frame}{Rob\+Frame}} \texorpdfstring{$\ast$}{*}rob\+Frame)
+\begin{DoxyCompactList}\small\item\em Initialisierung Zeiger zuweisung. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_kinematic_ac7021e76ae9927bcb2d17dbe8ef6a75a}{print\+Matrix}} (tmm\+::\+Matrix$<$ 4, 4 $>$ mat, String heading)
+\begin{DoxyCompactList}\small\item\em Matrix drucken. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_position}{Position}} \mbox{\hyperlink{class_kinematic_aef4876851b52873dff6f8b9e0d388121}{fd\+Kinematic}} (\mbox{\hyperlink{struct_posture}{Posture}} posture)
+\begin{DoxyCompactList}\small\item\em Vorwaertskinematik berechnung. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_posture}{Posture}} \mbox{\hyperlink{class_kinematic_ae03636412ecab6f5a53e8c3d9069e369}{iv\+Kinematic}} (\mbox{\hyperlink{struct_position}{Position}} position)
+\begin{DoxyCompactList}\small\item\em Inverskinematik berechnung. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_posture}{Posture}} \mbox{\hyperlink{class_kinematic_aa1cba6a32703d92f41c29ee59884f89a}{iv\+Position}} (\mbox{\hyperlink{struct_position}{Position}} position)
+\begin{DoxyCompactList}\small\item\em Positionsgebenden Winkeln Berechnen. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_posture}{Posture}} \mbox{\hyperlink{class_kinematic_aff4c2e3469d83e34b80eb8afe3b48a62}{iv\+Orientation}} (\mbox{\hyperlink{struct_posture}{Posture}} posture, \mbox{\hyperlink{struct_position}{Position}} ps)
+\begin{DoxyCompactList}\small\item\em Orientierungsgebeden Winkeln Berechnen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Öffentliche Attribute}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_dh_param}{Dh\+Param}} \mbox{\hyperlink{class_kinematic_aca4dfca1bccd583a780fcde8f165300f}{dh\+Par1}} = \{\}
+\begin{DoxyCompactList}\small\item\em D-\/H Parameter Gelenk 1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_dh_param}{Dh\+Param}} \mbox{\hyperlink{class_kinematic_a416e1ad35dbd73a70e9f9b7e6687fc2e}{dh\+Par2}} = \{\}
+\begin{DoxyCompactList}\small\item\em D-\/H Parameter Gelenk 2. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_dh_param}{Dh\+Param}} \mbox{\hyperlink{class_kinematic_ab2b575c21bb6fa8f244b6a8323ff1d01}{dh\+Par3}} = \{\}
+\begin{DoxyCompactList}\small\item\em D-\/H Parameter Gelenk 3. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_dh_param}{Dh\+Param}} \mbox{\hyperlink{class_kinematic_a6fbd761660db59f6ef4502d1c4ff4373}{dh\+Par4}} = \{\}
+\begin{DoxyCompactList}\small\item\em D-\/H Parameter Gelenk 4. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_dh_param}{Dh\+Param}} \mbox{\hyperlink{class_kinematic_af210936436479006efd37a2015aa1f88}{dh\+Par5}} = \{\}
+\begin{DoxyCompactList}\small\item\em D-\/H Parameter Gelenk 5. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_dh_param}{Dh\+Param}} \mbox{\hyperlink{class_kinematic_a68c34857a9669241e219e4103769929d}{dh\+Par6}} = \{\}
+\begin{DoxyCompactList}\small\item\em D-\/H Parameter Gelenk 6. \end{DoxyCompactList}\item 
+tmm\+::\+Matrix$<$ 4, 4 $>$ \mbox{\hyperlink{class_kinematic_a296ed2287e766671dc62fa9efd987e0d}{t\+Mat01}} = \{\}
+\begin{DoxyCompactList}\small\item\em Achsen-\/\+Transformations-\/\+Matrix 1. \end{DoxyCompactList}\item 
+tmm\+::\+Matrix$<$ 4, 4 $>$ \mbox{\hyperlink{class_kinematic_a75840e5338b0c2ee8f38b046d5871786}{t\+Mat12}} = \{\}
+\begin{DoxyCompactList}\small\item\em Achsen-\/\+Transformations-\/\+Matrix 2. \end{DoxyCompactList}\item 
+tmm\+::\+Matrix$<$ 4, 4 $>$ \mbox{\hyperlink{class_kinematic_a8d4db42c4c7a644b3300f1ed41da16fe}{t\+Mat23}} = \{\}
+\begin{DoxyCompactList}\small\item\em Achsen-\/\+Transformations-\/\+Matrix 3. \end{DoxyCompactList}\item 
+tmm\+::\+Matrix$<$ 4, 4 $>$ \mbox{\hyperlink{class_kinematic_afb57ce4e7710ce443246b03eee1d18f0}{t\+Mat34}} = \{\}
+\begin{DoxyCompactList}\small\item\em Achsen-\/\+Transformations-\/\+Matrix 4. \end{DoxyCompactList}\item 
+tmm\+::\+Matrix$<$ 4, 4 $>$ \mbox{\hyperlink{class_kinematic_ae936eb9caf1d13a5693fd3f2c6aa4189}{t\+Mat45}} = \{\}
+\begin{DoxyCompactList}\small\item\em Achsen-\/\+Transformations-\/\+Matrix 5. \end{DoxyCompactList}\item 
+tmm\+::\+Matrix$<$ 4, 4 $>$ \mbox{\hyperlink{class_kinematic_a18651a831e84c4d5f16b3ef6f74de1a4}{t\+Mat56}} = \{\}
+\begin{DoxyCompactList}\small\item\em Achsen-\/\+Transformations-\/\+Matrix 6. \end{DoxyCompactList}\item 
+tmm\+::\+Matrix$<$ 4, 4 $>$ \mbox{\hyperlink{class_kinematic_af8bb55ae1bbbf02056f9b725a8305290}{t\+Mat02}} = \{\}
+\begin{DoxyCompactList}\small\item\em Verkettet Transformations-\/\+Matrix 02. \end{DoxyCompactList}\item 
+tmm\+::\+Matrix$<$ 4, 4 $>$ \mbox{\hyperlink{class_kinematic_a1c929ef6e6f83f273e0837cc8b63fad5}{t\+Mat03}} = \{\}
+\begin{DoxyCompactList}\small\item\em Verkettet Transformations-\/\+Matrix 03. \end{DoxyCompactList}\item 
+tmm\+::\+Matrix$<$ 4, 4 $>$ \mbox{\hyperlink{class_kinematic_a9718bcbc57735496c88fa89be250c6c0}{t\+Mat04}} = \{\}
+\begin{DoxyCompactList}\small\item\em Verkettet Transformations-\/\+Matrix 04. \end{DoxyCompactList}\item 
+tmm\+::\+Matrix$<$ 4, 4 $>$ \mbox{\hyperlink{class_kinematic_a4e45d9b1d954d4df521780898a0ba4c5}{t\+Mat05}} = \{\}
+\begin{DoxyCompactList}\small\item\em Verkettet Transformations-\/\+Matrix 05. \end{DoxyCompactList}\item 
+tmm\+::\+Matrix$<$ 4, 4 $>$ \mbox{\hyperlink{class_kinematic_a924f5c0bc876c87ebe92b6ddfb0a5310}{t\+Mat06}} = \{\}
+\begin{DoxyCompactList}\small\item\em Verkettet Transformations-\/\+Matrix 06. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+tmm\+::\+Matrix$<$ 4, 4 $>$ \mbox{\hyperlink{class_kinematic_aeed737d1bf66f66d517f2907eb02c907}{joint\+TMatrix}} (\mbox{\hyperlink{struct_dh_param}{Dh\+Param}} dh\+Par)
+\begin{DoxyCompactList}\small\item\em Homogenen Transformations-\/\+Matrix des gelenks. \end{DoxyCompactList}\item 
+tmm\+::\+Matrix$<$ 4, 4 $>$ \mbox{\hyperlink{class_kinematic_aed35a0f15575c44ba0f62a42059e69c9}{arm\+TMatrix}} (\mbox{\hyperlink{struct_posture}{Posture}} posture)
+\begin{DoxyCompactList}\small\item\em Homogenen Transformations-\/\+Matrix des Manipulators. \end{DoxyCompactList}\item 
+tmm\+::\+Matrix$<$ 3, 3 $>$ \mbox{\hyperlink{class_kinematic_abe03b372a5c961fd58f5fe5b66eacaea}{read3x3}} (tmm\+::\+Matrix$<$ 4, 4 $>$ t\+Mat)
+\begin{DoxyCompactList}\small\item\em Rotations-\/\+Matrix auslesen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rob_frame}{Rob\+Frame}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_kinematic_a821c9777b72f62efc15efc0f3fd9ebb6}{\+\_\+rob\+Frame}}
+\begin{DoxyCompactList}\small\item\em Zeiger zu \doxylink{class_rob_frame}{Rob\+Frame}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_kinematic_doc-constructors}
+\doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
+\Hypertarget{class_kinematic_a0265e971c0ac4a847df7d625553becc2}\index{Kinematic@{Kinematic}!Kinematic@{Kinematic}}
+\index{Kinematic@{Kinematic}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{Kinematic()}{Kinematic()}}
+{\footnotesize\ttfamily \label{class_kinematic_a0265e971c0ac4a847df7d625553becc2} 
+Kinematic\+::\+Kinematic (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_kinematic}{Kinematic} Klassen-\/\+Objekt. 
+
+Klassen-\/\+Objekt instanzieren und Denavite-\/\+Hartenberg Parameter zuweisen. 
+
+\label{doc-func-members}
+\Hypertarget{class_kinematic_doc-func-members}
+\doxysubsection{Dokumentation der Elementfunktionen}
+\Hypertarget{class_kinematic_aed35a0f15575c44ba0f62a42059e69c9}\index{Kinematic@{Kinematic}!armTMatrix@{armTMatrix}}
+\index{armTMatrix@{armTMatrix}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{armTMatrix()}{armTMatrix()}}
+{\footnotesize\ttfamily \label{class_kinematic_aed35a0f15575c44ba0f62a42059e69c9} 
+tmm\+::\+Matrix$<$ 4, 4 $>$ Kinematic\+::arm\+TMatrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_posture}{Posture}}}]{p}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Homogenen Transformations-\/\+Matrix des Manipulators. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em Manipulator-\/\+Stellung} & Theta 1 bis 6 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Transformations-\/\+Matrix
+\end{DoxyReturn}
+Homogenen Transformations-\/\+Matrix des Manipulators aufstellen und wiedergeben mit bezug zu Gelenkwinkeln theta 1 bis 6 Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_kinematic_aed35a0f15575c44ba0f62a42059e69c9_cgraph}
+\end{center}
+\end{figure}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_kinematic_aed35a0f15575c44ba0f62a42059e69c9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_kinematic_aef4876851b52873dff6f8b9e0d388121}\index{Kinematic@{Kinematic}!fdKinematic@{fdKinematic}}
+\index{fdKinematic@{fdKinematic}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{fdKinematic()}{fdKinematic()}}
+{\footnotesize\ttfamily \label{class_kinematic_aef4876851b52873dff6f8b9e0d388121} 
+\mbox{\hyperlink{struct_position}{Position}} Kinematic\+::fd\+Kinematic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_posture}{Posture}}}]{pt}{}\end{DoxyParamCaption})}
+
+
+
+Vorwaertskinematik berechnung. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em posture} & Manipulator Winkelstellung \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Lage (\doxylink{struct_position}{Position} und Orientierung)
+\end{DoxyReturn}
+Vorwaertskinematik berechnung anhand der Denavite-\/\+Hartenberg Konvention Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_kinematic_aef4876851b52873dff6f8b9e0d388121_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_kinematic_a457c2d43f95669a6b1e4f901d6060d12}\index{Kinematic@{Kinematic}!Init@{Init}}
+\index{Init@{Init}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_kinematic_a457c2d43f95669a6b1e4f901d6060d12} 
+void Kinematic\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_rob_frame}{Rob\+Frame}} \texorpdfstring{$\ast$}{*}}]{rob\+Frame}{}\end{DoxyParamCaption})}
+
+
+
+Initialisierung Zeiger zuweisung. 
+
+Initialisierung Roboter-\/\+Framework Zeiger zuweisen.
+
+
+\begin{DoxyParams}{Parameter}
+{\em rob\+Frame} & Zeiger zu \doxylink{class_rob_frame}{Rob\+Frame} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+void 
+\end{DoxyReturn}
+\Hypertarget{class_kinematic_ae03636412ecab6f5a53e8c3d9069e369}\index{Kinematic@{Kinematic}!ivKinematic@{ivKinematic}}
+\index{ivKinematic@{ivKinematic}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{ivKinematic()}{ivKinematic()}}
+{\footnotesize\ttfamily \label{class_kinematic_ae03636412ecab6f5a53e8c3d9069e369} 
+\mbox{\hyperlink{struct_posture}{Posture}} Kinematic\+::iv\+Kinematic (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_position}{Position}}}]{p6}{}\end{DoxyParamCaption})}
+
+
+
+Inverskinematik berechnung. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em position} & Manipulator \doxylink{struct_position}{Position} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Manipulator Winkelstellung
+\end{DoxyReturn}
+Inverskinematik Berechnund anhand der Denavite-\/\+Hartenberge Konvention Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_kinematic_ae03636412ecab6f5a53e8c3d9069e369_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_kinematic_aff4c2e3469d83e34b80eb8afe3b48a62}\index{Kinematic@{Kinematic}!ivOrientation@{ivOrientation}}
+\index{ivOrientation@{ivOrientation}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{ivOrientation()}{ivOrientation()}}
+{\footnotesize\ttfamily \label{class_kinematic_aff4c2e3469d83e34b80eb8afe3b48a62} 
+\mbox{\hyperlink{struct_posture}{Posture}} Kinematic\+::iv\+Orientation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_posture}{Posture}}}]{pt}{, }\item[{\mbox{\hyperlink{struct_position}{Position}}}]{ps}{}\end{DoxyParamCaption})}
+
+
+
+Orientierungsgebeden Winkeln Berechnen. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em posture} & Winkelstellung \\
+\hline
+{\em Ps} & \doxylink{struct_position}{Position} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Winkelstellung
+\end{DoxyReturn}
+Ermittlung der Orientierung/\+Gelenkstellung d.\+h. th4, th5 und th6 Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_kinematic_aff4c2e3469d83e34b80eb8afe3b48a62_cgraph}
+\end{center}
+\end{figure}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_kinematic_aff4c2e3469d83e34b80eb8afe3b48a62_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_kinematic_aa1cba6a32703d92f41c29ee59884f89a}\index{Kinematic@{Kinematic}!ivPosition@{ivPosition}}
+\index{ivPosition@{ivPosition}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{ivPosition()}{ivPosition()}}
+{\footnotesize\ttfamily \label{class_kinematic_aa1cba6a32703d92f41c29ee59884f89a} 
+\mbox{\hyperlink{struct_posture}{Posture}} Kinematic\+::iv\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_position}{Position}}}]{ps}{}\end{DoxyParamCaption})}
+
+
+
+Positionsgebenden Winkeln Berechnen. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em position} & lage \doxylink{struct_position}{Position} und Orientierune \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Winkelwerte 1...3
+\end{DoxyReturn}
+Berechung der Positionsgebenden Winkelstellungen d.\+h. th1, th2 und th3 Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{class_kinematic_aa1cba6a32703d92f41c29ee59884f89a_cgraph}
+\end{center}
+\end{figure}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{class_kinematic_aa1cba6a32703d92f41c29ee59884f89a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_kinematic_aeed737d1bf66f66d517f2907eb02c907}\index{Kinematic@{Kinematic}!jointTMatrix@{jointTMatrix}}
+\index{jointTMatrix@{jointTMatrix}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{jointTMatrix()}{jointTMatrix()}}
+{\footnotesize\ttfamily \label{class_kinematic_aeed737d1bf66f66d517f2907eb02c907} 
+tmm\+::\+Matrix$<$ 4, 4 $>$ Kinematic\+::joint\+TMatrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_dh_param}{Dh\+Param}}}]{dh\+Par}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Homogenen Transformations-\/\+Matrix des gelenks. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em dh\+Par} & Denavite-\/\+Hartenberge Parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Transformations-\/\+Matrix
+\end{DoxyReturn}
+Homogenen Transformations-\/\+Matrix des Gelenks Aufstellen und wiedergeben mit bezug auf die Denavite-\/\+Hartenberg Parameter Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{class_kinematic_aeed737d1bf66f66d517f2907eb02c907_cgraph}
+\end{center}
+\end{figure}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_kinematic_aeed737d1bf66f66d517f2907eb02c907_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_kinematic_ac7021e76ae9927bcb2d17dbe8ef6a75a}\index{Kinematic@{Kinematic}!printMatrix@{printMatrix}}
+\index{printMatrix@{printMatrix}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{printMatrix()}{printMatrix()}}
+{\footnotesize\ttfamily \label{class_kinematic_ac7021e76ae9927bcb2d17dbe8ef6a75a} 
+void Kinematic\+::print\+Matrix (\begin{DoxyParamCaption}\item[{tmm\+::\+Matrix$<$ 4, 4 $>$}]{mat}{, }\item[{String}]{heading}{}\end{DoxyParamCaption})}
+
+
+
+Matrix drucken. 
+
+4x4 Matrix in Seriellen Monitor ausgeben
+
+
+\begin{DoxyParams}{Parameter}
+{\em mat} & 4x4 Matrix \\
+\hline
+{\em heading} & Matrix Tag \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+void 
+\end{DoxyReturn}
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{class_kinematic_ac7021e76ae9927bcb2d17dbe8ef6a75a_cgraph}
+\end{center}
+\end{figure}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_kinematic_ac7021e76ae9927bcb2d17dbe8ef6a75a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_kinematic_abe03b372a5c961fd58f5fe5b66eacaea}\index{Kinematic@{Kinematic}!read3x3@{read3x3}}
+\index{read3x3@{read3x3}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{read3x3()}{read3x3()}}
+{\footnotesize\ttfamily \label{class_kinematic_abe03b372a5c961fd58f5fe5b66eacaea} 
+tmm\+::\+Matrix$<$ 3, 3 $>$ Kinematic\+::read3x3 (\begin{DoxyParamCaption}\item[{tmm\+::\+Matrix$<$ 4, 4 $>$}]{t\+Mat}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Rotations-\/\+Matrix auslesen. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em t\+Mat} & Transformations-\/\+Matrix\\
+\hline
+\end{DoxyParams}
+3x3 Rotations-\/\+Matrix aus gegebenen 4x4 Transformations-\/\+Matrix auslesen. Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_kinematic_abe03b372a5c961fd58f5fe5b66eacaea_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_kinematic_doc-variable-members}
+\doxysubsection{Dokumentation der Datenelemente}
+\Hypertarget{class_kinematic_a821c9777b72f62efc15efc0f3fd9ebb6}\index{Kinematic@{Kinematic}!\_robFrame@{\_robFrame}}
+\index{\_robFrame@{\_robFrame}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{\_robFrame}{\_robFrame}}
+{\footnotesize\ttfamily \label{class_kinematic_a821c9777b72f62efc15efc0f3fd9ebb6} 
+\mbox{\hyperlink{class_rob_frame}{Rob\+Frame}}\texorpdfstring{$\ast$}{*} Kinematic\+::\+\_\+rob\+Frame\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Zeiger zu \doxylink{class_rob_frame}{Rob\+Frame}. 
+
+\Hypertarget{class_kinematic_aca4dfca1bccd583a780fcde8f165300f}\index{Kinematic@{Kinematic}!dhPar1@{dhPar1}}
+\index{dhPar1@{dhPar1}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{dhPar1}{dhPar1}}
+{\footnotesize\ttfamily \label{class_kinematic_aca4dfca1bccd583a780fcde8f165300f} 
+\mbox{\hyperlink{struct_dh_param}{Dh\+Param}} Kinematic\+::dh\+Par1 = \{\}}
+
+
+
+D-\/H Parameter Gelenk 1. 
+
+\Hypertarget{class_kinematic_a416e1ad35dbd73a70e9f9b7e6687fc2e}\index{Kinematic@{Kinematic}!dhPar2@{dhPar2}}
+\index{dhPar2@{dhPar2}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{dhPar2}{dhPar2}}
+{\footnotesize\ttfamily \label{class_kinematic_a416e1ad35dbd73a70e9f9b7e6687fc2e} 
+\mbox{\hyperlink{struct_dh_param}{Dh\+Param}} Kinematic\+::dh\+Par2 = \{\}}
+
+
+
+D-\/H Parameter Gelenk 2. 
+
+\Hypertarget{class_kinematic_ab2b575c21bb6fa8f244b6a8323ff1d01}\index{Kinematic@{Kinematic}!dhPar3@{dhPar3}}
+\index{dhPar3@{dhPar3}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{dhPar3}{dhPar3}}
+{\footnotesize\ttfamily \label{class_kinematic_ab2b575c21bb6fa8f244b6a8323ff1d01} 
+\mbox{\hyperlink{struct_dh_param}{Dh\+Param}} Kinematic\+::dh\+Par3 = \{\}}
+
+
+
+D-\/H Parameter Gelenk 3. 
+
+\Hypertarget{class_kinematic_a6fbd761660db59f6ef4502d1c4ff4373}\index{Kinematic@{Kinematic}!dhPar4@{dhPar4}}
+\index{dhPar4@{dhPar4}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{dhPar4}{dhPar4}}
+{\footnotesize\ttfamily \label{class_kinematic_a6fbd761660db59f6ef4502d1c4ff4373} 
+\mbox{\hyperlink{struct_dh_param}{Dh\+Param}} Kinematic\+::dh\+Par4 = \{\}}
+
+
+
+D-\/H Parameter Gelenk 4. 
+
+\Hypertarget{class_kinematic_af210936436479006efd37a2015aa1f88}\index{Kinematic@{Kinematic}!dhPar5@{dhPar5}}
+\index{dhPar5@{dhPar5}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{dhPar5}{dhPar5}}
+{\footnotesize\ttfamily \label{class_kinematic_af210936436479006efd37a2015aa1f88} 
+\mbox{\hyperlink{struct_dh_param}{Dh\+Param}} Kinematic\+::dh\+Par5 = \{\}}
+
+
+
+D-\/H Parameter Gelenk 5. 
+
+\Hypertarget{class_kinematic_a68c34857a9669241e219e4103769929d}\index{Kinematic@{Kinematic}!dhPar6@{dhPar6}}
+\index{dhPar6@{dhPar6}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{dhPar6}{dhPar6}}
+{\footnotesize\ttfamily \label{class_kinematic_a68c34857a9669241e219e4103769929d} 
+\mbox{\hyperlink{struct_dh_param}{Dh\+Param}} Kinematic\+::dh\+Par6 = \{\}}
+
+
+
+D-\/H Parameter Gelenk 6. 
+
+\Hypertarget{class_kinematic_a296ed2287e766671dc62fa9efd987e0d}\index{Kinematic@{Kinematic}!tMat01@{tMat01}}
+\index{tMat01@{tMat01}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{tMat01}{tMat01}}
+{\footnotesize\ttfamily \label{class_kinematic_a296ed2287e766671dc62fa9efd987e0d} 
+tmm\+::\+Matrix$<$4,4$>$ Kinematic\+::t\+Mat01 = \{\}}
+
+
+
+Achsen-\/\+Transformations-\/\+Matrix 1. 
+
+\Hypertarget{class_kinematic_af8bb55ae1bbbf02056f9b725a8305290}\index{Kinematic@{Kinematic}!tMat02@{tMat02}}
+\index{tMat02@{tMat02}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{tMat02}{tMat02}}
+{\footnotesize\ttfamily \label{class_kinematic_af8bb55ae1bbbf02056f9b725a8305290} 
+tmm\+::\+Matrix$<$4,4$>$ Kinematic\+::t\+Mat02 = \{\}}
+
+
+
+Verkettet Transformations-\/\+Matrix 02. 
+
+\Hypertarget{class_kinematic_a1c929ef6e6f83f273e0837cc8b63fad5}\index{Kinematic@{Kinematic}!tMat03@{tMat03}}
+\index{tMat03@{tMat03}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{tMat03}{tMat03}}
+{\footnotesize\ttfamily \label{class_kinematic_a1c929ef6e6f83f273e0837cc8b63fad5} 
+tmm\+::\+Matrix$<$4,4$>$ Kinematic\+::t\+Mat03 = \{\}}
+
+
+
+Verkettet Transformations-\/\+Matrix 03. 
+
+\Hypertarget{class_kinematic_a9718bcbc57735496c88fa89be250c6c0}\index{Kinematic@{Kinematic}!tMat04@{tMat04}}
+\index{tMat04@{tMat04}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{tMat04}{tMat04}}
+{\footnotesize\ttfamily \label{class_kinematic_a9718bcbc57735496c88fa89be250c6c0} 
+tmm\+::\+Matrix$<$4,4$>$ Kinematic\+::t\+Mat04 = \{\}}
+
+
+
+Verkettet Transformations-\/\+Matrix 04. 
+
+\Hypertarget{class_kinematic_a4e45d9b1d954d4df521780898a0ba4c5}\index{Kinematic@{Kinematic}!tMat05@{tMat05}}
+\index{tMat05@{tMat05}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{tMat05}{tMat05}}
+{\footnotesize\ttfamily \label{class_kinematic_a4e45d9b1d954d4df521780898a0ba4c5} 
+tmm\+::\+Matrix$<$4,4$>$ Kinematic\+::t\+Mat05 = \{\}}
+
+
+
+Verkettet Transformations-\/\+Matrix 05. 
+
+\Hypertarget{class_kinematic_a924f5c0bc876c87ebe92b6ddfb0a5310}\index{Kinematic@{Kinematic}!tMat06@{tMat06}}
+\index{tMat06@{tMat06}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{tMat06}{tMat06}}
+{\footnotesize\ttfamily \label{class_kinematic_a924f5c0bc876c87ebe92b6ddfb0a5310} 
+tmm\+::\+Matrix$<$4,4$>$ Kinematic\+::t\+Mat06 = \{\}}
+
+
+
+Verkettet Transformations-\/\+Matrix 06. 
+
+\Hypertarget{class_kinematic_a75840e5338b0c2ee8f38b046d5871786}\index{Kinematic@{Kinematic}!tMat12@{tMat12}}
+\index{tMat12@{tMat12}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{tMat12}{tMat12}}
+{\footnotesize\ttfamily \label{class_kinematic_a75840e5338b0c2ee8f38b046d5871786} 
+tmm\+::\+Matrix$<$4,4$>$ Kinematic\+::t\+Mat12 = \{\}}
+
+
+
+Achsen-\/\+Transformations-\/\+Matrix 2. 
+
+\Hypertarget{class_kinematic_a8d4db42c4c7a644b3300f1ed41da16fe}\index{Kinematic@{Kinematic}!tMat23@{tMat23}}
+\index{tMat23@{tMat23}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{tMat23}{tMat23}}
+{\footnotesize\ttfamily \label{class_kinematic_a8d4db42c4c7a644b3300f1ed41da16fe} 
+tmm\+::\+Matrix$<$4,4$>$ Kinematic\+::t\+Mat23 = \{\}}
+
+
+
+Achsen-\/\+Transformations-\/\+Matrix 3. 
+
+\Hypertarget{class_kinematic_afb57ce4e7710ce443246b03eee1d18f0}\index{Kinematic@{Kinematic}!tMat34@{tMat34}}
+\index{tMat34@{tMat34}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{tMat34}{tMat34}}
+{\footnotesize\ttfamily \label{class_kinematic_afb57ce4e7710ce443246b03eee1d18f0} 
+tmm\+::\+Matrix$<$4,4$>$ Kinematic\+::t\+Mat34 = \{\}}
+
+
+
+Achsen-\/\+Transformations-\/\+Matrix 4. 
+
+\Hypertarget{class_kinematic_ae936eb9caf1d13a5693fd3f2c6aa4189}\index{Kinematic@{Kinematic}!tMat45@{tMat45}}
+\index{tMat45@{tMat45}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{tMat45}{tMat45}}
+{\footnotesize\ttfamily \label{class_kinematic_ae936eb9caf1d13a5693fd3f2c6aa4189} 
+tmm\+::\+Matrix$<$4,4$>$ Kinematic\+::t\+Mat45 = \{\}}
+
+
+
+Achsen-\/\+Transformations-\/\+Matrix 5. 
+
+\Hypertarget{class_kinematic_a18651a831e84c4d5f16b3ef6f74de1a4}\index{Kinematic@{Kinematic}!tMat56@{tMat56}}
+\index{tMat56@{tMat56}!Kinematic@{Kinematic}}
+\doxysubsubsection{\texorpdfstring{tMat56}{tMat56}}
+{\footnotesize\ttfamily \label{class_kinematic_a18651a831e84c4d5f16b3ef6f74de1a4} 
+tmm\+::\+Matrix$<$4,4$>$ Kinematic\+::t\+Mat56 = \{\}}
+
+
+
+Achsen-\/\+Transformations-\/\+Matrix 6. 
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_kinematic_8hpp}{Kinematic.\+hpp}}\item 
+\mbox{\hyperlink{_kinematic_8cpp}{Kinematic.\+cpp}}\end{DoxyCompactItemize}

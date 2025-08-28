@@ -1,0 +1,72 @@
+\doxysection{Actuator.\+hpp}
+\hypertarget{_actuator_8hpp_source}{}\label{_actuator_8hpp_source}\index{Actuator.hpp@{Actuator.hpp}}
+\mbox{\hyperlink{_actuator_8hpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Datei:\ Actuator.hpp}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Beschreibung:\ Ansteuerungslogik\ des\ Aktuators.}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Dieser\ Klasse\ dient\ als\ wrappper\ für\ die}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ "{}BasicStepperDriver"{}\ Klasss\ von\ Laurentiu\ Badea}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ https://github.com/laurb9/StepperDriver}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ Autor:\ Chukwunonso\ Bob-\/Anyeji}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ Datum:\ 18.08.2025@12-\/00}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ Aktualisiert:\ 27.08.2025@11-\/46}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ NOTE:\ Motor\ steps\ per\ revolution.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ die\ meisten\ Nema-\/17\ Stepper\ haben\ 200\ steps\ oder\ 1.8\ degrees/step}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ mit\ 16\ Miktrosteps\ Einstellung\ jenach\ Treiber}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#ifndef\ ACTUATOR\_H\_}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ ACTUATOR\_H\_}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <BasicStepperDriver.h>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_types_8hpp}{Types.hpp}}"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_utilities_8hpp}{Utilities.hpp}}"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_logger_8hpp}{Logger.hpp}}"{}}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_rob_frame}{RobFrame}};}
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_actuator_ad08f81ed90eb01f4654acb47eff38be6}{Actuator}}}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_rob_frame}{RobFrame}}*\ \mbox{\hyperlink{class_actuator_aa99ce4c70762d23baf12e051e75ebbab}{\_robFrame}};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ BasicStepperDriver*\ \mbox{\hyperlink{class_actuator_ab8293059665eefc50d9050c9639787c1}{\_stepper}};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Stepper\ und\ Steppertreiber\ Einstellung}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_a34ecedcf03a70dc91e4616212d79267d}{uint8}}\ \mbox{\hyperlink{class_actuator_a565677065af811cdd52de4de12276547}{\_motorSteps}}\ =\ 200;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_a34ecedcf03a70dc91e4616212d79267d}{uint8}}\ \mbox{\hyperlink{class_actuator_ade001d1ef9d41e0fb033940fb43f3b83}{\_microSteps}}\ =\ 16;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Konfigurationswerte}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_a07fb256c1077eea7a7726e948cc8ff0e}{int8}}\ \ \mbox{\hyperlink{class_actuator_a195548ac6b8d5b487e20940e0920587e}{\_dir}}\ =\ 1;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}}\ \mbox{\hyperlink{class_actuator_a54b9ddb58f8b7730694d99c02b2cf77c}{\_id}}\ =\ 0;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}}\ \mbox{\hyperlink{class_actuator_af4b6e8a30c0de94b60c7dd88cadd1acb}{\_offset}};}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}}\ \mbox{\hyperlink{class_actuator_a511c8b67bd00781f24660bc76cafcaf4}{\_min}}\ =\ -\/90;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}}\ \mbox{\hyperlink{class_actuator_a5ca69ff2e0b27db10f90a32914cf6ef8}{\_max}}\ =\ 90;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}}\ \mbox{\hyperlink{class_actuator_a7b8ff8dc352dcbbd83ac0885bf134af2}{\_gearRatio}}\ =\ 1;}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}}\ \mbox{\hyperlink{class_actuator_a4abaac0db5b87ce00c0dded74cc80a20}{\_previousSteps}}\ =\ 0;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}}\ \mbox{\hyperlink{class_actuator_a4319d3173f74a448dc7dd10711fd5ee5}{\_actualSteps}}\ =\ 0;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}}\ \mbox{\hyperlink{class_actuator_abef58f75c37d3155ecde1613e2cbc0d4}{\_targetSteps}}\ =\ 0;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_ab7078bf13036f3e78534da3ad4149dc2}{uint16}}\ \mbox{\hyperlink{class_actuator_a13a30cb5ac83c9f04a5e592b2cb3dc0b}{\_timeOfDelay}}\ =\ 0;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_actuator_af7c222037d1b227f750c377eb49eb994}{\_rpm}}\ =\ 10;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Zustands\ Variabeln}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_a07fb256c1077eea7a7726e948cc8ff0e}{int8}}\ \ \mbox{\hyperlink{class_actuator_aa0dc7ebca239c487d18c66a43296e0d3}{\_enabled}}\ =\ -\/1;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_a7472db64fa0f8253f82d7452d6786968}{word}}\ \mbox{\hyperlink{class_actuator_a64d3661583813b8f259d3051d1626882}{\_state}}\ =\ 0;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}}\ \mbox{\hyperlink{class_actuator_a04116bc5ec0ca19fdf8bbe30b5f24754}{calcSteps}}(\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}}\ target);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}}\ \mbox{\hyperlink{class_actuator_ae4705f5263847ab234ef5d9f630753df}{calcPosition}}(\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}}\ actSteps);}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_actuator_ad08f81ed90eb01f4654acb47eff38be6}{Actuator}}\ ();}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_actuator_af104d83044a8e45833a1b67cd6347602}{Init}}(\mbox{\hyperlink{class_rob_frame}{RobFrame}}*\ robFrame);}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}}\ \mbox{\hyperlink{class_actuator_a62b9a187d9a73f9d1bfb013a06baf197}{Id}}();}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}}\ \mbox{\hyperlink{class_actuator_a9f1b744baa308c5c9fed6895a8816798}{SetUp}}(\textcolor{keywordtype}{float}\ gearRatio\ =\ 1,\ \mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}}\ accuracy\ =\ 5,\ \mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}}\ max\ =\ 90,\ \mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}}\ min\ =\ -\/90);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}}\ \mbox{\hyperlink{class_actuator_af251ec8fcb3ab8be2bb34cf73b79b085}{Attach}}(\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}}\ dirPin,\ \mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}}\ stepPin,\ \mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}}\ enaPin);}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}}\ \mbox{\hyperlink{class_actuator_a8f35086212a620c907154439718570ee}{Accuracy}};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}}\ \mbox{\hyperlink{class_actuator_aa8005479f1c593783dd74c6ebf7ade6b}{Activate}}(\mbox{\hyperlink{_types_8hpp_a07fb256c1077eea7a7726e948cc8ff0e}{int8}}\ ena,\ \mbox{\hyperlink{_types_8hpp_ab7078bf13036f3e78534da3ad4149dc2}{uint16}}\ tof\ =\ 5000);}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}}\ \mbox{\hyperlink{class_actuator_abc5a978818409cb0dcdfdddc43a16d50}{Refernce}}(\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}}\ value\ =\ 0);}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}}\ \mbox{\hyperlink{class_actuator_ae786a505db189182b2fec42f1bb82445}{Write}}(\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}}\ target);}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}}\ \mbox{\hyperlink{class_actuator_a81ea3f4dae18ab70413b8da2a419601b}{Read}}();}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}}\ \mbox{\hyperlink{class_actuator_a4438639840978376b4e689edcac42db7}{Delta}}(\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}}\ target);}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40}{State}}\ \{\mbox{\hyperlink{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40aa90c8dd45a5ecd017c4b6af46e65d0ff}{Enabled}},\ \mbox{\hyperlink{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40a9f7e8c4a6fe34fa4cd5a91d57272b268}{Stopped}},\ \mbox{\hyperlink{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40ab7cd476aef1e81a6a5a7a5b33ee145a5}{InMotion}},\ \mbox{\hyperlink{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40a5a4925de23e15c19ecf1de02c9ec86b2}{Referenced}},\ \mbox{\hyperlink{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40a8042795485fa3694c1aa4332e5c5957d}{InPosition}},\ \mbox{\hyperlink{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40ad7eac040de4363a7f2da987c79de4d34}{Aborted}}\};}
+\DoxyCodeLine{00106\ \};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ACTUATOR\_H\_}}
+
+\end{DoxyCode}

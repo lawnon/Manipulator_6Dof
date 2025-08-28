@@ -1,0 +1,1021 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Manipulator mit sechs Freiheitsgraden: Kinematic Klassenreferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Manipulator mit sechs Freiheitsgraden<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Konstruktion, Modellierung und Programmierung der inversen Kinematik eines experimentellen Manipulators mit sechs Freiheitsgraden</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_kinematic.html','','class_kinematic-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Kinematic Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_kinematic_8hpp_source.html">Kinematic.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Zusammengehörigkeiten von Kinematic:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_kinematic__coll__graph.png" border="0" usemap="#a_kinematic_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_kinematic_coll__map" id="a_kinematic_coll__map">
+<area shape="rect" title=" " alt="" coords="428,201,508,227"/>
+<area shape="rect" href="class_rob_frame.html" title=" " alt="" coords="369,297,452,323"/>
+<area shape="poly" title=" " alt="" coords="424,236,409,252,405,275,409,297,404,298,399,275,404,249,420,232"/>
+<area shape="poly" title=" " alt="" coords="463,290,483,272,486,261,485,250,474,228,479,226,490,248,492,262,488,275,467,294"/>
+<area shape="rect" href="class_commands.html" title=" " alt="" coords="608,493,696,519"/>
+<area shape="poly" title=" " alt="" coords="466,311,557,321,598,330,625,345,633,368,642,410,653,493,648,494,636,411,628,370,621,348,596,335,556,326,465,316"/>
+<area shape="rect" href="class_position_factory.html" title=" " alt="" coords="107,493,221,519"/>
+<area shape="poly" title=" " alt="" coords="356,314,301,316,243,321,193,332,174,339,162,348,151,365,145,384,144,425,152,463,162,492,157,494,147,465,139,425,140,383,147,363,158,345,172,335,191,327,242,316,301,310,356,308"/>
+<area shape="rect" href="class_actuator.html" title=" " alt="" coords="373,493,443,519"/>
+<area shape="poly" title=" " alt="" coords="418,336,419,346,422,408,419,470,414,494,409,492,413,469,417,408,413,347,412,337"/>
+<area shape="rect" href="struct_posture.html" title=" " alt="" coords="291,201,357,227"/>
+<area shape="poly" title=" " alt="" coords="329,239,334,256,342,272,357,285,375,295,373,300,354,289,338,275,329,258,324,241"/>
+<area shape="poly" title=" " alt="" coords="594,497,569,487,546,471,533,456,525,440,518,409,512,379,505,364,493,349,473,334,451,324,453,319,476,330,497,345,510,361,517,377,523,408,530,438,537,453,550,467,571,482,596,492"/>
+<area shape="rect" href="struct_command.html" title=" " alt="" coords="713,297,794,323"/>
+<area shape="poly" title=" " alt="" coords="758,337,758,366,754,401,744,438,726,471,711,486,692,496,690,491,707,481,722,468,739,436,749,400,752,366,753,336"/>
+<area shape="poly" title=" " alt="" coords="212,485,234,468,244,452,250,437,252,406,255,376,262,360,274,345,296,329,320,319,369,309,370,315,322,324,298,334,278,349,266,363,260,377,257,407,255,438,249,454,238,471,215,489"/>
+<area shape="rect" href="struct_pos_data.html" title=" " alt="" coords="56,297,128,323"/>
+<area shape="poly" title=" " alt="" coords="87,336,82,365,79,400,83,435,96,468,108,481,124,491,122,496,105,485,91,471,77,436,74,400,77,365,82,335"/>
+<area shape="rect" href="structs_position.html" title=" " alt="" coords="105,201,181,227"/>
+<area shape="poly" title=" " alt="" coords="134,240,116,275,102,298,97,296,111,272,129,238"/>
+<area shape="rect" href="structs_posture.html" title=" " alt="" coords="5,201,80,227"/>
+<area shape="poly" title=" " alt="" coords="50,239,62,272,81,296,77,299,58,275,45,241"/>
+<area shape="poly" title=" " alt="" coords="380,485,371,470,359,437,355,408,359,379,371,345,380,332,391,321,395,325,384,335,376,348,364,380,360,408,364,435,376,468,385,482"/>
+<area shape="rect" href="struct_dh_param.html" title=" " alt="" coords="430,5,506,31"/>
+<area shape="poly" title=" " alt="" coords="471,44,471,201,465,201,465,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">Legende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:a0265e971c0ac4a847df7d625553becc2" id="r_a0265e971c0ac4a847df7d625553becc2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0265e971c0ac4a847df7d625553becc2">Kinematic</a> ()</td></tr>
+<tr class="memdesc:a0265e971c0ac4a847df7d625553becc2"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_kinematic.html">Kinematic</a> Klassen-Objekt.  <br /></td></tr>
+<tr class="memitem:a457c2d43f95669a6b1e4f901d6060d12" id="r_a457c2d43f95669a6b1e4f901d6060d12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a457c2d43f95669a6b1e4f901d6060d12">Init</a> (<a class="el" href="class_rob_frame.html">RobFrame</a> *robFrame)</td></tr>
+<tr class="memdesc:a457c2d43f95669a6b1e4f901d6060d12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisierung Zeiger zuweisung.  <br /></td></tr>
+<tr class="memitem:ac7021e76ae9927bcb2d17dbe8ef6a75a" id="r_ac7021e76ae9927bcb2d17dbe8ef6a75a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac7021e76ae9927bcb2d17dbe8ef6a75a">printMatrix</a> (tmm::Matrix&lt; 4, 4 &gt; mat, String heading)</td></tr>
+<tr class="memdesc:ac7021e76ae9927bcb2d17dbe8ef6a75a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix drucken.  <br /></td></tr>
+<tr class="memitem:aef4876851b52873dff6f8b9e0d388121" id="r_aef4876851b52873dff6f8b9e0d388121"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_position.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef4876851b52873dff6f8b9e0d388121">fdKinematic</a> (<a class="el" href="struct_posture.html">Posture</a> posture)</td></tr>
+<tr class="memdesc:aef4876851b52873dff6f8b9e0d388121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vorwaertskinematik berechnung.  <br /></td></tr>
+<tr class="memitem:ae03636412ecab6f5a53e8c3d9069e369" id="r_ae03636412ecab6f5a53e8c3d9069e369"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_posture.html">Posture</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae03636412ecab6f5a53e8c3d9069e369">ivKinematic</a> (<a class="el" href="struct_position.html">Position</a> position)</td></tr>
+<tr class="memdesc:ae03636412ecab6f5a53e8c3d9069e369"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inverskinematik berechnung.  <br /></td></tr>
+<tr class="memitem:aa1cba6a32703d92f41c29ee59884f89a" id="r_aa1cba6a32703d92f41c29ee59884f89a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_posture.html">Posture</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1cba6a32703d92f41c29ee59884f89a">ivPosition</a> (<a class="el" href="struct_position.html">Position</a> position)</td></tr>
+<tr class="memdesc:aa1cba6a32703d92f41c29ee59884f89a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Positionsgebenden Winkeln Berechnen.  <br /></td></tr>
+<tr class="memitem:aff4c2e3469d83e34b80eb8afe3b48a62" id="r_aff4c2e3469d83e34b80eb8afe3b48a62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_posture.html">Posture</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff4c2e3469d83e34b80eb8afe3b48a62">ivOrientation</a> (<a class="el" href="struct_posture.html">Posture</a> posture, <a class="el" href="struct_position.html">Position</a> ps)</td></tr>
+<tr class="memdesc:aff4c2e3469d83e34b80eb8afe3b48a62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Orientierungsgebeden Winkeln Berechnen.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Öffentliche Attribute</h2></td></tr>
+<tr class="memitem:aca4dfca1bccd583a780fcde8f165300f" id="r_aca4dfca1bccd583a780fcde8f165300f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_dh_param.html">DhParam</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca4dfca1bccd583a780fcde8f165300f">dhPar1</a> = {}</td></tr>
+<tr class="memdesc:aca4dfca1bccd583a780fcde8f165300f"><td class="mdescLeft">&#160;</td><td class="mdescRight">D-H Parameter Gelenk 1.  <br /></td></tr>
+<tr class="memitem:a416e1ad35dbd73a70e9f9b7e6687fc2e" id="r_a416e1ad35dbd73a70e9f9b7e6687fc2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_dh_param.html">DhParam</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a416e1ad35dbd73a70e9f9b7e6687fc2e">dhPar2</a> = {}</td></tr>
+<tr class="memdesc:a416e1ad35dbd73a70e9f9b7e6687fc2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">D-H Parameter Gelenk 2.  <br /></td></tr>
+<tr class="memitem:ab2b575c21bb6fa8f244b6a8323ff1d01" id="r_ab2b575c21bb6fa8f244b6a8323ff1d01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_dh_param.html">DhParam</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2b575c21bb6fa8f244b6a8323ff1d01">dhPar3</a> = {}</td></tr>
+<tr class="memdesc:ab2b575c21bb6fa8f244b6a8323ff1d01"><td class="mdescLeft">&#160;</td><td class="mdescRight">D-H Parameter Gelenk 3.  <br /></td></tr>
+<tr class="memitem:a6fbd761660db59f6ef4502d1c4ff4373" id="r_a6fbd761660db59f6ef4502d1c4ff4373"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_dh_param.html">DhParam</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6fbd761660db59f6ef4502d1c4ff4373">dhPar4</a> = {}</td></tr>
+<tr class="memdesc:a6fbd761660db59f6ef4502d1c4ff4373"><td class="mdescLeft">&#160;</td><td class="mdescRight">D-H Parameter Gelenk 4.  <br /></td></tr>
+<tr class="memitem:af210936436479006efd37a2015aa1f88" id="r_af210936436479006efd37a2015aa1f88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_dh_param.html">DhParam</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af210936436479006efd37a2015aa1f88">dhPar5</a> = {}</td></tr>
+<tr class="memdesc:af210936436479006efd37a2015aa1f88"><td class="mdescLeft">&#160;</td><td class="mdescRight">D-H Parameter Gelenk 5.  <br /></td></tr>
+<tr class="memitem:a68c34857a9669241e219e4103769929d" id="r_a68c34857a9669241e219e4103769929d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_dh_param.html">DhParam</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68c34857a9669241e219e4103769929d">dhPar6</a> = {}</td></tr>
+<tr class="memdesc:a68c34857a9669241e219e4103769929d"><td class="mdescLeft">&#160;</td><td class="mdescRight">D-H Parameter Gelenk 6.  <br /></td></tr>
+<tr class="memitem:a296ed2287e766671dc62fa9efd987e0d" id="r_a296ed2287e766671dc62fa9efd987e0d"><td class="memItemLeft" align="right" valign="top">tmm::Matrix&lt; 4, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a296ed2287e766671dc62fa9efd987e0d">tMat01</a> = {}</td></tr>
+<tr class="memdesc:a296ed2287e766671dc62fa9efd987e0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Achsen-Transformations-Matrix 1.  <br /></td></tr>
+<tr class="memitem:a75840e5338b0c2ee8f38b046d5871786" id="r_a75840e5338b0c2ee8f38b046d5871786"><td class="memItemLeft" align="right" valign="top">tmm::Matrix&lt; 4, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a75840e5338b0c2ee8f38b046d5871786">tMat12</a> = {}</td></tr>
+<tr class="memdesc:a75840e5338b0c2ee8f38b046d5871786"><td class="mdescLeft">&#160;</td><td class="mdescRight">Achsen-Transformations-Matrix 2.  <br /></td></tr>
+<tr class="memitem:a8d4db42c4c7a644b3300f1ed41da16fe" id="r_a8d4db42c4c7a644b3300f1ed41da16fe"><td class="memItemLeft" align="right" valign="top">tmm::Matrix&lt; 4, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8d4db42c4c7a644b3300f1ed41da16fe">tMat23</a> = {}</td></tr>
+<tr class="memdesc:a8d4db42c4c7a644b3300f1ed41da16fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Achsen-Transformations-Matrix 3.  <br /></td></tr>
+<tr class="memitem:afb57ce4e7710ce443246b03eee1d18f0" id="r_afb57ce4e7710ce443246b03eee1d18f0"><td class="memItemLeft" align="right" valign="top">tmm::Matrix&lt; 4, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb57ce4e7710ce443246b03eee1d18f0">tMat34</a> = {}</td></tr>
+<tr class="memdesc:afb57ce4e7710ce443246b03eee1d18f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Achsen-Transformations-Matrix 4.  <br /></td></tr>
+<tr class="memitem:ae936eb9caf1d13a5693fd3f2c6aa4189" id="r_ae936eb9caf1d13a5693fd3f2c6aa4189"><td class="memItemLeft" align="right" valign="top">tmm::Matrix&lt; 4, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae936eb9caf1d13a5693fd3f2c6aa4189">tMat45</a> = {}</td></tr>
+<tr class="memdesc:ae936eb9caf1d13a5693fd3f2c6aa4189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Achsen-Transformations-Matrix 5.  <br /></td></tr>
+<tr class="memitem:a18651a831e84c4d5f16b3ef6f74de1a4" id="r_a18651a831e84c4d5f16b3ef6f74de1a4"><td class="memItemLeft" align="right" valign="top">tmm::Matrix&lt; 4, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18651a831e84c4d5f16b3ef6f74de1a4">tMat56</a> = {}</td></tr>
+<tr class="memdesc:a18651a831e84c4d5f16b3ef6f74de1a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Achsen-Transformations-Matrix 6.  <br /></td></tr>
+<tr class="memitem:af8bb55ae1bbbf02056f9b725a8305290" id="r_af8bb55ae1bbbf02056f9b725a8305290"><td class="memItemLeft" align="right" valign="top">tmm::Matrix&lt; 4, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8bb55ae1bbbf02056f9b725a8305290">tMat02</a> = {}</td></tr>
+<tr class="memdesc:af8bb55ae1bbbf02056f9b725a8305290"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verkettet Transformations-Matrix 02.  <br /></td></tr>
+<tr class="memitem:a1c929ef6e6f83f273e0837cc8b63fad5" id="r_a1c929ef6e6f83f273e0837cc8b63fad5"><td class="memItemLeft" align="right" valign="top">tmm::Matrix&lt; 4, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c929ef6e6f83f273e0837cc8b63fad5">tMat03</a> = {}</td></tr>
+<tr class="memdesc:a1c929ef6e6f83f273e0837cc8b63fad5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verkettet Transformations-Matrix 03.  <br /></td></tr>
+<tr class="memitem:a9718bcbc57735496c88fa89be250c6c0" id="r_a9718bcbc57735496c88fa89be250c6c0"><td class="memItemLeft" align="right" valign="top">tmm::Matrix&lt; 4, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9718bcbc57735496c88fa89be250c6c0">tMat04</a> = {}</td></tr>
+<tr class="memdesc:a9718bcbc57735496c88fa89be250c6c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verkettet Transformations-Matrix 04.  <br /></td></tr>
+<tr class="memitem:a4e45d9b1d954d4df521780898a0ba4c5" id="r_a4e45d9b1d954d4df521780898a0ba4c5"><td class="memItemLeft" align="right" valign="top">tmm::Matrix&lt; 4, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e45d9b1d954d4df521780898a0ba4c5">tMat05</a> = {}</td></tr>
+<tr class="memdesc:a4e45d9b1d954d4df521780898a0ba4c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verkettet Transformations-Matrix 05.  <br /></td></tr>
+<tr class="memitem:a924f5c0bc876c87ebe92b6ddfb0a5310" id="r_a924f5c0bc876c87ebe92b6ddfb0a5310"><td class="memItemLeft" align="right" valign="top">tmm::Matrix&lt; 4, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a924f5c0bc876c87ebe92b6ddfb0a5310">tMat06</a> = {}</td></tr>
+<tr class="memdesc:a924f5c0bc876c87ebe92b6ddfb0a5310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verkettet Transformations-Matrix 06.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Methoden</h2></td></tr>
+<tr class="memitem:aeed737d1bf66f66d517f2907eb02c907" id="r_aeed737d1bf66f66d517f2907eb02c907"><td class="memItemLeft" align="right" valign="top">tmm::Matrix&lt; 4, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeed737d1bf66f66d517f2907eb02c907">jointTMatrix</a> (<a class="el" href="struct_dh_param.html">DhParam</a> dhPar)</td></tr>
+<tr class="memdesc:aeed737d1bf66f66d517f2907eb02c907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Homogenen Transformations-Matrix des gelenks.  <br /></td></tr>
+<tr class="memitem:aed35a0f15575c44ba0f62a42059e69c9" id="r_aed35a0f15575c44ba0f62a42059e69c9"><td class="memItemLeft" align="right" valign="top">tmm::Matrix&lt; 4, 4 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed35a0f15575c44ba0f62a42059e69c9">armTMatrix</a> (<a class="el" href="struct_posture.html">Posture</a> posture)</td></tr>
+<tr class="memdesc:aed35a0f15575c44ba0f62a42059e69c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Homogenen Transformations-Matrix des Manipulators.  <br /></td></tr>
+<tr class="memitem:abe03b372a5c961fd58f5fe5b66eacaea" id="r_abe03b372a5c961fd58f5fe5b66eacaea"><td class="memItemLeft" align="right" valign="top">tmm::Matrix&lt; 3, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe03b372a5c961fd58f5fe5b66eacaea">read3x3</a> (tmm::Matrix&lt; 4, 4 &gt; tMat)</td></tr>
+<tr class="memdesc:abe03b372a5c961fd58f5fe5b66eacaea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotations-Matrix auslesen.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attribute</h2></td></tr>
+<tr class="memitem:a821c9777b72f62efc15efc0f3fd9ebb6" id="r_a821c9777b72f62efc15efc0f3fd9ebb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_rob_frame.html">RobFrame</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a821c9777b72f62efc15efc0f3fd9ebb6">_robFrame</a></td></tr>
+<tr class="memdesc:a821c9777b72f62efc15efc0f3fd9ebb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zeiger zu <a class="el" href="class_rob_frame.html">RobFrame</a>.  <br /></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="a0265e971c0ac4a847df7d625553becc2" name="a0265e971c0ac4a847df7d625553becc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0265e971c0ac4a847df7d625553becc2">&#9670;&#160;</a></span>Kinematic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Kinematic::Kinematic </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_kinematic.html">Kinematic</a> Klassen-Objekt. </p>
+<p>Klassen-Objekt instanzieren und Denavite-Hartenberg Parameter zuweisen. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="aed35a0f15575c44ba0f62a42059e69c9" name="aed35a0f15575c44ba0f62a42059e69c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed35a0f15575c44ba0f62a42059e69c9">&#9670;&#160;</a></span>armTMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tmm::Matrix&lt; 4, 4 &gt; Kinematic::armTMatrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_posture.html">Posture</a></td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Homogenen Transformations-Matrix des Manipulators. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Manipulator-Stellung</td><td>Theta 1 bis 6 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Transformations-Matrix</dd></dl>
+<p>Homogenen Transformations-Matrix des Manipulators aufstellen und wiedergeben mit bezug zu Gelenkwinkeln theta 1 bis 6 </p>
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_kinematic_aed35a0f15575c44ba0f62a42059e69c9_cgraph.png" border="0" usemap="#aclass_kinematic_aed35a0f15575c44ba0f62a42059e69c9_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_kinematic_aed35a0f15575c44ba0f62a42059e69c9_cgraph" id="aclass_kinematic_aed35a0f15575c44ba0f62a42059e69c9_cgraph">
+<area shape="rect" title="Homogenen Transformations&#45;Matrix des Manipulators." alt="" coords="5,56,159,81"/>
+<area shape="rect" href="class_kinematic.html#aeed737d1bf66f66d517f2907eb02c907" title="Homogenen Transformations&#45;Matrix des gelenks." alt="" coords="207,5,361,31"/>
+<area shape="poly" title=" " alt="" coords="133,53,219,31,220,37,134,58"/>
+<area shape="rect" href="namespace_logger.html#a83c3562c93d0101fc7fadc86e0482b2d" title=" " alt="" coords="409,81,496,107"/>
+<area shape="poly" title=" " alt="" coords="159,71,396,88,395,93,159,77"/>
+<area shape="rect" href="class_kinematic.html#ac7021e76ae9927bcb2d17dbe8ef6a75a" title="Matrix drucken." alt="" coords="209,107,359,132"/>
+<area shape="poly" title=" " alt="" coords="134,79,220,101,219,106,133,84"/>
+<area shape="rect" href="_kinematic_8cpp.html#a339acfaac605b5bd73624297f191cc39" title="Grad zu Radiant." alt="" coords="421,5,484,31"/>
+<area shape="poly" title=" " alt="" coords="362,15,408,15,408,21,362,21"/>
+<area shape="poly" title=" " alt="" coords="359,105,395,100,396,105,360,111"/>
+</map>
+</div>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_kinematic_aed35a0f15575c44ba0f62a42059e69c9_icgraph.png" border="0" usemap="#aclass_kinematic_aed35a0f15575c44ba0f62a42059e69c9_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_kinematic_aed35a0f15575c44ba0f62a42059e69c9_icgraph" id="aclass_kinematic_aed35a0f15575c44ba0f62a42059e69c9_icgraph">
+<area shape="rect" title="Homogenen Transformations&#45;Matrix des Manipulators." alt="" coords="209,31,363,56"/>
+<area shape="rect" href="class_kinematic.html#aef4876851b52873dff6f8b9e0d388121" title="Vorwaertskinematik berechnung." alt="" coords="5,5,161,31"/>
+<area shape="poly" title=" " alt="" coords="195,35,161,30,162,25,196,29"/>
+<area shape="rect" href="class_kinematic.html#ae03636412ecab6f5a53e8c3d9069e369" title="Inverskinematik berechnung." alt="" coords="6,55,161,80"/>
+<area shape="poly" title=" " alt="" coords="196,57,161,61,161,56,195,51"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aef4876851b52873dff6f8b9e0d388121" name="aef4876851b52873dff6f8b9e0d388121"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef4876851b52873dff6f8b9e0d388121">&#9670;&#160;</a></span>fdKinematic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_position.html">Position</a> Kinematic::fdKinematic </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_posture.html">Posture</a></td>          <td class="paramname"><span class="paramname"><em>pt</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vorwaertskinematik berechnung. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">posture</td><td>Manipulator Winkelstellung </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Lage (<a class="el" href="struct_position.html">Position</a> und Orientierung)</dd></dl>
+<p>Vorwaertskinematik berechnung anhand der Denavite-Hartenberg Konvention </p>
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_kinematic_aef4876851b52873dff6f8b9e0d388121_cgraph.png" border="0" usemap="#aclass_kinematic_aef4876851b52873dff6f8b9e0d388121_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_kinematic_aef4876851b52873dff6f8b9e0d388121_cgraph" id="aclass_kinematic_aef4876851b52873dff6f8b9e0d388121_cgraph">
+<area shape="rect" title="Vorwaertskinematik berechnung." alt="" coords="5,107,161,132"/>
+<area shape="rect" href="class_kinematic.html#aed35a0f15575c44ba0f62a42059e69c9" title="Homogenen Transformations&#45;Matrix des Manipulators." alt="" coords="209,81,363,107"/>
+<area shape="poly" title=" " alt="" coords="161,107,195,103,196,108,162,112"/>
+<area shape="rect" href="_kinematic_8cpp.html#a339acfaac605b5bd73624297f191cc39" title="Grad zu Radiant." alt="" coords="625,5,688,31"/>
+<area shape="poly" title=" " alt="" coords="113,104,208,67,308,35,352,24,410,15,519,9,612,12,611,17,519,15,411,21,353,30,309,40,210,73,115,109"/>
+<area shape="rect" href="class_kinematic.html#ac7021e76ae9927bcb2d17dbe8ef6a75a" title="Matrix drucken." alt="" coords="413,132,563,157"/>
+<area shape="poly" title=" " alt="" coords="162,122,400,137,400,142,162,127"/>
+<area shape="rect" href="_kinematic_8cpp.html#ac5b83beb5fe73e1a9f3d2fe3166f3d53" title="Radiant zu Grad." alt="" coords="255,183,317,208"/>
+<area shape="poly" title=" " alt="" coords="119,130,242,176,241,181,117,135"/>
+<area shape="rect" href="class_kinematic.html#aeed737d1bf66f66d517f2907eb02c907" title="Homogenen Transformations&#45;Matrix des gelenks." alt="" coords="411,31,565,56"/>
+<area shape="poly" title=" " alt="" coords="337,79,423,57,424,62,338,84"/>
+<area shape="rect" href="namespace_logger.html#a83c3562c93d0101fc7fadc86e0482b2d" title=" " alt="" coords="613,107,700,132"/>
+<area shape="poly" title=" " alt="" coords="363,97,600,113,599,118,363,102"/>
+<area shape="poly" title=" " alt="" coords="338,104,424,126,423,131,337,109"/>
+<area shape="poly" title=" " alt="" coords="565,29,611,22,612,27,566,34"/>
+<area shape="poly" title=" " alt="" coords="563,131,599,125,600,130,564,136"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a457c2d43f95669a6b1e4f901d6060d12" name="a457c2d43f95669a6b1e4f901d6060d12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a457c2d43f95669a6b1e4f901d6060d12">&#9670;&#160;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kinematic::Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_rob_frame.html">RobFrame</a> *</td>          <td class="paramname"><span class="paramname"><em>robFrame</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialisierung Zeiger zuweisung. </p>
+<p>Initialisierung Roboter-Framework Zeiger zuweisen.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">robFrame</td><td>Zeiger zu <a class="el" href="class_rob_frame.html">RobFrame</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="ae03636412ecab6f5a53e8c3d9069e369" name="ae03636412ecab6f5a53e8c3d9069e369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae03636412ecab6f5a53e8c3d9069e369">&#9670;&#160;</a></span>ivKinematic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_posture.html">Posture</a> Kinematic::ivKinematic </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_position.html">Position</a></td>          <td class="paramname"><span class="paramname"><em>p6</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inverskinematik berechnung. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>Manipulator <a class="el" href="struct_position.html">Position</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Manipulator Winkelstellung</dd></dl>
+<p>Inverskinematik Berechnund anhand der Denavite-Hartenberge Konvention </p>
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_kinematic_ae03636412ecab6f5a53e8c3d9069e369_cgraph.png" border="0" usemap="#aclass_kinematic_ae03636412ecab6f5a53e8c3d9069e369_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_kinematic_ae03636412ecab6f5a53e8c3d9069e369_cgraph" id="aclass_kinematic_ae03636412ecab6f5a53e8c3d9069e369_cgraph">
+<area shape="rect" title="Inverskinematik berechnung." alt="" coords="5,132,160,157"/>
+<area shape="rect" href="class_kinematic.html#aed35a0f15575c44ba0f62a42059e69c9" title="Homogenen Transformations&#45;Matrix des Manipulators." alt="" coords="211,31,364,56"/>
+<area shape="poly" title=" " alt="" coords="104,130,207,73,239,59,241,64,209,78,106,134"/>
+<area shape="rect" href="class_kinematic.html#aeed737d1bf66f66d517f2907eb02c907" title="Homogenen Transformations&#45;Matrix des gelenks." alt="" coords="415,80,569,105"/>
+<area shape="poly" title=" " alt="" coords="143,129,208,118,401,97,401,102,208,123,144,135"/>
+<area shape="rect" href="class_kinematic.html#aff4c2e3469d83e34b80eb8afe3b48a62" title="Orientierungsgebeden Winkeln Berechnen." alt="" coords="208,132,367,157"/>
+<area shape="poly" title=" " alt="" coords="160,142,194,142,194,147,160,147"/>
+<area shape="rect" href="class_kinematic.html#aa1cba6a32703d92f41c29ee59884f89a" title="Positionsgebenden Winkeln Berechnen." alt="" coords="216,228,359,253"/>
+<area shape="poly" title=" " alt="" coords="112,155,248,220,246,224,110,160"/>
+<area shape="rect" href="namespace_logger.html#a5afb1d40a2ebd9f8bf08ff9527e60713" title=" " alt="" coords="444,327,540,352"/>
+<area shape="poly" title=" " alt="" coords="95,156,141,208,173,238,209,264,265,290,324,309,381,322,431,330,430,336,380,327,323,314,263,295,207,268,170,243,137,212,91,159"/>
+<area shape="poly" title=" " alt="" coords="341,53,426,74,425,79,340,59"/>
+<area shape="rect" href="namespace_logger.html#a83c3562c93d0101fc7fadc86e0482b2d" title=" " alt="" coords="617,5,704,31"/>
+<area shape="poly" title=" " alt="" coords="339,28,414,15,514,11,603,12,603,18,515,16,415,21,340,33"/>
+<area shape="rect" href="class_kinematic.html#ac7021e76ae9927bcb2d17dbe8ef6a75a" title="Matrix drucken." alt="" coords="417,31,567,56"/>
+<area shape="poly" title=" " alt="" coords="364,41,404,41,404,46,364,46"/>
+<area shape="rect" href="_kinematic_8cpp.html#a339acfaac605b5bd73624297f191cc39" title="Grad zu Radiant." alt="" coords="629,80,692,105"/>
+<area shape="poly" title=" " alt="" coords="570,90,616,90,616,95,570,95"/>
+<area shape="poly" title=" " alt="" coords="567,29,603,24,604,29,568,35"/>
+<area shape="poly" title=" " alt="" coords="337,129,428,106,429,111,339,135"/>
+<area shape="rect" href="_kinematic_8cpp.html#ac5b83beb5fe73e1a9f3d2fe3166f3d53" title="Radiant zu Grad." alt="" coords="461,179,523,204"/>
+<area shape="poly" title=" " alt="" coords="344,155,448,179,447,184,343,160"/>
+<area shape="rect" href="class_kinematic.html#abe03b372a5c961fd58f5fe5b66eacaea" title="Rotations&#45;Matrix auslesen." alt="" coords="425,129,559,155"/>
+<area shape="poly" title=" " alt="" coords="367,141,411,140,411,146,367,146"/>
+<area shape="poly" title=" " alt="" coords="340,225,446,199,448,205,341,231"/>
+<area shape="rect" href="namespace_logger.html#a9f18249e59c4bf45798f70f8eed043d5" title=" " alt="" coords="445,228,539,253"/>
+<area shape="poly" title=" " alt="" coords="359,238,431,238,431,243,359,243"/>
+<area shape="poly" title=" " alt="" coords="309,251,356,281,416,313,433,320,431,325,414,318,353,286,306,256"/>
+<area shape="rect" href="_kinematic_8cpp.html#a7dc06c148934c75d6b7fcf3cb6e916c1" title="Signum Funktion." alt="" coords="469,277,515,303"/>
+<area shape="poly" title=" " alt="" coords="341,251,456,279,455,284,340,256"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aff4c2e3469d83e34b80eb8afe3b48a62" name="aff4c2e3469d83e34b80eb8afe3b48a62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff4c2e3469d83e34b80eb8afe3b48a62">&#9670;&#160;</a></span>ivOrientation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_posture.html">Posture</a> Kinematic::ivOrientation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_posture.html">Posture</a></td>          <td class="paramname"><span class="paramname"><em>pt</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_position.html">Position</a></td>          <td class="paramname"><span class="paramname"><em>ps</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Orientierungsgebeden Winkeln Berechnen. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">posture</td><td>Winkelstellung </td></tr>
+    <tr><td class="paramname">Ps</td><td><a class="el" href="struct_position.html">Position</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Winkelstellung</dd></dl>
+<p>Ermittlung der Orientierung/Gelenkstellung d.h. th4, th5 und th6 </p>
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_kinematic_aff4c2e3469d83e34b80eb8afe3b48a62_cgraph.png" border="0" usemap="#aclass_kinematic_aff4c2e3469d83e34b80eb8afe3b48a62_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_kinematic_aff4c2e3469d83e34b80eb8afe3b48a62_cgraph" id="aclass_kinematic_aff4c2e3469d83e34b80eb8afe3b48a62_cgraph">
+<area shape="rect" title="Orientierungsgebeden Winkeln Berechnen." alt="" coords="5,55,164,80"/>
+<area shape="rect" href="_kinematic_8cpp.html#ac5b83beb5fe73e1a9f3d2fe3166f3d53" title="Radiant zu Grad." alt="" coords="258,5,321,31"/>
+<area shape="poly" title=" " alt="" coords="137,52,244,26,245,31,139,57"/>
+<area shape="rect" href="class_kinematic.html#aeed737d1bf66f66d517f2907eb02c907" title="Homogenen Transformations&#45;Matrix des gelenks." alt="" coords="212,55,367,80"/>
+<area shape="poly" title=" " alt="" coords="164,65,198,65,198,70,164,70"/>
+<area shape="rect" href="class_kinematic.html#abe03b372a5c961fd58f5fe5b66eacaea" title="Rotations&#45;Matrix auslesen." alt="" coords="222,104,357,129"/>
+<area shape="poly" title=" " alt="" coords="139,77,223,98,222,103,137,83"/>
+<area shape="rect" href="_kinematic_8cpp.html#a339acfaac605b5bd73624297f191cc39" title="Grad zu Radiant." alt="" coords="415,55,477,80"/>
+<area shape="poly" title=" " alt="" coords="367,65,401,65,401,70,367,70"/>
+</map>
+</div>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_kinematic_aff4c2e3469d83e34b80eb8afe3b48a62_icgraph.png" border="0" usemap="#aclass_kinematic_aff4c2e3469d83e34b80eb8afe3b48a62_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_kinematic_aff4c2e3469d83e34b80eb8afe3b48a62_icgraph" id="aclass_kinematic_aff4c2e3469d83e34b80eb8afe3b48a62_icgraph">
+<area shape="rect" title="Orientierungsgebeden Winkeln Berechnen." alt="" coords="208,5,367,31"/>
+<area shape="rect" href="class_kinematic.html#ae03636412ecab6f5a53e8c3d9069e369" title="Inverskinematik berechnung." alt="" coords="5,5,160,31"/>
+<area shape="poly" title=" " alt="" coords="194,21,161,21,161,15,194,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa1cba6a32703d92f41c29ee59884f89a" name="aa1cba6a32703d92f41c29ee59884f89a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1cba6a32703d92f41c29ee59884f89a">&#9670;&#160;</a></span>ivPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_posture.html">Posture</a> Kinematic::ivPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_position.html">Position</a></td>          <td class="paramname"><span class="paramname"><em>ps</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Positionsgebenden Winkeln Berechnen. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>lage <a class="el" href="struct_position.html">Position</a> und Orientierune </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Winkelwerte 1...3</dd></dl>
+<p>Berechung der Positionsgebenden Winkelstellungen d.h. th1, th2 und th3 </p>
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_kinematic_aa1cba6a32703d92f41c29ee59884f89a_cgraph.png" border="0" usemap="#aclass_kinematic_aa1cba6a32703d92f41c29ee59884f89a_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_kinematic_aa1cba6a32703d92f41c29ee59884f89a_cgraph" id="aclass_kinematic_aa1cba6a32703d92f41c29ee59884f89a_cgraph">
+<area shape="rect" title="Positionsgebenden Winkeln Berechnen." alt="" coords="5,80,148,105"/>
+<area shape="rect" href="_kinematic_8cpp.html#ac5b83beb5fe73e1a9f3d2fe3166f3d53" title="Radiant zu Grad." alt="" coords="213,5,275,31"/>
+<area shape="poly" title=" " alt="" coords="105,77,201,34,203,39,107,82"/>
+<area shape="rect" href="namespace_logger.html#a9f18249e59c4bf45798f70f8eed043d5" title=" " alt="" coords="197,55,291,80"/>
+<area shape="poly" title=" " alt="" coords="148,79,183,74,184,79,149,84"/>
+<area shape="rect" href="namespace_logger.html#a5afb1d40a2ebd9f8bf08ff9527e60713" title=" " alt="" coords="196,104,292,129"/>
+<area shape="poly" title=" " alt="" coords="149,100,183,105,182,111,148,106"/>
+<area shape="rect" href="_kinematic_8cpp.html#a7dc06c148934c75d6b7fcf3cb6e916c1" title="Signum Funktion." alt="" coords="221,153,267,179"/>
+<area shape="poly" title=" " alt="" coords="108,103,209,148,207,153,106,108"/>
+</map>
+</div>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_kinematic_aa1cba6a32703d92f41c29ee59884f89a_icgraph.png" border="0" usemap="#aclass_kinematic_aa1cba6a32703d92f41c29ee59884f89a_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_kinematic_aa1cba6a32703d92f41c29ee59884f89a_icgraph" id="aclass_kinematic_aa1cba6a32703d92f41c29ee59884f89a_icgraph">
+<area shape="rect" title="Positionsgebenden Winkeln Berechnen." alt="" coords="208,5,351,31"/>
+<area shape="rect" href="class_kinematic.html#ae03636412ecab6f5a53e8c3d9069e369" title="Inverskinematik berechnung." alt="" coords="5,5,160,31"/>
+<area shape="poly" title=" " alt="" coords="194,21,160,21,160,15,194,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aeed737d1bf66f66d517f2907eb02c907" name="aeed737d1bf66f66d517f2907eb02c907"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeed737d1bf66f66d517f2907eb02c907">&#9670;&#160;</a></span>jointTMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tmm::Matrix&lt; 4, 4 &gt; Kinematic::jointTMatrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_dh_param.html">DhParam</a></td>          <td class="paramname"><span class="paramname"><em>dhPar</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Homogenen Transformations-Matrix des gelenks. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dhPar</td><td>Denavite-Hartenberge Parameter </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Transformations-Matrix</dd></dl>
+<p>Homogenen Transformations-Matrix des Gelenks Aufstellen und wiedergeben mit bezug auf die Denavite-Hartenberg Parameter </p>
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_kinematic_aeed737d1bf66f66d517f2907eb02c907_cgraph.png" border="0" usemap="#aclass_kinematic_aeed737d1bf66f66d517f2907eb02c907_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_kinematic_aeed737d1bf66f66d517f2907eb02c907_cgraph" id="aclass_kinematic_aeed737d1bf66f66d517f2907eb02c907_cgraph">
+<area shape="rect" title="Homogenen Transformations&#45;Matrix des gelenks." alt="" coords="5,5,160,31"/>
+<area shape="rect" href="_kinematic_8cpp.html#a339acfaac605b5bd73624297f191cc39" title="Grad zu Radiant." alt="" coords="208,5,271,31"/>
+<area shape="poly" title=" " alt="" coords="160,15,194,15,194,21,160,21"/>
+</map>
+</div>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_kinematic_aeed737d1bf66f66d517f2907eb02c907_icgraph.png" border="0" usemap="#aclass_kinematic_aeed737d1bf66f66d517f2907eb02c907_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_kinematic_aeed737d1bf66f66d517f2907eb02c907_icgraph" id="aclass_kinematic_aeed737d1bf66f66d517f2907eb02c907_icgraph">
+<area shape="rect" title="Homogenen Transformations&#45;Matrix des gelenks." alt="" coords="416,56,571,81"/>
+<area shape="rect" href="class_kinematic.html#aed35a0f15575c44ba0f62a42059e69c9" title="Homogenen Transformations&#45;Matrix des Manipulators." alt="" coords="212,5,365,31"/>
+<area shape="poly" title=" " alt="" coords="427,55,340,33,341,28,429,50"/>
+<area shape="rect" href="class_kinematic.html#ae03636412ecab6f5a53e8c3d9069e369" title="Inverskinematik berechnung." alt="" coords="6,56,161,81"/>
+<area shape="poly" title=" " alt="" coords="402,71,161,71,161,66,402,66"/>
+<area shape="rect" href="class_kinematic.html#aff4c2e3469d83e34b80eb8afe3b48a62" title="Orientierungsgebeden Winkeln Berechnen." alt="" coords="209,107,368,132"/>
+<area shape="poly" title=" " alt="" coords="429,87,341,109,340,104,427,82"/>
+<area shape="rect" href="class_kinematic.html#aef4876851b52873dff6f8b9e0d388121" title="Vorwaertskinematik berechnung." alt="" coords="5,5,161,31"/>
+<area shape="poly" title=" " alt="" coords="198,21,162,21,162,15,198,15"/>
+<area shape="poly" title=" " alt="" coords="224,37,136,59,135,53,222,31"/>
+<area shape="poly" title=" " alt="" coords="222,106,135,84,136,79,224,101"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac7021e76ae9927bcb2d17dbe8ef6a75a" name="ac7021e76ae9927bcb2d17dbe8ef6a75a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7021e76ae9927bcb2d17dbe8ef6a75a">&#9670;&#160;</a></span>printMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kinematic::printMatrix </td>
+          <td>(</td>
+          <td class="paramtype">tmm::Matrix&lt; 4, 4 &gt;</td>          <td class="paramname"><span class="paramname"><em>mat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>heading</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Matrix drucken. </p>
+<p>4x4 Matrix in Seriellen Monitor ausgeben</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mat</td><td>4x4 Matrix </td></tr>
+    <tr><td class="paramname">heading</td><td>Matrix Tag </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>void </dd></dl>
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_kinematic_ac7021e76ae9927bcb2d17dbe8ef6a75a_cgraph.png" border="0" usemap="#aclass_kinematic_ac7021e76ae9927bcb2d17dbe8ef6a75a_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_kinematic_ac7021e76ae9927bcb2d17dbe8ef6a75a_cgraph" id="aclass_kinematic_ac7021e76ae9927bcb2d17dbe8ef6a75a_cgraph">
+<area shape="rect" title="Matrix drucken." alt="" coords="5,5,155,31"/>
+<area shape="rect" href="namespace_logger.html#a83c3562c93d0101fc7fadc86e0482b2d" title=" " alt="" coords="203,5,289,31"/>
+<area shape="poly" title=" " alt="" coords="155,15,189,15,189,21,155,21"/>
+</map>
+</div>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_kinematic_ac7021e76ae9927bcb2d17dbe8ef6a75a_icgraph.png" border="0" usemap="#aclass_kinematic_ac7021e76ae9927bcb2d17dbe8ef6a75a_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_kinematic_ac7021e76ae9927bcb2d17dbe8ef6a75a_icgraph" id="aclass_kinematic_ac7021e76ae9927bcb2d17dbe8ef6a75a_icgraph">
+<area shape="rect" title="Matrix drucken." alt="" coords="411,29,560,55"/>
+<area shape="rect" href="class_kinematic.html#aed35a0f15575c44ba0f62a42059e69c9" title="Homogenen Transformations&#45;Matrix des Manipulators." alt="" coords="209,55,363,80"/>
+<area shape="poly" title=" " alt="" coords="397,56,363,60,363,55,397,51"/>
+<area shape="rect" href="class_kinematic.html#aef4876851b52873dff6f8b9e0d388121" title="Vorwaertskinematik berechnung." alt="" coords="5,5,161,31"/>
+<area shape="poly" title=" " alt="" coords="396,39,161,25,162,20,397,34"/>
+<area shape="poly" title=" " alt="" coords="220,54,136,33,137,28,221,49"/>
+<area shape="rect" href="class_kinematic.html#ae03636412ecab6f5a53e8c3d9069e369" title="Inverskinematik berechnung." alt="" coords="6,55,161,80"/>
+<area shape="poly" title=" " alt="" coords="196,70,161,70,161,65,196,65"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abe03b372a5c961fd58f5fe5b66eacaea" name="abe03b372a5c961fd58f5fe5b66eacaea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe03b372a5c961fd58f5fe5b66eacaea">&#9670;&#160;</a></span>read3x3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">tmm::Matrix&lt; 3, 3 &gt; Kinematic::read3x3 </td>
+          <td>(</td>
+          <td class="paramtype">tmm::Matrix&lt; 4, 4 &gt;</td>          <td class="paramname"><span class="paramname"><em>tMat</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rotations-Matrix auslesen. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tMat</td><td>Transformations-Matrix</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>3x3 Rotations-Matrix aus gegebenen 4x4 Transformations-Matrix auslesen. </p>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_kinematic_abe03b372a5c961fd58f5fe5b66eacaea_icgraph.png" border="0" usemap="#aclass_kinematic_abe03b372a5c961fd58f5fe5b66eacaea_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_kinematic_abe03b372a5c961fd58f5fe5b66eacaea_icgraph" id="aclass_kinematic_abe03b372a5c961fd58f5fe5b66eacaea_icgraph">
+<area shape="rect" title="Rotations&#45;Matrix auslesen." alt="" coords="415,5,549,31"/>
+<area shape="rect" href="class_kinematic.html#aff4c2e3469d83e34b80eb8afe3b48a62" title="Orientierungsgebeden Winkeln Berechnen." alt="" coords="208,5,367,31"/>
+<area shape="poly" title=" " alt="" coords="401,21,367,21,367,15,401,15"/>
+<area shape="rect" href="class_kinematic.html#ae03636412ecab6f5a53e8c3d9069e369" title="Inverskinematik berechnung." alt="" coords="5,5,160,31"/>
+<area shape="poly" title=" " alt="" coords="194,21,161,21,161,15,194,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="a821c9777b72f62efc15efc0f3fd9ebb6" name="a821c9777b72f62efc15efc0f3fd9ebb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a821c9777b72f62efc15efc0f3fd9ebb6">&#9670;&#160;</a></span>_robFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_rob_frame.html">RobFrame</a>* Kinematic::_robFrame</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zeiger zu <a class="el" href="class_rob_frame.html">RobFrame</a>. </p>
+
+</div>
+</div>
+<a id="aca4dfca1bccd583a780fcde8f165300f" name="aca4dfca1bccd583a780fcde8f165300f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca4dfca1bccd583a780fcde8f165300f">&#9670;&#160;</a></span>dhPar1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_dh_param.html">DhParam</a> Kinematic::dhPar1 = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>D-H Parameter Gelenk 1. </p>
+
+</div>
+</div>
+<a id="a416e1ad35dbd73a70e9f9b7e6687fc2e" name="a416e1ad35dbd73a70e9f9b7e6687fc2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a416e1ad35dbd73a70e9f9b7e6687fc2e">&#9670;&#160;</a></span>dhPar2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_dh_param.html">DhParam</a> Kinematic::dhPar2 = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>D-H Parameter Gelenk 2. </p>
+
+</div>
+</div>
+<a id="ab2b575c21bb6fa8f244b6a8323ff1d01" name="ab2b575c21bb6fa8f244b6a8323ff1d01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2b575c21bb6fa8f244b6a8323ff1d01">&#9670;&#160;</a></span>dhPar3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_dh_param.html">DhParam</a> Kinematic::dhPar3 = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>D-H Parameter Gelenk 3. </p>
+
+</div>
+</div>
+<a id="a6fbd761660db59f6ef4502d1c4ff4373" name="a6fbd761660db59f6ef4502d1c4ff4373"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fbd761660db59f6ef4502d1c4ff4373">&#9670;&#160;</a></span>dhPar4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_dh_param.html">DhParam</a> Kinematic::dhPar4 = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>D-H Parameter Gelenk 4. </p>
+
+</div>
+</div>
+<a id="af210936436479006efd37a2015aa1f88" name="af210936436479006efd37a2015aa1f88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af210936436479006efd37a2015aa1f88">&#9670;&#160;</a></span>dhPar5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_dh_param.html">DhParam</a> Kinematic::dhPar5 = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>D-H Parameter Gelenk 5. </p>
+
+</div>
+</div>
+<a id="a68c34857a9669241e219e4103769929d" name="a68c34857a9669241e219e4103769929d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68c34857a9669241e219e4103769929d">&#9670;&#160;</a></span>dhPar6</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_dh_param.html">DhParam</a> Kinematic::dhPar6 = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>D-H Parameter Gelenk 6. </p>
+
+</div>
+</div>
+<a id="a296ed2287e766671dc62fa9efd987e0d" name="a296ed2287e766671dc62fa9efd987e0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a296ed2287e766671dc62fa9efd987e0d">&#9670;&#160;</a></span>tMat01</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tmm::Matrix&lt;4,4&gt; Kinematic::tMat01 = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Achsen-Transformations-Matrix 1. </p>
+
+</div>
+</div>
+<a id="af8bb55ae1bbbf02056f9b725a8305290" name="af8bb55ae1bbbf02056f9b725a8305290"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8bb55ae1bbbf02056f9b725a8305290">&#9670;&#160;</a></span>tMat02</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tmm::Matrix&lt;4,4&gt; Kinematic::tMat02 = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verkettet Transformations-Matrix 02. </p>
+
+</div>
+</div>
+<a id="a1c929ef6e6f83f273e0837cc8b63fad5" name="a1c929ef6e6f83f273e0837cc8b63fad5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c929ef6e6f83f273e0837cc8b63fad5">&#9670;&#160;</a></span>tMat03</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tmm::Matrix&lt;4,4&gt; Kinematic::tMat03 = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verkettet Transformations-Matrix 03. </p>
+
+</div>
+</div>
+<a id="a9718bcbc57735496c88fa89be250c6c0" name="a9718bcbc57735496c88fa89be250c6c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9718bcbc57735496c88fa89be250c6c0">&#9670;&#160;</a></span>tMat04</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tmm::Matrix&lt;4,4&gt; Kinematic::tMat04 = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verkettet Transformations-Matrix 04. </p>
+
+</div>
+</div>
+<a id="a4e45d9b1d954d4df521780898a0ba4c5" name="a4e45d9b1d954d4df521780898a0ba4c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e45d9b1d954d4df521780898a0ba4c5">&#9670;&#160;</a></span>tMat05</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tmm::Matrix&lt;4,4&gt; Kinematic::tMat05 = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verkettet Transformations-Matrix 05. </p>
+
+</div>
+</div>
+<a id="a924f5c0bc876c87ebe92b6ddfb0a5310" name="a924f5c0bc876c87ebe92b6ddfb0a5310"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a924f5c0bc876c87ebe92b6ddfb0a5310">&#9670;&#160;</a></span>tMat06</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tmm::Matrix&lt;4,4&gt; Kinematic::tMat06 = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verkettet Transformations-Matrix 06. </p>
+
+</div>
+</div>
+<a id="a75840e5338b0c2ee8f38b046d5871786" name="a75840e5338b0c2ee8f38b046d5871786"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75840e5338b0c2ee8f38b046d5871786">&#9670;&#160;</a></span>tMat12</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tmm::Matrix&lt;4,4&gt; Kinematic::tMat12 = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Achsen-Transformations-Matrix 2. </p>
+
+</div>
+</div>
+<a id="a8d4db42c4c7a644b3300f1ed41da16fe" name="a8d4db42c4c7a644b3300f1ed41da16fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d4db42c4c7a644b3300f1ed41da16fe">&#9670;&#160;</a></span>tMat23</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tmm::Matrix&lt;4,4&gt; Kinematic::tMat23 = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Achsen-Transformations-Matrix 3. </p>
+
+</div>
+</div>
+<a id="afb57ce4e7710ce443246b03eee1d18f0" name="afb57ce4e7710ce443246b03eee1d18f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb57ce4e7710ce443246b03eee1d18f0">&#9670;&#160;</a></span>tMat34</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tmm::Matrix&lt;4,4&gt; Kinematic::tMat34 = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Achsen-Transformations-Matrix 4. </p>
+
+</div>
+</div>
+<a id="ae936eb9caf1d13a5693fd3f2c6aa4189" name="ae936eb9caf1d13a5693fd3f2c6aa4189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae936eb9caf1d13a5693fd3f2c6aa4189">&#9670;&#160;</a></span>tMat45</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tmm::Matrix&lt;4,4&gt; Kinematic::tMat45 = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Achsen-Transformations-Matrix 5. </p>
+
+</div>
+</div>
+<a id="a18651a831e84c4d5f16b3ef6f74de1a4" name="a18651a831e84c4d5f16b3ef6f74de1a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18651a831e84c4d5f16b3ef6f74de1a4">&#9670;&#160;</a></span>tMat56</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tmm::Matrix&lt;4,4&gt; Kinematic::tMat56 = {}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Achsen-Transformations-Matrix 6. </p>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien:<ul>
+<li><a class="el" href="_kinematic_8hpp_source.html">Kinematic.hpp</a></li>
+<li><a class="el" href="_kinematic_8cpp.html">Kinematic.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_kinematic.html">Kinematic</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,10 +1,13 @@
-/*
- * Program: Commands.cpp
- * Description: Class-Object containing prcedures
- *               for Parsing and validating Commands
- * Autor: Chukwunonso Bob-Anyeji
- * Date: 09.06.2024
- */
+
+//////////////////////////////////////////////////////////////////////////
+// Datei: PositionFactory.cpp
+// Beschreibung: Dieser Klasse Beinhaltet Logik zur Erstellung, Vernichtung
+//               und Verwalung von Positionen und Stellungen.
+//
+// Autor: Chukwunonso Bob-Anyeji
+// Datum: 11.07.2024@12-00
+// Aktualisiert: 27.08.2025@11-46
+//////////////////////////////////////////////////////////////////////////
 
 #include "RobFrameWork.hpp"
 #include "PositionFactory.hpp"
@@ -18,13 +21,14 @@ PositionFactory::~PositionFactory()
   delete _data;
 }
 
-/* Allocating and validation of Memory Block for Position Array */
+/// RobFrameWork Zeigerzuweiseung und Speicherplatz allozieren
 void PositionFactory::Init(RobFrame* robFrame)
 {
   _robFrame = robFrame;
   _data = new PosData[POS_LIMIT]{};
 }
 
+/// Allozierte Speicherplatz validieren
 void PositionFactory::Setup(){
   if(_data != NULL && _robFrame != NULL){
     log("PF::Init: Initialization Done");
@@ -34,6 +38,7 @@ void PositionFactory::Setup(){
   }
 }
 
+/// Debug Daten ausdrucken
 void PositionFactory::LogInfo()
 {
   log(sizeof(_data[0])*POS_LIMIT, "PF::LogInfo: Size of Memory-Block");
@@ -46,6 +51,7 @@ void PositionFactory::LogInfo()
   //log(_definedCount, "PF::LogInfo: Number of defined Positions");
 }
 
+/// Datensaetze gemaeß Type zum Serial Ausgeben
 void PositionFactory::LogPositions(PosState state){
   log(_definedCount, "PF::LogPositions: Number of defined Positions");
   for(int itr = 0; itr < _definedCount; itr++){
@@ -53,6 +59,7 @@ void PositionFactory::LogPositions(PosState state){
   }
 }
 
+/// Positions zustand Validieren und Ermitteln
 PosState PositionFactory::Decode(String content, char delimiter = ','){
   PosState decodeState = PosState::Undefined;
 
@@ -69,7 +76,7 @@ PosState PositionFactory::Decode(String content, char delimiter = ','){
   }
 }
 
-/* Transforem String Array in to Posture Structure */
+/// String Array in Winkelstellungs-Struktur Transformieren
 Posture PositionFactory::DecodePosture(String input, String filter = ","){
   /* Expected String := "<jt1>, <jt2, <jt3>, <jt4>" */
 
@@ -79,10 +86,12 @@ Posture PositionFactory::DecodePosture(String input, String filter = ","){
 
   if(input.equals(_robFrame->Commands[Commands::Here].Name)){
     return {
-      _robFrame->Joint1.read(),
-      _robFrame->Joint2.read(),
-      _robFrame->Joint3.read(),
-      _robFrame->Joint4.read()
+      _robFrame->Joint1.Read(),
+      _robFrame->Joint2.Read(),
+      _robFrame->Joint3.Read(),
+      _robFrame->Joint4.Read(),
+      _robFrame->Joint5.Read(),
+      _robFrame->Joint6.Read()
     };
   }
 
@@ -100,7 +109,7 @@ Posture PositionFactory::DecodePosture(String input, String filter = ","){
   return pt;
 }
 
-/* Transform String Arry in to Position Sturcture  */
+/// String Arrray in Positions-Struktur Transformieren
 Position PositionFactory::DecodePosition(String input, String filter = ","){
   /* Expected String := "<x>, <y, <z, <a>, <b>, <c>" */
 
@@ -110,10 +119,12 @@ Position PositionFactory::DecodePosition(String input, String filter = ","){
 
   if(input.equals(_robFrame->Commands[Commands::Here].Name)){
     return {_robFrame->Kinematics.fdKinematic(Posture{
-          _robFrame->Joint1.read(),
-          _robFrame->Joint2.read(),
-          _robFrame->Joint3.read(),
-          _robFrame->Joint4.read()
+          _robFrame->Joint1.Read(),
+          _robFrame->Joint2.Read(),
+          _robFrame->Joint3.Read(),
+          _robFrame->Joint4.Read(),
+          _robFrame->Joint5.Read(),
+          _robFrame->Joint6.Read()
         })};
   }
 
@@ -135,6 +146,7 @@ Position PositionFactory::DecodePosition(String input, String filter = ","){
   return pos;
 }
 
+/// Vorhandene Datensaetze Aktualisieren
 void PositionFactory::Update(int index, String& params, PosState state){
   // Update Positions
   switch(state){
@@ -147,6 +159,7 @@ void PositionFactory::Update(int index, String& params, PosState state){
   }
 }
 
+/// Neuen Datensatzt im allozierten Datenarray belegen.
 int& PositionFactory::AddPosition(String content, PosState state,  char filter = ' '){
   /* Expected String := "Position <identifier> <x>, <y>, <z>, <a>, <b>, <c>" */
 
@@ -199,17 +212,22 @@ int& PositionFactory::AddPosition(String content, PosState state,  char filter =
   return result;
 }
 
+/// Anzahl belegte Speicherplaetze wiedergeben
 int& PositionFactory::Count(){
   return _definedCount;
 }
 
+/// nicht Implementiert
 void PositionFactory::Get(String identifier){
   log("PF::Get not Implemented");
 }
+/// nicht Implementiert
 void PositionFactory::Del(String identifier){
   log("PF::Del not Implemented");
 }
 
+/// Pruft ob die Menge von Positionen Überschritten
+/// wurden ist
 int8_t PositionFactory::RangeCheck(){
   if(_definedCount >= POS_LIMIT){
     log("PF::RangCheck: Critical Error");
@@ -218,13 +236,16 @@ int8_t PositionFactory::RangeCheck(){
   return 1;
 }
 
+/// Umwandlung des structs von float to Short int
 sPosition PositionFactory::TosPosition(Position ps){
   return{ps.X, ps.Y, ps.Z, ps.A, ps.B, ps.C};
 }
+/// Umwandlung des structs von float to Short Int
 sPosture PositionFactory::TosPosture(Posture pt){
   return{pt.Jt1, pt.Jt2, pt.Jt3, pt.Jt4};
 }
 
+/// Datensatz index wiedergeben
 Position PositionFactory::operator[](int index){
   return {
     (float)_data[index].Position.X,

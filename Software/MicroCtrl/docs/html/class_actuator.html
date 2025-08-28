@@ -1,0 +1,1203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Manipulator mit sechs Freiheitsgraden: Actuator Klassenreferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Manipulator mit sechs Freiheitsgraden<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Konstruktion, Modellierung und Programmierung der inversen Kinematik eines experimentellen Manipulators mit sechs Freiheitsgraden</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_actuator.html','','class_actuator-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Actuator Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_actuator_8hpp_source.html">Actuator.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Zusammengehörigkeiten von Actuator:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_actuator__coll__graph.png" border="0" usemap="#a_actuator_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_actuator_coll__map" id="a_actuator_coll__map">
+<area shape="rect" title=" " alt="" coords="389,5,460,31"/>
+<area shape="rect" href="class_rob_frame.html" title=" " alt="" coords="329,201,411,227"/>
+<area shape="poly" title=" " alt="" coords="441,43,445,54,460,118,458,147,444,179,430,194,413,204,410,199,427,189,440,176,453,145,455,119,439,55,436,44"/>
+<area shape="poly" title=" " alt="" coords="361,188,356,160,353,125,357,88,369,53,381,39,395,29,399,33,384,43,374,56,362,89,359,125,361,159,366,188"/>
+<area shape="rect" href="class_commands.html" title=" " alt="" coords="66,397,154,423"/>
+<area shape="poly" title=" " alt="" coords="315,217,257,219,195,224,141,235,121,243,108,252,97,269,91,288,90,329,98,367,108,396,102,398,93,369,85,329,86,287,92,267,104,249,118,238,139,230,194,219,257,213,315,212"/>
+<area shape="rect" href="class_kinematic.html" title=" " alt="" coords="589,397,669,423"/>
+<area shape="poly" title=" " alt="" coords="425,214,526,223,571,233,601,249,615,277,624,319,631,397,626,397,618,320,610,278,597,253,569,238,525,229,425,219"/>
+<area shape="rect" href="class_position_factory.html" title=" " alt="" coords="367,397,480,423"/>
+<area shape="poly" title=" " alt="" coords="390,237,396,250,410,291,418,333,425,397,420,397,413,334,405,292,392,252,385,239"/>
+<area shape="rect" href="struct_posture.html" title=" " alt="" coords="250,5,317,31"/>
+<area shape="poly" title=" " alt="" coords="281,45,277,74,277,108,283,144,298,176,312,190,330,200,327,204,309,194,293,179,278,145,272,109,272,73,275,44"/>
+<area shape="poly" title=" " alt="" coords="158,389,180,372,190,356,194,341,195,310,196,280,203,264,215,249,234,238,263,229,328,217,329,223,264,234,236,243,218,253,207,267,202,281,200,310,200,342,195,358,184,375,162,393"/>
+<area shape="rect" href="struct_command.html" title=" " alt="" coords="5,201,87,227"/>
+<area shape="poly" title=" " alt="" coords="42,240,36,269,34,303,37,339,50,372,61,385,77,395,74,400,58,389,45,375,32,340,28,303,31,268,37,239"/>
+<area shape="poly" title=" " alt="" coords="574,403,547,393,524,375,513,359,508,343,508,312,509,281,504,267,493,253,476,239,455,229,411,219,412,214,456,224,478,234,497,249,509,265,514,281,514,312,513,342,518,357,528,371,550,388,576,398"/>
+<area shape="rect" href="struct_dh_param.html" title=" " alt="" coords="777,201,853,227"/>
+<area shape="poly" title=" " alt="" coords="819,240,818,271,813,307,800,344,778,375,760,386,732,395,669,406,668,401,731,390,758,381,775,371,796,341,808,306,813,270,814,240"/>
+<area shape="poly" title=" " alt="" coords="352,401,332,391,316,375,298,343,294,313,300,283,316,249,327,235,341,225,344,229,331,239,320,252,305,285,299,314,304,341,320,372,335,386,355,396"/>
+<area shape="rect" href="struct_pos_data.html" title=" " alt="" coords="681,201,753,227"/>
+<area shape="poly" title=" " alt="" coords="725,240,729,271,730,307,722,343,714,360,702,375,671,387,614,396,480,408,480,403,613,390,670,382,699,371,709,358,717,342,724,306,724,271,720,241"/>
+<area shape="rect" href="structs_position.html" title=" " alt="" coords="728,5,804,31"/>
+<area shape="poly" title=" " alt="" coords="762,44,722,202,717,200,757,43"/>
+<area shape="rect" href="structs_posture.html" title=" " alt="" coords="629,5,703,31"/>
+<area shape="poly" title=" " alt="" coords="662,44,657,73,655,107,658,143,670,176,680,189,693,199,690,203,676,193,665,179,653,144,650,107,652,72,657,43"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">Legende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Öffentliche Typen</h2></td></tr>
+<tr class="memitem:a61c5a6e128829bc6eeac705dbe40fe40" id="r_a61c5a6e128829bc6eeac705dbe40fe40"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61c5a6e128829bc6eeac705dbe40fe40">State</a> { <br />
+&#160;&#160;<a class="el" href="#a61c5a6e128829bc6eeac705dbe40fe40aa90c8dd45a5ecd017c4b6af46e65d0ff">Enabled</a>
+, <a class="el" href="#a61c5a6e128829bc6eeac705dbe40fe40a9f7e8c4a6fe34fa4cd5a91d57272b268">Stopped</a>
+, <a class="el" href="#a61c5a6e128829bc6eeac705dbe40fe40ab7cd476aef1e81a6a5a7a5b33ee145a5">InMotion</a>
+, <a class="el" href="#a61c5a6e128829bc6eeac705dbe40fe40a5a4925de23e15c19ecf1de02c9ec86b2">Referenced</a>
+, <br />
+&#160;&#160;<a class="el" href="#a61c5a6e128829bc6eeac705dbe40fe40a8042795485fa3694c1aa4332e5c5957d">InPosition</a>
+, <a class="el" href="#a61c5a6e128829bc6eeac705dbe40fe40ad7eac040de4363a7f2da987c79de4d34">Aborted</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a61c5a6e128829bc6eeac705dbe40fe40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aktuator Betriebszustand.  <a href="#a61c5a6e128829bc6eeac705dbe40fe40">Mehr ...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:ad08f81ed90eb01f4654acb47eff38be6" id="r_ad08f81ed90eb01f4654acb47eff38be6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad08f81ed90eb01f4654acb47eff38be6">Actuator</a> ()</td></tr>
+<tr class="memdesc:ad08f81ed90eb01f4654acb47eff38be6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actor Klassen-Objekt.  <br /></td></tr>
+<tr class="memitem:af104d83044a8e45833a1b67cd6347602" id="r_af104d83044a8e45833a1b67cd6347602"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af104d83044a8e45833a1b67cd6347602">Init</a> (<a class="el" href="class_rob_frame.html">RobFrame</a> *robFrame)</td></tr>
+<tr class="memdesc:af104d83044a8e45833a1b67cd6347602"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisierung Zeiger-Zuweisung.  <br /></td></tr>
+<tr class="memitem:a62b9a187d9a73f9d1bfb013a06baf197" id="r_a62b9a187d9a73f9d1bfb013a06baf197"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62b9a187d9a73f9d1bfb013a06baf197">Id</a> ()</td></tr>
+<tr class="memdesc:a62b9a187d9a73f9d1bfb013a06baf197"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aktor ID.  <br /></td></tr>
+<tr class="memitem:a9f1b744baa308c5c9fed6895a8816798" id="r_a9f1b744baa308c5c9fed6895a8816798"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9f1b744baa308c5c9fed6895a8816798">SetUp</a> (float gearRatio=1, <a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> accuracy=5, <a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> max=90, <a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> min=-90)</td></tr>
+<tr class="memdesc:a9f1b744baa308c5c9fed6895a8816798"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hardwareeinrichten.  <br /></td></tr>
+<tr class="memitem:af251ec8fcb3ab8be2bb34cf73b79b085" id="r_af251ec8fcb3ab8be2bb34cf73b79b085"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af251ec8fcb3ab8be2bb34cf73b79b085">Attach</a> (<a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> dirPin, <a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> stepPin, <a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> enaPin)</td></tr>
+<tr class="memdesc:af251ec8fcb3ab8be2bb34cf73b79b085"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hardware-Ausgänge Zuweisen Anbinddung der Hardware-Ausgänge.  <br /></td></tr>
+<tr class="memitem:aa8005479f1c593783dd74c6ebf7ade6b" id="r_aa8005479f1c593783dd74c6ebf7ade6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8005479f1c593783dd74c6ebf7ade6b">Activate</a> (<a class="el" href="_types_8hpp.html#a07fb256c1077eea7a7726e948cc8ff0e">int8</a> ena, <a class="el" href="_types_8hpp.html#ab7078bf13036f3e78534da3ad4149dc2">uint16</a> tof=5000)</td></tr>
+<tr class="memdesc:aa8005479f1c593783dd74c6ebf7ade6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aktoransteuerung.  <br /></td></tr>
+<tr class="memitem:abc5a978818409cb0dcdfdddc43a16d50" id="r_abc5a978818409cb0dcdfdddc43a16d50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc5a978818409cb0dcdfdddc43a16d50">Refernce</a> (<a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> value=0)</td></tr>
+<tr class="memdesc:abc5a978818409cb0dcdfdddc43a16d50"><td class="mdescLeft">&#160;</td><td class="mdescRight">IstPositionswert Referenzieren.  <br /></td></tr>
+<tr class="memitem:ae786a505db189182b2fec42f1bb82445" id="r_ae786a505db189182b2fec42f1bb82445"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae786a505db189182b2fec42f1bb82445">Write</a> (<a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> target)</td></tr>
+<tr class="memdesc:ae786a505db189182b2fec42f1bb82445"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aktuator Sollwert Schreiben.  <br /></td></tr>
+<tr class="memitem:a81ea3f4dae18ab70413b8da2a419601b" id="r_a81ea3f4dae18ab70413b8da2a419601b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81ea3f4dae18ab70413b8da2a419601b">Read</a> ()</td></tr>
+<tr class="memdesc:a81ea3f4dae18ab70413b8da2a419601b"><td class="mdescLeft">&#160;</td><td class="mdescRight">lese Istposition  <br /></td></tr>
+<tr class="memitem:a4438639840978376b4e689edcac42db7" id="r_a4438639840978376b4e689edcac42db7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4438639840978376b4e689edcac42db7">Delta</a> (<a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> target)</td></tr>
+<tr class="memdesc:a4438639840978376b4e689edcac42db7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Soll-Ist Differenze bilden.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Öffentliche Attribute</h2></td></tr>
+<tr class="memitem:a8f35086212a620c907154439718570ee" id="r_a8f35086212a620c907154439718570ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8f35086212a620c907154439718570ee">Accuracy</a></td></tr>
+<tr class="memdesc:a8f35086212a620c907154439718570ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Genauigkeit.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Methoden</h2></td></tr>
+<tr class="memitem:a04116bc5ec0ca19fdf8bbe30b5f24754" id="r_a04116bc5ec0ca19fdf8bbe30b5f24754"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04116bc5ec0ca19fdf8bbe30b5f24754">calcSteps</a> (<a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> target)</td></tr>
+<tr class="memdesc:a04116bc5ec0ca19fdf8bbe30b5f24754"><td class="mdescLeft">&#160;</td><td class="mdescRight">Winkelwerte in Grad zu Schritte konvertieren.  <br /></td></tr>
+<tr class="memitem:ae4705f5263847ab234ef5d9f630753df" id="r_ae4705f5263847ab234ef5d9f630753df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4705f5263847ab234ef5d9f630753df">calcPosition</a> (<a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> actSteps)</td></tr>
+<tr class="memdesc:ae4705f5263847ab234ef5d9f630753df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schritte zu Winkel.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attribute</h2></td></tr>
+<tr class="memitem:aa99ce4c70762d23baf12e051e75ebbab" id="r_aa99ce4c70762d23baf12e051e75ebbab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_rob_frame.html">RobFrame</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa99ce4c70762d23baf12e051e75ebbab">_robFrame</a></td></tr>
+<tr class="memdesc:aa99ce4c70762d23baf12e051e75ebbab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zeiger zu <a class="el" href="class_rob_frame.html">RobFrame</a>.  <br /></td></tr>
+<tr class="memitem:ab8293059665eefc50d9050c9639787c1" id="r_ab8293059665eefc50d9050c9639787c1"><td class="memItemLeft" align="right" valign="top">BasicStepperDriver *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab8293059665eefc50d9050c9639787c1">_stepper</a></td></tr>
+<tr class="memdesc:ab8293059665eefc50d9050c9639787c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zeiger zur Stepper Objekt.  <br /></td></tr>
+<tr class="memitem:a565677065af811cdd52de4de12276547" id="r_a565677065af811cdd52de4de12276547"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#a34ecedcf03a70dc91e4616212d79267d">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a565677065af811cdd52de4de12276547">_motorSteps</a> = 200</td></tr>
+<tr class="memitem:ade001d1ef9d41e0fb033940fb43f3b83" id="r_ade001d1ef9d41e0fb033940fb43f3b83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#a34ecedcf03a70dc91e4616212d79267d">uint8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade001d1ef9d41e0fb033940fb43f3b83">_microSteps</a> = 16</td></tr>
+<tr class="memitem:a195548ac6b8d5b487e20940e0920587e" id="r_a195548ac6b8d5b487e20940e0920587e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#a07fb256c1077eea7a7726e948cc8ff0e">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a195548ac6b8d5b487e20940e0920587e">_dir</a> = 1</td></tr>
+<tr class="memitem:a54b9ddb58f8b7730694d99c02b2cf77c" id="r_a54b9ddb58f8b7730694d99c02b2cf77c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54b9ddb58f8b7730694d99c02b2cf77c">_id</a> = 0</td></tr>
+<tr class="memitem:af4b6e8a30c0de94b60c7dd88cadd1acb" id="r_af4b6e8a30c0de94b60c7dd88cadd1acb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4b6e8a30c0de94b60c7dd88cadd1acb">_offset</a></td></tr>
+<tr class="memitem:a511c8b67bd00781f24660bc76cafcaf4" id="r_a511c8b67bd00781f24660bc76cafcaf4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a511c8b67bd00781f24660bc76cafcaf4">_min</a> = -90</td></tr>
+<tr class="memitem:a5ca69ff2e0b27db10f90a32914cf6ef8" id="r_a5ca69ff2e0b27db10f90a32914cf6ef8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ca69ff2e0b27db10f90a32914cf6ef8">_max</a> = 90</td></tr>
+<tr class="memitem:a7b8ff8dc352dcbbd83ac0885bf134af2" id="r_a7b8ff8dc352dcbbd83ac0885bf134af2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b8ff8dc352dcbbd83ac0885bf134af2">_gearRatio</a> = 1</td></tr>
+<tr class="memitem:a4abaac0db5b87ce00c0dded74cc80a20" id="r_a4abaac0db5b87ce00c0dded74cc80a20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4abaac0db5b87ce00c0dded74cc80a20">_previousSteps</a> = 0</td></tr>
+<tr class="memitem:a4319d3173f74a448dc7dd10711fd5ee5" id="r_a4319d3173f74a448dc7dd10711fd5ee5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4319d3173f74a448dc7dd10711fd5ee5">_actualSteps</a> = 0</td></tr>
+<tr class="memitem:abef58f75c37d3155ecde1613e2cbc0d4" id="r_abef58f75c37d3155ecde1613e2cbc0d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abef58f75c37d3155ecde1613e2cbc0d4">_targetSteps</a> = 0</td></tr>
+<tr class="memitem:a13a30cb5ac83c9f04a5e592b2cb3dc0b" id="r_a13a30cb5ac83c9f04a5e592b2cb3dc0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#ab7078bf13036f3e78534da3ad4149dc2">uint16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a13a30cb5ac83c9f04a5e592b2cb3dc0b">_timeOfDelay</a> = 0</td></tr>
+<tr class="memitem:af7c222037d1b227f750c377eb49eb994" id="r_af7c222037d1b227f750c377eb49eb994"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7c222037d1b227f750c377eb49eb994">_rpm</a> = 10</td></tr>
+<tr class="memitem:aa0dc7ebca239c487d18c66a43296e0d3" id="r_aa0dc7ebca239c487d18c66a43296e0d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#a07fb256c1077eea7a7726e948cc8ff0e">int8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0dc7ebca239c487d18c66a43296e0d3">_enabled</a> = -1</td></tr>
+<tr class="memitem:a64d3661583813b8f259d3051d1626882" id="r_a64d3661583813b8f259d3051d1626882"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#a7472db64fa0f8253f82d7452d6786968">word</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64d3661583813b8f259d3051d1626882">_state</a> = 0</td></tr>
+</table>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Dokumentation der Aufzählungstypen</h2>
+<a id="a61c5a6e128829bc6eeac705dbe40fe40" name="a61c5a6e128829bc6eeac705dbe40fe40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61c5a6e128829bc6eeac705dbe40fe40">&#9670;&#160;</a></span>State</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a61c5a6e128829bc6eeac705dbe40fe40">Actuator::State</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Aktuator Betriebszustand. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><a id="a61c5a6e128829bc6eeac705dbe40fe40aa90c8dd45a5ecd017c4b6af46e65d0ff" name="a61c5a6e128829bc6eeac705dbe40fe40aa90c8dd45a5ecd017c4b6af46e65d0ff"></a>Enabled&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61c5a6e128829bc6eeac705dbe40fe40a9f7e8c4a6fe34fa4cd5a91d57272b268" name="a61c5a6e128829bc6eeac705dbe40fe40a9f7e8c4a6fe34fa4cd5a91d57272b268"></a>Stopped&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61c5a6e128829bc6eeac705dbe40fe40ab7cd476aef1e81a6a5a7a5b33ee145a5" name="a61c5a6e128829bc6eeac705dbe40fe40ab7cd476aef1e81a6a5a7a5b33ee145a5"></a>InMotion&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61c5a6e128829bc6eeac705dbe40fe40a5a4925de23e15c19ecf1de02c9ec86b2" name="a61c5a6e128829bc6eeac705dbe40fe40a5a4925de23e15c19ecf1de02c9ec86b2"></a>Referenced&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61c5a6e128829bc6eeac705dbe40fe40a8042795485fa3694c1aa4332e5c5957d" name="a61c5a6e128829bc6eeac705dbe40fe40a8042795485fa3694c1aa4332e5c5957d"></a>InPosition&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61c5a6e128829bc6eeac705dbe40fe40ad7eac040de4363a7f2da987c79de4d34" name="a61c5a6e128829bc6eeac705dbe40fe40ad7eac040de4363a7f2da987c79de4d34"></a>Aborted&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="ad08f81ed90eb01f4654acb47eff38be6" name="ad08f81ed90eb01f4654acb47eff38be6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad08f81ed90eb01f4654acb47eff38be6">&#9670;&#160;</a></span>Actuator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Actuator::Actuator </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Actor Klassen-Objekt. </p>
+<p>Instanzierung des Aktuators bzw. Steppermotor Klassenobject. </p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="aa8005479f1c593783dd74c6ebf7ade6b" name="aa8005479f1c593783dd74c6ebf7ade6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8005479f1c593783dd74c6ebf7ade6b">&#9670;&#160;</a></span>Activate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> Actuator::Activate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#a07fb256c1077eea7a7726e948cc8ff0e">int8</a></td>          <td class="paramname"><span class="paramname"><em>ena</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#ab7078bf13036f3e78534da3ad4149dc2">uint16</a></td>          <td class="paramname"><span class="paramname"><em>tof</em></span><span class="paramdefsep"> = </span><span class="paramdefval">5000</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Aktoransteuerung. </p>
+<p>Asynchrones Aktoransteuerung Einschalten bzw. Freigeben.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ena</td><td>Aktivieren </td></tr>
+    <tr><td class="paramname">tof</td><td>Ausschaltverzögerung </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>ON wenn activ oder OFF wenn nicht Active </dd></dl>
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_actuator_aa8005479f1c593783dd74c6ebf7ade6b_cgraph.png" border="0" usemap="#aclass_actuator_aa8005479f1c593783dd74c6ebf7ade6b_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_actuator_aa8005479f1c593783dd74c6ebf7ade6b_cgraph" id="aclass_actuator_aa8005479f1c593783dd74c6ebf7ade6b_cgraph">
+<area shape="rect" title="Aktoransteuerung." alt="" coords="5,31,131,56"/>
+<area shape="rect" href="namespace_utils.html#a857ea2cb01ca027105c2aae4e67b6c07" title=" " alt="" coords="347,5,453,31"/>
+<area shape="poly" title=" " alt="" coords="113,28,178,15,259,11,333,11,333,17,259,16,179,21,114,33"/>
+<area shape="rect" href="namespace_utils.html#a34f4c27f7a4bfc7f366e9c3fdaa366e0" title=" " alt="" coords="179,31,299,56"/>
+<area shape="poly" title=" " alt="" coords="131,41,165,41,165,46,131,46"/>
+<area shape="rect" href="namespace_utils.html#a85b751974bf0c2c272eaec7bc89bd742" title=" " alt="" coords="185,80,292,105"/>
+<area shape="poly" title=" " alt="" coords="113,53,181,73,180,78,112,59"/>
+<area shape="poly" title=" " alt="" coords="299,31,332,26,333,31,300,37"/>
+</map>
+</div>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_actuator_aa8005479f1c593783dd74c6ebf7ade6b_icgraph.png" border="0" usemap="#aclass_actuator_aa8005479f1c593783dd74c6ebf7ade6b_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_actuator_aa8005479f1c593783dd74c6ebf7ade6b_icgraph" id="aclass_actuator_aa8005479f1c593783dd74c6ebf7ade6b_icgraph">
+<area shape="rect" title="Aktoransteuerung." alt="" coords="941,133,1067,158"/>
+<area shape="rect" href="class_actuator.html#ae786a505db189182b2fec42f1bb82445" title="Aktuator Sollwert Schreiben." alt="" coords="783,133,893,158"/>
+<area shape="poly" title=" " alt="" coords="927,148,894,148,894,143,927,143"/>
+<area shape="rect" href="class_rob_frame.html#aa358b505e48c8ea8efa6f069dab67520" title="Aktor Asynchron ansteuern." alt="" coords="588,108,735,133"/>
+<area shape="poly" title=" " alt="" coords="769,139,735,134,736,128,770,133"/>
+<area shape="rect" href="class_rob_frame.html#a208ae2ae7cdbe80dba28e4d0ad29857b" title="Aktor Synchron Ansteuern." alt="" coords="597,157,726,182"/>
+<area shape="poly" title=" " alt="" coords="770,158,727,164,726,158,769,152"/>
+<area shape="rect" href="class_rob_frame.html#ae5ef3c45bc8b82d75e47f422addeb56f" title="Punkt zu Punkt Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="410,82,529,108"/>
+<area shape="poly" title=" " alt="" coords="574,112,529,106,529,100,575,106"/>
+<area shape="rect" href="class_rob_frame.html#a0d79cee264204461c4445cf72c4481b7" title="Eingangsdaten Parsen." alt="" coords="24,133,159,158"/>
+<area shape="poly" title=" " alt="" coords="399,113,351,122,159,143,159,138,350,116,398,108"/>
+<area shape="rect" href="class_rob_frame.html#a40f13f5c1ce2baaaa77fc3eee9b98379" title="Punkt zu Punkt Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="229,82,347,108"/>
+<area shape="poly" title=" " alt="" coords="397,98,348,98,348,92,397,92"/>
+<area shape="rect" href="class_rob_frame.html#a3b51be372803d4960a457d2c03378314" title="Gradlinige Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="225,33,351,58"/>
+<area shape="poly" title=" " alt="" coords="408,81,335,61,337,56,409,76"/>
+<area shape="rect" href="class_rob_frame.html#a56384fc3894ecdaf39252f703ee91873" title="Iteriere durch den Positionsdatensatz." alt="" coords="5,8,177,33"/>
+<area shape="poly" title=" " alt="" coords="442,75,400,46,376,33,350,23,307,14,262,9,177,11,177,6,262,4,308,8,351,18,378,28,403,42,445,71"/>
+<area shape="poly" title=" " alt="" coords="240,66,227,72,165,105,114,135,111,131,162,100,224,67,237,61"/>
+<area shape="poly" title=" " alt="" coords="211,39,177,34,178,29,212,33"/>
+<area shape="rect" href="class_rob_frame.html#a92a99cf7219b60ab8d2c349fd2eef6a8" title="Glenk Einzelverfahren." alt="" coords="399,157,540,182"/>
+<area shape="poly" title=" " alt="" coords="583,172,540,172,540,167,583,167"/>
+<area shape="poly" title=" " alt="" coords="385,173,225,167,159,159,159,154,226,162,385,168"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af251ec8fcb3ab8be2bb34cf73b79b085" name="af251ec8fcb3ab8be2bb34cf73b79b085"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af251ec8fcb3ab8be2bb34cf73b79b085">&#9670;&#160;</a></span>Attach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> Actuator::Attach </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a></td>          <td class="paramname"><span class="paramname"><em>dirPin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a></td>          <td class="paramname"><span class="paramname"><em>stepPin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a></td>          <td class="paramname"><span class="paramname"><em>enaPin</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hardware-Ausgänge Zuweisen Anbinddung der Hardware-Ausgänge. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dirPin</td><td>Richtungs Pin id. </td></tr>
+    <tr><td class="paramname">stepPin</td><td>Stepper Pin id. </td></tr>
+    <tr><td class="paramname">enaPin</td><td>Aktivierungs Pin id. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Zeiger-Id zur BasicSteperDriver objekt</dd></dl>
+<p>Anbindung der Hardwareausgänge am Klassen-Ojekt durch die Initialisierung der "BasicStepperDriver" Klasse </p>
+
+</div>
+</div>
+<a id="ae4705f5263847ab234ef5d9f630753df" name="ae4705f5263847ab234ef5d9f630753df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4705f5263847ab234ef5d9f630753df">&#9670;&#160;</a></span>calcPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> Actuator::calcPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a></td>          <td class="paramname"><span class="paramname"><em>actSteps</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Schritte zu Winkel. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Schritte</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Winkel </dd></dl>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_actuator_ae4705f5263847ab234ef5d9f630753df_icgraph.png" border="0" usemap="#aclass_actuator_ae4705f5263847ab234ef5d9f630753df_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_actuator_ae4705f5263847ab234ef5d9f630753df_icgraph" id="aclass_actuator_ae4705f5263847ab234ef5d9f630753df_icgraph">
+<area shape="rect" title="Schritte zu Winkel." alt="" coords="941,81,1092,107"/>
+<area shape="rect" href="class_actuator.html#a81ea3f4dae18ab70413b8da2a419601b" title="lese Istposition" alt="" coords="783,56,893,81"/>
+<area shape="poly" title=" " alt="" coords="927,84,893,79,893,74,928,79"/>
+<area shape="rect" href="class_actuator.html#ae786a505db189182b2fec42f1bb82445" title="Aktuator Sollwert Schreiben." alt="" coords="783,107,893,132"/>
+<area shape="poly" title=" " alt="" coords="928,109,894,114,893,109,927,104"/>
+<area shape="rect" href="class_actuator.html#a4438639840978376b4e689edcac42db7" title="Soll&#45;Ist Differenze bilden." alt="" coords="607,5,716,31"/>
+<area shape="poly" title=" " alt="" coords="779,55,706,33,707,28,781,50"/>
+<area shape="rect" href="class_rob_frame.html#a92a99cf7219b60ab8d2c349fd2eef6a8" title="Glenk Einzelverfahren." alt="" coords="399,56,540,81"/>
+<area shape="poly" title=" " alt="" coords="770,71,540,71,540,66,770,66"/>
+<area shape="rect" href="class_rob_frame.html#a0d79cee264204461c4445cf72c4481b7" title="Eingangsdaten Parsen." alt="" coords="24,105,159,131"/>
+<area shape="poly" title=" " alt="" coords="385,82,226,102,159,111,158,106,225,97,385,76"/>
+<area shape="rect" href="class_rob_frame.html#aa358b505e48c8ea8efa6f069dab67520" title="Aktor Asynchron ansteuern." alt="" coords="588,156,735,181"/>
+<area shape="poly" title=" " alt="" coords="779,138,709,158,707,153,778,133"/>
+<area shape="rect" href="class_rob_frame.html#a208ae2ae7cdbe80dba28e4d0ad29857b" title="Aktor Synchron Ansteuern." alt="" coords="597,107,726,132"/>
+<area shape="poly" title=" " alt="" coords="769,122,726,122,726,117,769,117"/>
+<area shape="rect" href="class_rob_frame.html#ae5ef3c45bc8b82d75e47f422addeb56f" title="Punkt zu Punkt Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="410,156,529,181"/>
+<area shape="poly" title=" " alt="" coords="575,171,529,171,529,166,575,166"/>
+<area shape="poly" title=" " alt="" coords="402,156,350,146,250,133,158,125,159,120,250,128,351,141,403,150"/>
+<area shape="rect" href="class_rob_frame.html#a40f13f5c1ce2baaaa77fc3eee9b98379" title="Punkt zu Punkt Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="229,156,347,181"/>
+<area shape="poly" title=" " alt="" coords="397,171,348,171,348,166,397,166"/>
+<area shape="rect" href="class_rob_frame.html#a3b51be372803d4960a457d2c03378314" title="Gradlinige Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="225,205,351,231"/>
+<area shape="poly" title=" " alt="" coords="409,188,337,208,335,203,408,183"/>
+<area shape="rect" href="class_rob_frame.html#a56384fc3894ecdaf39252f703ee91873" title="Iteriere durch den Positionsdatensatz." alt="" coords="5,231,177,256"/>
+<area shape="poly" title=" " alt="" coords="445,193,403,222,378,236,351,246,308,255,262,260,177,258,177,252,262,254,307,250,350,241,376,231,400,218,442,188"/>
+<area shape="poly" title=" " alt="" coords="237,202,224,196,162,163,111,133,114,129,165,159,227,192,240,198"/>
+<area shape="poly" title=" " alt="" coords="212,230,178,235,177,230,211,225"/>
+<area shape="poly" title=" " alt="" coords="599,106,518,84,519,79,600,101"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a04116bc5ec0ca19fdf8bbe30b5f24754" name="a04116bc5ec0ca19fdf8bbe30b5f24754"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04116bc5ec0ca19fdf8bbe30b5f24754">&#9670;&#160;</a></span>calcSteps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> Actuator::calcSteps </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a></td>          <td class="paramname"><span class="paramname"><em>target</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Winkelwerte in Grad zu Schritte konvertieren. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>Winkel </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>void</dd></dl>
+<p>Private Funktions / Prozeduren </p>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_actuator_a04116bc5ec0ca19fdf8bbe30b5f24754_icgraph.png" border="0" usemap="#aclass_actuator_a04116bc5ec0ca19fdf8bbe30b5f24754_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_actuator_a04116bc5ec0ca19fdf8bbe30b5f24754_icgraph" id="aclass_actuator_a04116bc5ec0ca19fdf8bbe30b5f24754_icgraph">
+<area shape="rect" title="Winkelwerte in Grad zu Schritte konvertieren." alt="" coords="941,133,1079,158"/>
+<area shape="rect" href="class_actuator.html#ae786a505db189182b2fec42f1bb82445" title="Aktuator Sollwert Schreiben." alt="" coords="783,133,893,158"/>
+<area shape="poly" title=" " alt="" coords="928,148,893,148,893,143,928,143"/>
+<area shape="rect" href="class_rob_frame.html#aa358b505e48c8ea8efa6f069dab67520" title="Aktor Asynchron ansteuern." alt="" coords="588,108,735,133"/>
+<area shape="poly" title=" " alt="" coords="769,139,735,134,736,128,770,133"/>
+<area shape="rect" href="class_rob_frame.html#a208ae2ae7cdbe80dba28e4d0ad29857b" title="Aktor Synchron Ansteuern." alt="" coords="597,157,726,182"/>
+<area shape="poly" title=" " alt="" coords="770,158,727,164,726,158,769,152"/>
+<area shape="rect" href="class_rob_frame.html#ae5ef3c45bc8b82d75e47f422addeb56f" title="Punkt zu Punkt Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="410,82,529,108"/>
+<area shape="poly" title=" " alt="" coords="574,112,529,106,529,100,575,106"/>
+<area shape="rect" href="class_rob_frame.html#a0d79cee264204461c4445cf72c4481b7" title="Eingangsdaten Parsen." alt="" coords="24,133,159,158"/>
+<area shape="poly" title=" " alt="" coords="399,113,351,122,159,143,159,138,350,116,398,108"/>
+<area shape="rect" href="class_rob_frame.html#a40f13f5c1ce2baaaa77fc3eee9b98379" title="Punkt zu Punkt Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="229,82,347,108"/>
+<area shape="poly" title=" " alt="" coords="397,98,348,98,348,92,397,92"/>
+<area shape="rect" href="class_rob_frame.html#a3b51be372803d4960a457d2c03378314" title="Gradlinige Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="225,33,351,58"/>
+<area shape="poly" title=" " alt="" coords="408,81,335,61,337,56,409,76"/>
+<area shape="rect" href="class_rob_frame.html#a56384fc3894ecdaf39252f703ee91873" title="Iteriere durch den Positionsdatensatz." alt="" coords="5,8,177,33"/>
+<area shape="poly" title=" " alt="" coords="442,75,400,46,376,33,350,23,307,14,262,9,177,11,177,6,262,4,308,8,351,18,378,28,403,42,445,71"/>
+<area shape="poly" title=" " alt="" coords="240,66,227,72,165,105,114,135,111,131,162,100,224,67,237,61"/>
+<area shape="poly" title=" " alt="" coords="211,39,177,34,178,29,212,33"/>
+<area shape="rect" href="class_rob_frame.html#a92a99cf7219b60ab8d2c349fd2eef6a8" title="Glenk Einzelverfahren." alt="" coords="399,157,540,182"/>
+<area shape="poly" title=" " alt="" coords="583,172,540,172,540,167,583,167"/>
+<area shape="poly" title=" " alt="" coords="385,173,225,167,159,159,159,154,226,162,385,168"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4438639840978376b4e689edcac42db7" name="a4438639840978376b4e689edcac42db7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4438639840978376b4e689edcac42db7">&#9670;&#160;</a></span>Delta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> Actuator::Delta </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a></td>          <td class="paramname"><span class="paramname"><em>target</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Soll-Ist Differenze bilden. </p>
+<p>Soll-Ist Differenze bilden in Grad.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>Zielposition </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Winkel differenze </dd></dl>
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_actuator_a4438639840978376b4e689edcac42db7_cgraph.png" border="0" usemap="#aclass_actuator_a4438639840978376b4e689edcac42db7_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_actuator_a4438639840978376b4e689edcac42db7_cgraph" id="aclass_actuator_a4438639840978376b4e689edcac42db7_cgraph">
+<area shape="rect" title="Soll&#45;Ist Differenze bilden." alt="" coords="5,5,115,31"/>
+<area shape="rect" href="class_actuator.html#a81ea3f4dae18ab70413b8da2a419601b" title="lese Istposition" alt="" coords="163,5,272,31"/>
+<area shape="poly" title=" " alt="" coords="115,15,149,15,149,21,115,21"/>
+<area shape="rect" href="class_actuator.html#ae4705f5263847ab234ef5d9f630753df" title="Schritte zu Winkel." alt="" coords="320,5,471,31"/>
+<area shape="poly" title=" " alt="" coords="272,15,306,15,306,21,272,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a62b9a187d9a73f9d1bfb013a06baf197" name="a62b9a187d9a73f9d1bfb013a06baf197"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62b9a187d9a73f9d1bfb013a06baf197">&#9670;&#160;</a></span>Id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> Actuator::Id </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Aktor ID. </p>
+<p>Eindeutiges ID auslesen.</p>
+<p>Public Funktions / Prozeduren </p>
+
+</div>
+</div>
+<a id="af104d83044a8e45833a1b67cd6347602" name="af104d83044a8e45833a1b67cd6347602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af104d83044a8e45833a1b67cd6347602">&#9670;&#160;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Actuator::Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_rob_frame.html">RobFrame</a> *</td>          <td class="paramname"><span class="paramname"><em>robFrame</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialisierung Zeiger-Zuweisung. </p>
+<p>RoboterFrameWork-Objekt Zeigerzuweisung.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">robFrame</td><td>Zeiger zu <a class="el" href="class_rob_frame.html">RobFrame</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a81ea3f4dae18ab70413b8da2a419601b" name="a81ea3f4dae18ab70413b8da2a419601b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81ea3f4dae18ab70413b8da2a419601b">&#9670;&#160;</a></span>Read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> Actuator::Read </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>lese Istposition </p>
+<p>Ist-Winkelwert von in Grad auslesen.</p>
+<dl class="section return"><dt>Rückgabe</dt><dd>Istwert in Grad </dd></dl>
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_actuator_a81ea3f4dae18ab70413b8da2a419601b_cgraph.png" border="0" usemap="#aclass_actuator_a81ea3f4dae18ab70413b8da2a419601b_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_actuator_a81ea3f4dae18ab70413b8da2a419601b_cgraph" id="aclass_actuator_a81ea3f4dae18ab70413b8da2a419601b_cgraph">
+<area shape="rect" title="lese Istposition" alt="" coords="5,5,115,31"/>
+<area shape="rect" href="class_actuator.html#ae4705f5263847ab234ef5d9f630753df" title="Schritte zu Winkel." alt="" coords="163,5,313,31"/>
+<area shape="poly" title=" " alt="" coords="115,15,149,15,149,21,115,21"/>
+</map>
+</div>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_actuator_a81ea3f4dae18ab70413b8da2a419601b_icgraph.png" border="0" usemap="#aclass_actuator_a81ea3f4dae18ab70413b8da2a419601b_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_actuator_a81ea3f4dae18ab70413b8da2a419601b_icgraph" id="aclass_actuator_a81ea3f4dae18ab70413b8da2a419601b_icgraph">
+<area shape="rect" title="lese Istposition" alt="" coords="377,31,487,56"/>
+<area shape="rect" href="class_actuator.html#a4438639840978376b4e689edcac42db7" title="Soll&#45;Ist Differenze bilden." alt="" coords="204,5,313,31"/>
+<area shape="poly" title=" " alt="" coords="364,36,313,29,314,23,364,31"/>
+<area shape="rect" href="class_rob_frame.html#a92a99cf7219b60ab8d2c349fd2eef6a8" title="Glenk Einzelverfahren." alt="" coords="188,55,329,80"/>
+<area shape="poly" title=" " alt="" coords="364,55,330,60,329,55,363,50"/>
+<area shape="rect" href="class_rob_frame.html#a0d79cee264204461c4445cf72c4481b7" title="Eingangsdaten Parsen." alt="" coords="5,55,140,80"/>
+<area shape="poly" title=" " alt="" coords="174,70,140,70,140,65,174,65"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abc5a978818409cb0dcdfdddc43a16d50" name="abc5a978818409cb0dcdfdddc43a16d50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc5a978818409cb0dcdfdddc43a16d50">&#9670;&#160;</a></span>Refernce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> Actuator::Refernce </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a></td>          <td class="paramname"><span class="paramname"><em>value</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>IstPositionswert Referenzieren. </p>
+<p>Referenziehung der gespeicherten Ist-Position.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Zurücksetzungswert </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>neuer Istposition </dd></dl>
+
+</div>
+</div>
+<a id="a9f1b744baa308c5c9fed6895a8816798" name="a9f1b744baa308c5c9fed6895a8816798"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f1b744baa308c5c9fed6895a8816798">&#9670;&#160;</a></span>SetUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> Actuator::SetUp </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>gearRatio</em></span><span class="paramdefsep"> = </span><span class="paramdefval">1</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a></td>          <td class="paramname"><span class="paramname"><em>accuracy</em></span><span class="paramdefsep"> = </span><span class="paramdefval">5</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a></td>          <td class="paramname"><span class="paramname"><em>max</em></span><span class="paramdefsep"> = </span><span class="paramdefval">90</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a></td>          <td class="paramname"><span class="paramname"><em>min</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-90</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hardwareeinrichten. </p>
+<p>Hardware eigenschaften einrichten.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gearRatio</td><td>Getriebeübersetzung </td></tr>
+    <tr><td class="paramname">accuracy</td><td>Genauigkeit </td></tr>
+    <tr><td class="paramname">max</td><td>Max-Winkelstellung </td></tr>
+    <tr><td class="paramname">min</td><td>Min-Winkelstellung </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>OK wenn Erfolgreich </dd></dl>
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_actuator_a9f1b744baa308c5c9fed6895a8816798_cgraph.png" border="0" usemap="#aclass_actuator_a9f1b744baa308c5c9fed6895a8816798_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_actuator_a9f1b744baa308c5c9fed6895a8816798_cgraph" id="aclass_actuator_a9f1b744baa308c5c9fed6895a8816798_cgraph">
+<area shape="rect" title="Hardwareeinrichten." alt="" coords="5,5,120,31"/>
+<area shape="rect" href="namespace_utils.html#a85b751974bf0c2c272eaec7bc89bd742" title=" " alt="" coords="168,5,275,31"/>
+<area shape="poly" title=" " alt="" coords="120,15,154,15,154,21,120,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae786a505db189182b2fec42f1bb82445" name="ae786a505db189182b2fec42f1bb82445"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae786a505db189182b2fec42f1bb82445">&#9670;&#160;</a></span>Write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> Actuator::Write </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a></td>          <td class="paramname"><span class="paramname"><em>target</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Aktuator Sollwert Schreiben. </p>
+<p>Sollpositon Synchrone Schreiben.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>Zielvorgabe in Grad </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Anzahl gefahrene Schritte. </dd></dl>
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_actuator_ae786a505db189182b2fec42f1bb82445_cgraph.png" border="0" usemap="#aclass_actuator_ae786a505db189182b2fec42f1bb82445_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_actuator_ae786a505db189182b2fec42f1bb82445_cgraph" id="aclass_actuator_ae786a505db189182b2fec42f1bb82445_cgraph">
+<area shape="rect" title="Aktuator Sollwert Schreiben." alt="" coords="5,132,116,157"/>
+<area shape="rect" href="class_actuator.html#aa8005479f1c593783dd74c6ebf7ade6b" title="Aktoransteuerung." alt="" coords="177,56,302,81"/>
+<area shape="poly" title=" " alt="" coords="90,129,195,84,197,89,93,134"/>
+<area shape="rect" href="namespace_utils.html#a34f4c27f7a4bfc7f366e9c3fdaa366e0" title=" " alt="" coords="363,5,483,31"/>
+<area shape="poly" title=" " alt="" coords="69,130,105,86,132,61,163,42,209,26,258,16,305,11,349,10,349,16,306,16,258,21,211,31,165,47,135,66,109,89,73,133"/>
+<area shape="rect" href="namespace_utils.html#a85b751974bf0c2c272eaec7bc89bd742" title=" " alt="" coords="369,107,476,132"/>
+<area shape="poly" title=" " alt="" coords="116,138,355,121,356,127,116,144"/>
+<area shape="rect" href="class_actuator.html#ae4705f5263847ab234ef5d9f630753df" title="Schritte zu Winkel." alt="" coords="164,157,315,183"/>
+<area shape="poly" title=" " alt="" coords="117,150,150,155,150,160,116,155"/>
+<area shape="rect" href="class_actuator.html#a04116bc5ec0ca19fdf8bbe30b5f24754" title="Winkelwerte in Grad zu Schritte konvertieren." alt="" coords="171,207,308,232"/>
+<area shape="poly" title=" " alt="" coords="86,155,165,193,183,200,181,205,163,198,84,160"/>
+<area shape="rect" href="namespace_logger.html#a83c3562c93d0101fc7fadc86e0482b2d" title=" " alt="" coords="196,256,283,281"/>
+<area shape="poly" title=" " alt="" coords="74,156,111,198,137,222,165,242,184,252,182,256,163,247,134,226,107,202,70,159"/>
+<area shape="rect" href="namespace_utils.html#a857ea2cb01ca027105c2aae4e67b6c07" title=" " alt="" coords="531,31,637,56"/>
+<area shape="poly" title=" " alt="" coords="302,61,517,46,517,51,302,67"/>
+<area shape="poly" title=" " alt="" coords="286,53,362,32,364,37,287,58"/>
+<area shape="poly" title=" " alt="" coords="287,79,364,100,362,105,286,84"/>
+<area shape="poly" title=" " alt="" coords="484,25,517,30,516,35,483,30"/>
+</map>
+</div>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_actuator_ae786a505db189182b2fec42f1bb82445_icgraph.png" border="0" usemap="#aclass_actuator_ae786a505db189182b2fec42f1bb82445_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_actuator_ae786a505db189182b2fec42f1bb82445_icgraph" id="aclass_actuator_ae786a505db189182b2fec42f1bb82445_icgraph">
+<area shape="rect" title="Aktuator Sollwert Schreiben." alt="" coords="783,133,893,158"/>
+<area shape="rect" href="class_rob_frame.html#aa358b505e48c8ea8efa6f069dab67520" title="Aktor Asynchron ansteuern." alt="" coords="588,108,735,133"/>
+<area shape="poly" title=" " alt="" coords="769,139,735,134,736,128,770,133"/>
+<area shape="rect" href="class_rob_frame.html#a208ae2ae7cdbe80dba28e4d0ad29857b" title="Aktor Synchron Ansteuern." alt="" coords="597,157,726,182"/>
+<area shape="poly" title=" " alt="" coords="770,158,727,164,726,158,769,152"/>
+<area shape="rect" href="class_rob_frame.html#ae5ef3c45bc8b82d75e47f422addeb56f" title="Punkt zu Punkt Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="410,82,529,108"/>
+<area shape="poly" title=" " alt="" coords="574,112,529,106,529,100,575,106"/>
+<area shape="rect" href="class_rob_frame.html#a0d79cee264204461c4445cf72c4481b7" title="Eingangsdaten Parsen." alt="" coords="24,133,159,158"/>
+<area shape="poly" title=" " alt="" coords="399,113,351,122,159,143,159,138,350,116,398,108"/>
+<area shape="rect" href="class_rob_frame.html#a40f13f5c1ce2baaaa77fc3eee9b98379" title="Punkt zu Punkt Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="229,82,347,108"/>
+<area shape="poly" title=" " alt="" coords="397,98,348,98,348,92,397,92"/>
+<area shape="rect" href="class_rob_frame.html#a3b51be372803d4960a457d2c03378314" title="Gradlinige Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="225,33,351,58"/>
+<area shape="poly" title=" " alt="" coords="408,81,335,61,337,56,409,76"/>
+<area shape="rect" href="class_rob_frame.html#a56384fc3894ecdaf39252f703ee91873" title="Iteriere durch den Positionsdatensatz." alt="" coords="5,8,177,33"/>
+<area shape="poly" title=" " alt="" coords="442,75,400,46,376,33,350,23,307,14,262,9,177,11,177,6,262,4,308,8,351,18,378,28,403,42,445,71"/>
+<area shape="poly" title=" " alt="" coords="240,66,227,72,165,105,114,135,111,131,162,100,224,67,237,61"/>
+<area shape="poly" title=" " alt="" coords="211,39,177,34,178,29,212,33"/>
+<area shape="rect" href="class_rob_frame.html#a92a99cf7219b60ab8d2c349fd2eef6a8" title="Glenk Einzelverfahren." alt="" coords="399,157,540,182"/>
+<area shape="poly" title=" " alt="" coords="583,172,540,172,540,167,583,167"/>
+<area shape="poly" title=" " alt="" coords="385,173,225,167,159,159,159,154,226,162,385,168"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="a4319d3173f74a448dc7dd10711fd5ee5" name="a4319d3173f74a448dc7dd10711fd5ee5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4319d3173f74a448dc7dd10711fd5ee5">&#9670;&#160;</a></span>_actualSteps</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> Actuator::_actualSteps = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a195548ac6b8d5b487e20940e0920587e" name="a195548ac6b8d5b487e20940e0920587e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a195548ac6b8d5b487e20940e0920587e">&#9670;&#160;</a></span>_dir</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#a07fb256c1077eea7a7726e948cc8ff0e">int8</a> Actuator::_dir = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0dc7ebca239c487d18c66a43296e0d3" name="aa0dc7ebca239c487d18c66a43296e0d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0dc7ebca239c487d18c66a43296e0d3">&#9670;&#160;</a></span>_enabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#a07fb256c1077eea7a7726e948cc8ff0e">int8</a> Actuator::_enabled = -1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b8ff8dc352dcbbd83ac0885bf134af2" name="a7b8ff8dc352dcbbd83ac0885bf134af2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b8ff8dc352dcbbd83ac0885bf134af2">&#9670;&#160;</a></span>_gearRatio</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> Actuator::_gearRatio = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54b9ddb58f8b7730694d99c02b2cf77c" name="a54b9ddb58f8b7730694d99c02b2cf77c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54b9ddb58f8b7730694d99c02b2cf77c">&#9670;&#160;</a></span>_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> Actuator::_id = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ca69ff2e0b27db10f90a32914cf6ef8" name="a5ca69ff2e0b27db10f90a32914cf6ef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ca69ff2e0b27db10f90a32914cf6ef8">&#9670;&#160;</a></span>_max</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> Actuator::_max = 90</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade001d1ef9d41e0fb033940fb43f3b83" name="ade001d1ef9d41e0fb033940fb43f3b83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade001d1ef9d41e0fb033940fb43f3b83">&#9670;&#160;</a></span>_microSteps</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#a34ecedcf03a70dc91e4616212d79267d">uint8</a> Actuator::_microSteps = 16</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a511c8b67bd00781f24660bc76cafcaf4" name="a511c8b67bd00781f24660bc76cafcaf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a511c8b67bd00781f24660bc76cafcaf4">&#9670;&#160;</a></span>_min</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> Actuator::_min = -90</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a565677065af811cdd52de4de12276547" name="a565677065af811cdd52de4de12276547"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a565677065af811cdd52de4de12276547">&#9670;&#160;</a></span>_motorSteps</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#a34ecedcf03a70dc91e4616212d79267d">uint8</a> Actuator::_motorSteps = 200</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af4b6e8a30c0de94b60c7dd88cadd1acb" name="af4b6e8a30c0de94b60c7dd88cadd1acb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4b6e8a30c0de94b60c7dd88cadd1acb">&#9670;&#160;</a></span>_offset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> Actuator::_offset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4abaac0db5b87ce00c0dded74cc80a20" name="a4abaac0db5b87ce00c0dded74cc80a20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4abaac0db5b87ce00c0dded74cc80a20">&#9670;&#160;</a></span>_previousSteps</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> Actuator::_previousSteps = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa99ce4c70762d23baf12e051e75ebbab" name="aa99ce4c70762d23baf12e051e75ebbab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa99ce4c70762d23baf12e051e75ebbab">&#9670;&#160;</a></span>_robFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_rob_frame.html">RobFrame</a>* Actuator::_robFrame</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zeiger zu <a class="el" href="class_rob_frame.html">RobFrame</a>. </p>
+
+</div>
+</div>
+<a id="af7c222037d1b227f750c377eb49eb994" name="af7c222037d1b227f750c377eb49eb994"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7c222037d1b227f750c377eb49eb994">&#9670;&#160;</a></span>_rpm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Actuator::_rpm = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64d3661583813b8f259d3051d1626882" name="a64d3661583813b8f259d3051d1626882"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64d3661583813b8f259d3051d1626882">&#9670;&#160;</a></span>_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#a7472db64fa0f8253f82d7452d6786968">word</a> Actuator::_state = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab8293059665eefc50d9050c9639787c1" name="ab8293059665eefc50d9050c9639787c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8293059665eefc50d9050c9639787c1">&#9670;&#160;</a></span>_stepper</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BasicStepperDriver* Actuator::_stepper</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zeiger zur Stepper Objekt. </p>
+
+</div>
+</div>
+<a id="abef58f75c37d3155ecde1613e2cbc0d4" name="abef58f75c37d3155ecde1613e2cbc0d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abef58f75c37d3155ecde1613e2cbc0d4">&#9670;&#160;</a></span>_targetSteps</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> Actuator::_targetSteps = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13a30cb5ac83c9f04a5e592b2cb3dc0b" name="a13a30cb5ac83c9f04a5e592b2cb3dc0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13a30cb5ac83c9f04a5e592b2cb3dc0b">&#9670;&#160;</a></span>_timeOfDelay</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#ab7078bf13036f3e78534da3ad4149dc2">uint16</a> Actuator::_timeOfDelay = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f35086212a620c907154439718570ee" name="a8f35086212a620c907154439718570ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f35086212a620c907154439718570ee">&#9670;&#160;</a></span>Accuracy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> Actuator::Accuracy</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Genauigkeit. </p>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien:<ul>
+<li><a class="el" href="_actuator_8hpp_source.html">Actuator.hpp</a></li>
+<li><a class="el" href="_actuator_8cpp.html">Actuator.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_actuator.html">Actuator</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

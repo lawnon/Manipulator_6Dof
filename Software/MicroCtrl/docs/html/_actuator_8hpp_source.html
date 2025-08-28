@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Manipulator mit sechs Freiheitsgraden: Actuator.hpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Manipulator mit sechs Freiheitsgraden<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Konstruktion, Modellierung und Programmierung der inversen Kinematik eines experimentellen Manipulators mit sechs Freiheitsgraden</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_actuator_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Actuator.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_actuator_8hpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// Datei: Actuator.hpp</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Beschreibung: Ansteuerungslogik des Aktuators.</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//               Dieser Klasse dient als wrappper für die</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//               &quot;BasicStepperDriver&quot; Klasss von Laurentiu Badea</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//               https://github.com/laurb9/StepperDriver</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">//</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// Autor: Chukwunonso Bob-Anyeji</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// Datum: 18.08.2025@12-00</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// Aktualisiert: 27.08.2025@11-46</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// NOTE: Motor steps per revolution.</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">// die meisten Nema-17 Stepper haben 200 steps oder 1.8 degrees/step</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// mit 16 Miktrosteps Einstellung jenach Treiber</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#ifndef ACTUATOR_H_</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#define ACTUATOR_H_</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;BasicStepperDriver.h&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="_types_8hpp.html">Types.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="_utilities_8hpp.html">Utilities.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="_logger_8hpp.html">Logger.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">class </span><a class="code hl_class" href="class_rob_frame.html">RobFrame</a>;</div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_actuator.html">   28</a></span><span class="keyword">class </span><a class="code hl_function" href="class_actuator.html#ad08f81ed90eb01f4654acb47eff38be6">Actuator</a></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="class_actuator.html#aa99ce4c70762d23baf12e051e75ebbab">   32</a></span>        <a class="code hl_class" href="class_rob_frame.html">RobFrame</a>* <a class="code hl_variable" href="class_actuator.html#aa99ce4c70762d23baf12e051e75ebbab">_robFrame</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_actuator.html#ab8293059665eefc50d9050c9639787c1">   34</a></span>        BasicStepperDriver* <a class="code hl_variable" href="class_actuator.html#ab8293059665eefc50d9050c9639787c1">_stepper</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="comment">// Stepper und Steppertreiber Einstellung</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_actuator.html#a565677065af811cdd52de4de12276547">   36</a></span>        <a class="code hl_typedef" href="_types_8hpp.html#a34ecedcf03a70dc91e4616212d79267d">uint8</a> <a class="code hl_variable" href="class_actuator.html#a565677065af811cdd52de4de12276547">_motorSteps</a> = 200;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_actuator.html#ade001d1ef9d41e0fb033940fb43f3b83">   37</a></span>        <a class="code hl_typedef" href="_types_8hpp.html#a34ecedcf03a70dc91e4616212d79267d">uint8</a> <a class="code hl_variable" href="class_actuator.html#ade001d1ef9d41e0fb033940fb43f3b83">_microSteps</a> = 16;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="comment">// Konfigurationswerte</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_actuator.html#a195548ac6b8d5b487e20940e0920587e">   39</a></span>        <a class="code hl_typedef" href="_types_8hpp.html#a07fb256c1077eea7a7726e948cc8ff0e">int8</a>  <a class="code hl_variable" href="class_actuator.html#a195548ac6b8d5b487e20940e0920587e">_dir</a> = 1;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_actuator.html#a54b9ddb58f8b7730694d99c02b2cf77c">   40</a></span>        <a class="code hl_typedef" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> <a class="code hl_variable" href="class_actuator.html#a54b9ddb58f8b7730694d99c02b2cf77c">_id</a> = 0;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_actuator.html#af4b6e8a30c0de94b60c7dd88cadd1acb">   41</a></span>        <a class="code hl_typedef" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> <a class="code hl_variable" href="class_actuator.html#af4b6e8a30c0de94b60c7dd88cadd1acb">_offset</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_actuator.html#a511c8b67bd00781f24660bc76cafcaf4">   42</a></span>        <a class="code hl_typedef" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> <a class="code hl_variable" href="class_actuator.html#a511c8b67bd00781f24660bc76cafcaf4">_min</a> = -90;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_actuator.html#a5ca69ff2e0b27db10f90a32914cf6ef8">   43</a></span>        <a class="code hl_typedef" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> <a class="code hl_variable" href="class_actuator.html#a5ca69ff2e0b27db10f90a32914cf6ef8">_max</a> = 90;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="class_actuator.html#a7b8ff8dc352dcbbd83ac0885bf134af2">   44</a></span>        <a class="code hl_typedef" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> <a class="code hl_variable" href="class_actuator.html#a7b8ff8dc352dcbbd83ac0885bf134af2">_gearRatio</a> = 1;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_actuator.html#a4abaac0db5b87ce00c0dded74cc80a20">   45</a></span>        <a class="code hl_typedef" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> <a class="code hl_variable" href="class_actuator.html#a4abaac0db5b87ce00c0dded74cc80a20">_previousSteps</a> = 0;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="class_actuator.html#a4319d3173f74a448dc7dd10711fd5ee5">   46</a></span>        <a class="code hl_typedef" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> <a class="code hl_variable" href="class_actuator.html#a4319d3173f74a448dc7dd10711fd5ee5">_actualSteps</a> = 0;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_actuator.html#abef58f75c37d3155ecde1613e2cbc0d4">   47</a></span>        <a class="code hl_typedef" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> <a class="code hl_variable" href="class_actuator.html#abef58f75c37d3155ecde1613e2cbc0d4">_targetSteps</a> = 0;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_actuator.html#a13a30cb5ac83c9f04a5e592b2cb3dc0b">   48</a></span>        <a class="code hl_typedef" href="_types_8hpp.html#ab7078bf13036f3e78534da3ad4149dc2">uint16</a> <a class="code hl_variable" href="class_actuator.html#a13a30cb5ac83c9f04a5e592b2cb3dc0b">_timeOfDelay</a> = 0;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_actuator.html#af7c222037d1b227f750c377eb49eb994">   49</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="class_actuator.html#af7c222037d1b227f750c377eb49eb994">_rpm</a> = 10;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="comment">// Zustands Variabeln</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_actuator.html#aa0dc7ebca239c487d18c66a43296e0d3">   51</a></span>        <a class="code hl_typedef" href="_types_8hpp.html#a07fb256c1077eea7a7726e948cc8ff0e">int8</a>  <a class="code hl_variable" href="class_actuator.html#aa0dc7ebca239c487d18c66a43296e0d3">_enabled</a> = -1;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_actuator.html#a64d3661583813b8f259d3051d1626882">   52</a></span>        <a class="code hl_typedef" href="_types_8hpp.html#a7472db64fa0f8253f82d7452d6786968">word</a> <a class="code hl_variable" href="class_actuator.html#a64d3661583813b8f259d3051d1626882">_state</a> = 0;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_typedef" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> <a class="code hl_function" href="class_actuator.html#a04116bc5ec0ca19fdf8bbe30b5f24754">calcSteps</a>(<a class="code hl_typedef" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> target);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <a class="code hl_typedef" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> <a class="code hl_function" href="class_actuator.html#ae4705f5263847ab234ef5d9f630753df">calcPosition</a>(<a class="code hl_typedef" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> actSteps);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <a class="code hl_function" href="class_actuator.html#ad08f81ed90eb01f4654acb47eff38be6">Actuator</a> ();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_actuator.html#af104d83044a8e45833a1b67cd6347602">Init</a>(<a class="code hl_class" href="class_rob_frame.html">RobFrame</a>* robFrame);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <a class="code hl_typedef" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> <a class="code hl_function" href="class_actuator.html#a62b9a187d9a73f9d1bfb013a06baf197">Id</a>();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <a class="code hl_typedef" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> <a class="code hl_function" href="class_actuator.html#a9f1b744baa308c5c9fed6895a8816798">SetUp</a>(<span class="keywordtype">float</span> gearRatio = 1, <a class="code hl_typedef" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> accuracy = 5, <a class="code hl_typedef" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> max = 90, <a class="code hl_typedef" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> min = -90);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <a class="code hl_typedef" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> <a class="code hl_function" href="class_actuator.html#af251ec8fcb3ab8be2bb34cf73b79b085">Attach</a>(<a class="code hl_typedef" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> dirPin, <a class="code hl_typedef" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> stepPin, <a class="code hl_typedef" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> enaPin);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="class_actuator.html#a8f35086212a620c907154439718570ee">   83</a></span>        <a class="code hl_typedef" href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a> <a class="code hl_variable" href="class_actuator.html#a8f35086212a620c907154439718570ee">Accuracy</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <a class="code hl_typedef" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> <a class="code hl_function" href="class_actuator.html#aa8005479f1c593783dd74c6ebf7ade6b">Activate</a>(<a class="code hl_typedef" href="_types_8hpp.html#a07fb256c1077eea7a7726e948cc8ff0e">int8</a> ena, <a class="code hl_typedef" href="_types_8hpp.html#ab7078bf13036f3e78534da3ad4149dc2">uint16</a> tof = 5000);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        <a class="code hl_typedef" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> <a class="code hl_function" href="class_actuator.html#abc5a978818409cb0dcdfdddc43a16d50">Refernce</a>(<a class="code hl_typedef" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> value = 0);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        <a class="code hl_typedef" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> <a class="code hl_function" href="class_actuator.html#ae786a505db189182b2fec42f1bb82445">Write</a>(<a class="code hl_typedef" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> target);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <a class="code hl_typedef" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> <a class="code hl_function" href="class_actuator.html#a81ea3f4dae18ab70413b8da2a419601b">Read</a>();</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <a class="code hl_typedef" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> <a class="code hl_function" href="class_actuator.html#a4438639840978376b4e689edcac42db7">Delta</a>(<a class="code hl_typedef" href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a> target);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="class_actuator.html#a61c5a6e128829bc6eeac705dbe40fe40ad7eac040de4363a7f2da987c79de4d34">  105</a></span>        <span class="keyword">enum</span> <a class="code hl_enumeration" href="class_actuator.html#a61c5a6e128829bc6eeac705dbe40fe40">State</a> {<a class="code hl_enumvalue" href="class_actuator.html#a61c5a6e128829bc6eeac705dbe40fe40aa90c8dd45a5ecd017c4b6af46e65d0ff">Enabled</a>, <a class="code hl_enumvalue" href="class_actuator.html#a61c5a6e128829bc6eeac705dbe40fe40a9f7e8c4a6fe34fa4cd5a91d57272b268">Stopped</a>, <a class="code hl_enumvalue" href="class_actuator.html#a61c5a6e128829bc6eeac705dbe40fe40ab7cd476aef1e81a6a5a7a5b33ee145a5">InMotion</a>, <a class="code hl_enumvalue" href="class_actuator.html#a61c5a6e128829bc6eeac705dbe40fe40a5a4925de23e15c19ecf1de02c9ec86b2">Referenced</a>, <a class="code hl_enumvalue" href="class_actuator.html#a61c5a6e128829bc6eeac705dbe40fe40a8042795485fa3694c1aa4332e5c5957d">InPosition</a>, <a class="code hl_enumvalue" href="class_actuator.html#a61c5a6e128829bc6eeac705dbe40fe40ad7eac040de4363a7f2da987c79de4d34">Aborted</a>};</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>};</div>
+</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#endif </span><span class="comment">// ACTUATOR_H_</span></div>
+<div class="ttc" id="a_logger_8hpp_html"><div class="ttname"><a href="_logger_8hpp.html">Logger.hpp</a></div></div>
+<div class="ttc" id="a_types_8hpp_html"><div class="ttname"><a href="_types_8hpp.html">Types.hpp</a></div></div>
+<div class="ttc" id="a_types_8hpp_html_a07fb256c1077eea7a7726e948cc8ff0e"><div class="ttname"><a href="_types_8hpp.html#a07fb256c1077eea7a7726e948cc8ff0e">int8</a></div><div class="ttdeci">signed char int8</div><div class="ttdef"><b>Definition</b> Types.hpp:20</div></div>
+<div class="ttc" id="a_types_8hpp_html_a209decd2d9a8cd5f1697cdb6e00f1cd7"><div class="ttname"><a href="_types_8hpp.html#a209decd2d9a8cd5f1697cdb6e00f1cd7">int16</a></div><div class="ttdeci">short int int16</div><div class="ttdef"><b>Definition</b> Types.hpp:24</div></div>
+<div class="ttc" id="a_types_8hpp_html_a34ecedcf03a70dc91e4616212d79267d"><div class="ttname"><a href="_types_8hpp.html#a34ecedcf03a70dc91e4616212d79267d">uint8</a></div><div class="ttdeci">unsigned char uint8</div><div class="ttdef"><b>Definition</b> Types.hpp:21</div></div>
+<div class="ttc" id="a_types_8hpp_html_a7472db64fa0f8253f82d7452d6786968"><div class="ttname"><a href="_types_8hpp.html#a7472db64fa0f8253f82d7452d6786968">word</a></div><div class="ttdeci">unsigned int word</div><div class="ttdef"><b>Definition</b> Types.hpp:26</div></div>
+<div class="ttc" id="a_types_8hpp_html_ab7078bf13036f3e78534da3ad4149dc2"><div class="ttname"><a href="_types_8hpp.html#ab7078bf13036f3e78534da3ad4149dc2">uint16</a></div><div class="ttdeci">unsigned short int uint16</div><div class="ttdef"><b>Definition</b> Types.hpp:25</div></div>
+<div class="ttc" id="a_types_8hpp_html_abcfb764e2f77b82e8e2113b8857a51cb"><div class="ttname"><a href="_types_8hpp.html#abcfb764e2f77b82e8e2113b8857a51cb">int32</a></div><div class="ttdeci">long int int32</div><div class="ttdef"><b>Definition</b> Types.hpp:28</div></div>
+<div class="ttc" id="a_utilities_8hpp_html"><div class="ttname"><a href="_utilities_8hpp.html">Utilities.hpp</a></div></div>
+<div class="ttc" id="aclass_actuator_html_a04116bc5ec0ca19fdf8bbe30b5f24754"><div class="ttname"><a href="class_actuator.html#a04116bc5ec0ca19fdf8bbe30b5f24754">Actuator::calcSteps</a></div><div class="ttdeci">int32 calcSteps(int32 target)</div><div class="ttdoc">Winkelwerte in Grad zu Schritte konvertieren.</div><div class="ttdef"><b>Definition</b> Actuator.cpp:28</div></div>
+<div class="ttc" id="aclass_actuator_html_a13a30cb5ac83c9f04a5e592b2cb3dc0b"><div class="ttname"><a href="class_actuator.html#a13a30cb5ac83c9f04a5e592b2cb3dc0b">Actuator::_timeOfDelay</a></div><div class="ttdeci">uint16 _timeOfDelay</div><div class="ttdef"><b>Definition</b> Actuator.hpp:48</div></div>
+<div class="ttc" id="aclass_actuator_html_a195548ac6b8d5b487e20940e0920587e"><div class="ttname"><a href="class_actuator.html#a195548ac6b8d5b487e20940e0920587e">Actuator::_dir</a></div><div class="ttdeci">int8 _dir</div><div class="ttdef"><b>Definition</b> Actuator.hpp:39</div></div>
+<div class="ttc" id="aclass_actuator_html_a4319d3173f74a448dc7dd10711fd5ee5"><div class="ttname"><a href="class_actuator.html#a4319d3173f74a448dc7dd10711fd5ee5">Actuator::_actualSteps</a></div><div class="ttdeci">int32 _actualSteps</div><div class="ttdef"><b>Definition</b> Actuator.hpp:46</div></div>
+<div class="ttc" id="aclass_actuator_html_a4438639840978376b4e689edcac42db7"><div class="ttname"><a href="class_actuator.html#a4438639840978376b4e689edcac42db7">Actuator::Delta</a></div><div class="ttdeci">int32 Delta(int32 target)</div><div class="ttdoc">Soll-Ist Differenze bilden.</div><div class="ttdef"><b>Definition</b> Actuator.cpp:197</div></div>
+<div class="ttc" id="aclass_actuator_html_a4abaac0db5b87ce00c0dded74cc80a20"><div class="ttname"><a href="class_actuator.html#a4abaac0db5b87ce00c0dded74cc80a20">Actuator::_previousSteps</a></div><div class="ttdeci">int32 _previousSteps</div><div class="ttdef"><b>Definition</b> Actuator.hpp:45</div></div>
+<div class="ttc" id="aclass_actuator_html_a511c8b67bd00781f24660bc76cafcaf4"><div class="ttname"><a href="class_actuator.html#a511c8b67bd00781f24660bc76cafcaf4">Actuator::_min</a></div><div class="ttdeci">int16 _min</div><div class="ttdef"><b>Definition</b> Actuator.hpp:42</div></div>
+<div class="ttc" id="aclass_actuator_html_a54b9ddb58f8b7730694d99c02b2cf77c"><div class="ttname"><a href="class_actuator.html#a54b9ddb58f8b7730694d99c02b2cf77c">Actuator::_id</a></div><div class="ttdeci">int16 _id</div><div class="ttdef"><b>Definition</b> Actuator.hpp:40</div></div>
+<div class="ttc" id="aclass_actuator_html_a565677065af811cdd52de4de12276547"><div class="ttname"><a href="class_actuator.html#a565677065af811cdd52de4de12276547">Actuator::_motorSteps</a></div><div class="ttdeci">uint8 _motorSteps</div><div class="ttdef"><b>Definition</b> Actuator.hpp:36</div></div>
+<div class="ttc" id="aclass_actuator_html_a5ca69ff2e0b27db10f90a32914cf6ef8"><div class="ttname"><a href="class_actuator.html#a5ca69ff2e0b27db10f90a32914cf6ef8">Actuator::_max</a></div><div class="ttdeci">int16 _max</div><div class="ttdef"><b>Definition</b> Actuator.hpp:43</div></div>
+<div class="ttc" id="aclass_actuator_html_a61c5a6e128829bc6eeac705dbe40fe40"><div class="ttname"><a href="class_actuator.html#a61c5a6e128829bc6eeac705dbe40fe40">Actuator::State</a></div><div class="ttdeci">State</div><div class="ttdoc">Aktuator Betriebszustand.</div><div class="ttdef"><b>Definition</b> Actuator.hpp:105</div></div>
+<div class="ttc" id="aclass_actuator_html_a61c5a6e128829bc6eeac705dbe40fe40a5a4925de23e15c19ecf1de02c9ec86b2"><div class="ttname"><a href="class_actuator.html#a61c5a6e128829bc6eeac705dbe40fe40a5a4925de23e15c19ecf1de02c9ec86b2">Actuator::Referenced</a></div><div class="ttdeci">@ Referenced</div><div class="ttdef"><b>Definition</b> Actuator.hpp:105</div></div>
+<div class="ttc" id="aclass_actuator_html_a61c5a6e128829bc6eeac705dbe40fe40a8042795485fa3694c1aa4332e5c5957d"><div class="ttname"><a href="class_actuator.html#a61c5a6e128829bc6eeac705dbe40fe40a8042795485fa3694c1aa4332e5c5957d">Actuator::InPosition</a></div><div class="ttdeci">@ InPosition</div><div class="ttdef"><b>Definition</b> Actuator.hpp:105</div></div>
+<div class="ttc" id="aclass_actuator_html_a61c5a6e128829bc6eeac705dbe40fe40a9f7e8c4a6fe34fa4cd5a91d57272b268"><div class="ttname"><a href="class_actuator.html#a61c5a6e128829bc6eeac705dbe40fe40a9f7e8c4a6fe34fa4cd5a91d57272b268">Actuator::Stopped</a></div><div class="ttdeci">@ Stopped</div><div class="ttdef"><b>Definition</b> Actuator.hpp:105</div></div>
+<div class="ttc" id="aclass_actuator_html_a61c5a6e128829bc6eeac705dbe40fe40aa90c8dd45a5ecd017c4b6af46e65d0ff"><div class="ttname"><a href="class_actuator.html#a61c5a6e128829bc6eeac705dbe40fe40aa90c8dd45a5ecd017c4b6af46e65d0ff">Actuator::Enabled</a></div><div class="ttdeci">@ Enabled</div><div class="ttdef"><b>Definition</b> Actuator.hpp:105</div></div>
+<div class="ttc" id="aclass_actuator_html_a61c5a6e128829bc6eeac705dbe40fe40ab7cd476aef1e81a6a5a7a5b33ee145a5"><div class="ttname"><a href="class_actuator.html#a61c5a6e128829bc6eeac705dbe40fe40ab7cd476aef1e81a6a5a7a5b33ee145a5">Actuator::InMotion</a></div><div class="ttdeci">@ InMotion</div><div class="ttdef"><b>Definition</b> Actuator.hpp:105</div></div>
+<div class="ttc" id="aclass_actuator_html_a61c5a6e128829bc6eeac705dbe40fe40ad7eac040de4363a7f2da987c79de4d34"><div class="ttname"><a href="class_actuator.html#a61c5a6e128829bc6eeac705dbe40fe40ad7eac040de4363a7f2da987c79de4d34">Actuator::Aborted</a></div><div class="ttdeci">@ Aborted</div><div class="ttdef"><b>Definition</b> Actuator.hpp:105</div></div>
+<div class="ttc" id="aclass_actuator_html_a62b9a187d9a73f9d1bfb013a06baf197"><div class="ttname"><a href="class_actuator.html#a62b9a187d9a73f9d1bfb013a06baf197">Actuator::Id</a></div><div class="ttdeci">int16 Id()</div><div class="ttdoc">Aktor ID.</div><div class="ttdef"><b>Definition</b> Actuator.cpp:43</div></div>
+<div class="ttc" id="aclass_actuator_html_a64d3661583813b8f259d3051d1626882"><div class="ttname"><a href="class_actuator.html#a64d3661583813b8f259d3051d1626882">Actuator::_state</a></div><div class="ttdeci">word _state</div><div class="ttdef"><b>Definition</b> Actuator.hpp:52</div></div>
+<div class="ttc" id="aclass_actuator_html_a7b8ff8dc352dcbbd83ac0885bf134af2"><div class="ttname"><a href="class_actuator.html#a7b8ff8dc352dcbbd83ac0885bf134af2">Actuator::_gearRatio</a></div><div class="ttdeci">int16 _gearRatio</div><div class="ttdef"><b>Definition</b> Actuator.hpp:44</div></div>
+<div class="ttc" id="aclass_actuator_html_a81ea3f4dae18ab70413b8da2a419601b"><div class="ttname"><a href="class_actuator.html#a81ea3f4dae18ab70413b8da2a419601b">Actuator::Read</a></div><div class="ttdeci">int32 Read()</div><div class="ttdoc">lese Istposition</div><div class="ttdef"><b>Definition</b> Actuator.cpp:191</div></div>
+<div class="ttc" id="aclass_actuator_html_a8f35086212a620c907154439718570ee"><div class="ttname"><a href="class_actuator.html#a8f35086212a620c907154439718570ee">Actuator::Accuracy</a></div><div class="ttdeci">int16 Accuracy</div><div class="ttdoc">Genauigkeit.</div><div class="ttdef"><b>Definition</b> Actuator.hpp:83</div></div>
+<div class="ttc" id="aclass_actuator_html_a9f1b744baa308c5c9fed6895a8816798"><div class="ttname"><a href="class_actuator.html#a9f1b744baa308c5c9fed6895a8816798">Actuator::SetUp</a></div><div class="ttdeci">int16 SetUp(float gearRatio=1, int16 accuracy=5, int16 max=90, int16 min=-90)</div><div class="ttdoc">Hardwareeinrichten.</div><div class="ttdef"><b>Definition</b> Actuator.cpp:48</div></div>
+<div class="ttc" id="aclass_actuator_html_aa0dc7ebca239c487d18c66a43296e0d3"><div class="ttname"><a href="class_actuator.html#aa0dc7ebca239c487d18c66a43296e0d3">Actuator::_enabled</a></div><div class="ttdeci">int8 _enabled</div><div class="ttdef"><b>Definition</b> Actuator.hpp:51</div></div>
+<div class="ttc" id="aclass_actuator_html_aa8005479f1c593783dd74c6ebf7ade6b"><div class="ttname"><a href="class_actuator.html#aa8005479f1c593783dd74c6ebf7ade6b">Actuator::Activate</a></div><div class="ttdeci">int32 Activate(int8 ena, uint16 tof=5000)</div><div class="ttdoc">Aktoransteuerung.</div><div class="ttdef"><b>Definition</b> Actuator.cpp:85</div></div>
+<div class="ttc" id="aclass_actuator_html_aa99ce4c70762d23baf12e051e75ebbab"><div class="ttname"><a href="class_actuator.html#aa99ce4c70762d23baf12e051e75ebbab">Actuator::_robFrame</a></div><div class="ttdeci">RobFrame * _robFrame</div><div class="ttdoc">Zeiger zu RobFrame.</div><div class="ttdef"><b>Definition</b> Actuator.hpp:32</div></div>
+<div class="ttc" id="aclass_actuator_html_ab8293059665eefc50d9050c9639787c1"><div class="ttname"><a href="class_actuator.html#ab8293059665eefc50d9050c9639787c1">Actuator::_stepper</a></div><div class="ttdeci">BasicStepperDriver * _stepper</div><div class="ttdoc">Zeiger zur Stepper Objekt.</div><div class="ttdef"><b>Definition</b> Actuator.hpp:34</div></div>
+<div class="ttc" id="aclass_actuator_html_abc5a978818409cb0dcdfdddc43a16d50"><div class="ttname"><a href="class_actuator.html#abc5a978818409cb0dcdfdddc43a16d50">Actuator::Refernce</a></div><div class="ttdeci">int32 Refernce(int32 value=0)</div><div class="ttdoc">IstPositionswert Referenzieren.</div><div class="ttdef"><b>Definition</b> Actuator.cpp:79</div></div>
+<div class="ttc" id="aclass_actuator_html_abef58f75c37d3155ecde1613e2cbc0d4"><div class="ttname"><a href="class_actuator.html#abef58f75c37d3155ecde1613e2cbc0d4">Actuator::_targetSteps</a></div><div class="ttdeci">int32 _targetSteps</div><div class="ttdef"><b>Definition</b> Actuator.hpp:47</div></div>
+<div class="ttc" id="aclass_actuator_html_ad08f81ed90eb01f4654acb47eff38be6"><div class="ttname"><a href="class_actuator.html#ad08f81ed90eb01f4654acb47eff38be6">Actuator::Actuator</a></div><div class="ttdeci">Actuator()</div><div class="ttdoc">Actor Klassen-Objekt.</div><div class="ttdef"><b>Definition</b> Actuator.cpp:16</div></div>
+<div class="ttc" id="aclass_actuator_html_ade001d1ef9d41e0fb033940fb43f3b83"><div class="ttname"><a href="class_actuator.html#ade001d1ef9d41e0fb033940fb43f3b83">Actuator::_microSteps</a></div><div class="ttdeci">uint8 _microSteps</div><div class="ttdef"><b>Definition</b> Actuator.hpp:37</div></div>
+<div class="ttc" id="aclass_actuator_html_ae4705f5263847ab234ef5d9f630753df"><div class="ttname"><a href="class_actuator.html#ae4705f5263847ab234ef5d9f630753df">Actuator::calcPosition</a></div><div class="ttdeci">int32 calcPosition(int32 actSteps)</div><div class="ttdoc">Schritte zu Winkel.</div><div class="ttdef"><b>Definition</b> Actuator.cpp:34</div></div>
+<div class="ttc" id="aclass_actuator_html_ae786a505db189182b2fec42f1bb82445"><div class="ttname"><a href="class_actuator.html#ae786a505db189182b2fec42f1bb82445">Actuator::Write</a></div><div class="ttdeci">int32 Write(int32 target)</div><div class="ttdoc">Aktuator Sollwert Schreiben.</div><div class="ttdef"><b>Definition</b> Actuator.cpp:135</div></div>
+<div class="ttc" id="aclass_actuator_html_af104d83044a8e45833a1b67cd6347602"><div class="ttname"><a href="class_actuator.html#af104d83044a8e45833a1b67cd6347602">Actuator::Init</a></div><div class="ttdeci">void Init(RobFrame *robFrame)</div><div class="ttdoc">Initialisierung Zeiger-Zuweisung.</div><div class="ttdef"><b>Definition</b> Actuator.cpp:19</div></div>
+<div class="ttc" id="aclass_actuator_html_af251ec8fcb3ab8be2bb34cf73b79b085"><div class="ttname"><a href="class_actuator.html#af251ec8fcb3ab8be2bb34cf73b79b085">Actuator::Attach</a></div><div class="ttdeci">int16 Attach(int16 dirPin, int16 stepPin, int16 enaPin)</div><div class="ttdoc">Hardware-Ausgänge Zuweisen Anbinddung der Hardware-Ausgänge.</div><div class="ttdef"><b>Definition</b> Actuator.cpp:71</div></div>
+<div class="ttc" id="aclass_actuator_html_af4b6e8a30c0de94b60c7dd88cadd1acb"><div class="ttname"><a href="class_actuator.html#af4b6e8a30c0de94b60c7dd88cadd1acb">Actuator::_offset</a></div><div class="ttdeci">int16 _offset</div><div class="ttdef"><b>Definition</b> Actuator.hpp:41</div></div>
+<div class="ttc" id="aclass_actuator_html_af7c222037d1b227f750c377eb49eb994"><div class="ttname"><a href="class_actuator.html#af7c222037d1b227f750c377eb49eb994">Actuator::_rpm</a></div><div class="ttdeci">float _rpm</div><div class="ttdef"><b>Definition</b> Actuator.hpp:49</div></div>
+<div class="ttc" id="aclass_rob_frame_html"><div class="ttname"><a href="class_rob_frame.html">RobFrame</a></div><div class="ttdef"><b>Definition</b> RobFrameWork.hpp:21</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="_actuator_8hpp.html">Actuator.hpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

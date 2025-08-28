@@ -1,0 +1,518 @@
+\doxysection{Rob\+Frame Klassenreferenz}
+\hypertarget{class_rob_frame}{}\label{class_rob_frame}\index{RobFrame@{RobFrame}}
+
+
+{\ttfamily \#include $<$Rob\+Frame\+Work.\+hpp$>$}
+
+
+
+Zusammengehörigkeiten von Rob\+Frame\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rob_frame__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rob_frame_a0109bec096c54541b961148c78dce119}{Rob\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Klassen-\/\+Objekt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rob_frame_a23c099f0ed25c01099b53fa0d05150ed}{Setup}} ()
+\begin{DoxyCompactList}\small\item\em Einrichtung und Speicherallokation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rob_frame_a0d79cee264204461c4445cf72c4481b7}{Decode}} (String data)
+\begin{DoxyCompactList}\small\item\em Eingangsdaten Parsen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rob_frame_a92a99cf7219b60ab8d2c349fd2eef6a8}{Goto\+Deg}} (\mbox{\hyperlink{class_actuator}{Actuator}} \&jt, int dest)
+\begin{DoxyCompactList}\small\item\em Glenk Einzelverfahren. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rob_frame_a56384fc3894ecdaf39252f703ee91873}{Loop\+Positions}} ()
+\begin{DoxyCompactList}\small\item\em Iteriere durch den Positionsdatensatz. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{Pos\+State}} \mbox{\hyperlink{class_rob_frame_ae5ef3c45bc8b82d75e47f422addeb56f}{Drive}} (\mbox{\hyperlink{struct_posture}{Posture}} pt)
+\begin{DoxyCompactList}\small\item\em Punkt zu Punkt Asynchrone Gelenk-\/\+Ansteuerung. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{Pos\+State}} \mbox{\hyperlink{class_rob_frame_a40f13f5c1ce2baaaa77fc3eee9b98379}{Drive}} (\mbox{\hyperlink{struct_position}{Position}} ps)
+\begin{DoxyCompactList}\small\item\em Punkt zu Punkt Asynchrone Gelenk-\/\+Ansteuerung. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{Pos\+State}} \mbox{\hyperlink{class_rob_frame_a3b51be372803d4960a457d2c03378314}{LDrive}} (\mbox{\hyperlink{struct_position}{Position}} ps)
+\begin{DoxyCompactList}\small\item\em Gradlinige Asynchrone Gelenk-\/\+Ansteuerung. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Öffentliche Attribute}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_posture}{Posture}} \mbox{\hyperlink{class_rob_frame_ac24967ede35dcc595ca8f720f421bb70}{Pt\+Home}} \{0, 45, -\/90, 0, -\/45, 0\}
+\begin{DoxyCompactList}\small\item\em Grundstellung. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_commands}{Commands}} \mbox{\hyperlink{class_rob_frame_a24209acf7cbbbf1cb2147a15068ccf28}{Commands}}
+\begin{DoxyCompactList}\small\item\em Befehls-\/\+Manager. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_kinematic}{Kinematic}} \mbox{\hyperlink{class_rob_frame_a1599e8f613fd7b7196758cae7fce017b}{Kinematics}}
+\begin{DoxyCompactList}\small\item\em Kinematik-\/\+Manager. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_position_factory}{Position\+Factory}} \mbox{\hyperlink{class_rob_frame_a5e76a9553b0bc1c9d3dfd7f0c003f322}{Pos\+Factory}}
+\begin{DoxyCompactList}\small\item\em Position-\/\+Manager. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_actuator}{Actuator}} \mbox{\hyperlink{class_rob_frame_a06fc734ade46594b938fa3401ec83531}{Joint1}}
+\begin{DoxyCompactList}\small\item\em Gelenk 1. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_actuator}{Actuator}} \mbox{\hyperlink{class_rob_frame_ab97cde618ef57b02cde2c811895491a2}{Joint2}}
+\begin{DoxyCompactList}\small\item\em Gelenk 2. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_actuator}{Actuator}} \mbox{\hyperlink{class_rob_frame_a032b295eeb12e02d54ca629bdaab99be}{Joint3}}
+\begin{DoxyCompactList}\small\item\em Gelenk 3. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_actuator}{Actuator}} \mbox{\hyperlink{class_rob_frame_aad62150931dd77f06f9f8ddb2dcd1c2a}{Joint4}}
+\begin{DoxyCompactList}\small\item\em Gelenk 4. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_actuator}{Actuator}} \mbox{\hyperlink{class_rob_frame_ad59a1128c31affac8f4e49a91e7e3ecb}{Joint5}}
+\begin{DoxyCompactList}\small\item\em Gelenk 5. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_actuator}{Actuator}} \mbox{\hyperlink{class_rob_frame_a74ec840797d60e9da02277ac88dbe1b3}{Joint6}}
+\begin{DoxyCompactList}\small\item\em Gelenk 6. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_rob_frame_aa358b505e48c8ea8efa6f069dab67520}{Increment}} (\mbox{\hyperlink{class_actuator}{Actuator}} \&jt, int origin, int dest, int itr)
+\begin{DoxyCompactList}\small\item\em Aktor Asynchron ansteuern. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rob_frame_a208ae2ae7cdbe80dba28e4d0ad29857b}{Sweep}} (\mbox{\hyperlink{class_actuator}{Actuator}} \&jt, int origin, int dest)
+\begin{DoxyCompactList}\small\item\em Aktor Synchron Ansteuern. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_rob_frame_a194090d0e0cbb371b0af3a7728a41a49}{Validate}} (\mbox{\hyperlink{struct_position}{Position}} \&origin, \mbox{\hyperlink{struct_position}{Position}} \&dest, int \&range, int \&valid, \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{Pos\+State}} state=\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9ad4104c9463be0f246699a116eb647a63}{Pos\+State\+::\+Pos\+And\+Post}})
+\begin{DoxyCompactList}\small\item\em Positions Soll, Ist-\/\+Positions vergleich. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_position}{Position}} \mbox{\hyperlink{class_rob_frame_a6e0cd7ffcb6222818a7fed8d7033f6af}{Interpolate}} (\mbox{\hyperlink{struct_position}{Position}} \&origin, \mbox{\hyperlink{struct_position}{Position}} \&dest, int range, int step=1)
+\begin{DoxyCompactList}\small\item\em Gradlinige Interpolation zwischen Zwei Punkte. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_rob_frame_a82029fc7e2f3a0923be121a826dc72cc}{\+\_\+loop\+Count}} = 0
+\begin{DoxyCompactList}\small\item\em Schleifen zähler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_rob_frame_doc-constructors}
+\doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
+\Hypertarget{class_rob_frame_a0109bec096c54541b961148c78dce119}\index{RobFrame@{RobFrame}!RobFrame@{RobFrame}}
+\index{RobFrame@{RobFrame}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{RobFrame()}{RobFrame()}}
+{\footnotesize\ttfamily \label{class_rob_frame_a0109bec096c54541b961148c78dce119} 
+Rob\+Frame\+::\+Rob\+Frame (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Klassen-\/\+Objekt. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_rob_frame_doc-func-members}
+\doxysubsection{Dokumentation der Elementfunktionen}
+\Hypertarget{class_rob_frame_a0d79cee264204461c4445cf72c4481b7}\index{RobFrame@{RobFrame}!Decode@{Decode}}
+\index{Decode@{Decode}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{Decode()}{Decode()}}
+{\footnotesize\ttfamily \label{class_rob_frame_a0d79cee264204461c4445cf72c4481b7} 
+void Rob\+Frame\+::\+Decode (\begin{DoxyParamCaption}\item[{String}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Eingangsdaten Parsen. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em data} & String data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+void
+\end{DoxyReturn}
+Eingangs Daten aus Serialle Port lesen Auswerten und entsprechend aus führen. Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rob_frame_a0d79cee264204461c4445cf72c4481b7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_rob_frame_a40f13f5c1ce2baaaa77fc3eee9b98379}\index{RobFrame@{RobFrame}!Drive@{Drive}}
+\index{Drive@{Drive}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{Drive()}{Drive()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_rob_frame_a40f13f5c1ce2baaaa77fc3eee9b98379} 
+\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{Pos\+State}} Rob\+Frame\+::\+Drive (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_position}{Position}}}]{ps}{}\end{DoxyParamCaption})}
+
+
+
+Punkt zu Punkt Asynchrone Gelenk-\/\+Ansteuerung. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em ps} & Soll \doxylink{struct_position}{Position} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Positions Status
+\end{DoxyReturn}
+Verfahre alle Gelenke Asynchron zum Ziel \doxylink{struct_position}{Position} mit einer Point zu Punkt bzw. Gelenk Bewegung Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rob_frame_a40f13f5c1ce2baaaa77fc3eee9b98379_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_rob_frame_ae5ef3c45bc8b82d75e47f422addeb56f}\index{RobFrame@{RobFrame}!Drive@{Drive}}
+\index{Drive@{Drive}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{Drive()}{Drive()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_rob_frame_ae5ef3c45bc8b82d75e47f422addeb56f} 
+\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{Pos\+State}} Rob\+Frame\+::\+Drive (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_posture}{Posture}}}]{pt}{}\end{DoxyParamCaption})}
+
+
+
+Punkt zu Punkt Asynchrone Gelenk-\/\+Ansteuerung. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em pt} & Soll Winkelstellung \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Positions Status
+\end{DoxyReturn}
+Verfahre alle Gelenke Asynchrone zum Ziel Stellung in Punkt zu Punkt Bewegung Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rob_frame_ae5ef3c45bc8b82d75e47f422addeb56f_cgraph}
+\end{center}
+\end{figure}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rob_frame_ae5ef3c45bc8b82d75e47f422addeb56f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_rob_frame_a92a99cf7219b60ab8d2c349fd2eef6a8}\index{RobFrame@{RobFrame}!GotoDeg@{GotoDeg}}
+\index{GotoDeg@{GotoDeg}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{GotoDeg()}{GotoDeg()}}
+{\footnotesize\ttfamily \label{class_rob_frame_a92a99cf7219b60ab8d2c349fd2eef6a8} 
+void Rob\+Frame\+::\+Goto\+Deg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_actuator}{Actuator}} \&}]{jt}{, }\item[{int}]{dest}{}\end{DoxyParamCaption})}
+
+
+
+Glenk Einzelverfahren. 
+
+Verfahre Gelenk Einzel zum Soll-\/\+Position.
+
+
+\begin{DoxyParams}{Parameter}
+{\em jt} & Aktuator Referenz \\
+\hline
+{\em dest} & Ziel-\/\+Position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+void 
+\end{DoxyReturn}
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rob_frame_a92a99cf7219b60ab8d2c349fd2eef6a8_cgraph}
+\end{center}
+\end{figure}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{class_rob_frame_a92a99cf7219b60ab8d2c349fd2eef6a8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_rob_frame_aa358b505e48c8ea8efa6f069dab67520}\index{RobFrame@{RobFrame}!Increment@{Increment}}
+\index{Increment@{Increment}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{Increment()}{Increment()}}
+{\footnotesize\ttfamily \label{class_rob_frame_aa358b505e48c8ea8efa6f069dab67520} 
+void Rob\+Frame\+::\+Increment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_actuator}{Actuator}} \&}]{jt}{, }\item[{int}]{origin}{, }\item[{int}]{dest}{, }\item[{int}]{itr}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aktor Asynchron ansteuern. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em jt} & Aktuator referenz \\
+\hline
+{\em origin} & Ist-\/\+Position \\
+\hline
+{\em dest} & Ziel-\/\+Position \\
+\hline
+{\em itr} & Inkrementen Wert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+void
+\end{DoxyReturn}
+Gelenk Aktorik schrittweise inkrementieren asynchrone Ansteuerung zur ermöglichen Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rob_frame_aa358b505e48c8ea8efa6f069dab67520_cgraph}
+\end{center}
+\end{figure}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rob_frame_aa358b505e48c8ea8efa6f069dab67520_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_rob_frame_a6e0cd7ffcb6222818a7fed8d7033f6af}\index{RobFrame@{RobFrame}!Interpolate@{Interpolate}}
+\index{Interpolate@{Interpolate}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{Interpolate()}{Interpolate()}}
+{\footnotesize\ttfamily \label{class_rob_frame_a6e0cd7ffcb6222818a7fed8d7033f6af} 
+\mbox{\hyperlink{struct_position}{Position}} Rob\+Frame\+::\+Interpolate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_position}{Position}} \&}]{origin}{, }\item[{\mbox{\hyperlink{struct_position}{Position}} \&}]{dest}{, }\item[{int}]{range}{, }\item[{int}]{step}{ = {\ttfamily 1}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gradlinige Interpolation zwischen Zwei Punkte. 
+
+Gradlinige Interpolation zwischen zwei punkte delta = Ist-\/\+Position + Schritt\texorpdfstring{$\ast$}{*}(sign(\+Richtung)) Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rob_frame_a6e0cd7ffcb6222818a7fed8d7033f6af_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_rob_frame_a3b51be372803d4960a457d2c03378314}\index{RobFrame@{RobFrame}!LDrive@{LDrive}}
+\index{LDrive@{LDrive}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{LDrive()}{LDrive()}}
+{\footnotesize\ttfamily \label{class_rob_frame_a3b51be372803d4960a457d2c03378314} 
+\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{Pos\+State}} Rob\+Frame\+::\+LDrive (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_position}{Position}}}]{ps}{}\end{DoxyParamCaption})}
+
+
+
+Gradlinige Asynchrone Gelenk-\/\+Ansteuerung. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em ps} & Soll \doxylink{struct_position}{Position} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Positions Status
+\end{DoxyReturn}
+Verfahre alle Gelenke Asynchron zum Ziel \doxylink{struct_position}{Position} mit einer gradlinige Bewegung Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rob_frame_a3b51be372803d4960a457d2c03378314_cgraph}
+\end{center}
+\end{figure}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{class_rob_frame_a3b51be372803d4960a457d2c03378314_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_rob_frame_a56384fc3894ecdaf39252f703ee91873}\index{RobFrame@{RobFrame}!LoopPositions@{LoopPositions}}
+\index{LoopPositions@{LoopPositions}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{LoopPositions()}{LoopPositions()}}
+{\footnotesize\ttfamily \label{class_rob_frame_a56384fc3894ecdaf39252f703ee91873} 
+void Rob\+Frame\+::\+Loop\+Positions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Iteriere durch den Positionsdatensatz. 
+
+\begin{DoxyReturn}{Rückgabe}
+void
+\end{DoxyReturn}
+Iterierer durch den positions Datensatz Fahre in Punkt zu Punkt bzw. \doxylink{class_joint}{Joint} Bewegung oder fahre Gradlinige Bewegung. Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rob_frame_a56384fc3894ecdaf39252f703ee91873_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_rob_frame_a23c099f0ed25c01099b53fa0d05150ed}\index{RobFrame@{RobFrame}!Setup@{Setup}}
+\index{Setup@{Setup}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily \label{class_rob_frame_a23c099f0ed25c01099b53fa0d05150ed} 
+void Rob\+Frame\+::\+Setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Einrichtung und Speicherallokation. 
+
+Einrichtung des Aktoren, und Positions Daten allozieren. \Hypertarget{class_rob_frame_a208ae2ae7cdbe80dba28e4d0ad29857b}\index{RobFrame@{RobFrame}!Sweep@{Sweep}}
+\index{Sweep@{Sweep}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{Sweep()}{Sweep()}}
+{\footnotesize\ttfamily \label{class_rob_frame_a208ae2ae7cdbe80dba28e4d0ad29857b} 
+void Rob\+Frame\+::\+Sweep (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_actuator}{Actuator}} \&}]{jt}{, }\item[{int}]{origin}{, }\item[{int}]{dest}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aktor Synchron Ansteuern. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em jt} & Aktuator referenz \\
+\hline
+{\em origin} & Ist-\/\+Postion \\
+\hline
+{\em dest} & Ziel-\/\+Position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+void
+\end{DoxyReturn}
+Manipulator Aktorik synchron ansteuern d.\+h. mit Thread Sperrung Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rob_frame_a208ae2ae7cdbe80dba28e4d0ad29857b_cgraph}
+\end{center}
+\end{figure}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rob_frame_a208ae2ae7cdbe80dba28e4d0ad29857b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_rob_frame_a194090d0e0cbb371b0af3a7728a41a49}\index{RobFrame@{RobFrame}!Validate@{Validate}}
+\index{Validate@{Validate}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{Validate()}{Validate()}}
+{\footnotesize\ttfamily \label{class_rob_frame_a194090d0e0cbb371b0af3a7728a41a49} 
+void Rob\+Frame\+::\+Validate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_position}{Position}} \&}]{origin}{, }\item[{\mbox{\hyperlink{struct_position}{Position}} \&}]{dest}{, }\item[{int \&}]{range}{, }\item[{int \&}]{valid}{, }\item[{\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{Pos\+State}}}]{state}{ = {\ttfamily \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9ad4104c9463be0f246699a116eb647a63}{Pos\+State\+::\+Pos\+And\+Post}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Positions Soll, Ist-\/\+Positions vergleich. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em origin} & Ist-\/\+Position \\
+\hline
+{\em dest} & Soll-\/\+Position \\
+\hline
+{\em range} & Tolerance \\
+\hline
+{\em Flag} & Validierungs Merker 1 wenn Ist gleich Soll-\/\+Position, 0 wenn Ist ungleich Soll-\/\+Position. \\
+\hline
+{\em state} & Datensatz Type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+void
+\end{DoxyReturn}
+Ist-\/\+Soll Positions Vergleich für die validierung der Inverskinematik Berechnung Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_rob_frame_a194090d0e0cbb371b0af3a7728a41a49_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_rob_frame_doc-variable-members}
+\doxysubsection{Dokumentation der Datenelemente}
+\Hypertarget{class_rob_frame_a82029fc7e2f3a0923be121a826dc72cc}\index{RobFrame@{RobFrame}!\_loopCount@{\_loopCount}}
+\index{\_loopCount@{\_loopCount}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{\_loopCount}{\_loopCount}}
+{\footnotesize\ttfamily \label{class_rob_frame_a82029fc7e2f3a0923be121a826dc72cc} 
+int Rob\+Frame\+::\+\_\+loop\+Count = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Schleifen zähler. 
+
+\Hypertarget{class_rob_frame_a24209acf7cbbbf1cb2147a15068ccf28}\index{RobFrame@{RobFrame}!Commands@{Commands}}
+\index{Commands@{Commands}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{Commands}{Commands}}
+{\footnotesize\ttfamily \label{class_rob_frame_a24209acf7cbbbf1cb2147a15068ccf28} 
+\mbox{\hyperlink{class_commands}{Commands}} Rob\+Frame\+::\+Commands}
+
+
+
+Befehls-\/\+Manager. 
+
+\Hypertarget{class_rob_frame_a06fc734ade46594b938fa3401ec83531}\index{RobFrame@{RobFrame}!Joint1@{Joint1}}
+\index{Joint1@{Joint1}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{Joint1}{Joint1}}
+{\footnotesize\ttfamily \label{class_rob_frame_a06fc734ade46594b938fa3401ec83531} 
+\mbox{\hyperlink{class_actuator}{Actuator}} Rob\+Frame\+::\+Joint1}
+
+
+
+Gelenk 1. 
+
+\Hypertarget{class_rob_frame_ab97cde618ef57b02cde2c811895491a2}\index{RobFrame@{RobFrame}!Joint2@{Joint2}}
+\index{Joint2@{Joint2}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{Joint2}{Joint2}}
+{\footnotesize\ttfamily \label{class_rob_frame_ab97cde618ef57b02cde2c811895491a2} 
+\mbox{\hyperlink{class_actuator}{Actuator}} Rob\+Frame\+::\+Joint2}
+
+
+
+Gelenk 2. 
+
+\Hypertarget{class_rob_frame_a032b295eeb12e02d54ca629bdaab99be}\index{RobFrame@{RobFrame}!Joint3@{Joint3}}
+\index{Joint3@{Joint3}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{Joint3}{Joint3}}
+{\footnotesize\ttfamily \label{class_rob_frame_a032b295eeb12e02d54ca629bdaab99be} 
+\mbox{\hyperlink{class_actuator}{Actuator}} Rob\+Frame\+::\+Joint3}
+
+
+
+Gelenk 3. 
+
+\Hypertarget{class_rob_frame_aad62150931dd77f06f9f8ddb2dcd1c2a}\index{RobFrame@{RobFrame}!Joint4@{Joint4}}
+\index{Joint4@{Joint4}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{Joint4}{Joint4}}
+{\footnotesize\ttfamily \label{class_rob_frame_aad62150931dd77f06f9f8ddb2dcd1c2a} 
+\mbox{\hyperlink{class_actuator}{Actuator}} Rob\+Frame\+::\+Joint4}
+
+
+
+Gelenk 4. 
+
+\Hypertarget{class_rob_frame_ad59a1128c31affac8f4e49a91e7e3ecb}\index{RobFrame@{RobFrame}!Joint5@{Joint5}}
+\index{Joint5@{Joint5}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{Joint5}{Joint5}}
+{\footnotesize\ttfamily \label{class_rob_frame_ad59a1128c31affac8f4e49a91e7e3ecb} 
+\mbox{\hyperlink{class_actuator}{Actuator}} Rob\+Frame\+::\+Joint5}
+
+
+
+Gelenk 5. 
+
+\Hypertarget{class_rob_frame_a74ec840797d60e9da02277ac88dbe1b3}\index{RobFrame@{RobFrame}!Joint6@{Joint6}}
+\index{Joint6@{Joint6}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{Joint6}{Joint6}}
+{\footnotesize\ttfamily \label{class_rob_frame_a74ec840797d60e9da02277ac88dbe1b3} 
+\mbox{\hyperlink{class_actuator}{Actuator}} Rob\+Frame\+::\+Joint6}
+
+
+
+Gelenk 6. 
+
+\Hypertarget{class_rob_frame_a1599e8f613fd7b7196758cae7fce017b}\index{RobFrame@{RobFrame}!Kinematics@{Kinematics}}
+\index{Kinematics@{Kinematics}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{Kinematics}{Kinematics}}
+{\footnotesize\ttfamily \label{class_rob_frame_a1599e8f613fd7b7196758cae7fce017b} 
+\mbox{\hyperlink{class_kinematic}{Kinematic}} Rob\+Frame\+::\+Kinematics}
+
+
+
+Kinematik-\/\+Manager. 
+
+\Hypertarget{class_rob_frame_a5e76a9553b0bc1c9d3dfd7f0c003f322}\index{RobFrame@{RobFrame}!PosFactory@{PosFactory}}
+\index{PosFactory@{PosFactory}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{PosFactory}{PosFactory}}
+{\footnotesize\ttfamily \label{class_rob_frame_a5e76a9553b0bc1c9d3dfd7f0c003f322} 
+\mbox{\hyperlink{class_position_factory}{Position\+Factory}} Rob\+Frame\+::\+Pos\+Factory}
+
+
+
+Position-\/\+Manager. 
+
+\Hypertarget{class_rob_frame_ac24967ede35dcc595ca8f720f421bb70}\index{RobFrame@{RobFrame}!PtHome@{PtHome}}
+\index{PtHome@{PtHome}!RobFrame@{RobFrame}}
+\doxysubsubsection{\texorpdfstring{PtHome}{PtHome}}
+{\footnotesize\ttfamily \label{class_rob_frame_ac24967ede35dcc595ca8f720f421bb70} 
+\mbox{\hyperlink{struct_posture}{Posture}} Rob\+Frame\+::\+Pt\+Home \{0, 45, -\/90, 0, -\/45, 0\}}
+
+
+
+Grundstellung. 
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_rob_frame_work_8hpp}{Rob\+Frame\+Work.\+hpp}}\item 
+\mbox{\hyperlink{_rob_frame_work_8cpp}{Rob\+Frame\+Work.\+cpp}}\end{DoxyCompactItemize}

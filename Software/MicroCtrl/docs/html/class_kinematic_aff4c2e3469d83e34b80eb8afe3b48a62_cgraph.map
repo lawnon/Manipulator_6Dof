@@ -1,0 +1,11 @@
+<map id="Kinematic::ivOrientation" name="Kinematic::ivOrientation">
+<area shape="rect" id="Node000001" title="Orientierungsgebeden Winkeln Berechnen." alt="" coords="5,55,164,80"/>
+<area shape="rect" id="Node000002" href="$_kinematic_8cpp.html#ac5b83beb5fe73e1a9f3d2fe3166f3d53" title="Radiant zu Grad." alt="" coords="258,5,321,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,52,244,26,245,31,139,57"/>
+<area shape="rect" id="Node000003" href="$class_kinematic.html#aeed737d1bf66f66d517f2907eb02c907" title="Homogenen Transformations&#45;Matrix des gelenks." alt="" coords="212,55,367,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="164,65,198,65,198,70,164,70"/>
+<area shape="rect" id="Node000005" href="$class_kinematic.html#abe03b372a5c961fd58f5fe5b66eacaea" title="Rotations&#45;Matrix auslesen." alt="" coords="222,104,357,129"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="139,77,223,98,222,103,137,83"/>
+<area shape="rect" id="Node000004" href="$_kinematic_8cpp.html#a339acfaac605b5bd73624297f191cc39" title="Grad zu Radiant." alt="" coords="415,55,477,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="367,65,401,65,401,70,367,70"/>
+</map>

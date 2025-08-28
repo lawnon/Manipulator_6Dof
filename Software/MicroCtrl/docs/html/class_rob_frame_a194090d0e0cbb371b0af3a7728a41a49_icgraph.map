@@ -1,0 +1,11 @@
+<map id="RobFrame::Validate" name="RobFrame::Validate">
+<area shape="rect" id="Node000001" title="Positions Soll, Ist&#45;Positions vergleich." alt="" coords="399,31,536,56"/>
+<area shape="rect" id="Node000002" href="$class_rob_frame.html#a40f13f5c1ce2baaaa77fc3eee9b98379" title="Punkt zu Punkt Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="229,5,347,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="384,34,347,29,348,24,385,29"/>
+<area shape="rect" id="Node000003" href="$class_rob_frame.html#a3b51be372803d4960a457d2c03378314" title="Gradlinige Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="225,55,351,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="385,57,351,62,351,56,385,52"/>
+<area shape="rect" id="Node000004" href="$class_rob_frame.html#a0d79cee264204461c4445cf72c4481b7" title="Eingangsdaten Parsen." alt="" coords="24,29,159,55"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="211,60,158,53,159,48,212,55"/>
+<area shape="rect" id="Node000005" href="$class_rob_frame.html#a56384fc3894ecdaf39252f703ee91873" title="Iteriere durch den Positionsdatensatz." alt="" coords="5,79,177,104"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="212,79,178,83,177,78,211,74"/>
+</map>

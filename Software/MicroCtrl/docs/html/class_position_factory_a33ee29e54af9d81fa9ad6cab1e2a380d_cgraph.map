@@ -1,0 +1,18 @@
+<map id="PositionFactory::AddPosition" name="PositionFactory::AddPosition">
+<area shape="rect" id="Node000001" title="Position, Winkelstellung hinzufügen." alt="" coords="5,56,196,81"/>
+<area shape="rect" id="Node000002" href="$namespace_logger.html#a83c3562c93d0101fc7fadc86e0482b2d" title=" " alt="" coords="549,5,636,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,53,244,41,402,26,535,18,536,23,403,31,244,46,165,59"/>
+<area shape="rect" id="Node000003" href="$class_position_factory.html#ab654a8e160d6616c2052d9627eca6826" title="Postion Array Bereichs abfrage." alt="" coords="244,56,439,81"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="196,66,230,66,230,71,196,71"/>
+<area shape="rect" id="Node000004" href="$class_position_factory.html#a627ca4782ea413ec821bedf1aaf116ac" title="Positionsliste Aktualisieren." alt="" coords="260,105,423,131"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="164,79,266,100,265,105,163,84"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="405,53,536,27,537,32,406,58"/>
+<area shape="rect" id="Node000005" href="$class_position_factory.html#a01c1842e953f689ed2f4c984868ddfe2" title="String to Position." alt="" coords="487,55,699,80"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="405,103,515,80,516,85,406,108"/>
+<area shape="rect" id="Node000006" href="$class_position_factory.html#a6f63c0030222d68a19bf5a16fe3af2cf" title="String to Position." alt="" coords="487,104,698,129"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="423,115,473,115,473,120,423,120"/>
+<area shape="rect" id="Node000007" href="$class_position_factory.html#adb62693a75e3612913944f580f924269" title="Umwandlung des structs von float to Short int." alt="" coords="498,153,687,179"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="409,128,513,148,512,153,408,133"/>
+<area shape="rect" id="Node000008" href="$class_position_factory.html#abb3a019e903453ff914257cb965d8474" title="float to Short Int" alt="" coords="499,203,686,228"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="365,129,420,159,488,189,512,197,511,202,486,194,417,163,363,133"/>
+</map>

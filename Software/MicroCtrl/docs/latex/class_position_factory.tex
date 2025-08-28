@@ -1,0 +1,510 @@
+\doxysection{Position\+Factory Klassenreferenz}
+\hypertarget{class_position_factory}{}\label{class_position_factory}\index{PositionFactory@{PositionFactory}}
+
+
+{\ttfamily \#include $<$Position\+Factory.\+hpp$>$}
+
+
+
+Zusammengehörigkeiten von Position\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_position_factory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_position_factory_ae66a8fe9b51a518c157bfb90e9645eb7}{Position\+Factory}} ()
+\begin{DoxyCompactList}\small\item\em Klassen-\/\+Objekt erstellen. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_position_factory_a04babbfb40f05b34033fecfe14220558}{\texorpdfstring{$\sim$}{\string~}\+Position\+Factory}} ()
+\begin{DoxyCompactList}\small\item\em Datenarray Vernichten. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_position_factory_a2377a4cc3cff95f26764b2baef0a7e4b}{Init}} (\mbox{\hyperlink{class_rob_frame}{Rob\+Frame}} \texorpdfstring{$\ast$}{*}rob\+Frame)
+\begin{DoxyCompactList}\small\item\em Rob\+Frame\+Work Zeigerzuweiseung und Speicherplatz allozieren. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_position_factory_ab350bdbae8465ca901ef992a75619adf}{Setup}} ()
+\begin{DoxyCompactList}\small\item\em Initialisierung. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_posture}{Posture}} \mbox{\hyperlink{class_position_factory_a6f63c0030222d68a19bf5a16fe3af2cf}{Decode\+Posture}} (String input, String filter="{},"{})
+\begin{DoxyCompactList}\small\item\em String to \doxylink{struct_position}{Position}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_position}{Position}} \mbox{\hyperlink{class_position_factory_a01c1842e953f689ed2f4c984868ddfe2}{Decode\+Position}} (String input, String filter="{},"{})
+\begin{DoxyCompactList}\small\item\em String to \doxylink{struct_position}{Position}. \end{DoxyCompactList}\item 
+int \& \mbox{\hyperlink{class_position_factory_a33ee29e54af9d81fa9ad6cab1e2a380d}{Add\+Position}} (String content, \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{Pos\+State}} state, char filter=\textquotesingle{} \textquotesingle{})
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_position}{Position}, Winkelstellung hinzufügen. \end{DoxyCompactList}\item 
+int \& \mbox{\hyperlink{class_position_factory_a0fbf29d838686c1d5081592a6c918f02}{Count}} ()
+\begin{DoxyCompactList}\small\item\em Datensatzt anzahl. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_position_factory_ab504a3521ccf34cb6556f318ae13aaef}{Get}} (String identifier)
+\begin{DoxyCompactList}\small\item\em nicht Implementiert \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_position_factory_a32a2e62862a90d288896427fb63d9aaf}{Del}} (String identifier)
+\begin{DoxyCompactList}\small\item\em nicht Implementiert \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_position_factory_a14c9e06045694d07b9ba26427199708d}{Log\+Info}} ()
+\begin{DoxyCompactList}\small\item\em Debug info ausgeben. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_position_factory_ab50bbb05f5685d520f99dc1588925764}{Log\+Positions}} (\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{Pos\+State}} state)
+\begin{DoxyCompactList}\small\item\em Datensaetzte ausgeben. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_position}{Position}} \mbox{\hyperlink{class_position_factory_a5d95619f618e340dde30bf1fea01acee}{operator\mbox{[}$\,$\mbox{]}}} (int index)
+\begin{DoxyCompactList}\small\item\em \doxylink{struct_position}{Position} gemaeße index wiedergeben. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+int8\+\_\+t \mbox{\hyperlink{class_position_factory_ab654a8e160d6616c2052d9627eca6826}{Range\+Check}} ()
+\begin{DoxyCompactList}\small\item\em Postion Array Bereichs abfrage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structs_position}{s\+Position}} \mbox{\hyperlink{class_position_factory_adb62693a75e3612913944f580f924269}{Tos\+Position}} (\mbox{\hyperlink{struct_position}{Position}} ps)
+\begin{DoxyCompactList}\small\item\em Umwandlung des structs von float to Short int. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structs_posture}{s\+Posture}} \mbox{\hyperlink{class_position_factory_abb3a019e903453ff914257cb965d8474}{Tos\+Posture}} (\mbox{\hyperlink{struct_posture}{Posture}} ps)
+\begin{DoxyCompactList}\small\item\em float to Short Int \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{Pos\+State}} \mbox{\hyperlink{class_position_factory_a3aa174e21b064718a7dc6d5eec6c0988}{Decode}} (String content, char delimiter=\textquotesingle{},\textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Positions zustand Validieren und Ermitteln. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_position_factory_a627ca4782ea413ec821bedf1aaf116ac}{Update}} (int index, String \&params, \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{Pos\+State}} state)
+\begin{DoxyCompactList}\small\item\em Positionsliste Aktualisieren. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rob_frame}{Rob\+Frame}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_position_factory_abef41677e6ec49c3022e24227f791a46}{\+\_\+rob\+Frame}}
+\begin{DoxyCompactList}\small\item\em Zeiger Zur \doxylink{class_rob_frame}{Rob\+Frame}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_pos_data}{Pos\+Data}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8}{\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Array von Positions Daten. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_position_factory_a5e4feb4a8df8183e7f245de2a8df1cc2}{\+\_\+defined\+Count}} = 0
+\begin{DoxyCompactList}\small\item\em Anzahl definierte Datensatze innerhalb des Arrays. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{doc-constructors}
+\Hypertarget{class_position_factory_doc-constructors}
+\doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
+\Hypertarget{class_position_factory_ae66a8fe9b51a518c157bfb90e9645eb7}\index{PositionFactory@{PositionFactory}!PositionFactory@{PositionFactory}}
+\index{PositionFactory@{PositionFactory}!PositionFactory@{PositionFactory}}
+\doxysubsubsection{\texorpdfstring{PositionFactory()}{PositionFactory()}}
+{\footnotesize\ttfamily \label{class_position_factory_ae66a8fe9b51a518c157bfb90e9645eb7} 
+Position\+Factory\+::\+Position\+Factory (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Klassen-\/\+Objekt erstellen. 
+
+\Hypertarget{class_position_factory_a04babbfb40f05b34033fecfe14220558}\index{PositionFactory@{PositionFactory}!````~PositionFactory@{\texorpdfstring{$\sim$}{\string~}PositionFactory}}
+\index{````~PositionFactory@{\texorpdfstring{$\sim$}{\string~}PositionFactory}!PositionFactory@{PositionFactory}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}PositionFactory()}{\string~PositionFactory()}}
+{\footnotesize\ttfamily \label{class_position_factory_a04babbfb40f05b34033fecfe14220558} 
+Position\+Factory\+::\texorpdfstring{$\sim$}{\string~}\+Position\+Factory (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Datenarray Vernichten. 
+
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{class_position_factory_a04babbfb40f05b34033fecfe14220558_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{class_position_factory_doc-func-members}
+\doxysubsection{Dokumentation der Elementfunktionen}
+\Hypertarget{class_position_factory_a33ee29e54af9d81fa9ad6cab1e2a380d}\index{PositionFactory@{PositionFactory}!AddPosition@{AddPosition}}
+\index{AddPosition@{AddPosition}!PositionFactory@{PositionFactory}}
+\doxysubsubsection{\texorpdfstring{AddPosition()}{AddPosition()}}
+{\footnotesize\ttfamily \label{class_position_factory_a33ee29e54af9d81fa9ad6cab1e2a380d} 
+int \& Position\+Factory\+::\+Add\+Position (\begin{DoxyParamCaption}\item[{String}]{content}{, }\item[{\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{Pos\+State}}}]{state}{, }\item[{char}]{filter}{ = {\ttfamily \textquotesingle{}~\textquotesingle{}}}\end{DoxyParamCaption})}
+
+
+
+\doxylink{struct_position}{Position}, Winkelstellung hinzufügen. 
+
+Neuen Datensatzt im allozierten Datenarray belegen.
+
+
+\begin{DoxyParams}{Parameter}
+{\em content} & String \\
+\hline
+{\em state} & Type \\
+\hline
+{\em filter} & Trennzeichen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+index des hinzugefügte \doxylink{struct_position}{Position} 
+\end{DoxyReturn}
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_position_factory_a33ee29e54af9d81fa9ad6cab1e2a380d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_position_factory_a0fbf29d838686c1d5081592a6c918f02}\index{PositionFactory@{PositionFactory}!Count@{Count}}
+\index{Count@{Count}!PositionFactory@{PositionFactory}}
+\doxysubsubsection{\texorpdfstring{Count()}{Count()}}
+{\footnotesize\ttfamily \label{class_position_factory_a0fbf29d838686c1d5081592a6c918f02} 
+int \& Position\+Factory\+::\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Datensatzt anzahl. 
+
+Anzahl belegte Speicherplaetze wiedergeben. \Hypertarget{class_position_factory_a3aa174e21b064718a7dc6d5eec6c0988}\index{PositionFactory@{PositionFactory}!Decode@{Decode}}
+\index{Decode@{Decode}!PositionFactory@{PositionFactory}}
+\doxysubsubsection{\texorpdfstring{Decode()}{Decode()}}
+{\footnotesize\ttfamily \label{class_position_factory_a3aa174e21b064718a7dc6d5eec6c0988} 
+\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{Pos\+State}} Position\+Factory\+::\+Decode (\begin{DoxyParamCaption}\item[{String}]{content}{, }\item[{char}]{delimiter}{ = {\ttfamily \textquotesingle{},\textquotesingle{}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Positions zustand Validieren und Ermitteln. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em content} & String \doxylink{struct_position}{Position} \\
+\hline
+{\em delimiter} & variable Trennzeichen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Positionszusstand 
+\end{DoxyReturn}
+\Hypertarget{class_position_factory_a01c1842e953f689ed2f4c984868ddfe2}\index{PositionFactory@{PositionFactory}!DecodePosition@{DecodePosition}}
+\index{DecodePosition@{DecodePosition}!PositionFactory@{PositionFactory}}
+\doxysubsubsection{\texorpdfstring{DecodePosition()}{DecodePosition()}}
+{\footnotesize\ttfamily \label{class_position_factory_a01c1842e953f689ed2f4c984868ddfe2} 
+\mbox{\hyperlink{struct_position}{Position}} Position\+Factory\+::\+Decode\+Position (\begin{DoxyParamCaption}\item[{String}]{input}{, }\item[{String}]{filter}{ = {\ttfamily "{},"{}}}\end{DoxyParamCaption})}
+
+
+
+String to \doxylink{struct_position}{Position}. 
+
+String Arrray in Positions-\/\+Struktur Transformieren.
+
+
+\begin{DoxyParams}{Parameter}
+{\em input} & string \\
+\hline
+{\em filter} & Trennzeichen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+\doxylink{struct_position}{Position} 
+\end{DoxyReturn}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_position_factory_a01c1842e953f689ed2f4c984868ddfe2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_position_factory_a6f63c0030222d68a19bf5a16fe3af2cf}\index{PositionFactory@{PositionFactory}!DecodePosture@{DecodePosture}}
+\index{DecodePosture@{DecodePosture}!PositionFactory@{PositionFactory}}
+\doxysubsubsection{\texorpdfstring{DecodePosture()}{DecodePosture()}}
+{\footnotesize\ttfamily \label{class_position_factory_a6f63c0030222d68a19bf5a16fe3af2cf} 
+\mbox{\hyperlink{struct_posture}{Posture}} Position\+Factory\+::\+Decode\+Posture (\begin{DoxyParamCaption}\item[{String}]{input}{, }\item[{String}]{filter}{ = {\ttfamily "{},"{}}}\end{DoxyParamCaption})}
+
+
+
+String to \doxylink{struct_position}{Position}. 
+
+String Array in Winkelstellungs-\/\+Struktur Transformieren.
+
+
+\begin{DoxyParams}{Parameter}
+{\em input} & string \\
+\hline
+{\em filter} & Trennzeichen \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Winkelstellung 
+\end{DoxyReturn}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_position_factory_a6f63c0030222d68a19bf5a16fe3af2cf_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_position_factory_a32a2e62862a90d288896427fb63d9aaf}\index{PositionFactory@{PositionFactory}!Del@{Del}}
+\index{Del@{Del}!PositionFactory@{PositionFactory}}
+\doxysubsubsection{\texorpdfstring{Del()}{Del()}}
+{\footnotesize\ttfamily \label{class_position_factory_a32a2e62862a90d288896427fb63d9aaf} 
+void Position\+Factory\+::\+Del (\begin{DoxyParamCaption}\item[{String}]{identifier}{}\end{DoxyParamCaption})}
+
+
+
+nicht Implementiert 
+
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=286pt]{class_position_factory_a32a2e62862a90d288896427fb63d9aaf_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_position_factory_ab504a3521ccf34cb6556f318ae13aaef}\index{PositionFactory@{PositionFactory}!Get@{Get}}
+\index{Get@{Get}!PositionFactory@{PositionFactory}}
+\doxysubsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily \label{class_position_factory_ab504a3521ccf34cb6556f318ae13aaef} 
+void Position\+Factory\+::\+Get (\begin{DoxyParamCaption}\item[{String}]{identifier}{}\end{DoxyParamCaption})}
+
+
+
+nicht Implementiert 
+
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{class_position_factory_ab504a3521ccf34cb6556f318ae13aaef_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_position_factory_a2377a4cc3cff95f26764b2baef0a7e4b}\index{PositionFactory@{PositionFactory}!Init@{Init}}
+\index{Init@{Init}!PositionFactory@{PositionFactory}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_position_factory_a2377a4cc3cff95f26764b2baef0a7e4b} 
+void Position\+Factory\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_rob_frame}{Rob\+Frame}} \texorpdfstring{$\ast$}{*}}]{rob\+Frame}{}\end{DoxyParamCaption})}
+
+
+
+Rob\+Frame\+Work Zeigerzuweiseung und Speicherplatz allozieren. 
+
+Initialisierung Speicher Allokation 
+\begin{DoxyParams}{Parameter}
+{\em rob\+Frame} & Zeiger \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+void 
+\end{DoxyReturn}
+\Hypertarget{class_position_factory_a14c9e06045694d07b9ba26427199708d}\index{PositionFactory@{PositionFactory}!LogInfo@{LogInfo}}
+\index{LogInfo@{LogInfo}!PositionFactory@{PositionFactory}}
+\doxysubsubsection{\texorpdfstring{LogInfo()}{LogInfo()}}
+{\footnotesize\ttfamily \label{class_position_factory_a14c9e06045694d07b9ba26427199708d} 
+void Position\+Factory\+::\+Log\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Debug info ausgeben. 
+
+Debug Daten ausdrucken. Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{class_position_factory_a14c9e06045694d07b9ba26427199708d_cgraph}
+\end{center}
+\end{figure}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_position_factory_a14c9e06045694d07b9ba26427199708d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_position_factory_ab50bbb05f5685d520f99dc1588925764}\index{PositionFactory@{PositionFactory}!LogPositions@{LogPositions}}
+\index{LogPositions@{LogPositions}!PositionFactory@{PositionFactory}}
+\doxysubsubsection{\texorpdfstring{LogPositions()}{LogPositions()}}
+{\footnotesize\ttfamily \label{class_position_factory_ab50bbb05f5685d520f99dc1588925764} 
+void Position\+Factory\+::\+Log\+Positions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{Pos\+State}}}]{state}{}\end{DoxyParamCaption})}
+
+
+
+Datensaetzte ausgeben. 
+
+Datensaetze gemaeß Type zum Serial Ausgeben.
+
+
+\begin{DoxyParams}{Parameter}
+{\em Type} & \\
+\hline
+\end{DoxyParams}
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{class_position_factory_ab50bbb05f5685d520f99dc1588925764_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_position_factory_a5d95619f618e340dde30bf1fea01acee}\index{PositionFactory@{PositionFactory}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!PositionFactory@{PositionFactory}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \label{class_position_factory_a5d95619f618e340dde30bf1fea01acee} 
+\mbox{\hyperlink{struct_position}{Position}} Position\+Factory\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+\doxylink{struct_position}{Position} gemaeße index wiedergeben. 
+
+Datensatz index wiedergeben.
+
+\begin{DoxyReturn}{Rückgabe}
+\doxylink{struct_position}{Position} 
+\end{DoxyReturn}
+\Hypertarget{class_position_factory_ab654a8e160d6616c2052d9627eca6826}\index{PositionFactory@{PositionFactory}!RangeCheck@{RangeCheck}}
+\index{RangeCheck@{RangeCheck}!PositionFactory@{PositionFactory}}
+\doxysubsubsection{\texorpdfstring{RangeCheck()}{RangeCheck()}}
+{\footnotesize\ttfamily \label{class_position_factory_ab654a8e160d6616c2052d9627eca6826} 
+int8\+\_\+t Position\+Factory\+::\+Range\+Check (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Postion Array Bereichs abfrage. 
+
+\begin{DoxyReturn}{Rückgabe}
+1 wenn nicht voll -\/1 wenn voll
+\end{DoxyReturn}
+Pruft ob die Menge von Positionen Überschritten wurden ist Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{class_position_factory_ab654a8e160d6616c2052d9627eca6826_cgraph}
+\end{center}
+\end{figure}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_position_factory_ab654a8e160d6616c2052d9627eca6826_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_position_factory_ab350bdbae8465ca901ef992a75619adf}\index{PositionFactory@{PositionFactory}!Setup@{Setup}}
+\index{Setup@{Setup}!PositionFactory@{PositionFactory}}
+\doxysubsubsection{\texorpdfstring{Setup()}{Setup()}}
+{\footnotesize\ttfamily \label{class_position_factory_ab350bdbae8465ca901ef992a75619adf} 
+void Position\+Factory\+::\+Setup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initialisierung. 
+
+Allozierte Speicherplatz validieren. Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_position_factory_ab350bdbae8465ca901ef992a75619adf_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_position_factory_adb62693a75e3612913944f580f924269}\index{PositionFactory@{PositionFactory}!TosPosition@{TosPosition}}
+\index{TosPosition@{TosPosition}!PositionFactory@{PositionFactory}}
+\doxysubsubsection{\texorpdfstring{TosPosition()}{TosPosition()}}
+{\footnotesize\ttfamily \label{class_position_factory_adb62693a75e3612913944f580f924269} 
+\mbox{\hyperlink{structs_position}{s\+Position}} Position\+Factory\+::\+Tos\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_position}{Position}}}]{ps}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Umwandlung des structs von float to Short int. 
+
+@breif float to Short Int 
+\begin{DoxyParams}{Parameter}
+{\em ps} & \doxylink{struct_position}{Position} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Short Positionen 
+\end{DoxyReturn}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_position_factory_adb62693a75e3612913944f580f924269_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_position_factory_abb3a019e903453ff914257cb965d8474}\index{PositionFactory@{PositionFactory}!TosPosture@{TosPosture}}
+\index{TosPosture@{TosPosture}!PositionFactory@{PositionFactory}}
+\doxysubsubsection{\texorpdfstring{TosPosture()}{TosPosture()}}
+{\footnotesize\ttfamily \label{class_position_factory_abb3a019e903453ff914257cb965d8474} 
+\mbox{\hyperlink{structs_posture}{s\+Posture}} Position\+Factory\+::\+Tos\+Posture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_posture}{Posture}}}]{ps}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+float to Short Int 
+
+Umwandlung des structs von float to Short Int.
+
+
+\begin{DoxyParams}{Parameter}
+{\em ps} & Winkelstellung \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Short Winkelstellungen 
+\end{DoxyReturn}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_position_factory_abb3a019e903453ff914257cb965d8474_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_position_factory_a627ca4782ea413ec821bedf1aaf116ac}\index{PositionFactory@{PositionFactory}!Update@{Update}}
+\index{Update@{Update}!PositionFactory@{PositionFactory}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_position_factory_a627ca4782ea413ec821bedf1aaf116ac} 
+void Position\+Factory\+::\+Update (\begin{DoxyParamCaption}\item[{int}]{index}{, }\item[{String \&}]{params}{, }\item[{\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{Pos\+State}}}]{state}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Positionsliste Aktualisieren. 
+
+Vorhandene Datensaetze Aktualisieren.
+
+
+\begin{DoxyParams}{Parameter}
+{\em index} & Datensatzes \\
+\hline
+{\em params} & String Datensatz @state param Positions Type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+void 
+\end{DoxyReturn}
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_position_factory_a627ca4782ea413ec821bedf1aaf116ac_cgraph}
+\end{center}
+\end{figure}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_position_factory_a627ca4782ea413ec821bedf1aaf116ac_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_position_factory_doc-variable-members}
+\doxysubsection{Dokumentation der Datenelemente}
+\Hypertarget{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8}\index{PositionFactory@{PositionFactory}!\_data@{\_data}}
+\index{\_data@{\_data}!PositionFactory@{PositionFactory}}
+\doxysubsubsection{\texorpdfstring{\_data}{\_data}}
+{\footnotesize\ttfamily \label{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8} 
+\mbox{\hyperlink{struct_pos_data}{Pos\+Data}}\texorpdfstring{$\ast$}{*} Position\+Factory\+::\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Array von Positions Daten. 
+
+\Hypertarget{class_position_factory_a5e4feb4a8df8183e7f245de2a8df1cc2}\index{PositionFactory@{PositionFactory}!\_definedCount@{\_definedCount}}
+\index{\_definedCount@{\_definedCount}!PositionFactory@{PositionFactory}}
+\doxysubsubsection{\texorpdfstring{\_definedCount}{\_definedCount}}
+{\footnotesize\ttfamily \label{class_position_factory_a5e4feb4a8df8183e7f245de2a8df1cc2} 
+int Position\+Factory\+::\+\_\+defined\+Count = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Anzahl definierte Datensatze innerhalb des Arrays. 
+
+\Hypertarget{class_position_factory_abef41677e6ec49c3022e24227f791a46}\index{PositionFactory@{PositionFactory}!\_robFrame@{\_robFrame}}
+\index{\_robFrame@{\_robFrame}!PositionFactory@{PositionFactory}}
+\doxysubsubsection{\texorpdfstring{\_robFrame}{\_robFrame}}
+{\footnotesize\ttfamily \label{class_position_factory_abef41677e6ec49c3022e24227f791a46} 
+\mbox{\hyperlink{class_rob_frame}{Rob\+Frame}}\texorpdfstring{$\ast$}{*} Position\+Factory\+::\+\_\+rob\+Frame\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Zeiger Zur \doxylink{class_rob_frame}{Rob\+Frame}. 
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_position_factory_8hpp}{Position\+Factory.\+hpp}}\item 
+\mbox{\hyperlink{_position_factory_8cpp}{Position\+Factory.\+cpp}}\end{DoxyCompactItemize}

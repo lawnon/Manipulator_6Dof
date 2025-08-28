@@ -1,0 +1,247 @@
+\doxysection{Position\+Factory.\+cpp}
+\hypertarget{_position_factory_8cpp_source}{}\label{_position_factory_8cpp_source}\index{PositionFactory.cpp@{PositionFactory.cpp}}
+\mbox{\hyperlink{_position_factory_8cpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ Program:\ Commands.cpp}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00003}00003\ \textcolor{comment}{\ *\ Description:\ Class-\/Object\ containing\ prcedures}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00004}00004\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ for\ Parsing\ and\ validating\ Commands}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00005}00005\ \textcolor{comment}{\ *\ Autor:\ Chukwunonso\ Bob-\/Anyeji}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00006}00006\ \textcolor{comment}{\ *\ Date:\ 09.06.2024}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00007}00007\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_rob_frame_work_8hpp}{RobFrameWork.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_position_factory_8hpp}{PositionFactory.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00012}00012\ \textcolor{keyword}{using\ namespace\ }\mbox{\hyperlink{namespace_logger}{Logger}};}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00014}\mbox{\hyperlink{class_position_factory_ae66a8fe9b51a518c157bfb90e9645eb7}{00014}}\ \mbox{\hyperlink{class_position_factory_ae66a8fe9b51a518c157bfb90e9645eb7}{PositionFactory::PositionFactory}}()\{\}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00015}\mbox{\hyperlink{class_position_factory_a04babbfb40f05b34033fecfe14220558}{00015}}\ \mbox{\hyperlink{class_position_factory_a04babbfb40f05b34033fecfe14220558}{PositionFactory::\string~PositionFactory}}()}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00016}00016\ \{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00017}00017\ \ \ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\textcolor{stringliteral}{"{}PF:\ Destructor\ called."{}});}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00018}00018\ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8}{\_data}};}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00019}00019\ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00021}00021\ \textcolor{comment}{/*\ Allocating\ and\ validation\ of\ Memory\ Block\ for\ Position\ Array\ */}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00022}\mbox{\hyperlink{class_position_factory_a2377a4cc3cff95f26764b2baef0a7e4b}{00022}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_position_factory_a2377a4cc3cff95f26764b2baef0a7e4b}{PositionFactory::Init}}(\mbox{\hyperlink{class_rob_frame}{RobFrame}}*\ robFrame)}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00023}00023\ \{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00024}00024\ \ \ \mbox{\hyperlink{class_position_factory_abef41677e6ec49c3022e24227f791a46}{\_robFrame}}\ =\ robFrame;}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00025}00025\ \ \ \mbox{\hyperlink{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8}{\_data}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{struct_pos_data}{PosData}}[\mbox{\hyperlink{_position_factory_8hpp_a4ea867184de81e59e49eade129c46475}{POS\_LIMIT}}]\{\};}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00026}00026\ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00028}\mbox{\hyperlink{class_position_factory_ab350bdbae8465ca901ef992a75619adf}{00028}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_position_factory_ab350bdbae8465ca901ef992a75619adf}{PositionFactory::Setup}}()\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00029}00029\ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8}{\_data}}\ !=\ NULL\ \&\&\ \mbox{\hyperlink{class_position_factory_abef41677e6ec49c3022e24227f791a46}{\_robFrame}}\ !=\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\textcolor{stringliteral}{"{}PF::Init:\ Initialization\ Done"{}});}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00031}00031\ \ \ \ \ \mbox{\hyperlink{class_position_factory_a14c9e06045694d07b9ba26427199708d}{LogInfo}}();}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00032}00032\ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8}{\_data}})*\mbox{\hyperlink{_position_factory_8hpp_a4ea867184de81e59e49eade129c46475}{POS\_LIMIT}},\ \textcolor{stringliteral}{"{}PF::Init:\ Kritical\ Error\ Memory\ Allocation\ Failed:"{}});}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00034}00034\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00035}00035\ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00037}\mbox{\hyperlink{class_position_factory_a14c9e06045694d07b9ba26427199708d}{00037}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_position_factory_a14c9e06045694d07b9ba26427199708d}{PositionFactory::LogInfo}}()}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00038}00038\ \{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00039}00039\ \ \ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8}{\_data}}[0])*\mbox{\hyperlink{_position_factory_8hpp_a4ea867184de81e59e49eade129c46475}{POS\_LIMIT}},\ \textcolor{stringliteral}{"{}PF::LogInfo:\ Size\ of\ Memory-\/Block"{}});}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00040}00040\ \ \ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8}{\_data}}[0]),\textcolor{stringliteral}{"{}PF::LogInfo:\ Size\ of\ Memory-\/Unit"{}});}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00041}00041\ \ \ \textcolor{comment}{//log(sizeof(\_data[0].Identifier),\ "{}PF::LogInfo:\ Size\ of\ PosData.Identifier"{});}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00042}00042\ \ \ \textcolor{comment}{//log(sizeof(\_data[0].Position),\ "{}PF::LogInfo:\ Size\ of\ PosData.Position"{});}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00043}00043\ \ \ \textcolor{comment}{//log(sizeof(\_data[0].Posture),\ "{}PF::LogInfo:\ Size\ of\ PosData.Posture"{});}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00044}00044\ \ \ \textcolor{comment}{//log((sizeof(\_data[0])*POS\_LIMIT)/sizeof(\_data[0]),\ "{}PF::LogInfo:\ Nr\ of\ Memory-\/Units\ =>\ "{});}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00045}00045\ \ \ \textcolor{comment}{//log(sizeof(char),\ "{}PF::LogInfo:\ Size\ of\ Default\ Char"{});}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00046}00046\ \ \ \textcolor{comment}{//log(\_definedCount,\ "{}PF::LogInfo:\ Number\ of\ defined\ Positions"{});}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00047}00047\ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00049}\mbox{\hyperlink{class_position_factory_ab50bbb05f5685d520f99dc1588925764}{00049}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_position_factory_ab50bbb05f5685d520f99dc1588925764}{PositionFactory::LogPositions}}(\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{PosState}}\ state)\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00050}00050\ \ \ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\mbox{\hyperlink{class_position_factory_a5e4feb4a8df8183e7f245de2a8df1cc2}{\_definedCount}},\ \textcolor{stringliteral}{"{}PF::LogPositions:\ Number\ of\ defined\ Positions"{}});}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00051}00051\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ itr\ =\ 0;\ itr\ <\ \mbox{\hyperlink{class_position_factory_a5e4feb4a8df8183e7f245de2a8df1cc2}{\_definedCount}};\ itr++)\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00052}00052\ \ \ \ \ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\mbox{\hyperlink{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8}{\_data}}[itr],\ state);}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00053}00053\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00054}00054\ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00056}\mbox{\hyperlink{class_position_factory_a3aa174e21b064718a7dc6d5eec6c0988}{00056}}\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{PosState}}\ \mbox{\hyperlink{class_position_factory_a3aa174e21b064718a7dc6d5eec6c0988}{PositionFactory::Decode}}(String\ content,\ \textcolor{keywordtype}{char}\ delimiter\ =\ \textcolor{charliteral}{','})\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00057}00057\ \ \ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{PosState}}\ decodeState\ =\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9aec0fc0100c4fc1ce4eea230c3dc10360}{PosState::Undefined}};}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00059}00059\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ itr\ =\ 0;itr\ <\ content.length();itr++)\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{if}(isAlpha(content.charAt(itr)))\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00061}00061\ \ \ \ \ \ \ \textcolor{comment}{//log("{}PF::Decode"{});}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00062}00062\ \ \ \ \ \ \ \textcolor{keywordflow}{if}(content.equals(\textcolor{stringliteral}{"{}here"{}}))\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{comment}{//log("{}PF::Decode:\ here"{});}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00064}00064\ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(content.equals(\textcolor{stringliteral}{"{}joints"{}}))\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{comment}{//log("{}PF::Decode:\ joints"{});}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00066}00066\ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00067}00067\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ decodeState;}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00068}00068\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00069}00069\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00070}00070\ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00072}00072\ \textcolor{comment}{/*\ Transforem\ String\ Array\ in\ to\ Posture\ Structure\ */}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00073}\mbox{\hyperlink{class_position_factory_a6f63c0030222d68a19bf5a16fe3af2cf}{00073}}\ \mbox{\hyperlink{struct_posture}{Posture}}\ \mbox{\hyperlink{class_position_factory_a6f63c0030222d68a19bf5a16fe3af2cf}{PositionFactory::DecodePosture}}(String\ input,\ String\ filter\ =\ \textcolor{stringliteral}{"{},"{}})\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00074}00074\ \ \ \textcolor{comment}{/*\ Expected\ String\ :=\ "{}<jt1>,\ <jt2,\ <jt3>,\ <jt4>"{}\ */}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00076}00076\ \ \ \textcolor{keywordflow}{if}(input.length()\ <=\ 0\ )\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00077}00077\ \ \ \ \ \textcolor{keywordflow}{return}\ \{0,\ 0,\ 0,\ 0\};}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00078}00078\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00080}00080\ \ \ \textcolor{keywordflow}{if}(input.equals(\mbox{\hyperlink{class_position_factory_abef41677e6ec49c3022e24227f791a46}{\_robFrame}}-\/>Commands[\mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8aa326387b63cc946f4693116b52647a0f}{Commands::Here}}].Name))\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00081}00081\ \ \ \ \ \textcolor{keywordflow}{return}\ \{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00082}00082\ \ \ \ \ \ \ \mbox{\hyperlink{class_position_factory_abef41677e6ec49c3022e24227f791a46}{\_robFrame}}-\/>Joint1.Read(),}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00083}00083\ \ \ \ \ \ \ \mbox{\hyperlink{class_position_factory_abef41677e6ec49c3022e24227f791a46}{\_robFrame}}-\/>Joint2.Read(),}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00084}00084\ \ \ \ \ \ \ \mbox{\hyperlink{class_position_factory_abef41677e6ec49c3022e24227f791a46}{\_robFrame}}-\/>Joint3.Read(),}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00085}00085\ \ \ \ \ \ \ \mbox{\hyperlink{class_position_factory_abef41677e6ec49c3022e24227f791a46}{\_robFrame}}-\/>Joint4.Read(),}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00086}00086\ \ \ \ \ \ \ \mbox{\hyperlink{class_position_factory_abef41677e6ec49c3022e24227f791a46}{\_robFrame}}-\/>Joint5.Read(),}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00087}00087\ \ \ \ \ \ \ \mbox{\hyperlink{class_position_factory_abef41677e6ec49c3022e24227f791a46}{\_robFrame}}-\/>Joint6.Read()}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00088}00088\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00089}00089\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00091}00091\ \ \ int8\_t\ delimeter1\ =\ input.indexOf(filter);}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00092}00092\ \ \ int8\_t\ delimeter2\ =\ input.indexOf(filter,\ delimeter1\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00093}00093\ \ \ int8\_t\ delimeter3\ =\ input.indexOf(filter,\ delimeter2\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00095}00095\ \ \ \mbox{\hyperlink{struct_posture}{Posture}}\ pt\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00096}00096\ \ \ \ \ input.substring(0,\ delimeter1).toFloat(),}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00097}00097\ \ \ \ \ input.substring(delimeter1\ +\ 1,\ delimeter2).toFloat(),}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00098}00098\ \ \ \ \ input.substring(delimeter2\ +\ 1,\ delimeter3).toFloat(),}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00099}00099\ \ \ \ \ input.substring(delimeter3\ +\ 1,\ input.length()).toFloat()}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00100}00100\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00102}00102\ \ \ \textcolor{keywordflow}{return}\ pt;}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00103}00103\ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00105}00105\ \textcolor{comment}{/*\ Transform\ String\ Arry\ in\ to\ Position\ Sturcture\ \ */}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00106}\mbox{\hyperlink{class_position_factory_a01c1842e953f689ed2f4c984868ddfe2}{00106}}\ \mbox{\hyperlink{struct_position}{Position}}\ \mbox{\hyperlink{class_position_factory_a01c1842e953f689ed2f4c984868ddfe2}{PositionFactory::DecodePosition}}(String\ input,\ String\ filter\ =\ \textcolor{stringliteral}{"{},"{}})\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00107}00107\ \ \ \textcolor{comment}{/*\ Expected\ String\ :=\ "{}<x>,\ <y,\ <z,\ <a>,\ <b>,\ <c>"{}\ */}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00109}00109\ \ \ \textcolor{keywordflow}{if}(input.length()\ <=\ 0\ )\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00110}00110\ \ \ \ \ \textcolor{keywordflow}{return}\ \{0,\ 0,\ 0,\ 0,\ 0,\ 0\};}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00111}00111\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00113}00113\ \ \ \textcolor{keywordflow}{if}(input.equals(\mbox{\hyperlink{class_position_factory_abef41677e6ec49c3022e24227f791a46}{\_robFrame}}-\/>Commands[\mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8aa326387b63cc946f4693116b52647a0f}{Commands::Here}}].Name))\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00114}00114\ \ \ \ \ \textcolor{keywordflow}{return}\ \{\mbox{\hyperlink{class_position_factory_abef41677e6ec49c3022e24227f791a46}{\_robFrame}}-\/>Kinematics.fdKinematic(\mbox{\hyperlink{struct_posture}{Posture}}\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_position_factory_abef41677e6ec49c3022e24227f791a46}{\_robFrame}}-\/>Joint1.Read(),}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_position_factory_abef41677e6ec49c3022e24227f791a46}{\_robFrame}}-\/>Joint2.Read(),}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_position_factory_abef41677e6ec49c3022e24227f791a46}{\_robFrame}}-\/>Joint3.Read(),}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_position_factory_abef41677e6ec49c3022e24227f791a46}{\_robFrame}}-\/>Joint4.Read(),}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_position_factory_abef41677e6ec49c3022e24227f791a46}{\_robFrame}}-\/>Joint5.Read(),}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_position_factory_abef41677e6ec49c3022e24227f791a46}{\_robFrame}}-\/>Joint6.Read()}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ \})\};}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00122}00122\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00124}00124\ \ \ int8\_t\ delimeter1\ =\ input.indexOf(filter);}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00125}00125\ \ \ int8\_t\ delimeter2\ =\ input.indexOf(filter,\ delimeter1\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00126}00126\ \ \ int8\_t\ delimeter3\ =\ input.indexOf(filter,\ delimeter2\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00127}00127\ \ \ int8\_t\ delimeter4\ =\ input.indexOf(filter,\ delimeter3\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00128}00128\ \ \ int8\_t\ delimeter5\ =\ input.indexOf(filter,\ delimeter4\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00130}00130\ \ \ \mbox{\hyperlink{struct_position}{Position}}\ pos\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00131}00131\ \ \ \ \ input.substring(0,\ delimeter1).toFloat(),}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00132}00132\ \ \ \ \ input.substring(delimeter1\ +\ 1,\ delimeter2).toFloat(),}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00133}00133\ \ \ \ \ input.substring(delimeter2\ +\ 1,\ delimeter3).toFloat(),}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00134}00134\ \ \ \ \ input.substring(delimeter3\ +\ 1,\ delimeter4).toFloat(),}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00135}00135\ \ \ \ \ input.substring(delimeter4\ +\ 1,\ delimeter5).toFloat(),}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00136}00136\ \ \ \ \ input.substring(delimeter5\ +\ 1,\ input.length()).toFloat()}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00137}00137\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00139}00139\ \ \ \textcolor{keywordflow}{return}\ pos;}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00140}00140\ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00142}\mbox{\hyperlink{class_position_factory_a627ca4782ea413ec821bedf1aaf116ac}{00142}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_position_factory_a627ca4782ea413ec821bedf1aaf116ac}{PositionFactory::Update}}(\textcolor{keywordtype}{int}\ index,\ String\&\ params,\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{PosState}}\ state)\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00143}00143\ \ \ \textcolor{comment}{//\ Update\ Positions}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00144}00144\ \ \ \textcolor{keywordflow}{switch}(state)\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00145}00145\ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9a52f5e0bc3859bc5f5e25130b6c7e8881}{PosState::Position}}:}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00146}00146\ \ \ \ \ \mbox{\hyperlink{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8}{\_data}}[index].Position\ =\ \mbox{\hyperlink{class_position_factory_adb62693a75e3612913944f580f924269}{TosPosition}}(\mbox{\hyperlink{class_position_factory_a01c1842e953f689ed2f4c984868ddfe2}{DecodePosition}}(params));}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00147}00147\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00148}00148\ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9abfc18820466994dc2a2ed40ce8f92e62}{PosState::Posture}}:}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00149}00149\ \ \ \ \ \mbox{\hyperlink{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8}{\_data}}[index].Posture\ =\ \mbox{\hyperlink{class_position_factory_abb3a019e903453ff914257cb965d8474}{TosPosture}}(\mbox{\hyperlink{class_position_factory_a6f63c0030222d68a19bf5a16fe3af2cf}{DecodePosture}}(params));}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00150}00150\ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00151}00151\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00152}00152\ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00154}\mbox{\hyperlink{class_position_factory_a33ee29e54af9d81fa9ad6cab1e2a380d}{00154}}\ \textcolor{keywordtype}{int}\&\ \mbox{\hyperlink{class_position_factory_a33ee29e54af9d81fa9ad6cab1e2a380d}{PositionFactory::AddPosition}}(String\ content,\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{PosState}}\ state,\ \ \textcolor{keywordtype}{char}\ filter\ =\ \textcolor{charliteral}{'\ '})\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00155}00155\ \ \ \textcolor{comment}{/*\ Expected\ String\ :=\ "{}Position\ <identifier>\ <x>,\ <y>,\ <z>,\ <a>,\ <b>,\ <c>"{}\ */}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00157}00157\ \ \ \textcolor{keywordtype}{int}\ result\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00158}00158\ \ \ \textcolor{keywordtype}{int}\ delimeter\ =\ content.indexOf(filter);}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00159}00159\ \ \ String\ identifier\ =\ content.substring(0,\ fmax(content.length(),\ \mbox{\hyperlink{_types_8hpp_a43bd60836203349a1c745d0d29bf7706}{IDENTIFIER\_LEN}}));}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00160}00160\ \ \ String\ params\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00162}00162\ \ \ \textcolor{keywordflow}{if}(delimeter\ >=\ 1)\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00163}00163\ \ \ \ \ identifier\ =\ content.substring(0,\ fmin(delimeter,\ \mbox{\hyperlink{_types_8hpp_a43bd60836203349a1c745d0d29bf7706}{IDENTIFIER\_LEN}}));}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00164}00164\ \ \ \ \ params\ =\ content.substring(delimeter\ +\ 1,\ content.length());}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00165}00165\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00167}00167\ \ \ \textcolor{comment}{//log("{}PF::AddPosition:\ Content:\ "{}\ +\ content);}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00168}00168\ \ \ \textcolor{comment}{//log("{}PF::AddPosition:\ Identifier:\ "{}\ +\ identifier);}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00169}00169\ \ \ \textcolor{comment}{//log("{}PF::AddPosition:\ Parameters:\ "{}\ +\ params);}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00170}00170\ \ \ \textcolor{comment}{//log(delimeter,\ "{}PF::AddPosition:\ Delimeter\ "{});}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00172}00172\ \ \ \textcolor{keywordflow}{if}(identifier.length()\ <=\ 0\ ||}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00173}00173\ \ \ \ \ \ identifier.equals(\mbox{\hyperlink{class_position_factory_abef41677e6ec49c3022e24227f791a46}{\_robFrame}}-\/>Commands.Get(\mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8aa326387b63cc946f4693116b52647a0f}{Commands::Here}}).Name)\ ||}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00174}00174\ \ \ \ \ \ identifier.equals(\mbox{\hyperlink{class_position_factory_abef41677e6ec49c3022e24227f791a46}{\_robFrame}}-\/>Commands.Get(\mbox{\hyperlink{class_commands_a6fd45c4fef16717c5216deb15e7804a8a7f69d9bffd1fae17cfa19249a815b787}{Commands::Joints}}).Name))\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00175}00175\ \ \ \ \ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\textcolor{stringliteral}{"{}PF::AddPosition:\ Invalid\ Identifier"{}});}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00176}00176\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00177}00177\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00178}00178\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00179}00179\ \ \ \textcolor{keywordtype}{char}\ cIdentifier[\mbox{\hyperlink{_types_8hpp_a43bd60836203349a1c745d0d29bf7706}{IDENTIFIER\_LEN}}];}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00180}00180\ \ \ identifier.toCharArray(cIdentifier,\ \mbox{\hyperlink{_types_8hpp_a43bd60836203349a1c745d0d29bf7706}{IDENTIFIER\_LEN}});}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00181}00181\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00182}00182\ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ itr\ =\ 0;\ itr\ <\ \mbox{\hyperlink{class_position_factory_a5e4feb4a8df8183e7f245de2a8df1cc2}{\_definedCount}};\ itr++)\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00183}00183\ \ \ \ \ \textcolor{keywordflow}{if}(strcmp(\mbox{\hyperlink{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8}{\_data}}[itr].Identifier,\ cIdentifier)\ ==\ 0)\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00184}00184\ \ \ \ \ \ \ result\ =\ itr;}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00185}00185\ \ \ \ \ \ \ \mbox{\hyperlink{class_position_factory_a627ca4782ea413ec821bedf1aaf116ac}{Update}}(itr,\ params,\ state);}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00186}00186\ \ \ \ \ \ \ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\mbox{\hyperlink{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8}{\_data}}[itr],\ state);}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00187}00187\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00188}00188\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00189}00189\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00191}00191\ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_position_factory_ab654a8e160d6616c2052d9627eca6826}{RangeCheck}}()\ <=\ 0)\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00192}00192\ \ \ \ \ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\textcolor{stringliteral}{"{}PF::AddPos:\ Range\ Exceeded"{}});}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00193}00193\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00194}00194\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00195}00195\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00196}00196\ \ \ strcpy(\mbox{\hyperlink{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8}{\_data}}[\mbox{\hyperlink{class_position_factory_a5e4feb4a8df8183e7f245de2a8df1cc2}{\_definedCount}}].Identifier,\ cIdentifier);}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00197}00197\ \ \ \mbox{\hyperlink{class_position_factory_a627ca4782ea413ec821bedf1aaf116ac}{Update}}(\mbox{\hyperlink{class_position_factory_a5e4feb4a8df8183e7f245de2a8df1cc2}{\_definedCount}},\ params,\ state);}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00198}00198\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00199}00199\ \ \ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\mbox{\hyperlink{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8}{\_data}}[\mbox{\hyperlink{class_position_factory_a5e4feb4a8df8183e7f245de2a8df1cc2}{\_definedCount}}],\ state);}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00200}00200\ \ \ \mbox{\hyperlink{class_position_factory_a5e4feb4a8df8183e7f245de2a8df1cc2}{\_definedCount}}++;}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00201}00201\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00202}00202\ \ \ result\ =\ \mbox{\hyperlink{class_position_factory_a5e4feb4a8df8183e7f245de2a8df1cc2}{\_definedCount}}\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00203}00203\ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00204}00204\ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00205}00205\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00206}\mbox{\hyperlink{class_position_factory_a0fbf29d838686c1d5081592a6c918f02}{00206}}\ \textcolor{keywordtype}{int}\&\ \mbox{\hyperlink{class_position_factory_a0fbf29d838686c1d5081592a6c918f02}{PositionFactory::Count}}()\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00207}00207\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_position_factory_a5e4feb4a8df8183e7f245de2a8df1cc2}{\_definedCount}};}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00208}00208\ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00209}00209\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00210}\mbox{\hyperlink{class_position_factory_ab504a3521ccf34cb6556f318ae13aaef}{00210}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_position_factory_ab504a3521ccf34cb6556f318ae13aaef}{PositionFactory::Get}}(String\ identifier)\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00211}00211\ \ \ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\textcolor{stringliteral}{"{}PF::Get\ not\ Implemented"{}});}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00212}00212\ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00213}\mbox{\hyperlink{class_position_factory_a32a2e62862a90d288896427fb63d9aaf}{00213}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_position_factory_a32a2e62862a90d288896427fb63d9aaf}{PositionFactory::Del}}(String\ identifier)\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00214}00214\ \ \ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\textcolor{stringliteral}{"{}PF::Del\ not\ Implemented"{}});}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00215}00215\ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00216}00216\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00217}\mbox{\hyperlink{class_position_factory_ab654a8e160d6616c2052d9627eca6826}{00217}}\ int8\_t\ \mbox{\hyperlink{class_position_factory_ab654a8e160d6616c2052d9627eca6826}{PositionFactory::RangeCheck}}()\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00218}00218\ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_position_factory_a5e4feb4a8df8183e7f245de2a8df1cc2}{\_definedCount}}\ >=\ \mbox{\hyperlink{_position_factory_8hpp_a4ea867184de81e59e49eade129c46475}{POS\_LIMIT}})\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00219}00219\ \ \ \ \ \mbox{\hyperlink{namespace_logger_a83c3562c93d0101fc7fadc86e0482b2d}{log}}(\textcolor{stringliteral}{"{}PF::RangCheck:\ Critical\ Error"{}});}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00220}00220\ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00221}00221\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00222}00222\ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00223}00223\ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00224}00224\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00225}\mbox{\hyperlink{class_position_factory_adb62693a75e3612913944f580f924269}{00225}}\ \mbox{\hyperlink{structs_position}{sPosition}}\ \mbox{\hyperlink{class_position_factory_adb62693a75e3612913944f580f924269}{PositionFactory::TosPosition}}(\mbox{\hyperlink{struct_position}{Position}}\ ps)\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00226}00226\ \ \ \textcolor{keywordflow}{return}\{ps.\mbox{\hyperlink{struct_position_a85da30ee51269b4fec802f1a788fcf67}{X}},\ ps.\mbox{\hyperlink{struct_position_adf2e52dcab744085e856f384924b2483}{Y}},\ ps.\mbox{\hyperlink{struct_position_abe77f45f9c332325fe4f7bedde4e1ced}{Z}},\ ps.\mbox{\hyperlink{struct_position_a6a47e47fa19ad8df653d8e9aff385220}{A}},\ ps.\mbox{\hyperlink{struct_position_a1876a6b841e39865bda05d782408e543}{B}},\ ps.\mbox{\hyperlink{struct_position_aeb2497fe30b3eea2d734e7181d8f6296}{C}}\};}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00227}00227\ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00228}\mbox{\hyperlink{class_position_factory_abb3a019e903453ff914257cb965d8474}{00228}}\ \mbox{\hyperlink{structs_posture}{sPosture}}\ \mbox{\hyperlink{class_position_factory_abb3a019e903453ff914257cb965d8474}{PositionFactory::TosPosture}}(\mbox{\hyperlink{struct_posture}{Posture}}\ pt)\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00229}00229\ \ \ \textcolor{keywordflow}{return}\{pt.\mbox{\hyperlink{struct_posture_aa657326ae64de0d97caa2d74934079ad}{Jt1}},\ pt.\mbox{\hyperlink{struct_posture_a8c6ccfdd2d40eaefd6f0e115f1267a85}{Jt2}},\ pt.\mbox{\hyperlink{struct_posture_a7cb39876480dfd8af6af66c468eb4056}{Jt3}},\ pt.\mbox{\hyperlink{struct_posture_a5cac789f8d04273ba0972cb314764d51}{Jt4}}\};}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00230}00230\ \}}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00231}00231\ }
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00232}\mbox{\hyperlink{class_position_factory_a5d95619f618e340dde30bf1fea01acee}{00232}}\ \mbox{\hyperlink{struct_position}{Position}}\ \mbox{\hyperlink{class_position_factory_a5d95619f618e340dde30bf1fea01acee}{PositionFactory::operator[]}}(\textcolor{keywordtype}{int}\ index)\{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00233}00233\ \ \ \textcolor{keywordflow}{return}\ \{}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00234}00234\ \ \ \ \ (float)\mbox{\hyperlink{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8}{\_data}}[index].\mbox{\hyperlink{struct_position}{Position}}.\mbox{\hyperlink{struct_position_a85da30ee51269b4fec802f1a788fcf67}{X}},}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00235}00235\ \ \ \ \ (\textcolor{keywordtype}{float})\mbox{\hyperlink{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8}{\_data}}[index].Position.Y,}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00236}00236\ \ \ \ \ (float)\mbox{\hyperlink{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8}{\_data}}[index].\mbox{\hyperlink{struct_position}{Position}}.\mbox{\hyperlink{struct_position_abe77f45f9c332325fe4f7bedde4e1ced}{Z}},}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00237}00237\ \ \ \ \ (\textcolor{keywordtype}{float})\mbox{\hyperlink{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8}{\_data}}[index].Position.A,}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00238}00238\ \ \ \ \ (float)\mbox{\hyperlink{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8}{\_data}}[index].\mbox{\hyperlink{struct_position}{Position}}.\mbox{\hyperlink{struct_position_a1876a6b841e39865bda05d782408e543}{B}},}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00239}00239\ \ \ \ \ (\textcolor{keywordtype}{float})\mbox{\hyperlink{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8}{\_data}}[index].Position.C}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00240}00240\ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_position_factory_8cpp_source_l00241}00241\ \}}
+
+\end{DoxyCode}

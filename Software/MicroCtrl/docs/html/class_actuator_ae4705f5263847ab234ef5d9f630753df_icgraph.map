@@ -1,0 +1,29 @@
+<map id="Actuator::calcPosition" name="Actuator::calcPosition">
+<area shape="rect" id="Node000001" title="Schritte zu Winkel." alt="" coords="941,81,1092,107"/>
+<area shape="rect" id="Node000002" href="$class_actuator.html#a81ea3f4dae18ab70413b8da2a419601b" title="lese Istposition" alt="" coords="783,56,893,81"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="927,84,893,79,893,74,928,79"/>
+<area shape="rect" id="Node000006" href="$class_actuator.html#ae786a505db189182b2fec42f1bb82445" title="Aktuator Sollwert Schreiben." alt="" coords="783,107,893,132"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="928,109,894,114,893,109,927,104"/>
+<area shape="rect" id="Node000003" href="$class_actuator.html#a4438639840978376b4e689edcac42db7" title="Soll&#45;Ist Differenze bilden." alt="" coords="607,5,716,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="779,55,706,33,707,28,781,50"/>
+<area shape="rect" id="Node000004" href="$class_rob_frame.html#a92a99cf7219b60ab8d2c349fd2eef6a8" title="Glenk Einzelverfahren." alt="" coords="399,56,540,81"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="770,71,540,71,540,66,770,66"/>
+<area shape="rect" id="Node000005" href="$class_rob_frame.html#a0d79cee264204461c4445cf72c4481b7" title="Eingangsdaten Parsen." alt="" coords="24,105,159,131"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="385,82,226,102,159,111,158,106,225,97,385,76"/>
+<area shape="rect" id="Node000007" href="$class_rob_frame.html#aa358b505e48c8ea8efa6f069dab67520" title="Aktor Asynchron ansteuern." alt="" coords="588,156,735,181"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="779,138,709,158,707,153,778,133"/>
+<area shape="rect" id="Node000012" href="$class_rob_frame.html#a208ae2ae7cdbe80dba28e4d0ad29857b" title="Aktor Synchron Ansteuern." alt="" coords="597,107,726,132"/>
+<area shape="poly" id="edge14_Node000006_Node000012" title=" " alt="" coords="769,122,726,122,726,117,769,117"/>
+<area shape="rect" id="Node000008" href="$class_rob_frame.html#ae5ef3c45bc8b82d75e47f422addeb56f" title="Punkt zu Punkt Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="410,156,529,181"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="575,171,529,171,529,166,575,166"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="402,156,350,146,250,133,158,125,159,120,250,128,351,141,403,150"/>
+<area shape="rect" id="Node000009" href="$class_rob_frame.html#a40f13f5c1ce2baaaa77fc3eee9b98379" title="Punkt zu Punkt Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="229,156,347,181"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="397,171,348,171,348,166,397,166"/>
+<area shape="rect" id="Node000010" href="$class_rob_frame.html#a3b51be372803d4960a457d2c03378314" title="Gradlinige Asynchrone Gelenk&#45;Ansteuerung." alt="" coords="225,205,351,231"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="409,188,337,208,335,203,408,183"/>
+<area shape="rect" id="Node000011" href="$class_rob_frame.html#a56384fc3894ecdaf39252f703ee91873" title="Iteriere durch den Positionsdatensatz." alt="" coords="5,231,177,256"/>
+<area shape="poly" id="edge13_Node000008_Node000011" title=" " alt="" coords="445,193,403,222,378,236,351,246,308,255,262,260,177,258,177,252,262,254,307,250,350,241,376,231,400,218,442,188"/>
+<area shape="poly" id="edge11_Node000010_Node000005" title=" " alt="" coords="237,202,224,196,162,163,111,133,114,129,165,159,227,192,240,198"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="212,230,178,235,177,230,211,225"/>
+<area shape="poly" id="edge15_Node000012_Node000004" title=" " alt="" coords="599,106,518,84,519,79,600,101"/>
+</map>

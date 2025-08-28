@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Manipulator mit sechs Freiheitsgraden: PositionFactory.hpp Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Manipulator mit sechs Freiheitsgraden<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Konstruktion, Modellierung und Programmierung der inversen Kinematik eines experimentellen Manipulators mit sechs Freiheitsgraden</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_position_factory_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PositionFactory.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_position_factory_8hpp.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// Datei: PositionFactory.hpp</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// Beschreibung: Dieser Klasse Beinhaltet Logik zur Erstellung, Vernichtung</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">//               und Verwalung von Positionen und Stellungen.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// Autor: Chukwunonso Bob-Anyeji</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">// Datum: 11.07.2024@12-00</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// Aktualisiert: 27.08.2025@11-46</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef POSITIONFACTORY_H_</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define POSITIONFACTORY_H_</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="_position_factory_8hpp.html#a4ea867184de81e59e49eade129c46475">   15</a></span><span class="preprocessor">#define POS_LIMIT 100</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="_types_8hpp.html">Types.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="_logger_8hpp.html">Logger.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">class </span><a class="code hl_class" href="class_rob_frame.html">RobFrame</a>;</div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_position_factory.html">   21</a></span><span class="keyword">class </span><a class="code hl_function" href="class_position_factory.html#ae66a8fe9b51a518c157bfb90e9645eb7">PositionFactory</a></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_position_factory.html#abef41677e6ec49c3022e24227f791a46">   25</a></span>    <a class="code hl_class" href="class_rob_frame.html">RobFrame</a>* <a class="code hl_variable" href="class_position_factory.html#abef41677e6ec49c3022e24227f791a46">_robFrame</a>;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    int8_t <a class="code hl_function" href="class_position_factory.html#ab654a8e160d6616c2052d9627eca6826">RangeCheck</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_struct" href="structs_position.html">sPosition</a> <a class="code hl_function" href="class_position_factory.html#adb62693a75e3612913944f580f924269">TosPosition</a>(<a class="code hl_struct" href="struct_position.html">Position</a> ps);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_struct" href="structs_posture.html">sPosture</a> <a class="code hl_function" href="class_position_factory.html#abb3a019e903453ff914257cb965d8474">TosPosture</a>(<a class="code hl_struct" href="struct_posture.html">Posture</a> ps);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_enumeration" href="_types_8hpp.html#a3bb467bb1e8d9236bdea09a4367a11a9">PosState</a> <a class="code hl_function" href="class_position_factory.html#a3aa174e21b064718a7dc6d5eec6c0988">Decode</a>(String content, <span class="keywordtype">char</span> delimiter = <span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_position_factory.html#a627ca4782ea413ec821bedf1aaf116ac">Update</a>(<span class="keywordtype">int</span> index,String&amp; params, <a class="code hl_enumeration" href="_types_8hpp.html#a3bb467bb1e8d9236bdea09a4367a11a9">PosState</a> state);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_position_factory.html#aca701b2a08c1623508fd324bc7a0c6b8">   49</a></span>    <a class="code hl_struct" href="struct_pos_data.html">PosData</a>* <a class="code hl_variable" href="class_position_factory.html#aca701b2a08c1623508fd324bc7a0c6b8">_data</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_position_factory.html#a5e4feb4a8df8183e7f245de2a8df1cc2">   51</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_position_factory.html#a5e4feb4a8df8183e7f245de2a8df1cc2">_definedCount</a> = 0;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_function" href="class_position_factory.html#ae66a8fe9b51a518c157bfb90e9645eb7">PositionFactory</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_function" href="class_position_factory.html#a04babbfb40f05b34033fecfe14220558">~PositionFactory</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_position_factory.html#a2377a4cc3cff95f26764b2baef0a7e4b">Init</a>(<a class="code hl_class" href="class_rob_frame.html">RobFrame</a>* robFrame);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_position_factory.html#ab350bdbae8465ca901ef992a75619adf">Setup</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_struct" href="struct_posture.html">Posture</a> <a class="code hl_function" href="class_position_factory.html#a6f63c0030222d68a19bf5a16fe3af2cf">DecodePosture</a>(String input, String filter = <span class="stringliteral">&quot;,&quot;</span>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_struct" href="struct_position.html">Position</a> <a class="code hl_function" href="class_position_factory.html#a01c1842e953f689ed2f4c984868ddfe2">DecodePosition</a>(String input, String filter = <span class="stringliteral">&quot;,&quot;</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">int</span>&amp; <a class="code hl_function" href="class_position_factory.html#a33ee29e54af9d81fa9ad6cab1e2a380d">AddPosition</a>(String content, <a class="code hl_enumeration" href="_types_8hpp.html#a3bb467bb1e8d9236bdea09a4367a11a9">PosState</a> state, <span class="keywordtype">char</span> filter = <span class="charliteral">&#39; &#39;</span>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">int</span>&amp; <a class="code hl_function" href="class_position_factory.html#a0fbf29d838686c1d5081592a6c918f02">Count</a>();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_position_factory.html#ab504a3521ccf34cb6556f318ae13aaef">Get</a>(String identifier);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_position_factory.html#a32a2e62862a90d288896427fb63d9aaf">Del</a>(String identifier);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_position_factory.html#a14c9e06045694d07b9ba26427199708d">LogInfo</a>();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_position_factory.html#ab50bbb05f5685d520f99dc1588925764">LogPositions</a>(<a class="code hl_enumeration" href="_types_8hpp.html#a3bb467bb1e8d9236bdea09a4367a11a9">PosState</a> state);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <a class="code hl_struct" href="struct_position.html">Position</a> <a class="code hl_function" href="class_position_factory.html#a5d95619f618e340dde30bf1fea01acee">operator[]</a>(<span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>};</div>
+</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#endif </span><span class="comment">// POSITIONFACTORY_H_</span></div>
+<div class="ttc" id="a_logger_8hpp_html"><div class="ttname"><a href="_logger_8hpp.html">Logger.hpp</a></div></div>
+<div class="ttc" id="a_types_8hpp_html"><div class="ttname"><a href="_types_8hpp.html">Types.hpp</a></div></div>
+<div class="ttc" id="a_types_8hpp_html_a3bb467bb1e8d9236bdea09a4367a11a9"><div class="ttname"><a href="_types_8hpp.html#a3bb467bb1e8d9236bdea09a4367a11a9">PosState</a></div><div class="ttdeci">PosState</div><div class="ttdef"><b>Definition</b> Types.hpp:69</div></div>
+<div class="ttc" id="aclass_position_factory_html_a01c1842e953f689ed2f4c984868ddfe2"><div class="ttname"><a href="class_position_factory.html#a01c1842e953f689ed2f4c984868ddfe2">PositionFactory::DecodePosition</a></div><div class="ttdeci">Position DecodePosition(String input, String filter=&quot;,&quot;)</div><div class="ttdoc">String to Position.</div><div class="ttdef"><b>Definition</b> PositionFactory.cpp:113</div></div>
+<div class="ttc" id="aclass_position_factory_html_a04babbfb40f05b34033fecfe14220558"><div class="ttname"><a href="class_position_factory.html#a04babbfb40f05b34033fecfe14220558">PositionFactory::~PositionFactory</a></div><div class="ttdeci">~PositionFactory()</div><div class="ttdoc">Datenarray Vernichten.</div><div class="ttdef"><b>Definition</b> PositionFactory.cpp:18</div></div>
+<div class="ttc" id="aclass_position_factory_html_a0fbf29d838686c1d5081592a6c918f02"><div class="ttname"><a href="class_position_factory.html#a0fbf29d838686c1d5081592a6c918f02">PositionFactory::Count</a></div><div class="ttdeci">int &amp; Count()</div><div class="ttdoc">Datensatzt anzahl.</div><div class="ttdef"><b>Definition</b> PositionFactory.cpp:216</div></div>
+<div class="ttc" id="aclass_position_factory_html_a14c9e06045694d07b9ba26427199708d"><div class="ttname"><a href="class_position_factory.html#a14c9e06045694d07b9ba26427199708d">PositionFactory::LogInfo</a></div><div class="ttdeci">void LogInfo()</div><div class="ttdoc">Debug info ausgeben.</div><div class="ttdef"><b>Definition</b> PositionFactory.cpp:42</div></div>
+<div class="ttc" id="aclass_position_factory_html_a2377a4cc3cff95f26764b2baef0a7e4b"><div class="ttname"><a href="class_position_factory.html#a2377a4cc3cff95f26764b2baef0a7e4b">PositionFactory::Init</a></div><div class="ttdeci">void Init(RobFrame *robFrame)</div><div class="ttdoc">RobFrameWork Zeigerzuweiseung und Speicherplatz allozieren.</div><div class="ttdef"><b>Definition</b> PositionFactory.cpp:25</div></div>
+<div class="ttc" id="aclass_position_factory_html_a32a2e62862a90d288896427fb63d9aaf"><div class="ttname"><a href="class_position_factory.html#a32a2e62862a90d288896427fb63d9aaf">PositionFactory::Del</a></div><div class="ttdeci">void Del(String identifier)</div><div class="ttdoc">nicht Implementiert</div><div class="ttdef"><b>Definition</b> PositionFactory.cpp:225</div></div>
+<div class="ttc" id="aclass_position_factory_html_a33ee29e54af9d81fa9ad6cab1e2a380d"><div class="ttname"><a href="class_position_factory.html#a33ee29e54af9d81fa9ad6cab1e2a380d">PositionFactory::AddPosition</a></div><div class="ttdeci">int &amp; AddPosition(String content, PosState state, char filter=&#39; &#39;)</div><div class="ttdoc">Position, Winkelstellung hinzufügen.</div><div class="ttdef"><b>Definition</b> PositionFactory.cpp:163</div></div>
+<div class="ttc" id="aclass_position_factory_html_a3aa174e21b064718a7dc6d5eec6c0988"><div class="ttname"><a href="class_position_factory.html#a3aa174e21b064718a7dc6d5eec6c0988">PositionFactory::Decode</a></div><div class="ttdeci">PosState Decode(String content, char delimiter=&#39;,&#39;)</div><div class="ttdoc">Positions zustand Validieren und Ermitteln.</div><div class="ttdef"><b>Definition</b> PositionFactory.cpp:63</div></div>
+<div class="ttc" id="aclass_position_factory_html_a5d95619f618e340dde30bf1fea01acee"><div class="ttname"><a href="class_position_factory.html#a5d95619f618e340dde30bf1fea01acee">PositionFactory::operator[]</a></div><div class="ttdeci">Position operator[](int index)</div><div class="ttdoc">Position gemaeße index wiedergeben.</div><div class="ttdef"><b>Definition</b> PositionFactory.cpp:249</div></div>
+<div class="ttc" id="aclass_position_factory_html_a5e4feb4a8df8183e7f245de2a8df1cc2"><div class="ttname"><a href="class_position_factory.html#a5e4feb4a8df8183e7f245de2a8df1cc2">PositionFactory::_definedCount</a></div><div class="ttdeci">int _definedCount</div><div class="ttdoc">Anzahl definierte Datensatze innerhalb des Arrays.</div><div class="ttdef"><b>Definition</b> PositionFactory.hpp:51</div></div>
+<div class="ttc" id="aclass_position_factory_html_a627ca4782ea413ec821bedf1aaf116ac"><div class="ttname"><a href="class_position_factory.html#a627ca4782ea413ec821bedf1aaf116ac">PositionFactory::Update</a></div><div class="ttdeci">void Update(int index, String &amp;params, PosState state)</div><div class="ttdoc">Positionsliste Aktualisieren.</div><div class="ttdef"><b>Definition</b> PositionFactory.cpp:150</div></div>
+<div class="ttc" id="aclass_position_factory_html_a6f63c0030222d68a19bf5a16fe3af2cf"><div class="ttname"><a href="class_position_factory.html#a6f63c0030222d68a19bf5a16fe3af2cf">PositionFactory::DecodePosture</a></div><div class="ttdeci">Posture DecodePosture(String input, String filter=&quot;,&quot;)</div><div class="ttdoc">String to Position.</div><div class="ttdef"><b>Definition</b> PositionFactory.cpp:80</div></div>
+<div class="ttc" id="aclass_position_factory_html_ab350bdbae8465ca901ef992a75619adf"><div class="ttname"><a href="class_position_factory.html#ab350bdbae8465ca901ef992a75619adf">PositionFactory::Setup</a></div><div class="ttdeci">void Setup()</div><div class="ttdoc">Initialisierung.</div><div class="ttdef"><b>Definition</b> PositionFactory.cpp:32</div></div>
+<div class="ttc" id="aclass_position_factory_html_ab504a3521ccf34cb6556f318ae13aaef"><div class="ttname"><a href="class_position_factory.html#ab504a3521ccf34cb6556f318ae13aaef">PositionFactory::Get</a></div><div class="ttdeci">void Get(String identifier)</div><div class="ttdoc">nicht Implementiert</div><div class="ttdef"><b>Definition</b> PositionFactory.cpp:221</div></div>
+<div class="ttc" id="aclass_position_factory_html_ab50bbb05f5685d520f99dc1588925764"><div class="ttname"><a href="class_position_factory.html#ab50bbb05f5685d520f99dc1588925764">PositionFactory::LogPositions</a></div><div class="ttdeci">void LogPositions(PosState state)</div><div class="ttdoc">Datensaetzte ausgeben.</div><div class="ttdef"><b>Definition</b> PositionFactory.cpp:55</div></div>
+<div class="ttc" id="aclass_position_factory_html_ab654a8e160d6616c2052d9627eca6826"><div class="ttname"><a href="class_position_factory.html#ab654a8e160d6616c2052d9627eca6826">PositionFactory::RangeCheck</a></div><div class="ttdeci">int8_t RangeCheck()</div><div class="ttdoc">Postion Array Bereichs abfrage.</div><div class="ttdef"><b>Definition</b> PositionFactory.cpp:231</div></div>
+<div class="ttc" id="aclass_position_factory_html_abb3a019e903453ff914257cb965d8474"><div class="ttname"><a href="class_position_factory.html#abb3a019e903453ff914257cb965d8474">PositionFactory::TosPosture</a></div><div class="ttdeci">sPosture TosPosture(Posture ps)</div><div class="ttdoc">float to Short Int</div><div class="ttdef"><b>Definition</b> PositionFactory.cpp:244</div></div>
+<div class="ttc" id="aclass_position_factory_html_abef41677e6ec49c3022e24227f791a46"><div class="ttname"><a href="class_position_factory.html#abef41677e6ec49c3022e24227f791a46">PositionFactory::_robFrame</a></div><div class="ttdeci">RobFrame * _robFrame</div><div class="ttdoc">Zeiger Zur RobFrame.</div><div class="ttdef"><b>Definition</b> PositionFactory.hpp:25</div></div>
+<div class="ttc" id="aclass_position_factory_html_aca701b2a08c1623508fd324bc7a0c6b8"><div class="ttname"><a href="class_position_factory.html#aca701b2a08c1623508fd324bc7a0c6b8">PositionFactory::_data</a></div><div class="ttdeci">PosData * _data</div><div class="ttdoc">Array von Positions Daten.</div><div class="ttdef"><b>Definition</b> PositionFactory.hpp:49</div></div>
+<div class="ttc" id="aclass_position_factory_html_adb62693a75e3612913944f580f924269"><div class="ttname"><a href="class_position_factory.html#adb62693a75e3612913944f580f924269">PositionFactory::TosPosition</a></div><div class="ttdeci">sPosition TosPosition(Position ps)</div><div class="ttdoc">Umwandlung des structs von float to Short int.</div><div class="ttdef"><b>Definition</b> PositionFactory.cpp:240</div></div>
+<div class="ttc" id="aclass_position_factory_html_ae66a8fe9b51a518c157bfb90e9645eb7"><div class="ttname"><a href="class_position_factory.html#ae66a8fe9b51a518c157bfb90e9645eb7">PositionFactory::PositionFactory</a></div><div class="ttdeci">PositionFactory()</div><div class="ttdoc">Klassen-Objekt erstellen.</div><div class="ttdef"><b>Definition</b> PositionFactory.cpp:17</div></div>
+<div class="ttc" id="aclass_rob_frame_html"><div class="ttname"><a href="class_rob_frame.html">RobFrame</a></div><div class="ttdef"><b>Definition</b> RobFrameWork.hpp:21</div></div>
+<div class="ttc" id="astruct_pos_data_html"><div class="ttname"><a href="struct_pos_data.html">PosData</a></div><div class="ttdef"><b>Definition</b> Types.hpp:117</div></div>
+<div class="ttc" id="astruct_position_html"><div class="ttname"><a href="struct_position.html">Position</a></div><div class="ttdef"><b>Definition</b> Types.hpp:79</div></div>
+<div class="ttc" id="astruct_posture_html"><div class="ttname"><a href="struct_posture.html">Posture</a></div><div class="ttdef"><b>Definition</b> Types.hpp:98</div></div>
+<div class="ttc" id="astructs_position_html"><div class="ttname"><a href="structs_position.html">sPosition</a></div><div class="ttdef"><b>Definition</b> Types.hpp:88</div></div>
+<div class="ttc" id="astructs_posture_html"><div class="ttname"><a href="structs_posture.html">sPosture</a></div><div class="ttdef"><b>Definition</b> Types.hpp:107</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="_position_factory_8hpp.html">PositionFactory.hpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

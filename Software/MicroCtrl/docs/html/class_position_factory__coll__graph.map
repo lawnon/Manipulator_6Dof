@@ -1,0 +1,27 @@
+<map id="PositionFactory" name="PositionFactory">
+<area shape="rect" id="Node000001" title=" " alt="" coords="372,197,485,223"/>
+<area shape="rect" id="Node000002" href="$class_rob_frame.html" title=" " alt="" coords="323,293,406,319"/>
+<area shape="poly" id="edge9_Node000002_Node000001" title=" " alt="" coords="442,235,444,253,439,271,425,286,408,296,405,291,422,281,434,268,439,253,436,236"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="357,280,358,262,364,245,377,231,393,221,396,225,380,235,368,248,363,263,363,280"/>
+<area shape="rect" id="Node000004" href="$class_commands.html" title=" " alt="" coords="565,489,653,515"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="420,307,513,316,554,326,581,341,590,364,598,406,610,489,605,490,593,407,585,366,577,344,552,331,512,322,419,312"/>
+<area shape="rect" id="Node000006" href="$class_kinematic.html" title=" " alt="" coords="83,489,163,515"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="310,310,256,312,200,318,151,328,133,336,121,344,111,361,105,380,103,421,111,459,121,488,116,490,106,461,98,421,99,379,106,359,117,341,130,331,149,323,199,312,256,307,309,305"/>
+<area shape="rect" id="Node000008" href="$class_actuator.html" title=" " alt="" coords="329,489,400,515"/>
+<area shape="poly" id="edge11_Node000008_Node000002" title=" " alt="" coords="374,332,375,342,380,404,375,466,371,490,365,488,370,465,375,404,370,343,368,333"/>
+<area shape="rect" id="Node000003" href="$struct_posture.html" title=" " alt="" coords="245,197,311,223"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="285,235,292,252,301,268,317,281,335,291,332,296,314,285,297,271,287,255,280,237"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="550,493,525,483,503,467,490,452,482,436,476,405,471,374,464,360,452,345,430,329,405,319,407,314,433,324,456,341,469,357,476,373,482,404,487,434,494,449,506,463,528,478,552,488"/>
+<area shape="rect" id="Node000005" href="$struct_command.html" title=" " alt="" coords="669,293,751,319"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="715,333,714,362,710,397,701,434,683,467,667,482,649,492,646,487,664,477,679,464,696,432,705,396,709,362,709,332"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="171,481,193,464,204,448,209,433,212,402,215,372,222,356,235,341,255,326,277,316,322,306,323,312,279,321,257,331,238,345,227,359,220,373,217,403,215,434,209,450,197,467,174,485"/>
+<area shape="rect" id="Node000007" href="$struct_dh_param.html" title=" " alt="" coords="5,293,81,319"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="39,333,33,362,30,396,34,431,47,464,63,480,84,490,82,495,60,484,42,467,28,433,25,396,27,361,33,332"/>
+<area shape="poly" id="edge10_Node000002_Node000008" title=" " alt="" coords="337,481,328,466,316,433,312,404,316,375,328,342,336,328,347,317,351,321,340,331,332,344,321,377,317,404,321,431,332,464,341,478"/>
+<area shape="rect" id="Node000009" href="$struct_pos_data.html" title=" " alt="" coords="393,101,465,127"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="431,141,431,197,426,197,426,141"/>
+<area shape="rect" id="Node000010" href="$structs_position.html" title=" " alt="" coords="341,5,417,31"/>
+<area shape="poly" id="edge13_Node000009_Node000010" title=" " alt="" coords="385,43,396,76,416,100,412,103,392,79,380,45"/>
+<area shape="rect" id="Node000011" href="$structs_posture.html" title=" " alt="" coords="442,5,517,31"/>
+<area shape="poly" id="edge14_Node000009_Node000011" title=" " alt="" coords="470,44,452,79,438,102,434,100,448,76,465,42"/>
+</map>

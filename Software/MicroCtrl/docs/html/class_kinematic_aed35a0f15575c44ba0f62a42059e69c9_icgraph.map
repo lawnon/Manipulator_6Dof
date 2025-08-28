@@ -1,0 +1,7 @@
+<map id="Kinematic::armTMatrix" name="Kinematic::armTMatrix">
+<area shape="rect" id="Node000001" title="Homogenen Transformations&#45;Matrix des Manipulators." alt="" coords="209,31,363,56"/>
+<area shape="rect" id="Node000002" href="$class_kinematic.html#aef4876851b52873dff6f8b9e0d388121" title="Vorwaertskinematik berechnung." alt="" coords="5,5,161,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="195,35,161,30,162,25,196,29"/>
+<area shape="rect" id="Node000003" href="$class_kinematic.html#ae03636412ecab6f5a53e8c3d9069e369" title="Inverskinematik berechnung." alt="" coords="6,55,161,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="196,57,161,61,161,56,195,51"/>
+</map>

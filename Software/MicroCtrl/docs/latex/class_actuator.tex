@@ -1,0 +1,575 @@
+\doxysection{Actuator Klassenreferenz}
+\hypertarget{class_actuator}{}\label{class_actuator}\index{Actuator@{Actuator}}
+
+
+{\ttfamily \#include $<$Actuator.\+hpp$>$}
+
+
+
+Zusammengehörigkeiten von Actuator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_actuator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Öffentliche Typen}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40}{State}} \{ \newline
+\mbox{\hyperlink{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40aa90c8dd45a5ecd017c4b6af46e65d0ff}{Enabled}}
+, \mbox{\hyperlink{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40a9f7e8c4a6fe34fa4cd5a91d57272b268}{Stopped}}
+, \mbox{\hyperlink{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40ab7cd476aef1e81a6a5a7a5b33ee145a5}{In\+Motion}}
+, \mbox{\hyperlink{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40a5a4925de23e15c19ecf1de02c9ec86b2}{Referenced}}
+, \newline
+\mbox{\hyperlink{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40a8042795485fa3694c1aa4332e5c5957d}{In\+Position}}
+, \mbox{\hyperlink{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40ad7eac040de4363a7f2da987c79de4d34}{Aborted}}
+ \}
+\begin{DoxyCompactList}\small\item\em Aktuator Betriebszustand. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_actuator_ad08f81ed90eb01f4654acb47eff38be6}{Actuator}} ()
+\begin{DoxyCompactList}\small\item\em Actor Klassen-\/\+Objekt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_actuator_af104d83044a8e45833a1b67cd6347602}{Init}} (\mbox{\hyperlink{class_rob_frame}{Rob\+Frame}} \texorpdfstring{$\ast$}{*}rob\+Frame)
+\begin{DoxyCompactList}\small\item\em Initialisierung Zeiger-\/\+Zuweisung. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} \mbox{\hyperlink{class_actuator_a62b9a187d9a73f9d1bfb013a06baf197}{Id}} ()
+\begin{DoxyCompactList}\small\item\em Aktor ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} \mbox{\hyperlink{class_actuator_a9f1b744baa308c5c9fed6895a8816798}{Set\+Up}} (float gear\+Ratio=1, \mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} accuracy=5, \mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} max=90, \mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} min=-\/90)
+\begin{DoxyCompactList}\small\item\em Hardwareeinrichten. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} \mbox{\hyperlink{class_actuator_af251ec8fcb3ab8be2bb34cf73b79b085}{Attach}} (\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} dir\+Pin, \mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} step\+Pin, \mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} ena\+Pin)
+\begin{DoxyCompactList}\small\item\em Hardware-\/\+Ausgänge Zuweisen Anbinddung der Hardware-\/\+Ausgänge. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} \mbox{\hyperlink{class_actuator_aa8005479f1c593783dd74c6ebf7ade6b}{Activate}} (\mbox{\hyperlink{_types_8hpp_a07fb256c1077eea7a7726e948cc8ff0e}{int8}} ena, \mbox{\hyperlink{_types_8hpp_ab7078bf13036f3e78534da3ad4149dc2}{uint16}} tof=5000)
+\begin{DoxyCompactList}\small\item\em Aktoransteuerung. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} \mbox{\hyperlink{class_actuator_abc5a978818409cb0dcdfdddc43a16d50}{Refernce}} (\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} value=0)
+\begin{DoxyCompactList}\small\item\em Ist\+Positionswert Referenzieren. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} \mbox{\hyperlink{class_actuator_ae786a505db189182b2fec42f1bb82445}{Write}} (\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} target)
+\begin{DoxyCompactList}\small\item\em Aktuator Sollwert Schreiben. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} \mbox{\hyperlink{class_actuator_a81ea3f4dae18ab70413b8da2a419601b}{Read}} ()
+\begin{DoxyCompactList}\small\item\em lese Istposition \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} \mbox{\hyperlink{class_actuator_a4438639840978376b4e689edcac42db7}{Delta}} (\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} target)
+\begin{DoxyCompactList}\small\item\em Soll-\/\+Ist Differenze bilden. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Öffentliche Attribute}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} \mbox{\hyperlink{class_actuator_a8f35086212a620c907154439718570ee}{Accuracy}}
+\begin{DoxyCompactList}\small\item\em Genauigkeit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} \mbox{\hyperlink{class_actuator_a04116bc5ec0ca19fdf8bbe30b5f24754}{calc\+Steps}} (\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} target)
+\begin{DoxyCompactList}\small\item\em Winkelwerte in Grad zu Schritte konvertieren. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} \mbox{\hyperlink{class_actuator_ae4705f5263847ab234ef5d9f630753df}{calc\+Position}} (\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} act\+Steps)
+\begin{DoxyCompactList}\small\item\em Schritte zu Winkel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_rob_frame}{Rob\+Frame}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_actuator_aa99ce4c70762d23baf12e051e75ebbab}{\+\_\+rob\+Frame}}
+\begin{DoxyCompactList}\small\item\em Zeiger zu \doxylink{class_rob_frame}{Rob\+Frame}. \end{DoxyCompactList}\item 
+Basic\+Stepper\+Driver \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_actuator_ab8293059665eefc50d9050c9639787c1}{\+\_\+stepper}}
+\begin{DoxyCompactList}\small\item\em Zeiger zur Stepper Objekt. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_types_8hpp_a34ecedcf03a70dc91e4616212d79267d}{uint8}} \mbox{\hyperlink{class_actuator_a565677065af811cdd52de4de12276547}{\+\_\+motor\+Steps}} = 200
+\item 
+\mbox{\hyperlink{_types_8hpp_a34ecedcf03a70dc91e4616212d79267d}{uint8}} \mbox{\hyperlink{class_actuator_ade001d1ef9d41e0fb033940fb43f3b83}{\+\_\+micro\+Steps}} = 16
+\item 
+\mbox{\hyperlink{_types_8hpp_a07fb256c1077eea7a7726e948cc8ff0e}{int8}} \mbox{\hyperlink{class_actuator_a195548ac6b8d5b487e20940e0920587e}{\+\_\+dir}} = 1
+\item 
+\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} \mbox{\hyperlink{class_actuator_a54b9ddb58f8b7730694d99c02b2cf77c}{\+\_\+id}} = 0
+\item 
+\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} \mbox{\hyperlink{class_actuator_af4b6e8a30c0de94b60c7dd88cadd1acb}{\+\_\+offset}}
+\item 
+\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} \mbox{\hyperlink{class_actuator_a511c8b67bd00781f24660bc76cafcaf4}{\+\_\+min}} = -\/90
+\item 
+\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} \mbox{\hyperlink{class_actuator_a5ca69ff2e0b27db10f90a32914cf6ef8}{\+\_\+max}} = 90
+\item 
+\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} \mbox{\hyperlink{class_actuator_a7b8ff8dc352dcbbd83ac0885bf134af2}{\+\_\+gear\+Ratio}} = 1
+\item 
+\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} \mbox{\hyperlink{class_actuator_a4abaac0db5b87ce00c0dded74cc80a20}{\+\_\+previous\+Steps}} = 0
+\item 
+\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} \mbox{\hyperlink{class_actuator_a4319d3173f74a448dc7dd10711fd5ee5}{\+\_\+actual\+Steps}} = 0
+\item 
+\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} \mbox{\hyperlink{class_actuator_abef58f75c37d3155ecde1613e2cbc0d4}{\+\_\+target\+Steps}} = 0
+\item 
+\mbox{\hyperlink{_types_8hpp_ab7078bf13036f3e78534da3ad4149dc2}{uint16}} \mbox{\hyperlink{class_actuator_a13a30cb5ac83c9f04a5e592b2cb3dc0b}{\+\_\+time\+Of\+Delay}} = 0
+\item 
+float \mbox{\hyperlink{class_actuator_af7c222037d1b227f750c377eb49eb994}{\+\_\+rpm}} = 10
+\item 
+\mbox{\hyperlink{_types_8hpp_a07fb256c1077eea7a7726e948cc8ff0e}{int8}} \mbox{\hyperlink{class_actuator_aa0dc7ebca239c487d18c66a43296e0d3}{\+\_\+enabled}} = -\/1
+\item 
+\mbox{\hyperlink{_types_8hpp_a7472db64fa0f8253f82d7452d6786968}{word}} \mbox{\hyperlink{class_actuator_a64d3661583813b8f259d3051d1626882}{\+\_\+state}} = 0
+\end{DoxyCompactItemize}
+
+
+\label{doc-enum-members}
+\Hypertarget{class_actuator_doc-enum-members}
+\doxysubsection{Dokumentation der Aufzählungstypen}
+\Hypertarget{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40}\index{Actuator@{Actuator}!State@{State}}
+\index{State@{State}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily \label{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40} 
+enum \mbox{\hyperlink{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40}{Actuator\+::\+State}}}
+
+
+
+Aktuator Betriebszustand. 
+
+\begin{DoxyEnumFields}[2]{Aufzählungswerte}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Enabled@{Enabled}!Actuator@{Actuator}}\index{Actuator@{Actuator}!Enabled@{Enabled}}}\Hypertarget{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40aa90c8dd45a5ecd017c4b6af46e65d0ff}\label{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40aa90c8dd45a5ecd017c4b6af46e65d0ff} 
+Enabled&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Stopped@{Stopped}!Actuator@{Actuator}}\index{Actuator@{Actuator}!Stopped@{Stopped}}}\Hypertarget{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40a9f7e8c4a6fe34fa4cd5a91d57272b268}\label{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40a9f7e8c4a6fe34fa4cd5a91d57272b268} 
+Stopped&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InMotion@{InMotion}!Actuator@{Actuator}}\index{Actuator@{Actuator}!InMotion@{InMotion}}}\Hypertarget{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40ab7cd476aef1e81a6a5a7a5b33ee145a5}\label{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40ab7cd476aef1e81a6a5a7a5b33ee145a5} 
+In\+Motion&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Referenced@{Referenced}!Actuator@{Actuator}}\index{Actuator@{Actuator}!Referenced@{Referenced}}}\Hypertarget{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40a5a4925de23e15c19ecf1de02c9ec86b2}\label{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40a5a4925de23e15c19ecf1de02c9ec86b2} 
+Referenced&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InPosition@{InPosition}!Actuator@{Actuator}}\index{Actuator@{Actuator}!InPosition@{InPosition}}}\Hypertarget{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40a8042795485fa3694c1aa4332e5c5957d}\label{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40a8042795485fa3694c1aa4332e5c5957d} 
+In\+Position&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Aborted@{Aborted}!Actuator@{Actuator}}\index{Actuator@{Actuator}!Aborted@{Aborted}}}\Hypertarget{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40ad7eac040de4363a7f2da987c79de4d34}\label{class_actuator_a61c5a6e128829bc6eeac705dbe40fe40ad7eac040de4363a7f2da987c79de4d34} 
+Aborted&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-constructors}
+\Hypertarget{class_actuator_doc-constructors}
+\doxysubsection{Beschreibung der Konstruktoren und Destruktoren}
+\Hypertarget{class_actuator_ad08f81ed90eb01f4654acb47eff38be6}\index{Actuator@{Actuator}!Actuator@{Actuator}}
+\index{Actuator@{Actuator}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{Actuator()}{Actuator()}}
+{\footnotesize\ttfamily \label{class_actuator_ad08f81ed90eb01f4654acb47eff38be6} 
+Actuator\+::\+Actuator (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Actor Klassen-\/\+Objekt. 
+
+Instanzierung des Aktuators bzw. Steppermotor Klassenobject. 
+
+\label{doc-func-members}
+\Hypertarget{class_actuator_doc-func-members}
+\doxysubsection{Dokumentation der Elementfunktionen}
+\Hypertarget{class_actuator_aa8005479f1c593783dd74c6ebf7ade6b}\index{Actuator@{Actuator}!Activate@{Activate}}
+\index{Activate@{Activate}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{Activate()}{Activate()}}
+{\footnotesize\ttfamily \label{class_actuator_aa8005479f1c593783dd74c6ebf7ade6b} 
+\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} Actuator\+::\+Activate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_types_8hpp_a07fb256c1077eea7a7726e948cc8ff0e}{int8}}}]{ena}{, }\item[{\mbox{\hyperlink{_types_8hpp_ab7078bf13036f3e78534da3ad4149dc2}{uint16}}}]{tof}{ = {\ttfamily 5000}}\end{DoxyParamCaption})}
+
+
+
+Aktoransteuerung. 
+
+Asynchrones Aktoransteuerung Einschalten bzw. Freigeben.
+
+
+\begin{DoxyParams}{Parameter}
+{\em ena} & Aktivieren \\
+\hline
+{\em tof} & Ausschaltverzögerung \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+ON wenn activ oder OFF wenn nicht Active 
+\end{DoxyReturn}
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_actuator_aa8005479f1c593783dd74c6ebf7ade6b_cgraph}
+\end{center}
+\end{figure}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_actuator_aa8005479f1c593783dd74c6ebf7ade6b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_actuator_af251ec8fcb3ab8be2bb34cf73b79b085}\index{Actuator@{Actuator}!Attach@{Attach}}
+\index{Attach@{Attach}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{Attach()}{Attach()}}
+{\footnotesize\ttfamily \label{class_actuator_af251ec8fcb3ab8be2bb34cf73b79b085} 
+\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} Actuator\+::\+Attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}}}]{dir\+Pin}{, }\item[{\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}}}]{step\+Pin}{, }\item[{\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}}}]{ena\+Pin}{}\end{DoxyParamCaption})}
+
+
+
+Hardware-\/\+Ausgänge Zuweisen Anbinddung der Hardware-\/\+Ausgänge. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em dir\+Pin} & Richtungs Pin id. \\
+\hline
+{\em step\+Pin} & Stepper Pin id. \\
+\hline
+{\em ena\+Pin} & Aktivierungs Pin id. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Zeiger-\/\+Id zur Basic\+Steper\+Driver objekt
+\end{DoxyReturn}
+Anbindung der Hardwareausgänge am Klassen-\/\+Ojekt durch die Initialisierung der "{}\+Basic\+Stepper\+Driver"{} Klasse \Hypertarget{class_actuator_ae4705f5263847ab234ef5d9f630753df}\index{Actuator@{Actuator}!calcPosition@{calcPosition}}
+\index{calcPosition@{calcPosition}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{calcPosition()}{calcPosition()}}
+{\footnotesize\ttfamily \label{class_actuator_ae4705f5263847ab234ef5d9f630753df} 
+\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} Actuator\+::calc\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}}}]{act\+Steps}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Schritte zu Winkel. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em Schritte} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Winkel 
+\end{DoxyReturn}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_actuator_ae4705f5263847ab234ef5d9f630753df_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_actuator_a04116bc5ec0ca19fdf8bbe30b5f24754}\index{Actuator@{Actuator}!calcSteps@{calcSteps}}
+\index{calcSteps@{calcSteps}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{calcSteps()}{calcSteps()}}
+{\footnotesize\ttfamily \label{class_actuator_a04116bc5ec0ca19fdf8bbe30b5f24754} 
+\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} Actuator\+::calc\+Steps (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}}}]{target}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Winkelwerte in Grad zu Schritte konvertieren. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em target} & Winkel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+void
+\end{DoxyReturn}
+Private Funktions / Prozeduren Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_actuator_a04116bc5ec0ca19fdf8bbe30b5f24754_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_actuator_a4438639840978376b4e689edcac42db7}\index{Actuator@{Actuator}!Delta@{Delta}}
+\index{Delta@{Delta}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{Delta()}{Delta()}}
+{\footnotesize\ttfamily \label{class_actuator_a4438639840978376b4e689edcac42db7} 
+\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} Actuator\+::\+Delta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}}}]{target}{}\end{DoxyParamCaption})}
+
+
+
+Soll-\/\+Ist Differenze bilden. 
+
+Soll-\/\+Ist Differenze bilden in Grad.
+
+
+\begin{DoxyParams}{Parameter}
+{\em target} & Zielposition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Winkel differenze 
+\end{DoxyReturn}
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_actuator_a4438639840978376b4e689edcac42db7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_actuator_a62b9a187d9a73f9d1bfb013a06baf197}\index{Actuator@{Actuator}!Id@{Id}}
+\index{Id@{Id}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{Id()}{Id()}}
+{\footnotesize\ttfamily \label{class_actuator_a62b9a187d9a73f9d1bfb013a06baf197} 
+\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} Actuator\+::\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Aktor ID. 
+
+Eindeutiges ID auslesen.
+
+Public Funktions / Prozeduren \Hypertarget{class_actuator_af104d83044a8e45833a1b67cd6347602}\index{Actuator@{Actuator}!Init@{Init}}
+\index{Init@{Init}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_actuator_af104d83044a8e45833a1b67cd6347602} 
+void Actuator\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_rob_frame}{Rob\+Frame}} \texorpdfstring{$\ast$}{*}}]{rob\+Frame}{}\end{DoxyParamCaption})}
+
+
+
+Initialisierung Zeiger-\/\+Zuweisung. 
+
+Roboter\+Frame\+Work-\/\+Objekt Zeigerzuweisung.
+
+
+\begin{DoxyParams}{Parameter}
+{\em rob\+Frame} & Zeiger zu \doxylink{class_rob_frame}{Rob\+Frame} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+void 
+\end{DoxyReturn}
+\Hypertarget{class_actuator_a81ea3f4dae18ab70413b8da2a419601b}\index{Actuator@{Actuator}!Read@{Read}}
+\index{Read@{Read}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{Read()}{Read()}}
+{\footnotesize\ttfamily \label{class_actuator_a81ea3f4dae18ab70413b8da2a419601b} 
+\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} Actuator\+::\+Read (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+lese Istposition 
+
+Ist-\/\+Winkelwert von in Grad auslesen.
+
+\begin{DoxyReturn}{Rückgabe}
+Istwert in Grad 
+\end{DoxyReturn}
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{class_actuator_a81ea3f4dae18ab70413b8da2a419601b_cgraph}
+\end{center}
+\end{figure}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_actuator_a81ea3f4dae18ab70413b8da2a419601b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_actuator_abc5a978818409cb0dcdfdddc43a16d50}\index{Actuator@{Actuator}!Refernce@{Refernce}}
+\index{Refernce@{Refernce}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{Refernce()}{Refernce()}}
+{\footnotesize\ttfamily \label{class_actuator_abc5a978818409cb0dcdfdddc43a16d50} 
+\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} Actuator\+::\+Refernce (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}}}]{value}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Ist\+Positionswert Referenzieren. 
+
+Referenziehung der gespeicherten Ist-\/\+Position.
+
+
+\begin{DoxyParams}{Parameter}
+{\em value} & Zurücksetzungswert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+neuer Istposition 
+\end{DoxyReturn}
+\Hypertarget{class_actuator_a9f1b744baa308c5c9fed6895a8816798}\index{Actuator@{Actuator}!SetUp@{SetUp}}
+\index{SetUp@{SetUp}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{SetUp()}{SetUp()}}
+{\footnotesize\ttfamily \label{class_actuator_a9f1b744baa308c5c9fed6895a8816798} 
+\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} Actuator\+::\+Set\+Up (\begin{DoxyParamCaption}\item[{float}]{gear\+Ratio}{ = {\ttfamily 1}, }\item[{\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}}}]{accuracy}{ = {\ttfamily 5}, }\item[{\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}}}]{max}{ = {\ttfamily 90}, }\item[{\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}}}]{min}{ = {\ttfamily -\/90}}\end{DoxyParamCaption})}
+
+
+
+Hardwareeinrichten. 
+
+Hardware eigenschaften einrichten.
+
+
+\begin{DoxyParams}{Parameter}
+{\em gear\+Ratio} & Getriebeübersetzung \\
+\hline
+{\em accuracy} & Genauigkeit \\
+\hline
+{\em max} & Max-\/\+Winkelstellung \\
+\hline
+{\em min} & Min-\/\+Winkelstellung \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+OK wenn Erfolgreich 
+\end{DoxyReturn}
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{class_actuator_a9f1b744baa308c5c9fed6895a8816798_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_actuator_ae786a505db189182b2fec42f1bb82445}\index{Actuator@{Actuator}!Write@{Write}}
+\index{Write@{Write}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{Write()}{Write()}}
+{\footnotesize\ttfamily \label{class_actuator_ae786a505db189182b2fec42f1bb82445} 
+\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} Actuator\+::\+Write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}}}]{target}{}\end{DoxyParamCaption})}
+
+
+
+Aktuator Sollwert Schreiben. 
+
+Sollpositon Synchrone Schreiben.
+
+
+\begin{DoxyParams}{Parameter}
+{\em target} & Zielvorgabe in Grad \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Anzahl gefahrene Schritte. 
+\end{DoxyReturn}
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_actuator_ae786a505db189182b2fec42f1bb82445_cgraph}
+\end{center}
+\end{figure}
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_actuator_ae786a505db189182b2fec42f1bb82445_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_actuator_doc-variable-members}
+\doxysubsection{Dokumentation der Datenelemente}
+\Hypertarget{class_actuator_a4319d3173f74a448dc7dd10711fd5ee5}\index{Actuator@{Actuator}!\_actualSteps@{\_actualSteps}}
+\index{\_actualSteps@{\_actualSteps}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{\_actualSteps}{\_actualSteps}}
+{\footnotesize\ttfamily \label{class_actuator_a4319d3173f74a448dc7dd10711fd5ee5} 
+\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} Actuator\+::\+\_\+actual\+Steps = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_actuator_a195548ac6b8d5b487e20940e0920587e}\index{Actuator@{Actuator}!\_dir@{\_dir}}
+\index{\_dir@{\_dir}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{\_dir}{\_dir}}
+{\footnotesize\ttfamily \label{class_actuator_a195548ac6b8d5b487e20940e0920587e} 
+\mbox{\hyperlink{_types_8hpp_a07fb256c1077eea7a7726e948cc8ff0e}{int8}} Actuator\+::\+\_\+dir = 1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_actuator_aa0dc7ebca239c487d18c66a43296e0d3}\index{Actuator@{Actuator}!\_enabled@{\_enabled}}
+\index{\_enabled@{\_enabled}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{\_enabled}{\_enabled}}
+{\footnotesize\ttfamily \label{class_actuator_aa0dc7ebca239c487d18c66a43296e0d3} 
+\mbox{\hyperlink{_types_8hpp_a07fb256c1077eea7a7726e948cc8ff0e}{int8}} Actuator\+::\+\_\+enabled = -\/1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_actuator_a7b8ff8dc352dcbbd83ac0885bf134af2}\index{Actuator@{Actuator}!\_gearRatio@{\_gearRatio}}
+\index{\_gearRatio@{\_gearRatio}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{\_gearRatio}{\_gearRatio}}
+{\footnotesize\ttfamily \label{class_actuator_a7b8ff8dc352dcbbd83ac0885bf134af2} 
+\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} Actuator\+::\+\_\+gear\+Ratio = 1\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_actuator_a54b9ddb58f8b7730694d99c02b2cf77c}\index{Actuator@{Actuator}!\_id@{\_id}}
+\index{\_id@{\_id}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{\_id}{\_id}}
+{\footnotesize\ttfamily \label{class_actuator_a54b9ddb58f8b7730694d99c02b2cf77c} 
+\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} Actuator\+::\+\_\+id = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_actuator_a5ca69ff2e0b27db10f90a32914cf6ef8}\index{Actuator@{Actuator}!\_max@{\_max}}
+\index{\_max@{\_max}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{\_max}{\_max}}
+{\footnotesize\ttfamily \label{class_actuator_a5ca69ff2e0b27db10f90a32914cf6ef8} 
+\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} Actuator\+::\+\_\+max = 90\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_actuator_ade001d1ef9d41e0fb033940fb43f3b83}\index{Actuator@{Actuator}!\_microSteps@{\_microSteps}}
+\index{\_microSteps@{\_microSteps}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{\_microSteps}{\_microSteps}}
+{\footnotesize\ttfamily \label{class_actuator_ade001d1ef9d41e0fb033940fb43f3b83} 
+\mbox{\hyperlink{_types_8hpp_a34ecedcf03a70dc91e4616212d79267d}{uint8}} Actuator\+::\+\_\+micro\+Steps = 16\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_actuator_a511c8b67bd00781f24660bc76cafcaf4}\index{Actuator@{Actuator}!\_min@{\_min}}
+\index{\_min@{\_min}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{\_min}{\_min}}
+{\footnotesize\ttfamily \label{class_actuator_a511c8b67bd00781f24660bc76cafcaf4} 
+\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} Actuator\+::\+\_\+min = -\/90\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_actuator_a565677065af811cdd52de4de12276547}\index{Actuator@{Actuator}!\_motorSteps@{\_motorSteps}}
+\index{\_motorSteps@{\_motorSteps}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{\_motorSteps}{\_motorSteps}}
+{\footnotesize\ttfamily \label{class_actuator_a565677065af811cdd52de4de12276547} 
+\mbox{\hyperlink{_types_8hpp_a34ecedcf03a70dc91e4616212d79267d}{uint8}} Actuator\+::\+\_\+motor\+Steps = 200\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_actuator_af4b6e8a30c0de94b60c7dd88cadd1acb}\index{Actuator@{Actuator}!\_offset@{\_offset}}
+\index{\_offset@{\_offset}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{\_offset}{\_offset}}
+{\footnotesize\ttfamily \label{class_actuator_af4b6e8a30c0de94b60c7dd88cadd1acb} 
+\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} Actuator\+::\+\_\+offset\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_actuator_a4abaac0db5b87ce00c0dded74cc80a20}\index{Actuator@{Actuator}!\_previousSteps@{\_previousSteps}}
+\index{\_previousSteps@{\_previousSteps}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{\_previousSteps}{\_previousSteps}}
+{\footnotesize\ttfamily \label{class_actuator_a4abaac0db5b87ce00c0dded74cc80a20} 
+\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} Actuator\+::\+\_\+previous\+Steps = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_actuator_aa99ce4c70762d23baf12e051e75ebbab}\index{Actuator@{Actuator}!\_robFrame@{\_robFrame}}
+\index{\_robFrame@{\_robFrame}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{\_robFrame}{\_robFrame}}
+{\footnotesize\ttfamily \label{class_actuator_aa99ce4c70762d23baf12e051e75ebbab} 
+\mbox{\hyperlink{class_rob_frame}{Rob\+Frame}}\texorpdfstring{$\ast$}{*} Actuator\+::\+\_\+rob\+Frame\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Zeiger zu \doxylink{class_rob_frame}{Rob\+Frame}. 
+
+\Hypertarget{class_actuator_af7c222037d1b227f750c377eb49eb994}\index{Actuator@{Actuator}!\_rpm@{\_rpm}}
+\index{\_rpm@{\_rpm}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{\_rpm}{\_rpm}}
+{\footnotesize\ttfamily \label{class_actuator_af7c222037d1b227f750c377eb49eb994} 
+float Actuator\+::\+\_\+rpm = 10\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_actuator_a64d3661583813b8f259d3051d1626882}\index{Actuator@{Actuator}!\_state@{\_state}}
+\index{\_state@{\_state}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{\_state}{\_state}}
+{\footnotesize\ttfamily \label{class_actuator_a64d3661583813b8f259d3051d1626882} 
+\mbox{\hyperlink{_types_8hpp_a7472db64fa0f8253f82d7452d6786968}{word}} Actuator\+::\+\_\+state = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_actuator_ab8293059665eefc50d9050c9639787c1}\index{Actuator@{Actuator}!\_stepper@{\_stepper}}
+\index{\_stepper@{\_stepper}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{\_stepper}{\_stepper}}
+{\footnotesize\ttfamily \label{class_actuator_ab8293059665eefc50d9050c9639787c1} 
+Basic\+Stepper\+Driver\texorpdfstring{$\ast$}{*} Actuator\+::\+\_\+stepper\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Zeiger zur Stepper Objekt. 
+
+\Hypertarget{class_actuator_abef58f75c37d3155ecde1613e2cbc0d4}\index{Actuator@{Actuator}!\_targetSteps@{\_targetSteps}}
+\index{\_targetSteps@{\_targetSteps}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{\_targetSteps}{\_targetSteps}}
+{\footnotesize\ttfamily \label{class_actuator_abef58f75c37d3155ecde1613e2cbc0d4} 
+\mbox{\hyperlink{_types_8hpp_abcfb764e2f77b82e8e2113b8857a51cb}{int32}} Actuator\+::\+\_\+target\+Steps = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_actuator_a13a30cb5ac83c9f04a5e592b2cb3dc0b}\index{Actuator@{Actuator}!\_timeOfDelay@{\_timeOfDelay}}
+\index{\_timeOfDelay@{\_timeOfDelay}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{\_timeOfDelay}{\_timeOfDelay}}
+{\footnotesize\ttfamily \label{class_actuator_a13a30cb5ac83c9f04a5e592b2cb3dc0b} 
+\mbox{\hyperlink{_types_8hpp_ab7078bf13036f3e78534da3ad4149dc2}{uint16}} Actuator\+::\+\_\+time\+Of\+Delay = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_actuator_a8f35086212a620c907154439718570ee}\index{Actuator@{Actuator}!Accuracy@{Accuracy}}
+\index{Accuracy@{Accuracy}!Actuator@{Actuator}}
+\doxysubsubsection{\texorpdfstring{Accuracy}{Accuracy}}
+{\footnotesize\ttfamily \label{class_actuator_a8f35086212a620c907154439718570ee} 
+\mbox{\hyperlink{_types_8hpp_a209decd2d9a8cd5f1697cdb6e00f1cd7}{int16}} Actuator\+::\+Accuracy}
+
+
+
+Genauigkeit. 
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_actuator_8hpp}{Actuator.\+hpp}}\item 
+\mbox{\hyperlink{_actuator_8cpp}{Actuator.\+cpp}}\end{DoxyCompactItemize}

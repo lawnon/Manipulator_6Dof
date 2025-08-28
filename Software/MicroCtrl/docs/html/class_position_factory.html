@@ -1,0 +1,961 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Manipulator mit sechs Freiheitsgraden: PositionFactory Klassenreferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Manipulator mit sechs Freiheitsgraden<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Konstruktion, Modellierung und Programmierung der inversen Kinematik eines experimentellen Manipulators mit sechs Freiheitsgraden</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_position_factory.html','','class_position_factory-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">PositionFactory Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_position_factory_8hpp_source.html">PositionFactory.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Zusammengehörigkeiten von PositionFactory:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_factory__coll__graph.png" border="0" usemap="#a_position_factory_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="a_position_factory_coll__map" id="a_position_factory_coll__map">
+<area shape="rect" title=" " alt="" coords="372,197,485,223"/>
+<area shape="rect" href="class_rob_frame.html" title=" " alt="" coords="323,293,406,319"/>
+<area shape="poly" title=" " alt="" coords="442,235,444,253,439,271,425,286,408,296,405,291,422,281,434,268,439,253,436,236"/>
+<area shape="poly" title=" " alt="" coords="357,280,358,262,364,245,377,231,393,221,396,225,380,235,368,248,363,263,363,280"/>
+<area shape="rect" href="class_commands.html" title=" " alt="" coords="565,489,653,515"/>
+<area shape="poly" title=" " alt="" coords="420,307,513,316,554,326,581,341,590,364,598,406,610,489,605,490,593,407,585,366,577,344,552,331,512,322,419,312"/>
+<area shape="rect" href="class_kinematic.html" title=" " alt="" coords="83,489,163,515"/>
+<area shape="poly" title=" " alt="" coords="310,310,256,312,200,318,151,328,133,336,121,344,111,361,105,380,103,421,111,459,121,488,116,490,106,461,98,421,99,379,106,359,117,341,130,331,149,323,199,312,256,307,309,305"/>
+<area shape="rect" href="class_actuator.html" title=" " alt="" coords="329,489,400,515"/>
+<area shape="poly" title=" " alt="" coords="374,332,375,342,380,404,375,466,371,490,365,488,370,465,375,404,370,343,368,333"/>
+<area shape="rect" href="struct_posture.html" title=" " alt="" coords="245,197,311,223"/>
+<area shape="poly" title=" " alt="" coords="285,235,292,252,301,268,317,281,335,291,332,296,314,285,297,271,287,255,280,237"/>
+<area shape="poly" title=" " alt="" coords="550,493,525,483,503,467,490,452,482,436,476,405,471,374,464,360,452,345,430,329,405,319,407,314,433,324,456,341,469,357,476,373,482,404,487,434,494,449,506,463,528,478,552,488"/>
+<area shape="rect" href="struct_command.html" title=" " alt="" coords="669,293,751,319"/>
+<area shape="poly" title=" " alt="" coords="715,333,714,362,710,397,701,434,683,467,667,482,649,492,646,487,664,477,679,464,696,432,705,396,709,362,709,332"/>
+<area shape="poly" title=" " alt="" coords="171,481,193,464,204,448,209,433,212,402,215,372,222,356,235,341,255,326,277,316,322,306,323,312,279,321,257,331,238,345,227,359,220,373,217,403,215,434,209,450,197,467,174,485"/>
+<area shape="rect" href="struct_dh_param.html" title=" " alt="" coords="5,293,81,319"/>
+<area shape="poly" title=" " alt="" coords="39,333,33,362,30,396,34,431,47,464,63,480,84,490,82,495,60,484,42,467,28,433,25,396,27,361,33,332"/>
+<area shape="poly" title=" " alt="" coords="337,481,328,466,316,433,312,404,316,375,328,342,336,328,347,317,351,321,340,331,332,344,321,377,317,404,321,431,332,464,341,478"/>
+<area shape="rect" href="struct_pos_data.html" title=" " alt="" coords="393,101,465,127"/>
+<area shape="poly" title=" " alt="" coords="431,141,431,197,426,197,426,141"/>
+<area shape="rect" href="structs_position.html" title=" " alt="" coords="341,5,417,31"/>
+<area shape="poly" title=" " alt="" coords="385,43,396,76,416,100,412,103,392,79,380,45"/>
+<area shape="rect" href="structs_posture.html" title=" " alt="" coords="442,5,517,31"/>
+<area shape="poly" title=" " alt="" coords="470,44,452,79,438,102,434,100,448,76,465,42"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">Legende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:ae66a8fe9b51a518c157bfb90e9645eb7" id="r_ae66a8fe9b51a518c157bfb90e9645eb7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae66a8fe9b51a518c157bfb90e9645eb7">PositionFactory</a> ()</td></tr>
+<tr class="memdesc:ae66a8fe9b51a518c157bfb90e9645eb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Klassen-Objekt erstellen.  <br /></td></tr>
+<tr class="memitem:a04babbfb40f05b34033fecfe14220558" id="r_a04babbfb40f05b34033fecfe14220558"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04babbfb40f05b34033fecfe14220558">~PositionFactory</a> ()</td></tr>
+<tr class="memdesc:a04babbfb40f05b34033fecfe14220558"><td class="mdescLeft">&#160;</td><td class="mdescRight">Datenarray Vernichten.  <br /></td></tr>
+<tr class="memitem:a2377a4cc3cff95f26764b2baef0a7e4b" id="r_a2377a4cc3cff95f26764b2baef0a7e4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2377a4cc3cff95f26764b2baef0a7e4b">Init</a> (<a class="el" href="class_rob_frame.html">RobFrame</a> *robFrame)</td></tr>
+<tr class="memdesc:a2377a4cc3cff95f26764b2baef0a7e4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">RobFrameWork Zeigerzuweiseung und Speicherplatz allozieren.  <br /></td></tr>
+<tr class="memitem:ab350bdbae8465ca901ef992a75619adf" id="r_ab350bdbae8465ca901ef992a75619adf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab350bdbae8465ca901ef992a75619adf">Setup</a> ()</td></tr>
+<tr class="memdesc:ab350bdbae8465ca901ef992a75619adf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisierung.  <br /></td></tr>
+<tr class="memitem:a6f63c0030222d68a19bf5a16fe3af2cf" id="r_a6f63c0030222d68a19bf5a16fe3af2cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_posture.html">Posture</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f63c0030222d68a19bf5a16fe3af2cf">DecodePosture</a> (String input, String filter=&quot;,&quot;)</td></tr>
+<tr class="memdesc:a6f63c0030222d68a19bf5a16fe3af2cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">String to <a class="el" href="struct_position.html">Position</a>.  <br /></td></tr>
+<tr class="memitem:a01c1842e953f689ed2f4c984868ddfe2" id="r_a01c1842e953f689ed2f4c984868ddfe2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_position.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01c1842e953f689ed2f4c984868ddfe2">DecodePosition</a> (String input, String filter=&quot;,&quot;)</td></tr>
+<tr class="memdesc:a01c1842e953f689ed2f4c984868ddfe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">String to <a class="el" href="struct_position.html">Position</a>.  <br /></td></tr>
+<tr class="memitem:a33ee29e54af9d81fa9ad6cab1e2a380d" id="r_a33ee29e54af9d81fa9ad6cab1e2a380d"><td class="memItemLeft" align="right" valign="top">int &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a33ee29e54af9d81fa9ad6cab1e2a380d">AddPosition</a> (String content, <a class="el" href="_types_8hpp.html#a3bb467bb1e8d9236bdea09a4367a11a9">PosState</a> state, char filter=' ')</td></tr>
+<tr class="memdesc:a33ee29e54af9d81fa9ad6cab1e2a380d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_position.html">Position</a>, Winkelstellung hinzufügen.  <br /></td></tr>
+<tr class="memitem:a0fbf29d838686c1d5081592a6c918f02" id="r_a0fbf29d838686c1d5081592a6c918f02"><td class="memItemLeft" align="right" valign="top">int &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0fbf29d838686c1d5081592a6c918f02">Count</a> ()</td></tr>
+<tr class="memdesc:a0fbf29d838686c1d5081592a6c918f02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Datensatzt anzahl.  <br /></td></tr>
+<tr class="memitem:ab504a3521ccf34cb6556f318ae13aaef" id="r_ab504a3521ccf34cb6556f318ae13aaef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab504a3521ccf34cb6556f318ae13aaef">Get</a> (String identifier)</td></tr>
+<tr class="memdesc:ab504a3521ccf34cb6556f318ae13aaef"><td class="mdescLeft">&#160;</td><td class="mdescRight">nicht Implementiert  <br /></td></tr>
+<tr class="memitem:a32a2e62862a90d288896427fb63d9aaf" id="r_a32a2e62862a90d288896427fb63d9aaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32a2e62862a90d288896427fb63d9aaf">Del</a> (String identifier)</td></tr>
+<tr class="memdesc:a32a2e62862a90d288896427fb63d9aaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">nicht Implementiert  <br /></td></tr>
+<tr class="memitem:a14c9e06045694d07b9ba26427199708d" id="r_a14c9e06045694d07b9ba26427199708d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14c9e06045694d07b9ba26427199708d">LogInfo</a> ()</td></tr>
+<tr class="memdesc:a14c9e06045694d07b9ba26427199708d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Debug info ausgeben.  <br /></td></tr>
+<tr class="memitem:ab50bbb05f5685d520f99dc1588925764" id="r_ab50bbb05f5685d520f99dc1588925764"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab50bbb05f5685d520f99dc1588925764">LogPositions</a> (<a class="el" href="_types_8hpp.html#a3bb467bb1e8d9236bdea09a4367a11a9">PosState</a> state)</td></tr>
+<tr class="memdesc:ab50bbb05f5685d520f99dc1588925764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Datensaetzte ausgeben.  <br /></td></tr>
+<tr class="memitem:a5d95619f618e340dde30bf1fea01acee" id="r_a5d95619f618e340dde30bf1fea01acee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_position.html">Position</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d95619f618e340dde30bf1fea01acee">operator[]</a> (int index)</td></tr>
+<tr class="memdesc:a5d95619f618e340dde30bf1fea01acee"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="struct_position.html">Position</a> gemaeße index wiedergeben.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Methoden</h2></td></tr>
+<tr class="memitem:ab654a8e160d6616c2052d9627eca6826" id="r_ab654a8e160d6616c2052d9627eca6826"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab654a8e160d6616c2052d9627eca6826">RangeCheck</a> ()</td></tr>
+<tr class="memdesc:ab654a8e160d6616c2052d9627eca6826"><td class="mdescLeft">&#160;</td><td class="mdescRight">Postion Array Bereichs abfrage.  <br /></td></tr>
+<tr class="memitem:adb62693a75e3612913944f580f924269" id="r_adb62693a75e3612913944f580f924269"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs_position.html">sPosition</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb62693a75e3612913944f580f924269">TosPosition</a> (<a class="el" href="struct_position.html">Position</a> ps)</td></tr>
+<tr class="memdesc:adb62693a75e3612913944f580f924269"><td class="mdescLeft">&#160;</td><td class="mdescRight">Umwandlung des structs von float to Short int.  <br /></td></tr>
+<tr class="memitem:abb3a019e903453ff914257cb965d8474" id="r_abb3a019e903453ff914257cb965d8474"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs_posture.html">sPosture</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb3a019e903453ff914257cb965d8474">TosPosture</a> (<a class="el" href="struct_posture.html">Posture</a> ps)</td></tr>
+<tr class="memdesc:abb3a019e903453ff914257cb965d8474"><td class="mdescLeft">&#160;</td><td class="mdescRight">float to Short Int  <br /></td></tr>
+<tr class="memitem:a3aa174e21b064718a7dc6d5eec6c0988" id="r_a3aa174e21b064718a7dc6d5eec6c0988"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_types_8hpp.html#a3bb467bb1e8d9236bdea09a4367a11a9">PosState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3aa174e21b064718a7dc6d5eec6c0988">Decode</a> (String content, char delimiter=',')</td></tr>
+<tr class="memdesc:a3aa174e21b064718a7dc6d5eec6c0988"><td class="mdescLeft">&#160;</td><td class="mdescRight">Positions zustand Validieren und Ermitteln.  <br /></td></tr>
+<tr class="memitem:a627ca4782ea413ec821bedf1aaf116ac" id="r_a627ca4782ea413ec821bedf1aaf116ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a627ca4782ea413ec821bedf1aaf116ac">Update</a> (int index, String &amp;params, <a class="el" href="_types_8hpp.html#a3bb467bb1e8d9236bdea09a4367a11a9">PosState</a> state)</td></tr>
+<tr class="memdesc:a627ca4782ea413ec821bedf1aaf116ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Positionsliste Aktualisieren.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attribute</h2></td></tr>
+<tr class="memitem:abef41677e6ec49c3022e24227f791a46" id="r_abef41677e6ec49c3022e24227f791a46"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_rob_frame.html">RobFrame</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abef41677e6ec49c3022e24227f791a46">_robFrame</a></td></tr>
+<tr class="memdesc:abef41677e6ec49c3022e24227f791a46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zeiger Zur <a class="el" href="class_rob_frame.html">RobFrame</a>.  <br /></td></tr>
+<tr class="memitem:aca701b2a08c1623508fd324bc7a0c6b8" id="r_aca701b2a08c1623508fd324bc7a0c6b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_pos_data.html">PosData</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aca701b2a08c1623508fd324bc7a0c6b8">_data</a></td></tr>
+<tr class="memdesc:aca701b2a08c1623508fd324bc7a0c6b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array von Positions Daten.  <br /></td></tr>
+<tr class="memitem:a5e4feb4a8df8183e7f245de2a8df1cc2" id="r_a5e4feb4a8df8183e7f245de2a8df1cc2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e4feb4a8df8183e7f245de2a8df1cc2">_definedCount</a> = 0</td></tr>
+<tr class="memdesc:a5e4feb4a8df8183e7f245de2a8df1cc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Anzahl definierte Datensatze innerhalb des Arrays.  <br /></td></tr>
+</table>
+<a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Beschreibung der Konstruktoren und Destruktoren</h2>
+<a id="ae66a8fe9b51a518c157bfb90e9645eb7" name="ae66a8fe9b51a518c157bfb90e9645eb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66a8fe9b51a518c157bfb90e9645eb7">&#9670;&#160;</a></span>PositionFactory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PositionFactory::PositionFactory </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Klassen-Objekt erstellen. </p>
+
+</div>
+</div>
+<a id="a04babbfb40f05b34033fecfe14220558" name="a04babbfb40f05b34033fecfe14220558"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04babbfb40f05b34033fecfe14220558">&#9670;&#160;</a></span>~PositionFactory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PositionFactory::~PositionFactory </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Datenarray Vernichten. </p>
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_factory_a04babbfb40f05b34033fecfe14220558_cgraph.png" border="0" usemap="#aclass_position_factory_a04babbfb40f05b34033fecfe14220558_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_position_factory_a04babbfb40f05b34033fecfe14220558_cgraph" id="aclass_position_factory_a04babbfb40f05b34033fecfe14220558_cgraph">
+<area shape="rect" title="Datenarray Vernichten." alt="" coords="5,5,181,45"/>
+<area shape="rect" href="namespace_logger.html#a83c3562c93d0101fc7fadc86e0482b2d" title=" " alt="" coords="229,13,316,38"/>
+<area shape="poly" title=" " alt="" coords="181,23,216,23,216,28,181,28"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="a33ee29e54af9d81fa9ad6cab1e2a380d" name="a33ee29e54af9d81fa9ad6cab1e2a380d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33ee29e54af9d81fa9ad6cab1e2a380d">&#9670;&#160;</a></span>AddPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int &amp; PositionFactory::AddPosition </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>content</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#a3bb467bb1e8d9236bdea09a4367a11a9">PosState</a></td>          <td class="paramname"><span class="paramname"><em>state</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>filter</em></span><span class="paramdefsep"> = </span><span class="paramdefval">'&#160;'</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_position.html">Position</a>, Winkelstellung hinzufügen. </p>
+<p>Neuen Datensatzt im allozierten Datenarray belegen.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">content</td><td>String </td></tr>
+    <tr><td class="paramname">state</td><td>Type </td></tr>
+    <tr><td class="paramname">filter</td><td>Trennzeichen </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>index des hinzugefügte <a class="el" href="struct_position.html">Position</a> </dd></dl>
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_factory_a33ee29e54af9d81fa9ad6cab1e2a380d_cgraph.png" border="0" usemap="#aclass_position_factory_a33ee29e54af9d81fa9ad6cab1e2a380d_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_position_factory_a33ee29e54af9d81fa9ad6cab1e2a380d_cgraph" id="aclass_position_factory_a33ee29e54af9d81fa9ad6cab1e2a380d_cgraph">
+<area shape="rect" title="Position, Winkelstellung hinzufügen." alt="" coords="5,56,196,81"/>
+<area shape="rect" href="namespace_logger.html#a83c3562c93d0101fc7fadc86e0482b2d" title=" " alt="" coords="549,5,636,31"/>
+<area shape="poly" title=" " alt="" coords="165,53,244,41,402,26,535,18,536,23,403,31,244,46,165,59"/>
+<area shape="rect" href="class_position_factory.html#ab654a8e160d6616c2052d9627eca6826" title="Postion Array Bereichs abfrage." alt="" coords="244,56,439,81"/>
+<area shape="poly" title=" " alt="" coords="196,66,230,66,230,71,196,71"/>
+<area shape="rect" href="class_position_factory.html#a627ca4782ea413ec821bedf1aaf116ac" title="Positionsliste Aktualisieren." alt="" coords="260,105,423,131"/>
+<area shape="poly" title=" " alt="" coords="164,79,266,100,265,105,163,84"/>
+<area shape="poly" title=" " alt="" coords="405,53,536,27,537,32,406,58"/>
+<area shape="rect" href="class_position_factory.html#a01c1842e953f689ed2f4c984868ddfe2" title="String to Position." alt="" coords="487,55,699,80"/>
+<area shape="poly" title=" " alt="" coords="405,103,515,80,516,85,406,108"/>
+<area shape="rect" href="class_position_factory.html#a6f63c0030222d68a19bf5a16fe3af2cf" title="String to Position." alt="" coords="487,104,698,129"/>
+<area shape="poly" title=" " alt="" coords="423,115,473,115,473,120,423,120"/>
+<area shape="rect" href="class_position_factory.html#adb62693a75e3612913944f580f924269" title="Umwandlung des structs von float to Short int." alt="" coords="498,153,687,179"/>
+<area shape="poly" title=" " alt="" coords="409,128,513,148,512,153,408,133"/>
+<area shape="rect" href="class_position_factory.html#abb3a019e903453ff914257cb965d8474" title="float to Short Int" alt="" coords="499,203,686,228"/>
+<area shape="poly" title=" " alt="" coords="365,129,420,159,488,189,512,197,511,202,486,194,417,163,363,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0fbf29d838686c1d5081592a6c918f02" name="a0fbf29d838686c1d5081592a6c918f02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fbf29d838686c1d5081592a6c918f02">&#9670;&#160;</a></span>Count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int &amp; PositionFactory::Count </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Datensatzt anzahl. </p>
+<p>Anzahl belegte Speicherplaetze wiedergeben. </p>
+
+</div>
+</div>
+<a id="a3aa174e21b064718a7dc6d5eec6c0988" name="a3aa174e21b064718a7dc6d5eec6c0988"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aa174e21b064718a7dc6d5eec6c0988">&#9670;&#160;</a></span>Decode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_types_8hpp.html#a3bb467bb1e8d9236bdea09a4367a11a9">PosState</a> PositionFactory::Decode </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>content</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>delimiter</em></span><span class="paramdefsep"> = </span><span class="paramdefval">','</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Positions zustand Validieren und Ermitteln. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">content</td><td>String <a class="el" href="struct_position.html">Position</a> </td></tr>
+    <tr><td class="paramname">delimiter</td><td>variable Trennzeichen </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Positionszusstand </dd></dl>
+
+</div>
+</div>
+<a id="a01c1842e953f689ed2f4c984868ddfe2" name="a01c1842e953f689ed2f4c984868ddfe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01c1842e953f689ed2f4c984868ddfe2">&#9670;&#160;</a></span>DecodePosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_position.html">Position</a> PositionFactory::DecodePosition </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>filter</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;,&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>String to <a class="el" href="struct_position.html">Position</a>. </p>
+<p>String Arrray in Positions-Struktur Transformieren.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>string </td></tr>
+    <tr><td class="paramname">filter</td><td>Trennzeichen </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd><a class="el" href="struct_position.html">Position</a> </dd></dl>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_factory_a01c1842e953f689ed2f4c984868ddfe2_icgraph.png" border="0" usemap="#aclass_position_factory_a01c1842e953f689ed2f4c984868ddfe2_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_position_factory_a01c1842e953f689ed2f4c984868ddfe2_icgraph" id="aclass_position_factory_a01c1842e953f689ed2f4c984868ddfe2_icgraph">
+<area shape="rect" title="String to Position." alt="" coords="455,5,667,31"/>
+<area shape="rect" href="class_position_factory.html#a627ca4782ea413ec821bedf1aaf116ac" title="Positionsliste Aktualisieren." alt="" coords="244,5,407,31"/>
+<area shape="poly" title=" " alt="" coords="441,21,407,21,407,15,441,15"/>
+<area shape="rect" href="class_position_factory.html#a33ee29e54af9d81fa9ad6cab1e2a380d" title="Position, Winkelstellung hinzufügen." alt="" coords="5,5,196,31"/>
+<area shape="poly" title=" " alt="" coords="230,21,196,21,196,15,230,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6f63c0030222d68a19bf5a16fe3af2cf" name="a6f63c0030222d68a19bf5a16fe3af2cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f63c0030222d68a19bf5a16fe3af2cf">&#9670;&#160;</a></span>DecodePosture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_posture.html">Posture</a> PositionFactory::DecodePosture </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>input</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>filter</em></span><span class="paramdefsep"> = </span><span class="paramdefval">&quot;,&quot;</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>String to <a class="el" href="struct_position.html">Position</a>. </p>
+<p>String Array in Winkelstellungs-Struktur Transformieren.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>string </td></tr>
+    <tr><td class="paramname">filter</td><td>Trennzeichen </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Winkelstellung </dd></dl>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_factory_a6f63c0030222d68a19bf5a16fe3af2cf_icgraph.png" border="0" usemap="#aclass_position_factory_a6f63c0030222d68a19bf5a16fe3af2cf_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_position_factory_a6f63c0030222d68a19bf5a16fe3af2cf_icgraph" id="aclass_position_factory_a6f63c0030222d68a19bf5a16fe3af2cf_icgraph">
+<area shape="rect" title="String to Position." alt="" coords="455,5,665,31"/>
+<area shape="rect" href="class_position_factory.html#a627ca4782ea413ec821bedf1aaf116ac" title="Positionsliste Aktualisieren." alt="" coords="244,5,407,31"/>
+<area shape="poly" title=" " alt="" coords="441,21,407,21,407,15,441,15"/>
+<area shape="rect" href="class_position_factory.html#a33ee29e54af9d81fa9ad6cab1e2a380d" title="Position, Winkelstellung hinzufügen." alt="" coords="5,5,196,31"/>
+<area shape="poly" title=" " alt="" coords="230,21,196,21,196,15,230,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a32a2e62862a90d288896427fb63d9aaf" name="a32a2e62862a90d288896427fb63d9aaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32a2e62862a90d288896427fb63d9aaf">&#9670;&#160;</a></span>Del()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PositionFactory::Del </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>identifier</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>nicht Implementiert </p>
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_factory_a32a2e62862a90d288896427fb63d9aaf_cgraph.png" border="0" usemap="#aclass_position_factory_a32a2e62862a90d288896427fb63d9aaf_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_position_factory_a32a2e62862a90d288896427fb63d9aaf_cgraph" id="aclass_position_factory_a32a2e62862a90d288896427fb63d9aaf_cgraph">
+<area shape="rect" title="nicht Implementiert" alt="" coords="5,5,145,31"/>
+<area shape="rect" href="namespace_logger.html#a83c3562c93d0101fc7fadc86e0482b2d" title=" " alt="" coords="193,5,280,31"/>
+<area shape="poly" title=" " alt="" coords="145,15,180,15,180,21,145,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab504a3521ccf34cb6556f318ae13aaef" name="ab504a3521ccf34cb6556f318ae13aaef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab504a3521ccf34cb6556f318ae13aaef">&#9670;&#160;</a></span>Get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PositionFactory::Get </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>identifier</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>nicht Implementiert </p>
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_factory_ab504a3521ccf34cb6556f318ae13aaef_cgraph.png" border="0" usemap="#aclass_position_factory_ab504a3521ccf34cb6556f318ae13aaef_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_position_factory_ab504a3521ccf34cb6556f318ae13aaef_cgraph" id="aclass_position_factory_ab504a3521ccf34cb6556f318ae13aaef_cgraph">
+<area shape="rect" title="nicht Implementiert" alt="" coords="5,5,148,31"/>
+<area shape="rect" href="namespace_logger.html#a83c3562c93d0101fc7fadc86e0482b2d" title=" " alt="" coords="196,5,283,31"/>
+<area shape="poly" title=" " alt="" coords="148,15,182,15,182,21,148,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2377a4cc3cff95f26764b2baef0a7e4b" name="a2377a4cc3cff95f26764b2baef0a7e4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2377a4cc3cff95f26764b2baef0a7e4b">&#9670;&#160;</a></span>Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PositionFactory::Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_rob_frame.html">RobFrame</a> *</td>          <td class="paramname"><span class="paramname"><em>robFrame</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>RobFrameWork Zeigerzuweiseung und Speicherplatz allozieren. </p>
+<p>Initialisierung Speicher Allokation </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">robFrame</td><td>Zeiger </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a id="a14c9e06045694d07b9ba26427199708d" name="a14c9e06045694d07b9ba26427199708d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14c9e06045694d07b9ba26427199708d">&#9670;&#160;</a></span>LogInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PositionFactory::LogInfo </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Debug info ausgeben. </p>
+<p>Debug Daten ausdrucken. </p>
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_factory_a14c9e06045694d07b9ba26427199708d_cgraph.png" border="0" usemap="#aclass_position_factory_a14c9e06045694d07b9ba26427199708d_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_position_factory_a14c9e06045694d07b9ba26427199708d_cgraph" id="aclass_position_factory_a14c9e06045694d07b9ba26427199708d_cgraph">
+<area shape="rect" title="Debug info ausgeben." alt="" coords="5,5,168,31"/>
+<area shape="rect" href="namespace_logger.html#a83c3562c93d0101fc7fadc86e0482b2d" title=" " alt="" coords="216,5,303,31"/>
+<area shape="poly" title=" " alt="" coords="168,15,202,15,202,21,168,21"/>
+</map>
+</div>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_factory_a14c9e06045694d07b9ba26427199708d_icgraph.png" border="0" usemap="#aclass_position_factory_a14c9e06045694d07b9ba26427199708d_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_position_factory_a14c9e06045694d07b9ba26427199708d_icgraph" id="aclass_position_factory_a14c9e06045694d07b9ba26427199708d_icgraph">
+<area shape="rect" title="Debug info ausgeben." alt="" coords="208,5,371,31"/>
+<area shape="rect" href="class_position_factory.html#ab350bdbae8465ca901ef992a75619adf" title="Initialisierung." alt="" coords="5,5,160,31"/>
+<area shape="poly" title=" " alt="" coords="194,21,160,21,160,15,194,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab50bbb05f5685d520f99dc1588925764" name="ab50bbb05f5685d520f99dc1588925764"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab50bbb05f5685d520f99dc1588925764">&#9670;&#160;</a></span>LogPositions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PositionFactory::LogPositions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#a3bb467bb1e8d9236bdea09a4367a11a9">PosState</a></td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Datensaetzte ausgeben. </p>
+<p>Datensaetze gemaeß Type zum Serial Ausgeben.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Type</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_factory_ab50bbb05f5685d520f99dc1588925764_cgraph.png" border="0" usemap="#aclass_position_factory_ab50bbb05f5685d520f99dc1588925764_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_position_factory_ab50bbb05f5685d520f99dc1588925764_cgraph" id="aclass_position_factory_ab50bbb05f5685d520f99dc1588925764_cgraph">
+<area shape="rect" title="Datensaetzte ausgeben." alt="" coords="5,5,201,31"/>
+<area shape="rect" href="namespace_logger.html#a83c3562c93d0101fc7fadc86e0482b2d" title=" " alt="" coords="249,5,336,31"/>
+<area shape="poly" title=" " alt="" coords="202,15,236,15,236,21,202,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5d95619f618e340dde30bf1fea01acee" name="a5d95619f618e340dde30bf1fea01acee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d95619f618e340dde30bf1fea01acee">&#9670;&#160;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_position.html">Position</a> PositionFactory::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="struct_position.html">Position</a> gemaeße index wiedergeben. </p>
+<p>Datensatz index wiedergeben.</p>
+<dl class="section return"><dt>Rückgabe</dt><dd><a class="el" href="struct_position.html">Position</a> </dd></dl>
+
+</div>
+</div>
+<a id="ab654a8e160d6616c2052d9627eca6826" name="ab654a8e160d6616c2052d9627eca6826"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab654a8e160d6616c2052d9627eca6826">&#9670;&#160;</a></span>RangeCheck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t PositionFactory::RangeCheck </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Postion Array Bereichs abfrage. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>1 wenn nicht voll -1 wenn voll</dd></dl>
+<p>Pruft ob die Menge von Positionen Überschritten wurden ist </p>
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_factory_ab654a8e160d6616c2052d9627eca6826_cgraph.png" border="0" usemap="#aclass_position_factory_ab654a8e160d6616c2052d9627eca6826_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_position_factory_ab654a8e160d6616c2052d9627eca6826_cgraph" id="aclass_position_factory_ab654a8e160d6616c2052d9627eca6826_cgraph">
+<area shape="rect" title="Postion Array Bereichs abfrage." alt="" coords="5,5,200,31"/>
+<area shape="rect" href="namespace_logger.html#a83c3562c93d0101fc7fadc86e0482b2d" title=" " alt="" coords="248,5,335,31"/>
+<area shape="poly" title=" " alt="" coords="200,15,234,15,234,21,200,21"/>
+</map>
+</div>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_factory_ab654a8e160d6616c2052d9627eca6826_icgraph.png" border="0" usemap="#aclass_position_factory_ab654a8e160d6616c2052d9627eca6826_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_position_factory_ab654a8e160d6616c2052d9627eca6826_icgraph" id="aclass_position_factory_ab654a8e160d6616c2052d9627eca6826_icgraph">
+<area shape="rect" title="Postion Array Bereichs abfrage." alt="" coords="244,5,439,31"/>
+<area shape="rect" href="class_position_factory.html#a33ee29e54af9d81fa9ad6cab1e2a380d" title="Position, Winkelstellung hinzufügen." alt="" coords="5,5,196,31"/>
+<area shape="poly" title=" " alt="" coords="230,21,196,21,196,15,230,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab350bdbae8465ca901ef992a75619adf" name="ab350bdbae8465ca901ef992a75619adf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab350bdbae8465ca901ef992a75619adf">&#9670;&#160;</a></span>Setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PositionFactory::Setup </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialisierung. </p>
+<p>Allozierte Speicherplatz validieren. </p>
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_factory_ab350bdbae8465ca901ef992a75619adf_cgraph.png" border="0" usemap="#aclass_position_factory_ab350bdbae8465ca901ef992a75619adf_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_position_factory_ab350bdbae8465ca901ef992a75619adf_cgraph" id="aclass_position_factory_ab350bdbae8465ca901ef992a75619adf_cgraph">
+<area shape="rect" title="Initialisierung." alt="" coords="5,5,160,31"/>
+<area shape="rect" href="namespace_logger.html#a83c3562c93d0101fc7fadc86e0482b2d" title=" " alt="" coords="419,5,505,31"/>
+<area shape="poly" title=" " alt="" coords="160,15,405,15,405,21,160,21"/>
+<area shape="rect" href="class_position_factory.html#a14c9e06045694d07b9ba26427199708d" title="Debug info ausgeben." alt="" coords="208,31,371,56"/>
+<area shape="poly" title=" " alt="" coords="161,25,195,29,194,34,160,30"/>
+<area shape="poly" title=" " alt="" coords="370,29,405,24,405,29,371,34"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adb62693a75e3612913944f580f924269" name="adb62693a75e3612913944f580f924269"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb62693a75e3612913944f580f924269">&#9670;&#160;</a></span>TosPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs_position.html">sPosition</a> PositionFactory::TosPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_position.html">Position</a></td>          <td class="paramname"><span class="paramname"><em>ps</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Umwandlung des structs von float to Short int. </p>
+<p>@breif float to Short Int </p><dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ps</td><td><a class="el" href="struct_position.html">Position</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Short Positionen </dd></dl>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_factory_adb62693a75e3612913944f580f924269_icgraph.png" border="0" usemap="#aclass_position_factory_adb62693a75e3612913944f580f924269_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_position_factory_adb62693a75e3612913944f580f924269_icgraph" id="aclass_position_factory_adb62693a75e3612913944f580f924269_icgraph">
+<area shape="rect" title="Umwandlung des structs von float to Short int." alt="" coords="455,5,644,31"/>
+<area shape="rect" href="class_position_factory.html#a627ca4782ea413ec821bedf1aaf116ac" title="Positionsliste Aktualisieren." alt="" coords="244,5,407,31"/>
+<area shape="poly" title=" " alt="" coords="441,21,407,21,407,15,441,15"/>
+<area shape="rect" href="class_position_factory.html#a33ee29e54af9d81fa9ad6cab1e2a380d" title="Position, Winkelstellung hinzufügen." alt="" coords="5,5,196,31"/>
+<area shape="poly" title=" " alt="" coords="230,21,196,21,196,15,230,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abb3a019e903453ff914257cb965d8474" name="abb3a019e903453ff914257cb965d8474"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb3a019e903453ff914257cb965d8474">&#9670;&#160;</a></span>TosPosture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs_posture.html">sPosture</a> PositionFactory::TosPosture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_posture.html">Posture</a></td>          <td class="paramname"><span class="paramname"><em>ps</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>float to Short Int </p>
+<p>Umwandlung des structs von float to Short Int.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ps</td><td>Winkelstellung </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Short Winkelstellungen </dd></dl>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_factory_abb3a019e903453ff914257cb965d8474_icgraph.png" border="0" usemap="#aclass_position_factory_abb3a019e903453ff914257cb965d8474_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_position_factory_abb3a019e903453ff914257cb965d8474_icgraph" id="aclass_position_factory_abb3a019e903453ff914257cb965d8474_icgraph">
+<area shape="rect" title="float to Short Int" alt="" coords="455,5,641,31"/>
+<area shape="rect" href="class_position_factory.html#a627ca4782ea413ec821bedf1aaf116ac" title="Positionsliste Aktualisieren." alt="" coords="244,5,407,31"/>
+<area shape="poly" title=" " alt="" coords="441,21,407,21,407,15,441,15"/>
+<area shape="rect" href="class_position_factory.html#a33ee29e54af9d81fa9ad6cab1e2a380d" title="Position, Winkelstellung hinzufügen." alt="" coords="5,5,196,31"/>
+<area shape="poly" title=" " alt="" coords="230,21,196,21,196,15,230,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a627ca4782ea413ec821bedf1aaf116ac" name="a627ca4782ea413ec821bedf1aaf116ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a627ca4782ea413ec821bedf1aaf116ac">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PositionFactory::Update </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String &amp;</td>          <td class="paramname"><span class="paramname"><em>params</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_types_8hpp.html#a3bb467bb1e8d9236bdea09a4367a11a9">PosState</a></td>          <td class="paramname"><span class="paramname"><em>state</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Positionsliste Aktualisieren. </p>
+<p>Vorhandene Datensaetze Aktualisieren.</p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Datensatzes </td></tr>
+    <tr><td class="paramname">params</td><td>String Datensatz @state param Positions Type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>void </dd></dl>
+<div class="dynheader">
+Hier ist ein Graph, der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_factory_a627ca4782ea413ec821bedf1aaf116ac_cgraph.png" border="0" usemap="#aclass_position_factory_a627ca4782ea413ec821bedf1aaf116ac_cgraph" loading="lazy" alt=""/></div>
+<map name="aclass_position_factory_a627ca4782ea413ec821bedf1aaf116ac_cgraph" id="aclass_position_factory_a627ca4782ea413ec821bedf1aaf116ac_cgraph">
+<area shape="rect" title="Positionsliste Aktualisieren." alt="" coords="5,80,168,105"/>
+<area shape="rect" href="class_position_factory.html#a01c1842e953f689ed2f4c984868ddfe2" title="String to Position." alt="" coords="216,5,428,31"/>
+<area shape="poly" title=" " alt="" coords="116,77,215,39,244,31,246,36,217,45,117,82"/>
+<area shape="rect" href="class_position_factory.html#a6f63c0030222d68a19bf5a16fe3af2cf" title="String to Position." alt="" coords="217,55,427,80"/>
+<area shape="poly" title=" " alt="" coords="168,81,203,77,203,83,168,87"/>
+<area shape="rect" href="class_position_factory.html#adb62693a75e3612913944f580f924269" title="Umwandlung des structs von float to Short int." alt="" coords="227,104,417,129"/>
+<area shape="poly" title=" " alt="" coords="168,98,214,103,214,108,168,104"/>
+<area shape="rect" href="class_position_factory.html#abb3a019e903453ff914257cb965d8474" title="float to Short Int" alt="" coords="229,153,415,179"/>
+<area shape="poly" title=" " alt="" coords="120,103,217,138,250,147,249,153,215,143,118,108"/>
+</map>
+</div>
+<div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_position_factory_a627ca4782ea413ec821bedf1aaf116ac_icgraph.png" border="0" usemap="#aclass_position_factory_a627ca4782ea413ec821bedf1aaf116ac_icgraph" loading="lazy" alt=""/></div>
+<map name="aclass_position_factory_a627ca4782ea413ec821bedf1aaf116ac_icgraph" id="aclass_position_factory_a627ca4782ea413ec821bedf1aaf116ac_icgraph">
+<area shape="rect" title="Positionsliste Aktualisieren." alt="" coords="244,5,407,31"/>
+<area shape="rect" href="class_position_factory.html#a33ee29e54af9d81fa9ad6cab1e2a380d" title="Position, Winkelstellung hinzufügen." alt="" coords="5,5,196,31"/>
+<area shape="poly" title=" " alt="" coords="230,21,196,21,196,15,230,15"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="aca701b2a08c1623508fd324bc7a0c6b8" name="aca701b2a08c1623508fd324bc7a0c6b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca701b2a08c1623508fd324bc7a0c6b8">&#9670;&#160;</a></span>_data</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_pos_data.html">PosData</a>* PositionFactory::_data</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Array von Positions Daten. </p>
+
+</div>
+</div>
+<a id="a5e4feb4a8df8183e7f245de2a8df1cc2" name="a5e4feb4a8df8183e7f245de2a8df1cc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e4feb4a8df8183e7f245de2a8df1cc2">&#9670;&#160;</a></span>_definedCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PositionFactory::_definedCount = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Anzahl definierte Datensatze innerhalb des Arrays. </p>
+
+</div>
+</div>
+<a id="abef41677e6ec49c3022e24227f791a46" name="abef41677e6ec49c3022e24227f791a46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abef41677e6ec49c3022e24227f791a46">&#9670;&#160;</a></span>_robFrame</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_rob_frame.html">RobFrame</a>* PositionFactory::_robFrame</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zeiger Zur <a class="el" href="class_rob_frame.html">RobFrame</a>. </p>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Dateien:<ul>
+<li><a class="el" href="_position_factory_8hpp_source.html">PositionFactory.hpp</a></li>
+<li><a class="el" href="_position_factory_8cpp.html">PositionFactory.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="class_position_factory.html">PositionFactory</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

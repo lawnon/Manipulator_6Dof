@@ -60,13 +60,17 @@ namespace Logger{
     Serial.println("==>JT2: " + String(pt.Jt2));
     Serial.println("==>JT3: " + String(pt.Jt3));
     Serial.println("==>JT4: " + String(pt.Jt4));
+    Serial.println("==>JT3: " + String(pt.Jt5));
+    Serial.println("==>JT4: " + String(pt.Jt6));
   }
 
   void logln(Posture pt){
     Serial.println("==>" + String(pt.Jt1) +
                    ", " + String(pt.Jt2) +
                    ", " + String(pt.Jt3) +
-                   ", " + String(pt.Jt4));
+                   ", " + String(pt.Jt4) +
+                   ", " + String(pt.Jt5) +
+                   ", " + String(pt.Jt6));
   }
 
   void logln(Posture pt, String title){
@@ -74,7 +78,9 @@ namespace Logger{
                    ": " + String(pt.Jt1) +
                    ", " + String(pt.Jt2) +
                    ", " + String(pt.Jt3) +
-                   ", " + String(pt.Jt4));
+                   ", " + String(pt.Jt4) +
+                   ", " + String(pt.Jt5) +
+                   ", " + String(pt.Jt6));
   }
 
   String ptEncode(float val){
@@ -103,8 +109,10 @@ namespace Logger{
     String spt2 = ptEncode(pt.Jt2);
     String spt3 = ptEncode(pt.Jt3);
     String spt4 = ptEncode(pt.Jt4);
+    String spt5 = ptEncode(pt.Jt5);
+    String spt6 = ptEncode(pt.Jt6);
 
-    encode(spt1 + spt2 + spt3 + spt4);
+    encode(spt1 + spt2 + spt3 + spt4 + spt5 + spt6);
   }
 
   void logToSerial(String input){
@@ -176,7 +184,9 @@ namespace Logger{
                        ": " + String(pdata.Posture.Jt1) +
                        ", " + String(pdata.Posture.Jt2) +
                        ", " + String(pdata.Posture.Jt3) +
-                       ", " + String(pdata.Posture.Jt4));
+                       ", " + String(pdata.Posture.Jt4) +
+                       ", " + String(pdata.Posture.Jt5) +
+                       ", " + String(pdata.Posture.Jt6));
         break;
       case PosState::PosAndPost:
         Serial.println("==>" + String(pdata.Identifier) +
@@ -190,7 +200,9 @@ namespace Logger{
                        ": " + String(pdata.Posture.Jt1) +
                        ", " + String(pdata.Posture.Jt2) +
                        ", " + String(pdata.Posture.Jt3) +
-                       ", " + String(pdata.Posture.Jt4));
+                       ", " + String(pdata.Posture.Jt4) +
+                       ", " + String(pdata.Posture.Jt5) +
+                       ", " + String(pdata.Posture.Jt6));
         break;
     }
   }

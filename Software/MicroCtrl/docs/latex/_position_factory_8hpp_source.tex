@@ -1,0 +1,52 @@
+\doxysection{Position\+Factory.\+hpp}
+\hypertarget{_position_factory_8hpp_source}{}\label{_position_factory_8hpp_source}\index{PositionFactory.hpp@{PositionFactory.hpp}}
+\mbox{\hyperlink{_position_factory_8hpp}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Datei:\ PositionFactory.hpp}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Beschreibung:\ Dieser\ Klasse\ Beinhaltet\ Logik\ zur\ Erstellung,\ Vernichtung}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ und\ Verwalung\ von\ Positionen\ und\ Stellungen.}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ Autor:\ Chukwunonso\ Bob-\/Anyeji}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ Datum:\ 11.07.2024@12-\/00}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ Aktualisiert:\ 27.08.2025@11-\/46}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ POSITIONFACTORY\_H\_}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ POSITIONFACTORY\_H\_}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ POS\_LIMIT\ 100}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_types_8hpp}{Types.hpp}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_logger_8hpp}{Logger.hpp}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_rob_frame}{RobFrame}};}
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_position_factory_ae66a8fe9b51a518c157bfb90e9645eb7}{PositionFactory}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_rob_frame}{RobFrame}}*\ \mbox{\hyperlink{class_position_factory_abef41677e6ec49c3022e24227f791a46}{\_robFrame}};}
+\DoxyCodeLine{00028\ \ \ \ \ int8\_t\ \mbox{\hyperlink{class_position_factory_ab654a8e160d6616c2052d9627eca6826}{RangeCheck}}();}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{structs_position}{sPosition}}\ \mbox{\hyperlink{class_position_factory_adb62693a75e3612913944f580f924269}{TosPosition}}(\mbox{\hyperlink{struct_position}{Position}}\ ps);}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{structs_posture}{sPosture}}\ \mbox{\hyperlink{class_position_factory_abb3a019e903453ff914257cb965d8474}{TosPosture}}(\mbox{\hyperlink{struct_posture}{Posture}}\ ps);}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{PosState}}\ \mbox{\hyperlink{class_position_factory_a3aa174e21b064718a7dc6d5eec6c0988}{Decode}}(String\ content,\ \textcolor{keywordtype}{char}\ delimiter\ =\ \textcolor{charliteral}{','});}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_position_factory_a627ca4782ea413ec821bedf1aaf116ac}{Update}}(\textcolor{keywordtype}{int}\ index,String\&\ params,\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{PosState}}\ state);}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{struct_pos_data}{PosData}}*\ \mbox{\hyperlink{class_position_factory_aca701b2a08c1623508fd324bc7a0c6b8}{\_data}};}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_position_factory_a5e4feb4a8df8183e7f245de2a8df1cc2}{\_definedCount}}\ =\ 0;}
+\DoxyCodeLine{00052\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{class_position_factory_ae66a8fe9b51a518c157bfb90e9645eb7}{PositionFactory}}();}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_position_factory_a04babbfb40f05b34033fecfe14220558}{\string~PositionFactory}}();}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_position_factory_a2377a4cc3cff95f26764b2baef0a7e4b}{Init}}(\mbox{\hyperlink{class_rob_frame}{RobFrame}}*\ robFrame);}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_position_factory_ab350bdbae8465ca901ef992a75619adf}{Setup}}();}
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{struct_posture}{Posture}}\ \mbox{\hyperlink{class_position_factory_a6f63c0030222d68a19bf5a16fe3af2cf}{DecodePosture}}(String\ input,\ String\ filter\ =\ \textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{struct_position}{Position}}\ \mbox{\hyperlink{class_position_factory_a01c1842e953f689ed2f4c984868ddfe2}{DecodePosition}}(String\ input,\ String\ filter\ =\ \textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{int}\&\ \mbox{\hyperlink{class_position_factory_a33ee29e54af9d81fa9ad6cab1e2a380d}{AddPosition}}(String\ content,\ \mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{PosState}}\ state,\ \textcolor{keywordtype}{char}\ filter\ =\ \textcolor{charliteral}{'\ '});}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{int}\&\ \mbox{\hyperlink{class_position_factory_a0fbf29d838686c1d5081592a6c918f02}{Count}}();}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_position_factory_ab504a3521ccf34cb6556f318ae13aaef}{Get}}(String\ identifier);}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_position_factory_a32a2e62862a90d288896427fb63d9aaf}{Del}}(String\ identifier);}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_position_factory_a14c9e06045694d07b9ba26427199708d}{LogInfo}}();}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_position_factory_ab50bbb05f5685d520f99dc1588925764}{LogPositions}}(\mbox{\hyperlink{_types_8hpp_a3bb467bb1e8d9236bdea09a4367a11a9}{PosState}}\ state);}
+\DoxyCodeLine{00090\ \ \ \ \ \mbox{\hyperlink{struct_position}{Position}}\ \mbox{\hyperlink{class_position_factory_a5d95619f618e340dde30bf1fea01acee}{operator[]}}(\textcolor{keywordtype}{int}\ index);}
+\DoxyCodeLine{00091\ \};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ POSITIONFACTORY\_H\_}}
+
+\end{DoxyCode}

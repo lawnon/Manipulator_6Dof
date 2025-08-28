@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.14.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Manipulator mit sechs Freiheitsgraden: Commands.cpp-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Manipulator mit sechs Freiheitsgraden<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Konstruktion, Modellierung und Programmierung der inversen Kinematik eines experimentellen Manipulators mit sechs Freiheitsgraden</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.14.0 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_commands_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Commands.cpp-Dateireferenz</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="_rob_frame_work_8hpp_source.html">RobFrameWork.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_commands_8hpp_source.html">Commands.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include-Abhängigkeitsdiagramm für Commands.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="_commands_8cpp__incl.png" border="0" usemap="#a_commands_8cpp" loading="lazy" alt=""/></div>
+<map name="a_commands_8cpp" id="a_commands_8cpp">
+<area shape="rect" title=" " alt="" coords="521,5,635,31"/>
+<area shape="rect" href="_rob_frame_work_8hpp.html" title=" " alt="" coords="455,79,594,104"/>
+<area shape="poly" title=" " alt="" coords="571,33,544,69,539,66,567,29"/>
+<area shape="rect" href="_commands_8hpp.html" title=" " alt="" coords="595,152,708,177"/>
+<area shape="poly" title=" " alt="" coords="586,30,642,138,637,141,582,32"/>
+<area shape="rect" href="pins_8h.html" title=" " alt="" coords="411,152,468,177"/>
+<area shape="poly" title=" " alt="" coords="513,106,465,145,462,141,509,102"/>
+<area shape="rect" href="_actuator_8hpp.html" title=" " alt="" coords="162,225,258,251"/>
+<area shape="poly" title=" " alt="" coords="501,107,248,222,246,217,498,102"/>
+<area shape="poly" title=" " alt="" coords="546,102,620,143,617,147,544,106"/>
+<area shape="rect" href="_kinematic_8hpp.html" title=" " alt="" coords="599,225,704,251"/>
+<area shape="poly" title=" " alt="" coords="534,103,555,137,585,176,627,214,623,218,581,179,551,140,529,106"/>
+<area shape="rect" href="_position_factory_8hpp.html" title=" " alt="" coords="282,225,421,251"/>
+<area shape="poly" title=" " alt="" coords="524,105,510,141,498,161,482,179,446,205,407,223,405,218,444,201,479,175,493,158,505,138,519,103"/>
+<area shape="rect" title=" " alt="" coords="5,299,148,324"/>
+<area shape="poly" title=" " alt="" coords="190,253,112,294,109,290,187,248"/>
+<area shape="rect" href="_types_8hpp.html" title=" " alt="" coords="361,372,443,397"/>
+<area shape="poly" title=" " alt="" coords="209,251,204,286,206,305,213,322,241,348,275,365,312,375,347,380,346,385,311,380,273,370,238,352,209,326,201,307,198,286,204,251"/>
+<area shape="rect" href="_utilities_8hpp.html" title=" " alt="" coords="223,299,314,324"/>
+<area shape="poly" title=" " alt="" coords="222,249,253,287,249,290,218,253"/>
+<area shape="rect" href="_logger_8hpp.html" title=" " alt="" coords="440,299,527,324"/>
+<area shape="poly" title=" " alt="" coords="255,248,427,293,426,298,253,253"/>
+<area shape="rect" title=" " alt="" coords="443,445,523,471"/>
+<area shape="poly" title=" " alt="" coords="417,395,462,434,458,438,413,399"/>
+<area shape="poly" title=" " alt="" coords="291,322,369,363,367,368,289,326"/>
+<area shape="poly" title=" " alt="" coords="472,326,427,365,424,361,469,322"/>
+<area shape="poly" title=" " alt="" coords="486,324,486,432,481,432,481,324"/>
+<area shape="rect" title=" " alt="" coords="549,372,669,397"/>
+<area shape="poly" title=" " alt="" coords="505,322,578,363,575,367,502,326"/>
+<area shape="rect" title=" " alt="" coords="748,372,811,397"/>
+<area shape="poly" title=" " alt="" coords="528,321,735,370,734,375,526,326"/>
+<area shape="poly" title=" " alt="" coords="618,180,575,198,525,223,474,258,431,300,415,329,408,359,402,358,411,327,427,297,471,253,522,219,573,193,616,175"/>
+<area shape="poly" title=" " alt="" coords="639,180,509,292,506,287,636,176"/>
+<area shape="rect" title=" " alt="" coords="915,299,980,324"/>
+<area shape="poly" title=" " alt="" coords="691,175,751,195,817,223,874,256,923,288,920,293,872,260,814,228,749,200,690,180"/>
+<area shape="rect" title=" " alt="" coords="879,225,989,251"/>
+<area shape="poly" title=" " alt="" coords="697,175,876,219,875,225,696,180"/>
+<area shape="rect" href="_joint_8hpp.html" title=" " alt="" coords="729,225,803,251"/>
+<area shape="poly" title=" " alt="" coords="671,175,737,216,734,220,668,180"/>
+<area shape="poly" title=" " alt="" coords="654,178,654,212,649,212,649,178"/>
+<area shape="poly" title=" " alt="" coords="796,248,906,291,904,296,794,253"/>
+<area shape="poly" title=" " alt="" coords="640,253,597,288,541,326,493,350,448,370,446,365,491,346,538,322,594,283,637,249"/>
+<area shape="poly" title=" " alt="" coords="704,248,751,266,774,280,794,297,817,321,834,346,838,372,834,385,825,399,806,414,777,426,700,444,614,454,538,458,537,453,613,448,699,438,775,421,803,410,821,396,829,383,833,372,829,348,813,325,791,301,771,284,749,271,702,253"/>
+<area shape="poly" title=" " alt="" coords="625,253,524,296,522,291,623,248"/>
+<area shape="poly" title=" " alt="" coords="686,248,714,261,741,279,756,300,757,313,752,325,738,342,721,355,683,373,681,368,718,350,735,338,748,323,752,312,751,302,737,283,712,266,683,253"/>
+<area shape="poly" title=" " alt="" coords="699,248,739,267,757,280,772,297,784,328,785,358,780,358,779,329,768,300,753,284,736,271,697,253"/>
+<area shape="rect" title=" " alt="" coords="602,299,738,324"/>
+<area shape="poly" title=" " alt="" coords="657,250,666,285,661,286,652,252"/>
+<area shape="poly" title=" " alt="" coords="358,250,396,358,391,360,353,252"/>
+<area shape="poly" title=" " alt="" coords="374,248,451,290,449,294,371,253"/>
+</map>
+</div>
+</div></div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="_commands_8cpp.html">Commands.cpp</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
+  </ul>
+</div>
+</body>
+</html>

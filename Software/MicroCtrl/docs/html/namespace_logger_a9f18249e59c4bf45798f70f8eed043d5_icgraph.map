@@ -1,0 +1,7 @@
+<map id="Logger::logft" name="Logger::logft">
+<area shape="rect" id="Node000001" title=" " alt="" coords="399,5,492,31"/>
+<area shape="rect" id="Node000002" href="$class_kinematic.html#aa1cba6a32703d92f41c29ee59884f89a" title="Positionsgebenden Winkeln Berechnen." alt="" coords="208,5,351,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="385,21,351,21,351,15,385,15"/>
+<area shape="rect" id="Node000003" href="$class_kinematic.html#ae03636412ecab6f5a53e8c3d9069e369" title="Inverskinematik berechnung." alt="" coords="5,5,160,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="194,21,160,21,160,15,194,15"/>
+</map>

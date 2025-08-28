@@ -1,13 +1,20 @@
-// ========================================================================
-// File: Actuator.hpp
-// Description: header file with wrapper functions with respect to Hardware
-// Actuator
+
+//////////////////////////////////////////////////////////////////////////
+// Datei: Actuator.hpp
+// Beschreibung: Ansteuerungslogik des Aktuators.
+//
+//               Dieser Klasse dient als wrappper für die
+//               "BasicStepperDriver" Klasss von Laurentiu Badea
+//               https://github.com/laurb9/StepperDriver
+//
 // Autor: Chukwunonso Bob-Anyeji
-// Date: 09:06.2025
-// ========================================================================
+// Datum: 18.08.2025@12-00
+// Aktualisiert: 27.08.2025@11-46
+//////////////////////////////////////////////////////////////////////////
 
 // NOTE: Motor steps per revolution.
-// Most steppers are 200 steps or 1.8 degrees/step
+// die meisten Nema-17 Stepper haben 200 steps oder 1.8 degrees/step
+// mit 16 Miktrosteps Einstellung jenach Treiber
 
 #ifndef ACTUATOR_H_
 #define ACTUATOR_H_
@@ -17,10 +24,13 @@
 #include "Utilities.hpp"
 #include "Logger.hpp"
 
+class RobFrame;
 class Actuator
 {
     private:
-        // Zeiger zur Stepper Objekt
+        /// Zeiger zu RobFrame
+        RobFrame* _robFrame;
+        /// Zeiger zur Stepper Objekt
         BasicStepperDriver* _stepper;
         // Stepper und Steppertreiber Einstellung
         uint8 _motorSteps = 200;
@@ -40,26 +50,58 @@ class Actuator
         // Zustands Variabeln
         int8  _enabled = -1;
         word _state = 0;
-        // Funktionen / Prozeduren
+        /// @param target Winkel
+        /// @return void
         int32 calcSteps(int32 target);
+        /// @param Schritte
+        /// @return Winkel
         int32 calcPosition(int32 actSteps);
     public:
-        // Klassen Objektinstanz
+        /// @brief Actor Klassen-Objekt
         Actuator ();
-        // Initialisierung
+        /// @brief Initialisierung Zeiger-Zuweisung
+        /// @param robFrame Zeiger zu RobFrame
+        /// @return void
+        void Init(RobFrame* robFrame);
+        /// @brief Aktor ID
         int16 Id();
+        /// @brief Hardwareeinrichten
+        /// @param gearRatio Getriebeübersetzung
+        /// @param accuracy Genauigkeit
+        /// @param max Max-Winkelstellung
+        /// @param min Min-Winkelstellung
+        /// @return OK wenn Erfolgreich
         int16 SetUp(float gearRatio = 1, int16 accuracy = 5, int16 max = 90, int16 min = -90);
+        /// @brief Hardware-Ausgänge Zuweisen
+        /// Anbinddung der Hardware-Ausgänge
+        /// @param dirPin Richtungs Pin id.
+        /// @param stepPin Stepper Pin id.
+        /// @param enaPin Aktivierungs Pin id.
+        /// @return Zeiger-Id  zur BasicSteperDriver objekt
         int16 Attach(int16 dirPin, int16 stepPin, int16 enaPin);
-        // Attribute
+        ///  Genauigkeit
         int16 Accuracy;
-        // Betriebssteuerung
+        /// @brief Aktoransteuerung
+        /// @param ena Aktivieren
+        /// @param tof Ausschaltverzögerung
+        /// @return ON wenn activ oder OFF wenn nicht Active
         int32 Activate(int8 ena, uint16 tof = 5000);
+        /// @brief IstPositionswert Referenzieren
+        /// @param value Zurücksetzungswert
+        /// @return neuer Istposition
         int32 Refernce(int32 value = 0);
-        // Steuerungs-Funktionen
+        /// @brief Aktuator Sollwert Schreiben
+        /// @param target Zielvorgabe in Grad
+        /// @return Anzahl gefahrene Schritte.
         int32 Write(int32 target);
+        /// @brief lese Istposition
+        /// @return Istwert in Grad
         int32 Read();
+        /// @brief Soll-Ist Differenze bilden
+        /// @param target Zielposition
+        /// @return Winkel differenze
         int32 Delta(int32 target);
-        // Enumerationen
+        /// Aktuator Betriebszustand
         enum State {Enabled, Stopped, InMotion, Referenced, InPosition, Aborted};
 };
 
