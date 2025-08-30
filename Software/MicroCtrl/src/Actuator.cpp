@@ -7,6 +7,7 @@
 // Aktualisiert: 27.08.2025@11-46
 //////////////////////////////////////////////////////////////////////////
 
+#include "RobFrameWork.hpp"
 #include "Actuator.hpp"
 
 using namespace Logger;

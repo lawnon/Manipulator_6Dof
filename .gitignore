@@ -32,9 +32,6 @@ Software/.gitignore
 #Matlab
 *.asv
 
-#Doxgen
-Doxyfile
-
 # Expert Files
 [Aa]rchive/
 [Aa]rchiv/

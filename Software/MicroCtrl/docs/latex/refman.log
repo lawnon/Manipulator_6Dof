@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.14)  28 AUG 2025 02:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.8.14)  29 AUG 2025 08:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -9110,11 +9110,11 @@ aph.pdf  used on input line 395.
 [72]
 Kapitel 6.
 (./_actuator_8cpp.tex <./_actuator_8cpp__incl.pdf>
-<_actuator_8cpp__incl.pdf, id=2354, 497.86pt x 320.19624pt>
+<_actuator_8cpp__incl.pdf, id=2354, 815.045pt x 430.60875pt>
 File: _actuator_8cpp__incl.pdf Graphic file (type pdf)
 <use _actuator_8cpp__incl.pdf>
-Package pdftex.def Info: _actuator_8cpp__incl.pdf  used on input line 8.
-(pdftex.def)             Requested size: 350.0pt x 225.10321pt.
+Package pdftex.def Info: _actuator_8cpp__incl.pdf  used on input line 10.
+(pdftex.def)             Requested size: 350.0pt x 184.91502pt.
 ) (./_actuator_8hpp.tex <./_actuator_8hpp__incl.pdf>
 <_actuator_8hpp__incl.pdf, id=2362, 497.86pt x 264.99pt>
 File: _actuator_8hpp__incl.pdf Graphic file (type pdf)
@@ -9126,11 +9126,11 @@ Package pdftex.def Info: _actuator_8hpp__incl.pdf  used on input line 11.
 [73
 
 ] <./_actuator_8hpp__dep__incl.pdf>
-<_actuator_8hpp__dep__incl.pdf, id=2379, 583.17876pt x 209.78375pt>
+<_actuator_8hpp__dep__incl.pdf, id=2379, 673.51625pt x 209.78375pt>
 File: _actuator_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use _actuator_8hpp__dep__incl.pdf>
-Package pdftex.def Info: _actuator_8hpp__dep__incl.pdf  used on input line 18.
-(pdftex.def)             Requested size: 350.0pt x 125.90642pt.
+Package pdftex.def Info: _actuator_8hpp__dep__incl.pdf  used on input line 19.
+(pdftex.def)             Requested size: 350.0pt x 109.01775pt.
 ) (./_actuator_8hpp_source.tex
 
 [74]) (./_commands_8cpp.tex <./_commands_8cpp__incl.pdf>
@@ -9148,11 +9148,11 @@ Package pdftex.def Info: _commands_8hpp__incl.pdf  used on input line 13.
 
 
 [75] <./_commands_8hpp__dep__incl.pdf>
-<_commands_8hpp__dep__incl.pdf, id=2505, 583.17876pt x 209.78375pt>
+<_commands_8hpp__dep__incl.pdf, id=2505, 674.52pt x 209.78375pt>
 File: _commands_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use _commands_8hpp__dep__incl.pdf>
-Package pdftex.def Info: _commands_8hpp__dep__incl.pdf  used on input line 20.
-(pdftex.def)             Requested size: 350.0pt x 125.90642pt.
+Package pdftex.def Info: _commands_8hpp__dep__incl.pdf  used on input line 21.
+(pdftex.def)             Requested size: 350.0pt x 108.85449pt.
 ) (./_commands_8hpp_source.tex
 
 [76]
@@ -9170,11 +9170,11 @@ File: _joint_8hpp__incl.pdf Graphic file (type pdf)
 Package pdftex.def Info: _joint_8hpp__incl.pdf  used on input line 8.
 (pdftex.def)             Requested size: 136.0pt x 154.00865pt.
  <./_joint_8hpp__dep__incl.pdf>
-<_joint_8hpp__dep__incl.pdf, id=2608, 583.17876pt x 264.99pt>
+<_joint_8hpp__dep__incl.pdf, id=2608, 674.52pt x 264.99pt>
 File: _joint_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use _joint_8hpp__dep__incl.pdf>
-Package pdftex.def Info: _joint_8hpp__dep__incl.pdf  used on input line 15.
-(pdftex.def)             Requested size: 350.0pt x 159.0397pt.
+Package pdftex.def Info: _joint_8hpp__dep__incl.pdf  used on input line 16.
+(pdftex.def)             Requested size: 350.0pt x 137.50041pt.
 
 
 [78]) (./_joint_8hpp_source.tex) (./_kinematic_8cpp.tex <./_kinematic_8cpp__inc
@@ -9224,19 +9224,19 @@ File: _kinematic_8hpp__incl.pdf Graphic file (type pdf)
 Package pdftex.def Info: _kinematic_8hpp__incl.pdf  used on input line 13.
 (pdftex.def)             Requested size: 350.0pt x 214.8914pt.
  <./_kinematic_8hpp__dep__incl.pdf>
-<_kinematic_8hpp__dep__incl.pdf, id=2736, 583.17876pt x 264.99pt>
+<_kinematic_8hpp__dep__incl.pdf, id=2736, 673.51625pt x 264.99pt>
 File: _kinematic_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use _kinematic_8hpp__dep__incl.pdf>
-Package pdftex.def Info: _kinematic_8hpp__dep__incl.pdf  used on input line 20.
+Package pdftex.def Info: _kinematic_8hpp__dep__incl.pdf  used on input line 21.
 
-(pdftex.def)             Requested size: 350.0pt x 159.0397pt.
+(pdftex.def)             Requested size: 350.0pt x 137.70663pt.
 
 
 [82]
 ! Undefined control sequence.
 <argument> ...rtpbox {\@nextchar }\insert@pcolumn 
                                                   \@endpbox \do@row@strut \o...
-l.53 \begin{DoxyParams}{Parameter}
+l.54 \begin{DoxyParams}{Parameter}
                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -9247,7 +9247,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...rtpbox {\@nextchar }\insert@pcolumn 
                                                   \@endpbox \do@row@strut \o...
-l.53 \begin{DoxyParams}{Parameter}
+l.54 \begin{DoxyParams}{Parameter}
                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -9258,7 +9258,7 @@ and I'll forget about whatever was undefined.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.56 \end{DoxyParams}
+l.57 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9267,7 +9267,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.56 \end{DoxyParams}
+l.57 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9276,7 +9276,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.56 \end{DoxyParams}
+l.57 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9285,7 +9285,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.56 \end{DoxyParams}
+l.57 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9294,7 +9294,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.56 \end{DoxyParams}
+l.57 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9303,7 +9303,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.56 \end{DoxyParams}
+l.57 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9312,7 +9312,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.56 \end{DoxyParams}
+l.57 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9321,7 +9321,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.56 \end{DoxyParams}
+l.57 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9330,7 +9330,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.56 \end{DoxyParams}
+l.57 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9339,7 +9339,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.56 \end{DoxyParams}
+l.57 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9348,7 +9348,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.56 \end{DoxyParams}
+l.57 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9357,7 +9357,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.56 \end{DoxyParams}
+l.57 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9366,7 +9366,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.56 \end{DoxyParams}
+l.57 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9375,7 +9375,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.56 \end{DoxyParams}
+l.57 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9384,7 +9384,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.56 \end{DoxyParams}
+l.57 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9393,7 +9393,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.56 \end{DoxyParams}
+l.57 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9402,7 +9402,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.56 \end{DoxyParams}
+l.57 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9411,7 +9411,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.56 \end{DoxyParams}
+l.57 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9419,10 +9419,10 @@ none, so I've put one in; maybe that will work.
 
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 6.1 on input line 56.
+(longtable)                in table 6.1 on input line 57.
 
 
-Underfull \hbox (badness 10000) detected at line 57
+Underfull \hbox (badness 10000) detected at line 58
 [][][]
  []
 
@@ -9433,13 +9433,13 @@ File: _kinematic_8hpp_ac5b83beb5fe73e1a9f3d2fe3166f3d53_icgraph.pdf Graphic fil
 e (type pdf)
 <use _kinematic_8hpp_ac5b83beb5fe73e1a9f3d2fe3166f3d53_icgraph.pdf>
 Package pdftex.def Info: _kinematic_8hpp_ac5b83beb5fe73e1a9f3d2fe3166f3d53_icgr
-aph.pdf  used on input line 64.
+aph.pdf  used on input line 65.
 (pdftex.def)             Requested size: 350.0pt x 139.51535pt.
 
 ! Undefined control sequence.
 <argument> ...rtpbox {\@nextchar }\insert@pcolumn 
                                                   \@endpbox \do@row@strut \o...
-l.78 \begin{DoxyParams}{Parameter}
+l.79 \begin{DoxyParams}{Parameter}
                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -9450,7 +9450,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...rtpbox {\@nextchar }\insert@pcolumn 
                                                   \@endpbox \do@row@strut \o...
-l.78 \begin{DoxyParams}{Parameter}
+l.79 \begin{DoxyParams}{Parameter}
                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -9461,7 +9461,7 @@ and I'll forget about whatever was undefined.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.81 \end{DoxyParams}
+l.82 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9470,7 +9470,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.81 \end{DoxyParams}
+l.82 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9479,7 +9479,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.81 \end{DoxyParams}
+l.82 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9488,7 +9488,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.81 \end{DoxyParams}
+l.82 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9497,7 +9497,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.81 \end{DoxyParams}
+l.82 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9506,7 +9506,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.81 \end{DoxyParams}
+l.82 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9515,7 +9515,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.81 \end{DoxyParams}
+l.82 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9524,7 +9524,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.81 \end{DoxyParams}
+l.82 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9533,7 +9533,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.81 \end{DoxyParams}
+l.82 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9542,7 +9542,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.81 \end{DoxyParams}
+l.82 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9551,7 +9551,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.81 \end{DoxyParams}
+l.82 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9560,7 +9560,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.81 \end{DoxyParams}
+l.82 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9569,7 +9569,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.81 \end{DoxyParams}
+l.82 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9578,7 +9578,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.81 \end{DoxyParams}
+l.82 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9587,7 +9587,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.81 \end{DoxyParams}
+l.82 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9596,7 +9596,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.81 \end{DoxyParams}
+l.82 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9605,7 +9605,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.81 \end{DoxyParams}
+l.82 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9614,7 +9614,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.81 \end{DoxyParams}
+l.82 \end{DoxyParams}
                      
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9625,10 +9625,10 @@ none, so I've put one in; maybe that will work.
 [83]
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 6.2 on input line 81.
+(longtable)                in table 6.2 on input line 82.
 
 
-Underfull \hbox (badness 10000) detected at line 82
+Underfull \hbox (badness 10000) detected at line 83
 [][][]
  []
 
@@ -9639,13 +9639,13 @@ File: _kinematic_8hpp_a339acfaac605b5bd73624297f191cc39_icgraph.pdf Graphic fil
 e (type pdf)
 <use _kinematic_8hpp_a339acfaac605b5bd73624297f191cc39_icgraph.pdf>
 Package pdftex.def Info: _kinematic_8hpp_a339acfaac605b5bd73624297f191cc39_icgr
-aph.pdf  used on input line 89.
+aph.pdf  used on input line 90.
 (pdftex.def)             Requested size: 350.0pt x 115.67264pt.
 
 ! Undefined control sequence.
 <argument> ...rtpbox {\@nextchar }\insert@pcolumn 
                                                   \@endpbox \do@row@strut \o...
-l.103 \begin{DoxyParams}{Parameter}
+l.104 \begin{DoxyParams}{Parameter}
                                    
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -9656,7 +9656,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...rtpbox {\@nextchar }\insert@pcolumn 
                                                   \@endpbox \do@row@strut \o...
-l.103 \begin{DoxyParams}{Parameter}
+l.104 \begin{DoxyParams}{Parameter}
                                    
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -9667,7 +9667,7 @@ and I'll forget about whatever was undefined.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.106 \end{DoxyParams}
+l.107 \end{DoxyParams}
                       
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9676,7 +9676,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.106 \end{DoxyParams}
+l.107 \end{DoxyParams}
                       
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9685,7 +9685,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.106 \end{DoxyParams}
+l.107 \end{DoxyParams}
                       
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9694,7 +9694,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.106 \end{DoxyParams}
+l.107 \end{DoxyParams}
                       
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9703,7 +9703,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.106 \end{DoxyParams}
+l.107 \end{DoxyParams}
                       
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9712,7 +9712,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.106 \end{DoxyParams}
+l.107 \end{DoxyParams}
                       
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9721,7 +9721,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.106 \end{DoxyParams}
+l.107 \end{DoxyParams}
                       
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9730,7 +9730,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.106 \end{DoxyParams}
+l.107 \end{DoxyParams}
                       
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9739,7 +9739,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.106 \end{DoxyParams}
+l.107 \end{DoxyParams}
                       
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9748,7 +9748,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.106 \end{DoxyParams}
+l.107 \end{DoxyParams}
                       
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9757,7 +9757,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.106 \end{DoxyParams}
+l.107 \end{DoxyParams}
                       
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9766,7 +9766,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.106 \end{DoxyParams}
+l.107 \end{DoxyParams}
                       
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9775,7 +9775,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.106 \end{DoxyParams}
+l.107 \end{DoxyParams}
                       
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9784,7 +9784,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.106 \end{DoxyParams}
+l.107 \end{DoxyParams}
                       
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9793,7 +9793,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.106 \end{DoxyParams}
+l.107 \end{DoxyParams}
                       
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9802,7 +9802,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.106 \end{DoxyParams}
+l.107 \end{DoxyParams}
                       
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9811,7 +9811,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.106 \end{DoxyParams}
+l.107 \end{DoxyParams}
                       
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9820,7 +9820,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.106 \end{DoxyParams}
+l.107 \end{DoxyParams}
                       
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -9828,10 +9828,10 @@ none, so I've put one in; maybe that will work.
 
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 6.3 on input line 106.
+(longtable)                in table 6.3 on input line 107.
 
 
-Underfull \hbox (badness 10000) detected at line 107
+Underfull \hbox (badness 10000) detected at line 108
 [][][]
  []
 
@@ -9842,7 +9842,7 @@ File: _kinematic_8hpp_a8e014290d3f9707d1c2d06717e815a8b_icgraph.pdf Graphic fil
 e (type pdf)
 <use _kinematic_8hpp_a8e014290d3f9707d1c2d06717e815a8b_icgraph.pdf>
 Package pdftex.def Info: _kinematic_8hpp_a8e014290d3f9707d1c2d06717e815a8b_icgr
-aph.pdf  used on input line 114.
+aph.pdf  used on input line 115.
 (pdftex.def)             Requested size: 350.0pt x 84.51295pt.
 )
 (./_kinematic_8hpp_source.tex
@@ -9864,22 +9864,22 @@ Package pdftex.def Info: _logger_8hpp__incl.pdf  used on input line 11.
 
 
 [86] <./_logger_8hpp__dep__incl.pdf>
-<_logger_8hpp__dep__incl.pdf, id=2930, 584.1825pt x 320.19624pt>
+<_logger_8hpp__dep__incl.pdf, id=2930, 674.52pt x 320.19624pt>
 File: _logger_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use _logger_8hpp__dep__incl.pdf>
-Package pdftex.def Info: _logger_8hpp__dep__incl.pdf  used on input line 18.
-(pdftex.def)             Requested size: 350.0pt x 191.84561pt.
+Package pdftex.def Info: _logger_8hpp__dep__incl.pdf  used on input line 19.
+(pdftex.def)             Requested size: 350.0pt x 166.14633pt.
 
 
-[87]) (./_logger_8hpp_source.tex
-
-[88]) (./main_8cpp.tex <./main_8cpp__incl.pdf>
-<main_8cpp__incl.pdf, id=3019, 762.85pt x 430.60875pt>
+[87]) (./_logger_8hpp_source.tex) (./main_8cpp.tex <./main_8cpp__incl.pdf>
+<main_8cpp__incl.pdf, id=3010, 762.85pt x 430.60875pt>
 File: main_8cpp__incl.pdf Graphic file (type pdf)
 <use main_8cpp__incl.pdf>
 Package pdftex.def Info: main_8cpp__incl.pdf  used on input line 8.
 (pdftex.def)             Requested size: 350.0pt x 197.56334pt.
- <./main_8cpp_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
+
+
+[88] <./main_8cpp_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf>
 <main_8cpp_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf, id=3032, 216.81pt x 99
 .37125pt>
 File: main_8cpp_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf Graphic file (type
@@ -9888,10 +9888,8 @@ File: main_8cpp_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf Graphic file (type
 Package pdftex.def Info: main_8cpp_afe461d27b9c48d5921c00d521181f12f_cgraph.pdf
   used on input line 40.
 (pdftex.def)             Requested size: 216.0pt x 99.00557pt.
-
-
-[89] <./main_8cpp_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
-<main_8cpp_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf, id=3057, 222.8325pt x 
+ <./main_8cpp_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf>
+<main_8cpp_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf, id=3040, 222.8325pt x 
 99.37125pt>
 File: main_8cpp_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file (type
  pdf)
@@ -9899,12 +9897,14 @@ File: main_8cpp_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf Graphic file (type
 Package pdftex.def Info: main_8cpp_a4fc01d736fe50cf5b977f755b675f11d_cgraph.pdf
   used on input line 53.
 (pdftex.def)             Requested size: 222.0pt x 99.00102pt.
-) (./pins_8h.tex <./pins_8h__dep__incl.pdf>
-<pins_8h__dep__incl.pdf, id=3066, 583.17876pt x 209.78375pt>
+
+
+[89]) (./pins_8h.tex <./pins_8h__dep__incl.pdf>
+<pins_8h__dep__incl.pdf, id=3067, 673.51625pt x 209.78375pt>
 File: pins_8h__dep__incl.pdf Graphic file (type pdf)
 <use pins_8h__dep__incl.pdf>
-Package pdftex.def Info: pins_8h__dep__incl.pdf  used on input line 7.
-(pdftex.def)             Requested size: 350.0pt x 125.90642pt.
+Package pdftex.def Info: pins_8h__dep__incl.pdf  used on input line 8.
+(pdftex.def)             Requested size: 350.0pt x 109.01775pt.
 
 
 [90]
@@ -9933,12 +9933,12 @@ Package pdftex.def Info: _position_factory_8hpp__incl.pdf  used on input line 9
 .
 (pdftex.def)             Requested size: 350.0pt x 261.0268pt.
  <./_position_factory_8hpp__dep__incl.pdf>
-<_position_factory_8hpp__dep__incl.pdf, id=3233, 583.17876pt x 209.78375pt>
+<_position_factory_8hpp__dep__incl.pdf, id=3233, 673.51625pt x 209.78375pt>
 File: _position_factory_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use _position_factory_8hpp__dep__incl.pdf>
 Package pdftex.def Info: _position_factory_8hpp__dep__incl.pdf  used on input l
-ine 16.
-(pdftex.def)             Requested size: 350.0pt x 125.90642pt.
+ine 17.
+(pdftex.def)             Requested size: 350.0pt x 109.01775pt.
 
 
 [96]) (./_position_factory_8hpp_source.tex
@@ -9960,12 +9960,12 @@ Package pdftex.def Info: _rob_frame_work_8hpp__incl.pdf  used on input line 12.
 
 
 [98] <./_rob_frame_work_8hpp__dep__incl.pdf>
-<_rob_frame_work_8hpp__dep__incl.pdf, id=3331, 583.17876pt x 154.5775pt>
+<_rob_frame_work_8hpp__dep__incl.pdf, id=3331, 673.51625pt x 154.5775pt>
 File: _rob_frame_work_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use _rob_frame_work_8hpp__dep__incl.pdf>
 Package pdftex.def Info: _rob_frame_work_8hpp__dep__incl.pdf  used on input lin
-e 19.
-(pdftex.def)             Requested size: 350.0pt x 92.77315pt.
+e 20.
+(pdftex.def)             Requested size: 350.0pt x 80.32886pt.
 )
 (./_rob_frame_work_8hpp_source.tex
 
@@ -9976,11 +9976,11 @@ File: _types_8hpp__incl.pdf Graphic file (type pdf)
 Package pdftex.def Info: _types_8hpp__incl.pdf  used on input line 8.
 (pdftex.def)             Requested size: 142.0pt x 153.99922pt.
  <./_types_8hpp__dep__incl.pdf>
-<_types_8hpp__dep__incl.pdf, id=3415, 616.3025pt x 375.4025pt>
+<_types_8hpp__dep__incl.pdf, id=3415, 673.51625pt x 375.4025pt>
 File: _types_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use _types_8hpp__dep__incl.pdf>
-Package pdftex.def Info: _types_8hpp__dep__incl.pdf  used on input line 15.
-(pdftex.def)             Requested size: 350.0pt x 213.19688pt.
+Package pdftex.def Info: _types_8hpp__dep__incl.pdf  used on input line 16.
+(pdftex.def)             Requested size: 350.0pt x 195.0844pt.
 
 
 [100]
@@ -9991,7 +9991,7 @@ Package pdftex.def Info: _types_8hpp__dep__incl.pdf  used on input line 15.
 ! Undefined control sequence.
 <argument> ...rtpbox {\@nextchar }\insert@pcolumn 
                                                   \@endpbox \do@row@strut \o...
-l.199 \begin{DoxyEnumFields}[2]{Aufzählungswerte}
+l.200 \begin{DoxyEnumFields}[2]{Aufzählungswerte}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10002,7 +10002,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> ...rtpbox {\@nextchar }\insert@pcolumn 
                                                   \@endpbox \do@row@strut \o...
-l.199 \begin{DoxyEnumFields}[2]{Aufzählungswerte}
+l.200 \begin{DoxyEnumFields}[2]{Aufzählungswerte}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -10013,7 +10013,7 @@ and I'll forget about whatever was undefined.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.224 \end{DoxyEnumFields}
+l.225 \end{DoxyEnumFields}
                           
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -10022,7 +10022,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.224 \end{DoxyEnumFields}
+l.225 \end{DoxyEnumFields}
                           
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -10031,7 +10031,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.224 \end{DoxyEnumFields}
+l.225 \end{DoxyEnumFields}
                           
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -10040,7 +10040,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.224 \end{DoxyEnumFields}
+l.225 \end{DoxyEnumFields}
                           
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -10049,7 +10049,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.224 \end{DoxyEnumFields}
+l.225 \end{DoxyEnumFields}
                           
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -10058,7 +10058,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.224 \end{DoxyEnumFields}
+l.225 \end{DoxyEnumFields}
                           
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -10067,7 +10067,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.224 \end{DoxyEnumFields}
+l.225 \end{DoxyEnumFields}
                           
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -10076,7 +10076,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.224 \end{DoxyEnumFields}
+l.225 \end{DoxyEnumFields}
                           
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -10085,7 +10085,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.224 \end{DoxyEnumFields}
+l.225 \end{DoxyEnumFields}
                           
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -10094,7 +10094,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.224 \end{DoxyEnumFields}
+l.225 \end{DoxyEnumFields}
                           
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -10103,7 +10103,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.224 \end{DoxyEnumFields}
+l.225 \end{DoxyEnumFields}
                           
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -10112,7 +10112,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.224 \end{DoxyEnumFields}
+l.225 \end{DoxyEnumFields}
                           
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -10121,7 +10121,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.224 \end{DoxyEnumFields}
+l.225 \end{DoxyEnumFields}
                           
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -10130,7 +10130,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.224 \end{DoxyEnumFields}
+l.225 \end{DoxyEnumFields}
                           
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -10139,7 +10139,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.224 \end{DoxyEnumFields}
+l.225 \end{DoxyEnumFields}
                           
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -10148,7 +10148,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.224 \end{DoxyEnumFields}
+l.225 \end{DoxyEnumFields}
                           
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -10157,7 +10157,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    &
-l.224 \end{DoxyEnumFields}
+l.225 \end{DoxyEnumFields}
                           
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -10166,7 +10166,7 @@ none, so I've put one in; maybe that will work.
 ! Missing # inserted in alignment preamble.
 <to be read again> 
                    \cr 
-l.224 \end{DoxyEnumFields}
+l.225 \end{DoxyEnumFields}
                           
 There should be exactly one # between &'s, when an
 \halign or \valign is being set up. In this case you had
@@ -10174,40 +10174,43 @@ none, so I've put one in; maybe that will work.
 
 
 Package longtable Warning: Column widths have changed
-(longtable)                in table 6.4 on input line 224.
+(longtable)                in table 6.4 on input line 225.
 
 ) (./_types_8hpp_source.tex
 
 [103]
 
 [104]) (./_utilities_8cpp.tex <./_utilities_8cpp__incl.pdf>
-<_utilities_8cpp__incl.pdf, id=3608, 148.555pt x 264.99pt>
+<_utilities_8cpp__incl.pdf, id=3607, 148.555pt x 264.99pt>
 File: _utilities_8cpp__incl.pdf Graphic file (type pdf)
 <use _utilities_8cpp__incl.pdf>
 Package pdftex.def Info: _utilities_8cpp__incl.pdf  used on input line 8.
 (pdftex.def)             Requested size: 148.0pt x 264.01083pt.
-
-
-[105]) (./_utilities_8hpp.tex <./_utilities_8hpp__incl.pdf>
-<_utilities_8hpp__incl.pdf, id=3633, 148.555pt x 209.78375pt>
+)
+(./_utilities_8hpp.tex <./_utilities_8hpp__incl.pdf>
+<_utilities_8hpp__incl.pdf, id=3628, 148.555pt x 209.78375pt>
 File: _utilities_8hpp__incl.pdf Graphic file (type pdf)
 <use _utilities_8hpp__incl.pdf>
 Package pdftex.def Info: _utilities_8hpp__incl.pdf  used on input line 8.
 (pdftex.def)             Requested size: 148.0pt x 209.00856pt.
 
 
-[106] <./_utilities_8hpp__dep__incl.pdf>
-<_utilities_8hpp__dep__incl.pdf, id=3652, 583.17876pt x 264.99pt>
+[105] <./_utilities_8hpp__dep__incl.pdf>
+<_utilities_8hpp__dep__incl.pdf, id=3645, 673.51625pt x 264.99pt>
 File: _utilities_8hpp__dep__incl.pdf Graphic file (type pdf)
 <use _utilities_8hpp__dep__incl.pdf>
-Package pdftex.def Info: _utilities_8hpp__dep__incl.pdf  used on input line 15.
+Package pdftex.def Info: _utilities_8hpp__dep__incl.pdf  used on input line 16.
 
-(pdftex.def)             Requested size: 350.0pt x 159.0397pt.
+(pdftex.def)             Requested size: 350.0pt x 137.70663pt.
 ) (./_utilities_8hpp_source.tex
 
-[107])
+[106])
 
-[108]
+[107]
+
+[108
+
+]
 No file refman.ind.
 
 Package longtable Warning: Table widths have changed. Rerun LaTeX.
@@ -10252,10 +10255,10 @@ ve/2025/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb><c:/texlive/2025/texmf-d
 ist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1
 /urw/helvetic/uhvb8ac.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/
 uhvr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (110 pages, 2183975 bytes).
+Output written on refman.pdf (110 pages, 2195167 bytes).
 PDF statistics:
- 3987 PDF objects out of 4296 (max. 8388607)
- 3434 compressed objects within 35 object streams
+ 3986 PDF objects out of 4296 (max. 8388607)
+ 3435 compressed objects within 35 object streams
  1081 named destinations out of 1200 (max. 500000)
  571 words of extra memory for PDF output out of 10000 (max. 10000000)
 
