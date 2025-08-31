@@ -43,6 +43,7 @@ using uint64 = unsigned long long int;
 /* Kinematik Struct */
 
 /* Denavit Hartenberg-Parameter for all Joints */
+/// @struct
 struct DhParameters{
   float alpha[6] = { 90.000,   0.000,   0.000,   0.000,  0.000, 0.000};
   float beta[6]  = {-90.000,   0.000,  90.000, -90.000, 90.000, 0.000};
@@ -52,6 +53,7 @@ struct DhParameters{
 };
 
 /* Denavit Hartenberg_Parameter Discription */
+/// @struct
 struct DhParam{
   float alpha;
   float beta;
