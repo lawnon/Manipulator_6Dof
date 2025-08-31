@@ -1,6 +1,7 @@
-Grüß euch zusammen!
-Diese Baustelle ist noch im Gange.
+Dies hier ist der Projekt Ropository zur Masterthesis
 
-In diesem Projekt geht es um die Konstruktion, Modellierung und Programmierung der inversen Kinematik eines experimentellen Manipulators mit sechs Freiheitsgraden.
+Thema: Konstruktion, Modellierung und Programmierung der inversen Kinematik eines experimentellen Manipulators mit sechs Freiheitsgraden.
 
-Es wird noch fleißig daran gearbeitet! Ich bemühe mich jedoch, einen gut modulierten, reproduzierbaren Roboterarm zu entwickeln.
+Diese Arbeit soll als Fallbeispiel fuer den aktuellen Stand der Technik dienen. Wir
+moechten zeigen, wie sich die Inverskinematik eines Manipulators mit sechs Freiheitsgraden
+mithilfe von Standardwerkzeugen wie einem 3D-Drucker und Standardbauteilenwie einem Schrittmotor entwickeln lässt.
