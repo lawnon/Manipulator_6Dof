@@ -1,0 +1,39 @@
+NX to 3D PDF
+---------------------------------------------
+Time of Creation: 09.09.2025 17:46:11
+---------------------------------------------
+Template used: C:\Program Files\Siemens\NX2312\tdp\templates\A4_Size_asy_landscape_3dpdf.prt
+---------------------------------------------
+Model views selected: 
+Back
+Bottom
+Front
+Isometric
+Left
+Right
+Top
+Trimetric
+---------------------------------------------
+Input filename: D:\Projects\Dev\Robotics\Manipulator_6Dof\Cad\Assembly.prt
+---------------------------------------------
+Output filename: D:\Projects\Dev\Robotics\Manipulator_6Dof\Cad\Export\PDF\Assembly.pdf
+---------------------------------------------
+Password used: No
+---------------------------------------------
+Accuracy: Maximum
+---------------------------------------------
+Use Lossy Compression: No
+---------------------------------------------
+Part Load on Feature Update Error: No
+---------------------------------------------
+Attachments: 
+---------------------------------------------
+Text inputs: 
+Design Date - MM/DD/YYYY
+Designer - Enter Name
+Revision - A 
+Description - Enter Text
+Part Number - #####
+---------------------------------------------
+Technical Data Package has been published with some errors:
+Minor error encountered for: Minor elements
