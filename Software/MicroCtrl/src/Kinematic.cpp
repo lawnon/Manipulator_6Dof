@@ -53,8 +53,9 @@ void Kinematic::Init(RobFrame* robFrame){
 }
 
 /// 4x4 Matrix in Seriellen Monitor ausgeben
-void Kinematic::printMatrix(tmm::Matrix<4,4> mat, String heading){
-  //log("=============================");
+// TODO: Change String Copy to String Refernece
+void Kinematic::printMatrix(tmm::Matrix<4,4> mat, const char* heading){
+  log("=============================");
   log(heading);
   mat.printTo(Serial);
 }
@@ -78,7 +79,7 @@ Position Kinematic::fdKinematic(Posture pt){
     ps.A = 0;
     ps.C = getDeg(atan2(mat[0][1], mat[1][1]));
   }
-  if((ps.B == -(getDeg(pi)/2))) {
+  if(ps.B == -(getDeg(pi)/2)) {
     ps.A = 0;
     ps.C = getDeg(-atan2(mat[0][1], mat[2][2]));
   }
@@ -90,7 +91,7 @@ Position Kinematic::fdKinematic(Posture pt){
 ///  d.h. th1, th2 und th3
 Posture Kinematic::ivPosition(Position ps){
   Posture pt = {};
-  logln(ps, "ivPosition: Target Position");
+  logln(&ps, "ivPosition: Target Position");
 
   // Berechnung von theata 1
   float jt1 = atan2(ps.Y, ps.X);
@@ -115,7 +116,7 @@ Posture Kinematic::ivPosition(Position ps){
   float Phi = atan2(-B,A);
   // d.h
   float jt2 = atan2(sqrt(1-powf(D/C,2)),(D/C)) - Phi;
-  float jt2_neg = atan2(-sqrt(1-powf(D/C,2)),(D/C)) - Phi;
+  // NOTE: Unused => float jt2_neg = atan2(-sqrt(1-powf(D/C,2)),(D/C)) - Phi;
 
   pt.Jt2 = getDeg(jt2);
 
@@ -247,7 +248,7 @@ Posture Kinematic::ivKinematic(Position p6){
   }
 
 
-  logln(p6, "ivKinematic: Target Position");
+  logln(&p6, "ivKinematic: Target Position");
   return pt;
 }
 
@@ -270,25 +271,24 @@ tmm::Matrix<4,4> Kinematic::jointTMatrix(DhParam dhPar){
   tmm::Matrix<4,4> mat = {};
 
   // Matrix m11 bis m41
-  mat.printTo(Serial);
-  mat[0][0] = cos(getRad(dhPar.beta))*cos(getRad(dhPar.theta));
-  mat[1][0] = cos(getRad(dhPar.beta))*sin(getRad(dhPar.theta));
-  mat[2][0] = -sin(getRad(dhPar.beta));
+  mat[0][0] = roundf(cos(getRad(dhPar.beta))*cos(getRad(dhPar.theta)));
+  mat[1][0] = roundf(cos(getRad(dhPar.beta))*sin(getRad(dhPar.theta)));
+  mat[2][0] = roundf(-sin(getRad(dhPar.beta)));
   mat[3][0] = 0;
   // Matrix m12 bis m42
-  mat[0][1] = -cos(getRad(dhPar.alpha))*sin(getRad(dhPar.theta))+sin(getRad(dhPar.alpha))*sin(getRad(dhPar.beta))*cos(getRad(dhPar.theta));
-  mat[1][1] =  cos(getRad(dhPar.alpha))*cos(getRad(dhPar.theta))+sin(getRad(dhPar.alpha))*sin(getRad(dhPar.beta))*sin(getRad(dhPar.theta));
-  mat[2][1] =  sin(getRad(dhPar.alpha))*cos(getRad(dhPar.beta));
+  mat[0][1] = roundf(-cos(getRad(dhPar.alpha))*sin(getRad(dhPar.theta))+sin(getRad(dhPar.alpha))*sin(getRad(dhPar.beta))*cos(getRad(dhPar.theta)));
+  mat[1][1] = roundf( cos(getRad(dhPar.alpha))*cos(getRad(dhPar.theta))+sin(getRad(dhPar.alpha))*sin(getRad(dhPar.beta))*sin(getRad(dhPar.theta)));
+  mat[2][1] = roundf( sin(getRad(dhPar.alpha))*cos(getRad(dhPar.beta)));
   mat[3][1] =  0;
   // Matrix m13 bis m43
-  mat[0][2] =  sin(getRad(dhPar.alpha))*sin(getRad(dhPar.theta))+cos(getRad(dhPar.alpha))*sin(getRad(dhPar.beta))*cos(getRad(dhPar.theta));
-  mat[1][2] = -sin(getRad(dhPar.alpha))*cos(getRad(dhPar.theta))+cos(getRad(dhPar.alpha))*sin(getRad(dhPar.beta))*sin(getRad(dhPar.theta));
-  mat[2][2] =  cos(getRad(dhPar.alpha))*cos(getRad(dhPar.beta));
+  mat[0][2] = roundf( sin(getRad(dhPar.alpha))*sin(getRad(dhPar.theta))+cos(getRad(dhPar.alpha))*sin(getRad(dhPar.beta))*cos(getRad(dhPar.theta)));
+  mat[1][2] = roundf(-sin(getRad(dhPar.alpha))*cos(getRad(dhPar.theta))+cos(getRad(dhPar.alpha))*sin(getRad(dhPar.beta))*sin(getRad(dhPar.theta)));
+  mat[2][2] = roundf( cos(getRad(dhPar.alpha))*cos(getRad(dhPar.beta)));
   mat[3][2] =  0;
   // Matrix m14 bis m44
-  mat[0][3] = dhPar.link*cos(getRad(dhPar.theta));
-  mat[1][3] = dhPar.link*sin(getRad(dhPar.theta));
-  mat[2][3] = dhPar.disp;
+  mat[0][3] = roundf(dhPar.link*cos(getRad(dhPar.theta)));
+  mat[1][3] = roundf(dhPar.link*sin(getRad(dhPar.theta)));
+  mat[2][3] = roundf(dhPar.disp);
   mat[3][3] = 1;
 
   return mat;
@@ -306,7 +306,24 @@ tmm::Matrix<4,4> Kinematic::armTMatrix(Posture p){
   dhPar5.theta = p.Jt5;
   dhPar6.theta = p.Jt6;
 
-  //log("===================================================");
+  /*
+  String str1 = "dhPar1: " + String(dhPar1.alpha) + " ," + String(dhPar1.link) + ", " + String(dhPar1.disp) + ", " + String(dhPar1.theta);
+  String str2 = "dhPar2: " + String(dhPar2.alpha) + " ," + String(dhPar2.link) + ", " + String(dhPar2.disp) + ", " + String(dhPar2.theta);
+  String str3 = "dhPar3: " + String(dhPar3.alpha) + " ," + String(dhPar3.link) + ", " + String(dhPar3.disp) + ", " + String(dhPar3.theta);
+  String str4 = "dhPar4: " + String(dhPar4.alpha) + " ," + String(dhPar4.link) + ", " + String(dhPar4.disp) + ", " + String(dhPar4.theta);
+  String str5 = "dhPar5: " + String(dhPar5.alpha) + " ," + String(dhPar5.link) + ", " + String(dhPar5.disp) + ", " + String(dhPar5.theta);
+  String str6 = "dhPar6: " + String(dhPar6.alpha) + " ," + String(dhPar6.link) + ", " + String(dhPar6.disp) + ", " + String(dhPar6.theta);
+  log("===================================================");
+  log("D-H Paramter");
+  log(str1.c_str());
+  log(str2.c_str());
+  log(str3.c_str());
+  log(str4.c_str());
+  log(str5.c_str());
+  log(str6.c_str());
+  log("===================================================");
+
+  log("===================================================");
   log("D-H Paramter");
   log("dhPar1: " + String(dhPar1.alpha) + " ," + String(dhPar1.link) + ", " + String(dhPar1.disp) + ", " + String(dhPar1.theta));
   log("dhPar2: " + String(dhPar2.alpha) + " ," + String(dhPar2.link) + ", " + String(dhPar2.disp) + ", " + String(dhPar2.theta));
@@ -315,6 +332,9 @@ tmm::Matrix<4,4> Kinematic::armTMatrix(Posture p){
   log("dhPar5: " + String(dhPar5.alpha) + " ," + String(dhPar5.link) + ", " + String(dhPar5.disp) + ", " + String(dhPar5.theta));
   log("dhPar6: " + String(dhPar6.alpha) + " ," + String(dhPar6.link) + ", " + String(dhPar6.disp) + ", " + String(dhPar6.theta));
   log("===================================================");
+
+   */
+
 
   // Achsen-Transformations Matrizen Ermittlen
   tMat01 = jointTMatrix(dhPar1);
@@ -325,12 +345,12 @@ tmm::Matrix<4,4> Kinematic::armTMatrix(Posture p){
   tMat56 = jointTMatrix(dhPar6);
 
   // Achsen Transformationen Loggen
-  printMatrix(tMat01, "TMatrix01");
-  printMatrix(tMat12, "TMatrix12");
-  printMatrix(tMat23, "TMatrix23");
-  printMatrix(tMat34, "TMatrix34");
-  printMatrix(tMat45, "TMatrix45");
-  printMatrix(tMat56, "TMatrix56");
+  //printMatrix(tMat01, "TMatrix01");
+  //printMatrix(tMat12, "TMatrix12");
+  //printMatrix(tMat34, "TMatrix34");
+  //printMatrix(tMat45, "TMatrix45");
+  //printMatrix(tMat56, "TMatrix56");
+  //printMatrix(tMat23, "TMatrix23");
 
   // Verkettet-Transformations Matrizen Ermittlen
   tMat02 = tMat01*tMat12;
@@ -341,11 +361,11 @@ tmm::Matrix<4,4> Kinematic::armTMatrix(Posture p){
 
 
   // Transformationen Loggen
-  printMatrix(tMat02, "TMatrix02");
-  printMatrix(tMat03, "TMatrix03");
-  printMatrix(tMat04, "TMatrix04");
-  printMatrix(tMat05, "TMatrix05");
-  printMatrix(tMat06, "TMatrix06");
+  //printMatrix(tMat02, "TMatrix02");
+  //printMatrix(tMat03, "TMatrix03");
+  //printMatrix(tMat04, "TMatrix04");
+  //printMatrix(tMat05, "TMatrix05");
+  //printMatrix(tMat06, "TMatrix06");
 
   return tMat06;
 }

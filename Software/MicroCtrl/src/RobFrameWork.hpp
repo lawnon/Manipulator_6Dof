@@ -52,7 +52,7 @@ class RobFrame
     /// @brief Grundstellung
     Posture PtHome {0, 45, -90, 0, -45, 0};
     /// @brief Befehls-Manager
-    Commands Commands;
+    CommandFactory Commands;
     /// @brief Kinematik-Manager
     Kinematic Kinematics;
     /// @brief Position-Manager
@@ -74,7 +74,7 @@ class RobFrame
     /// @brief Eingangsdaten Parsen
     /// @param data String data
     /// @return void
-    void Decode(String data);
+    void Decode(String& data);
     /// @brief Glenk Einzelverfahren
     /// @param jt Aktuator Referenz
     /// @param dest Ziel-Position

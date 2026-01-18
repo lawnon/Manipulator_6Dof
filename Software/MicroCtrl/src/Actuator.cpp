@@ -69,11 +69,11 @@ int16 Actuator::SetUp(float gearRatio, int16 accuracy, int16 max, int16 min)
 
 /// Anbindung der Hardwareausgänge am Klassen-Ojekt durch die Initialisierung
 /// der "BasicStepperDriver" Klasse
-int16 Actuator::Attach(int16 dirPin, int16 stepPin, int16 enaPin){
+int32 Actuator::Attach(int16 dirPin, int16 stepPin, int16 enaPin){
   _stepper = new BasicStepperDriver(_motorSteps, dirPin, stepPin, enaPin);
   _id = stepPin;
 
-  return int16(_stepper);
+  return int32(_stepper);
 }
 
 /// Referenziehung der gespeicherten Ist-Position
@@ -145,13 +145,15 @@ int32 Actuator::Write(int32 target)
     target = _max;
   }
   int16 actpos = calcPosition(_actualSteps);
+  log(target, "Actuator target");
+  log(actpos, "Actuator Postion");
   if(target >= actpos)
   {
     target = target - actpos;
   }
   else
   {
-    target = actpos - target;
+    target = -(actpos - target);
   }
 
   _previousSteps = _actualSteps;
@@ -166,7 +168,7 @@ int32 Actuator::Write(int32 target)
 
   // Fahrtrichtungs Validierung
   _dir = (_targetSteps >= _actualSteps) ? 1 : -1;
-  _stepper->startMove(_targetSteps*_dir);
+  _stepper->startMove(_targetSteps);
   log(_targetSteps, "Act:target: ");
   log(_actualSteps, "Act:Actual: ");
   log(_dir, "Act:Write dir ");
@@ -189,9 +191,9 @@ int32 Actuator::Write(int32 target)
 }
 
 /// Ist-Winkelwert von in Grad auslesen
-int32 Actuator::Read()
+float Actuator::Read()
 {
-  return calcPosition(_actualSteps);
+  return float(calcPosition(_actualSteps));
 }
 
 /// Soll-Ist Differenze bilden in Grad
@@ -204,5 +206,5 @@ int32 Actuator::Delta(int32 target){
   {
     return _max - _offset;
   }
-  return target - Read();
+  return target - int32(Read());
 }

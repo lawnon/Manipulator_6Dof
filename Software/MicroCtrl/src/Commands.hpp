@@ -20,15 +20,20 @@
 #include "Kinematic.hpp"
 
 class RobFrame;
-class Commands
+class CommandFactory
 {
 private:
   int _range = 0;
   RobFrame* _robFrame;
   Command _list[COMMAND_LEN];
 
+  int _cmdIndex = -1;
+  String _cmdName;
+  String _cmdValue;
+  const Command _cmdNaN = {-1, "Invalid", 0, "NaN"};
+
 public:
-  Commands();
+  CommandFactory();
 
   // Const Difinitions
   enum Tags{

@@ -41,8 +41,8 @@ void PositionFactory::Setup(){
 /// Debug Daten ausdrucken
 void PositionFactory::LogInfo()
 {
-  log(sizeof(_data[0])*POS_LIMIT, "PF::LogInfo: Size of Memory-Block");
-  log(sizeof(_data[0]),"PF::LogInfo: Size of Memory-Unit");
+  //log(sizeof(_data[0])*POS_LIMIT, "PF::LogInfo: Size of Memory-Block");
+  //log(sizeof(_data[0]),"PF::LogInfo: Size of Memory-Unit");
   //log(sizeof(_data[0].Identifier), "PF::LogInfo: Size of PosData.Identifier");
   //log(sizeof(_data[0].Position), "PF::LogInfo: Size of PosData.Position");
   //log(sizeof(_data[0].Posture), "PF::LogInfo: Size of PosData.Posture");
@@ -55,15 +55,15 @@ void PositionFactory::LogInfo()
 void PositionFactory::LogPositions(PosState state){
   log(_definedCount, "PF::LogPositions: Number of defined Positions");
   for(int itr = 0; itr < _definedCount; itr++){
-    log(_data[itr], state);
+    log(&_data[itr], state);
   }
 }
 
 /// Positions zustand Validieren und Ermitteln
-PosState PositionFactory::Decode(String content, char delimiter = ','){
+PosState PositionFactory::Decode(String content, char delimiter){
   PosState decodeState = PosState::Undefined;
 
-  for(int itr = 0;itr < content.length();itr++){
+  for(uint16 itr = 0;itr < content.length();itr++){
     if(isAlpha(content.charAt(itr))){
       //log("PF::Decode");
       if(content.equals("here")){
@@ -77,14 +77,14 @@ PosState PositionFactory::Decode(String content, char delimiter = ','){
 }
 
 /// String Array in Winkelstellungs-Struktur Transformieren
-Posture PositionFactory::DecodePosture(String input, String filter = ","){
+Posture PositionFactory::DecodePosture(String input, String filter){
   /* Expected String := "<jt1>, <jt2, <jt3>, <jt4>" */
 
   if(input.length() <= 0 ){
     return {0, 0, 0, 0};
   }
 
-  if(input.equals(_robFrame->Commands[Commands::Here].Name)){
+  if(input.equals(_robFrame->Commands[CommandFactory::Here].Name)){
     return {
       _robFrame->Joint1.Read(),
       _robFrame->Joint2.Read(),
@@ -110,22 +110,22 @@ Posture PositionFactory::DecodePosture(String input, String filter = ","){
 }
 
 /// String Arrray in Positions-Struktur Transformieren
-Position PositionFactory::DecodePosition(String input, String filter = ","){
+Position PositionFactory::DecodePosition(String input, String filter){
   /* Expected String := "<x>, <y, <z, <a>, <b>, <c>" */
 
   if(input.length() <= 0 ){
     return {0, 0, 0, 0, 0, 0};
   }
 
-  if(input.equals(_robFrame->Commands[Commands::Here].Name)){
+  if(input.equals(_robFrame->Commands[CommandFactory::Here].Name)){
     return {_robFrame->Kinematics.fdKinematic(Posture{
-          _robFrame->Joint1.Read(),
-          _robFrame->Joint2.Read(),
-          _robFrame->Joint3.Read(),
-          _robFrame->Joint4.Read(),
-          _robFrame->Joint5.Read(),
-          _robFrame->Joint6.Read()
-        })};
+      _robFrame->Joint1.Read(),
+      _robFrame->Joint2.Read(),
+      _robFrame->Joint3.Read(),
+      _robFrame->Joint4.Read(),
+      _robFrame->Joint5.Read(),
+      _robFrame->Joint6.Read()
+    })};
   }
 
   int8_t delimeter1 = input.indexOf(filter);
@@ -156,14 +156,16 @@ void PositionFactory::Update(int index, String& params, PosState state){
   case PosState::Posture:
     _data[index].Posture = TosPosture(DecodePosture(params));
     break;
+  default:
+    log("Invalid Params");
   }
 }
 
 /// Neuen Datensatzt im allozierten Datenarray belegen.
-int& PositionFactory::AddPosition(String content, PosState state,  char filter = ' '){
+int& PositionFactory::AddPosition(String content, PosState state, char filter = ' ', int result = -1){
   /* Expected String := "Position <identifier> <x>, <y>, <z>, <a>, <b>, <c>" */
 
-  int result = -1;
+  //int result = -1;
   int delimeter = content.indexOf(filter);
   String identifier = content.substring(0, fmax(content.length(), IDENTIFIER_LEN));
   String params = "";
@@ -179,8 +181,8 @@ int& PositionFactory::AddPosition(String content, PosState state,  char filter =
   //log(delimeter, "PF::AddPosition: Delimeter ");
 
   if(identifier.length() <= 0 ||
-     identifier.equals(_robFrame->Commands.Get(Commands::Here).Name) ||
-     identifier.equals(_robFrame->Commands.Get(Commands::Joints).Name)){
+     identifier.equals(_robFrame->Commands.Get(CommandFactory::Here).Name) ||
+     identifier.equals(_robFrame->Commands.Get(CommandFactory::Joints).Name)){
     log("PF::AddPosition: Invalid Identifier");
     return result;
   }
@@ -192,7 +194,7 @@ int& PositionFactory::AddPosition(String content, PosState state,  char filter =
     if(strcmp(_data[itr].Identifier, cIdentifier) == 0){
       result = itr;
       Update(itr, params, state);
-      log(_data[itr], state);
+      log(&_data[itr], state);
       return result;
     }
   }
@@ -205,7 +207,7 @@ int& PositionFactory::AddPosition(String content, PosState state,  char filter =
   strcpy(_data[_definedCount].Identifier, cIdentifier);
   Update(_definedCount, params, state);
 
-  log(_data[_definedCount], state);
+  log(&_data[_definedCount], state);
   _definedCount++;
 
   result = _definedCount - 1;

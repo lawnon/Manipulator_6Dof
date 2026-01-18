@@ -78,7 +78,7 @@ class Actuator
         /// @param stepPin Stepper Pin id.
         /// @param enaPin Aktivierungs Pin id.
         /// @return Zeiger-Id  zur BasicSteperDriver objekt
-        int16 Attach(int16 dirPin, int16 stepPin, int16 enaPin);
+        int32 Attach(int16 dirPin, int16 stepPin, int16 enaPin);
         ///  Genauigkeit
         int16 Accuracy;
         /// @brief Aktoransteuerung
@@ -96,7 +96,7 @@ class Actuator
         int32 Write(int32 target);
         /// @brief lese Istposition
         /// @return Istwert in Grad
-        int32 Read();
+        float Read();
         /// @brief Soll-Ist Differenze bilden
         /// @param target Zielposition
         /// @return Winkel differenze

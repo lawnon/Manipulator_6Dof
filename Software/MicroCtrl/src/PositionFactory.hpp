@@ -12,7 +12,7 @@
 #ifndef POSITIONFACTORY_H_
 #define POSITIONFACTORY_H_
 
-#define POS_LIMIT 100
+#define POS_LIMIT 10
 
 #include "Types.hpp"
 #include "Logger.hpp"
@@ -75,7 +75,7 @@ class PositionFactory
     /// @param state Type
     /// @param filter Trennzeichen
     /// @return index des hinzugefügte Position
-    int& AddPosition(String content, PosState state, char filter = ' ');
+    int& AddPosition(String content, PosState state, char filter, int result);
     /// @brief Datensatzt anzahl
     int& Count();
     void Get(String identifier);

@@ -35,27 +35,28 @@ void RobFrame::Setup(){
   Joint5.Attach(JT5_DIR_PIN, JT5_STP_PIN, JT5_ENA_PIN);
   Joint6.Attach(JT6_DIR_PIN, JT6_STP_PIN, JT6_ENA_PIN);
   // Set Up Joints
-  Joint1.SetUp( 1,    5,  90, -90);
+  Joint1.SetUp(13.73, 5,  90, -90);
   Joint2.SetUp(13.73, 5,  90, -90);
   Joint3.SetUp(10,    5,  90, -90);
-  Joint4.SetUp( 1,    5,  90, -90);
-  Joint5.SetUp(10,    5,  90, -90);
+  Joint4.SetUp(10,    5,  90, -90);
+  Joint5.SetUp( 1,    5,  90, -90);
   Joint6.SetUp( 1,    5, 180, -180);
   // Set Up Initial Configurations
-  Joint1.Write(PtHome.Jt1);
-  Joint2.Write(PtHome.Jt2);
-  Joint3.Write(PtHome.Jt3);
-  Joint4.Write(PtHome.Jt4);
-  Joint5.Write(PtHome.Jt5);
-  Joint6.Write(PtHome.Jt6);
+  //Joint1.Write(PtHome.Jt1);
+  //Joint2.Write(PtHome.Jt2);
+  //Joint3.Write(PtHome.Jt3);
+  //Joint4.Write(PtHome.Jt4);
+  //Joint5.Write(PtHome.Jt5);
+  //Joint6.Write(PtHome.Jt6);
   // Allocation of Static Position Data
   PosFactory.Setup();
 }
 
 /// Verfahre Gelenk Einzel zum Soll-Position
 void RobFrame::GotoDeg(Actuator& jt, int dest) {
-  float origin = jt.Read();
-  Sweep(jt, origin, dest);
+  //float origin = jt.Read();
+  //Sweep(jt, origin, dest);
+  jt.Write(dest);
 }
 
 /// Manipulator Aktorik synchron ansteuern d.h. mit
@@ -103,7 +104,7 @@ void RobFrame::Validate(Position& origin,
                         Position& dest,
                         int& range,
                         int& valid,
-                        PosState state = PosState::PosAndPost){
+                        PosState state){
   valid = (fabs(dest.X - origin.X) <= range);
   valid = valid && (fabs(dest.Y - origin.Y) <= range);
   valid = valid && (fabs(dest.Z - origin.Z) <= range);
@@ -117,7 +118,7 @@ void RobFrame::Validate(Position& origin,
 Position RobFrame::Interpolate(Position& origin,
                                Position& dest,
                                int range,
-                               int step = 1){
+                               int step){
   return Position {
     ((dest.X - origin.X) > range) ? origin.X + step*((dest.X - origin.X)/abs(dest.X - origin.X)) : dest.X,
     ((dest.Y - origin.Y) > range) ? origin.Y + step*((dest.Y - origin.Y)/abs(dest.Y - origin.Y)) : dest.Y,
@@ -131,16 +132,17 @@ Position RobFrame::Interpolate(Position& origin,
 /// Verfahre alle Gelenke Asynchrone zum Ziel Stellung
 /// in Punkt zu Punkt Bewegung
 PosState RobFrame::Drive(Posture pt){
-  log("Drive Data: " + String(pt.Jt1) +
+  String str = "Drive Data: " + String(pt.Jt1) +
       " | " + String(pt.Jt2) +
       " | " + String(pt.Jt3) +
       " | " + String(pt.Jt4) +
       " | " + String(pt.Jt5) +
-      " | " + String(pt.Jt6));
+      " | " + String(pt.Jt6);
+  log(str.c_str());
 
   if(pt.Jt1 == 0 && pt.Jt2 == 0 && pt.Jt3 == 0
      && pt.Jt4 == 0 && pt.Jt5 == 0 && pt.Jt6 == 0){
-    return;
+    return PosState {};
   }
 
   int origin1 = Joint1.Read();
@@ -156,12 +158,14 @@ PosState RobFrame::Drive(Posture pt){
   int delta4 = Joint4.Delta(pt.Jt4);
   int delta5 = Joint5.Delta(pt.Jt5);
   int delta6 = Joint6.Delta(pt.Jt6);
-  log("Drive Delta: " + String(delta1) +
+
+  str = "Drive Delta: " + String(delta1) +
       " | " + String(delta2) +
       " | " + String(delta3) +
       " | " + String(delta4) +
       " | " + String(delta5) +
-      " | " + String(delta6));
+      " | " + String(delta6);
+  log(str.c_str());
 
   // Get max delta
   int delta = (abs(delta1) >= abs(delta2)) ? abs(delta1) : abs(delta2);
@@ -197,8 +201,8 @@ PosState RobFrame::Drive(Position ps){
   Validate(ps, psCheck, range, valid);
 
   if(valid != 1){
-    logln(ps,"Validation of target Position failed");
-    logln(psCheck,"psChect");
+    logln(&ps, "Validation of target Position failed");
+    logln(&psCheck, "psChect");
     return PosState::Invalid;
   }
   return Drive(pt);
@@ -210,7 +214,7 @@ PosState RobFrame::LDrive(Position ps){
   int valid = 1;
   int counter = 0;
   PosState result = PosState::Undefined;
-  int range = Commands[Commands::Accuracy].Value;
+  int range = Commands[CommandFactory::Accuracy].Value;
   Position origin {};
 
   do{
@@ -223,14 +227,14 @@ PosState RobFrame::LDrive(Position ps){
         Joint6.Read()
       });
 
-    logln(origin, "RF::LDrive: origin");
+    logln(&origin, "RF::LDrive: origin");
 
     Validate(origin, ps, range, valid, PosState::Position);
     log(valid,"RF:LDrive: Valid");
     if(valid <= 0){
       Position itp = Interpolate(origin, ps, range);
-      if(Commands[Commands::Debug].Value > 0){
-        logln(itp, "RF::LDrive: Intp");
+      if(Commands[CommandFactory::Debug].Value > 0){
+        logln(&itp, "RF::LDrive: Intp");
       }
       result = Drive(itp);
     }
@@ -246,10 +250,11 @@ PosState RobFrame::LDrive(Position ps){
 /// Fahre in Punkt zu Punkt bzw. Joint Bewegung
 /// oder fahre Gradlinige Bewegung.
 void RobFrame::LoopPositions(){
-  if(Commands[Commands::JLoop].Value > 0 &&
-     Commands[Commands::LLoop].Value <= 0){
+  if(Commands[CommandFactory::JLoop].Value > 0 &&
+     Commands[CommandFactory::LLoop].Value <= 0){
     if(_loopCount < PosFactory.Count()){
-      logln(PosFactory[_loopCount], "RF::LoopPos: [" + String(_loopCount) + "]");
+      String str = "RF::LoopPos: [" + String(_loopCount) + "]";
+      logln(&PosFactory[_loopCount], str.c_str());
       Drive(PosFactory[_loopCount]);
       _loopCount++;
       Commands.Delay();
@@ -257,10 +262,11 @@ void RobFrame::LoopPositions(){
       _loopCount = 0;
     }
   }
-  if(Commands[Commands::LLoop].Value > 0 &&
-     Commands[Commands::JLoop].Value <= 0){
+  if(Commands[CommandFactory::LLoop].Value > 0 &&
+     Commands[CommandFactory::JLoop].Value <= 0){
     if(_loopCount < PosFactory.Count()){
-      logln(PosFactory[_loopCount], "RF::LoopPos: [" + String(_loopCount) + "]");
+      String str = "RF::LoopPos: [" + String(_loopCount) + "]";
+      logln(&PosFactory[_loopCount], str.c_str());
       LDrive(PosFactory[_loopCount]);
       _loopCount++;
       Commands.Delay();
@@ -272,63 +278,89 @@ void RobFrame::LoopPositions(){
 
 /// Eingangs Daten aus Serialle Port lesen
 /// Auswerten und entsprechend aus führen.
-void RobFrame::Decode(String data) {
+void RobFrame::Decode(String& data) {
   // Eingangs Daten lesen
-  Command inputCmd = Commands.Parse(data);
+  Command* inputCmd = &Commands.Parse(data);
 
-  switch (inputCmd.Id) {
-  case Commands::World:
+  if (inputCmd->Id == -1){ return; }
+
+  Posture pt = {
+    Joint1.Read(),
+    Joint2.Read(),
+    Joint3.Read(),
+    Joint4.Read(),
+    Joint5.Read(),
+    Joint6.Read()
+  };
+
+  switch (inputCmd->Id) {
+  case CommandFactory::World:
+  {
     log("World Command not yet Implemented");
     break;
-
-  case Commands::Jt1:
-    GotoDeg(Joint1, inputCmd.Value);
+  }
+  case CommandFactory::Jt1:
+  {
+    GotoDeg(Joint1, inputCmd->Value);
     break;
-
-  case Commands::Jt2:
-    GotoDeg(Joint2, inputCmd.Value);
+  }
+  case CommandFactory::Jt2:
+  {
+    GotoDeg(Joint2, inputCmd->Value);
     break;
-
-  case Commands::Jt3:
-    GotoDeg(Joint3, inputCmd.Value);
+  }
+  case CommandFactory::Jt3:
+  {
+    GotoDeg(Joint3, inputCmd->Value);
     break;
-
-  case Commands::Jt4:
-    GotoDeg(Joint4, inputCmd.Value);
+  }
+  case CommandFactory::Jt4:
+  {
+    GotoDeg(Joint4, inputCmd->Value);
     break;
-
-  case Commands::Joints:
-    // Get Angular Positoin of each Joint
-    log(Posture {
-        Joint1.Read(),
-        Joint2.Read(),
-        Joint3.Read(),
-        Joint4.Read(),
-        Joint5.Read(),
-        Joint6.Read()
-      });
+  }
+  case CommandFactory::Jt5:
+  {
+    GotoDeg(Joint5, inputCmd->Value);
     break;
+  }
 
-  case Commands::Here:
-    // Get Carthesian Koordinates
-    log(Kinematics.fdKinematic(Posture {
-          Joint1.Read(),
-          Joint2.Read(),
-          Joint3.Read(),
-          Joint4.Read(),
-          Joint5.Read(),
-          Joint6.Read()
-        }));
+  case CommandFactory::Jt6:
+  {
+    GotoDeg(Joint6, inputCmd->Value);
     break;
-
-  case Commands::GoHome:
+  }
+  case CommandFactory::Here:
+  {
+    log(&Kinematics.fdKinematic(pt));
+    break;
+  }
+  case CommandFactory::Joints:
+  {
+    log(&pt);
+    break;
+  }
+  case CommandFactory::GoHome:
+  {
     Drive(Posture {PtHome.Jt1, PtHome.Jt2, PtHome.Jt3, PtHome.Jt4, PtHome.Jt5, PtHome.Jt6});
     break;
-
-  case Commands::Drive:
-    Drive(PosFactory.DecodePosition(inputCmd.Content));
+  }
+  //
+  //
+  //
+  case CommandFactory::Help:
+  {
+    Commands.List();
     break;
-
+  }
+  }
+  log("Decode Jesus is lord");
+  /*
+  case CommandFactory::Drive:
+  {
+    Drive(PosFactory.DecodePosition(inputCmd->Content));
+    break;
+  }
   case Commands::JDrive:
     Drive(PosFactory.DecodePosture(inputCmd.Content));
     break;
@@ -356,7 +388,6 @@ void RobFrame::Decode(String data) {
   case Commands::ListAllPositions:
     PosFactory.LogPositions(PosState::PosAndPost);
     break;
-  case Commands::Help:
-    Commands.List();
   }
+   */
 }

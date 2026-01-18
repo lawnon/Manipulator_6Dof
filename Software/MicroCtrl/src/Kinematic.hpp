@@ -68,24 +68,24 @@ class Kinematic
         /// @param mat 4x4 Matrix
         /// @param heading Matrix Tag
         /// @return void
-        void printMatrix(tmm::Matrix<4,4> mat, String heading);
+        void printMatrix(tmm::Matrix<4,4> mat, const char*  heading);
         /// @brief Vorwaertskinematik berechnung
         /// @param posture Manipulator Winkelstellung
         /// @return Lage (Position und Orientierung)
-        Position fdKinematic(Posture posture);
+        Position fdKinematic(Posture pt);
         /// @brief Inverskinematik berechnung
         /// @param position Manipulator Position
         /// @return Manipulator Winkelstellung
-        Posture ivKinematic(Position position);
+        Posture ivKinematic(Position ps);
         /// @brief Positionsgebenden Winkeln Berechnen
         /// @param position lage Position und Orientierune
         /// @return Winkelwerte 1...3
-        Posture ivPosition(Position position);
+        Posture ivPosition(Position ps);
         /// @brief Orientierungsgebeden Winkeln Berechnen
         /// @param posture Winkelstellung
         /// @param Ps Position
         /// @return Winkelstellung
-        Posture ivOrientation(Posture posture, Position ps);
+        Posture ivOrientation(Posture pt, Position ps);
 
         /// @brief D-H Parameter Gelenk 1
         DhParam dhPar1 = {};
