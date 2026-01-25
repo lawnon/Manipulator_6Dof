@@ -13,7 +13,7 @@ namespace Logger{
   void logInit(long  baudRate){
     Serial.begin(baudRate);
     while (!Serial){}
-    delay(5000);
+    delay(500);
     Serial.print("C++ Version: ");
     Serial.print(__cplusplus);
     Serial.print("\n");
