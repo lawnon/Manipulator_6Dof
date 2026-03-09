@@ -22,5 +22,37 @@
 // #define cCyan    "\033[36m";
 // #define cWhite   "\033[37m";
 
+/// State Steps
+struct Step
+{
+    int Active = 0;
+    int Previous = 0;
+    int Next = 0;
+};
+
+/// Communication State Maschine
+enum ComState
+{
+    /// Persisten StateMaschine Data
+    // Initialization-SetUp 
+    Init,
+    Idel,
+
+    // Read and Evaluate Input data from Embedded Controller
+    Input,            
+    InputPending,     
+    InputFinished,        
+    InputReadBuffer,  
+    InputWriteConsole,
+    InputDone,        
+    InputError,       
+
+    // Evaulate and Write to Embedded Controller
+    Output,
+    OutputGetConsole,
+    OutputWriteBuffer,
+    OutputDone,
+    OutputError
+};
 
 #endif // CTRL_H_
