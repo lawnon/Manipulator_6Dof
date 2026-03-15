@@ -33,9 +33,11 @@ struct Terminal //
     const char* cInfo    = "\033[35m->\033[32m ";
     const char* cWarn    = "\033[35m->\033[33m ";
     const char* cError   = "\033[35m->\033[31m ";
+    const char* cGetLine = "\033[35m<-\033[34m ";
 
     // Debug Info
     BOOL Debug = false;
+    BOOL DebugSM = false;
 };
 
 /// State Steps
@@ -57,7 +59,7 @@ enum ComState
     // Read and Evaluate Input data from Embedded Controller
     Input,            
     InputPending,     
-    InputFinished,        
+    InputReady,        
     InputReadBuffer,  
     InputWriteConsole,
     InputDone,        

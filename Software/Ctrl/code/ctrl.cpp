@@ -25,6 +25,9 @@ std::string ConsoleInput = "";
 char TimeStampBuffer[32];
 Terminal Term;
 
+BYTE  vKeyBoardState[256] = {};
+short vKeyStatus = 0;
+
 /////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////
 /// TODO: 1) Add Refactor logging
@@ -32,6 +35,7 @@ Terminal Term;
 ///       3) Refactor / Pull out code chunks in seprate functions
 ///       4) Auto set Baudrate
 ///       5) Consider using a state Maschine
+///       6) Encalsulate dangling attributes within Namespaces
 ///       x) Refactor, Refactor, Refactor
 /////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////// 
@@ -87,14 +91,35 @@ void logGetLastError(const char* text, const char* msgType = Term.cError)
               << text << GetLastError()
               << Term.cReset;
 }
-std::string  logStep(Step stp)
+
+void logDeviceState(DCB deviceCtrlBlk)
+{
+    std::cout << Term.cInfo
+              << "DCB["      << (int)deviceCtrlBlk.DCBlength << "]:= "
+              << "BaudRate=" << (int)deviceCtrlBlk.BaudRate << " |"
+              << "ByteSize=" << (int)deviceCtrlBlk.ByteSize << " |"
+              << "Parity="   << (int)deviceCtrlBlk.Parity   << " |" 
+              << "StopBits=" << (int)deviceCtrlBlk.StopBits
+              << Term.cReset;
+}
+
+void logIOCompletion(DWORD errorCode, DWORD nrOfBytes, LPOVERLAPPED overlaped)
+{
+    std::cout << Term.cError
+              << "ErrorCode: " << std::bitset<32>(errorCode)
+              << " | Number of bytes: " << nrOfBytes
+              << " | Overlap: " << static_cast<void*>(overlaped)
+              << Term.cReset;
+}
+
+std::string  StepToString(Step stp)
 {
     switch (stp.Active) {
         case ComState::Init: return "Initialization";
         case ComState::Idel: return "Idel";
         case ComState::Input: return "Input";            
         case ComState::InputPending: return "InputPending";     
-        case ComState::InputFinished: return "InputFinished";        
+        case ComState::InputReady: return "InputReady";        
         case ComState::InputReadBuffer: return "InputeReadBuffer";  
         case ComState::InputWriteConsole: return "InputeWriteConsole";
         case ComState::InputDone: return "InputDone";        
@@ -119,24 +144,27 @@ void EventReset(OVERLAPPED& overlap)
     overlap.InternalHigh = 0;
 }
 
-void logDeviceState(DCB deviceCtrlBlk)
+BOOL KeyboardPressed(BOOL Init = true)
 {
-    std::cout << Term.cInfo
-              << "DCB["      << (int)deviceCtrlBlk.DCBlength << "]:= "
-              << "BaudRate=" << (int)deviceCtrlBlk.BaudRate << " |"
-              << "ByteSize=" << (int)deviceCtrlBlk.ByteSize << " |"
-              << "Parity="   << (int)deviceCtrlBlk.Parity   << " |" 
-              << "StopBits=" << (int)deviceCtrlBlk.StopBits
-              << Term.cReset;
-}
-
-void logIOCompletion(DWORD errorCode, DWORD nrOfBytes, LPOVERLAPPED overlaped)
-{
-    std::cout << Term.cError
-              << "ErrorCode: " << std::bitset<32>(errorCode)
-              << " | Number of bytes: " << nrOfBytes
-              << " | Overlap: " << static_cast<void*>(overlaped)
-              << Term.cReset;
+    // Init Keyboard State
+    if(Init)
+    {
+        GetKeyState(0);        
+    }
+    
+    // Get keyboard Input
+    if (!GetKeyboardState(vKeyBoardState))
+    {
+        logGetLastError("Get Key Board State failed with error:  ", Term.cWarn);
+    }
+    for (int i = 26; i <= 90; i++)
+    {                    
+        if (vKeyBoardState[i] & KeyDown)
+        {
+            return true;
+        }
+    }
+    return false;
 }
 
 void CALLBACK onReadIOCompletion(
@@ -165,26 +193,34 @@ void CALLBACK onWriteIOCompletion(
     EventReset(*overlaped);
 }
 
-int main(int argc, const char* argv[], const char* envp[])
+int main(int argc, const char* argv[])
 {
     // NOTE: Refractor, Refractor, Refractor
-     
-    // Print Debug Info
+    
     std::cout << Term.cInfo
               <<"(* programm Started *)"
               << Term.cReset;
-    std::initializer_list<Message<int>> infc = {{"Argument Count: ", argc}};
-    logInfos<int>(infc);
 
     // Activate verborse logging
     if(!strcmp(argv[argc-1], "-v") || !strcmp(argv[argc-1], "--verbose"))
     {
-        Term.Debug = true;            
+        Term.Debug = true;
     }
+    if(!strcmp(argv[argc-1], "-v-sm") || !strcmp(argv[argc-1], "--verbose-sm"))
+    {
+        Term.Debug = true;
+        Term.DebugSM = true;            
+    }
+    
+    std::initializer_list<Message<int>> infc = {{"Argument Count: ", argc}};
+    logInfos<int>(infc);
     
     std::string devicePort = "COM1";
     for (int i = 0; i < argc; i++)
     {       
+        std::initializer_list<Message<const char*>> infv = {{"Argument Value: ", argv[i]}};
+        logInfos<const char*>(infv);
+        
         if (!strcmp(argv[i], "-c") || !strcmp(argv[i],"--com"))
         {
             if ((i+1 < argc) && (strlen(argv[i+1]) > 0))
@@ -192,9 +228,6 @@ int main(int argc, const char* argv[], const char* envp[])
                 devicePort = "COM" + static_cast<std::string>(argv[i+1]);
             }            
         }
-
-        std::initializer_list<Message<const char*>> infv = {{"Argument Value: ", argv[i]}};
-        logInfos<const char*>(infv);
     } 
 
     char deviceBuffer[BUFFERSIZE] = {0};
@@ -234,9 +267,7 @@ int main(int argc, const char* argv[], const char* envp[])
     result = GetCommState(deviceHandle, &deviceCtrlBlk);
     if (!result)
     {
-        std::cout << Term.cError
-                  << "GetCommState failed with error " << GetLastError()
-                  << Term.cReset;
+        logGetLastError("GetCommState failed with error ");
         CloseHandle(deviceHandle);
         return (2);
     }
@@ -249,16 +280,11 @@ int main(int argc, const char* argv[], const char* envp[])
     result = SetCommState(deviceHandle, &deviceCtrlBlk);
     if (!result)
     {
-        std::cout << Term.cError
-                  << "SetCommState failed with error " << GetLastError()
-                  << Term.cReset;
+        logGetLastError("SetCommState failed with error ");
         CloseHandle(deviceHandle);
         return (3);
     }
-    //std::initializer_list<Info<string>> infs = { }
-    std::cout << Term.cInfo
-              << "Serial port " << devicePort  << " successfully reconfigured."
-              << Term.cReset;
+    logInfo("Serial port " + devicePort + " successfully reconfigured.");
     logDeviceState(deviceCtrlBlk);
 
     result = SetCommMask(deviceHandle,
@@ -271,9 +297,7 @@ int main(int argc, const char* argv[], const char* envp[])
     );
     if (!result)
     {
-        std::cout << Term.cError
-                  << "SetCommMask failed with error " << GetLastError()
-                  << Term.cReset;
+        logGetLastError("SetCommMask failed with error ");
         CloseHandle(deviceHandle);
         return (4);
     }
@@ -302,12 +326,9 @@ int main(int argc, const char* argv[], const char* envp[])
     writeOverlap.OffsetHigh = 0;
     assert(writeOverlap.hEvent);
     
-    // TODO: Refactor While Loops to State Maschine
-
     COMSTAT comState;
     DWORD bufferSize = BUFFERSIZE;
-    BYTE vKeyBoardState[256] = {};
-    short vKeyStatus = 0;
+    
     Step cStep = {};
     long pendingCycleCount = 0;
     
@@ -333,6 +354,13 @@ int main(int argc, const char* argv[], const char* envp[])
             {
                 // Init Keyboard State
                 vKeyStatus = GetKeyState(0);
+
+                // Get keyboard Input
+                if (KeyboardPressed())
+                {
+                    cStep.Next = ComState::Output;                    
+                    break;                
+                }
                 
                 // Check for Incoming data
                 eventError = GetLastError();
@@ -345,24 +373,27 @@ int main(int argc, const char* argv[], const char* envp[])
                 }
                 if (eventError == ERROR_IO_PENDING)
                 { 
-                    eventOverlapResult = GetOverlappedResult(
-                        deviceHandle,  // Handle Hfile
-                        &eventOverlap, // Overlapped
-                        &bytesRead,    // NumberOfBytesTransferred EventMask
-                        false);        // Alertable
-
-                    
+                    cStep.Next = ComState::InputPending;                    
                 }
+                break;
+            }
+
+            case ComState::InputPending:
+            {
+                cStep.Next = ComState::Idel;
+                eventOverlapResult = GetOverlappedResult(
+                    deviceHandle,  // Handle Hfile
+                    &eventOverlap, // Overlapped
+                    &bytesRead,    // NumberOfBytesTransferred EventMask
+                    false);        // Alertable
+
                 if(eventOverlapResult)
                 {
                     if(eventMask)
                     {                        
                         eventOverlapResult = false;
-                        cStep.Next = ComState::InputFinished;
+                        cStep.Next = ComState::InputReady;
                         pendingCycleCount = 0;
-                        logInfo("Event Error: " + std::to_string(eventError) +
-                                " Event Mask: " + std::to_string(eventMask));
-                    
                         break; 
                     }
                 }
@@ -372,130 +403,22 @@ int main(int argc, const char* argv[], const char* envp[])
                     switch (eventError)
                     {
                         case ERROR_IO_INCOMPLETE:
-                        {            
-                            if (pendingCycleCount <= 0)
-                            {
-                                std::cout << Term.cInfo
-                                          << "IO Completion ... "
-                                          << pendingCycleCount
-                                          << Term.cReset;
-                            }
-                            else
-                            {
-                                std::cout << "\x1b[1A"  // Move cursor up one
-                                          << "\x1b[2K" // Delete the entire line
-                                          << Term.cInfo
-                                          << "IO Completion ... "
-                                          << pendingCycleCount
-                                          << Term.cReset;
-                            }
-                            pendingCycleCount += 1;
-                            break;
-                        }
-                    }
-                }
-                
-                // Get keyboard Input
-                if (!GetKeyboardState(vKeyBoardState))
-                {
-                    logGetLastError("Get Key Board State failed with error:  ", Term.cWarn);
-                }
-                for (int i = 48; i <= 90; i++)
-                {                    
-                    if (vKeyBoardState[i] & KeyDown)
-                    {
-                        cStep.Next = ComState::Output;
-                        break;
-                    }
-                }
-                break;
-            }
-
-            case ComState::Input:
-            {
-                cStep.Next = ComState::Idel;
-                eventError = GetLastError();
-                if (eventError == ERROR_IO_PENDING)
-                {
-                    cStep.Next = ComState::InputPending;
-                    pendingCycleCount = 0;
-                }
-                else
-                {
-                    std::cout << Term.cRed << "I\\O pending failed with error "
-                              << eventError
-                              << Term.cReset << std::endl;    
-                } 
-                break;                
-            }
-                
-            case ComState::InputPending:
-            {
-                if (!eventOverlapResult)
-                {
-                    eventError = GetLastError();                
-                    switch (eventError)
-                    {
-                        case ERROR_IO_INCOMPLETE:
-                        {                                
-                            // Force Input to Console or IO-Completion Time-One                             
-                            cStep.Next = ComState::InputPending;
-                            
-                            if (pendingCycleCount > 100)
-                            {
-                                EventReset(eventOverlap);
-                                cStep.Next = ComState::Idel;
-                                break;
-                            }
-
-                            if (pendingCycleCount <= 0)
-                            {
-                                std::cout << Term.cInfo
-                                          << "IO Completion ... "
-                                          << pendingCycleCount
-                                          << Term.cReset;
-                            }
-                            else
-                            {
-                                std::cout << "\x1b[1A"  // Move cursor up one
-                                          << "\x1b[2K" // Delete the entire line
-                                          << Term.cInfo
-                                          << "IO Completion ... "
-                                          << pendingCycleCount
-                                          << Term.cReset;
-                            }
-                            pendingCycleCount += 1;
-                            break;
-                        }
-                        default:
                         {
-                            std::cout << Term.cError
-                                      << "Undefined Error: " << eventError
-                                      << Term.cReset;
+                            ClearCommError(deviceHandle, &eventError, &comState);                                
+                            if (comState.cbInQue >= 8)
+                            {
+                                cStep.Next = ComState::InputPending;
+                            }
+                            pendingCycleCount += 1;
+                            break;
                         }
-                    }                        
+                    }
                 }
-
-                vKeyStatus = GetKeyState(VK_SPACE);
-                if (vKeyStatus & KeyDown)
-                {
-                    EventReset(eventOverlap);
-                    cStep.Next = ComState::Idel;
-                    break;
-                }
-                
-                if (eventMask)
-                {
-                    cStep.Next = ComState::InputFinished;
-                    ClearCommError(deviceHandle, &eventError, &comState);
-                    EventReset(eventOverlap);                    
-                }
-                SetLastError(0);
                 break;
             }
-
-            case ComState::InputFinished: 
-           { 
+            
+            case ComState::InputReady: 
+            { 
                cStep.Next = ComState::Idel;
                 if (eventMask & EV_CTS)
                 {
@@ -507,17 +430,17 @@ int main(int argc, const char* argv[], const char* envp[])
                 }
                 if (eventMask & EV_RXFLAG)
                 {
-                    clog("RXFLAG changed state detected", Term.cBlue);
+                    logInfo("RXFLAG changed state detected");
                     cStep.Next = ComState::InputReadBuffer;
                 }
                 if (eventMask & EV_RXCHAR)
                 {
-                    clog("RXCHAR changed detected", Term.cBlue);
+                    logInfo("RXCHAR changed detected");
                     cStep.Next = ComState::InputReadBuffer;
                 }
                 if (eventMask & EV_RLSD)
                 {
-                    clog("EV_RLSD detectec§", Term.cBlue);
+                    logInfo("EV_RLSD detectec§");
                 }
                 eventMask = 0;
                 break;
@@ -525,11 +448,12 @@ int main(int argc, const char* argv[], const char* envp[])
 
             case ComState::InputReadBuffer:
             {
+                Sleep(100);
                 cStep.Next = ComState::Idel;
                 if (ClearCommError(deviceHandle, &eventError, &comState))
                 {
                     bufferSize = comState.cbInQue;
-                    logWarn("Comm Error Size: " + std::to_string(bufferSize));
+                    logInfo("Comm Error Size: " + std::to_string(bufferSize));
                 }
                 else
                 {
@@ -546,9 +470,7 @@ int main(int argc, const char* argv[], const char* envp[])
                         
                 if (!readResult)
                 {
-                    std::cout << Term.cError
-                              << "Termnal failure: Unable to read from File: " << GetLastError()
-                              << Term.cReset;
+                    logGetLastError("Termnal failure: Unable to read from File: ");
                     CloseHandle(deviceHandle);
                     return (5);
                 }
@@ -569,12 +491,9 @@ int main(int argc, const char* argv[], const char* envp[])
                     
                     std::cout << Term.cCyan
                               << deviceBuffer
-                              << Term.cReset;
-                
-                    bytesRead = 0;
+                              << Term.cReset
+                              << std::endl;                
                     
-                    // NOTE: this is temporary
-                    std::memset(deviceBuffer, 0, BUFFERSIZE);
                     cStep.Next = ComState::InputDone;
                     break;
                 }
@@ -582,7 +501,7 @@ int main(int argc, const char* argv[], const char* envp[])
                 {
                     // FIXME: NUll byte has to be handled better than
                     // verbose logging.                    
-                    logError("No data read from devicePort");
+                    logWarn("No data read from devicePort");
                 }
                 else
                 {
@@ -593,6 +512,12 @@ int main(int argc, const char* argv[], const char* envp[])
 
             case ComState::InputDone:
             {
+                comState = {};
+                eventMask = 0;
+                // NOTE: this is temporary
+                bytesRead = 0;
+                std::memset(deviceBuffer, 0, BUFFERSIZE);
+                
                 cStep.Next = ComState::Idel;
                 break;
             }
@@ -604,12 +529,13 @@ int main(int argc, const char* argv[], const char* envp[])
 
             case ComState::Output:
             {
-                cStep.Next = ComState::Idel;
-                std::cout << Term.cWarn;
+                logInfo("Waiting for Keyboard Input ... ");
+                std::cout << Term.cGetLine;
                 std::getline(std::cin, ConsoleInput);
                     
                 if (!ConsoleInput.length())
                 {
+                    cStep.Next = ComState::Idel;
                     break;
                 }
                 if (ConsoleInput == "exit")
@@ -629,9 +555,7 @@ int main(int argc, const char* argv[], const char* envp[])
                 );
                 if (!writeResult)
                 {
-                    std::cout << Term.cError
-                              << "Termnal failure: Unable to write from File " << GetLastError()
-                              << Term.cReset;
+                    logGetLastError("Termnal failure: Unable to write from File ");
                     CloseHandle(deviceHandle);
                     return (6);
                 }
@@ -646,7 +570,11 @@ int main(int argc, const char* argv[], const char* envp[])
 
             case ComState::OutputDone:
             {
-                cStep.Next = ComState::Idel;
+                if(!KeyboardPressed())
+                {
+                    cStep.Next = ComState::Idel;                    
+                }
+                
                 break;
             }
 
@@ -660,15 +588,20 @@ int main(int argc, const char* argv[], const char* envp[])
         {
             cStep.Previous = cStep.Active;
             cStep.Active = cStep.Next;
-            std::string stp = "Step: " + logStep(cStep);
-            logInfo(stp);
+            if(Term.DebugSM)
+            {
+                std::string stp = "Step: " + StepToString(cStep);
+                logInfo(stp);                
+            }
         }
 
-        Sleep(50);
+        //Sleep(50);
     }
 
 Terminate:
-    logInfo("Programm Terminating");
+    std::cout << Term.cInfo
+              << "(* Programm Terminating *)"
+              << Term.cReset;
     CloseHandle(deviceHandle);
     return (0);
 }
