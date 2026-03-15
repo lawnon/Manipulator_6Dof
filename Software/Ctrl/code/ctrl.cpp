@@ -10,30 +10,12 @@
 
 #include "ctrl.hpp"
 
-#include <windows.h>
-#include <winuser.h>
-#include <tchar.h>
-#include <assert.h>
 #include <time.h>
 #include <iostream>
 #include <string>
 #include <initializer_list>
 #include <bitset>
 
-// Console Color Codes
-const char* cReset   = "\033[00m\n";
-const char* cBlack   = "\033[30m";
-const char* cRed     = "\033[31m";
-const char* cGreen   = "\033[32m";
-const char* cYellow  = "\033[33m";
-const char* cBlue    = "\033[34m";
-const char* cMagenta = "\033[35m";
-const char* cCyan    = "\033[36m";
-const char* cWhite   = "\033[37m";
-
-const char* cInfo    = "\033[35m->\033[32m ";
-const char* cWarn    = "\033[35m->\033[33m ";
-const char* cError   = "\033[35m->\033[31m ";
 
 DWORD ReadBytesTransferred = 0;
 DWORD WriteBytesTransferred = 0;
@@ -41,6 +23,7 @@ DWORD WriteBytesTransferred = 0;
 std::time_t TimeStamp = std::time(NULL);
 std::string ConsoleInput = "";
 char TimeStampBuffer[32];
+Terminal Term;
 
 /////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////
@@ -56,16 +39,19 @@ char TimeStampBuffer[32];
 template<typename T>
 struct Message{
     std::string text = "";
-    T &code;
+    const T &code;
 };
 
-void clog(const std::string &text, std::string colour = cReset)
+void clog(const std::string &text, std::string colour = Term.cReset)
 {
-    std::cout << cMagenta  << "-> " << colour  << text << cReset;   
+    if (Term.Debug)
+    {
+        std::cout << Term.cMagenta  << "-> " << colour  << text << Term.cReset;           
+    }
 }
 void logInfo(const std::string &text)
 {
-    clog(text, cGreen);
+    clog(text, Term.cGreen);
 }
 // TODO: undate with templates
 // in order to pas an Array of <string, var>
@@ -73,30 +59,33 @@ void logInfo(const std::string &text)
 template <typename T>
 void logInfos(std::initializer_list<Message<T>> infos)
 {
-    if (infos.size() < 0)
-    {
-        return;        
+    if (Term.Debug)
+    {        
+        if (infos.size() < 0)
+        {
+            return;        
+        }
+        std::cout << Term.cMagenta  << "-> "  << Term.cGreen;
+        for (auto &info : infos)
+        {
+            std::cout << info.text << static_cast<T>(info.code);
+        }
+        std::cout << Term.cReset;
     }
-    std::cout << cMagenta  << "-> "  << cGreen;
-    for (auto &info : infos)
-    {
-        std::cout << info.text << static_cast<T>(info.code);
-    }
-    std::cout << cReset;
 }
 void logWarn(const std::string &text)
 {
-    clog(text, cYellow);
+    clog(text, Term.cYellow);
 }
 void logError(const std::string &text)
 {
-    clog(text, cRed);
+    clog(text, Term.cRed);
 }
-void logGetLastError(const char* text, const char* msgType = cError)
+void logGetLastError(const char* text, const char* msgType = Term.cError)
 {
     std::cout << msgType
               << text << GetLastError()
-              << cReset;
+              << Term.cReset;
 }
 std::string  logStep(Step stp)
 {
@@ -115,8 +104,8 @@ std::string  logStep(Step stp)
         case ComState::OutputWriteBuffer: return "OutputWriteBuffer";
         case ComState::OutputDone: return "OutputDone";
         case ComState::OutputError: return "OutpurtError";
+        default: return "NA";
     }
-    return "NA";    
 }
 
 void EventReset(OVERLAPPED& overlap)
@@ -132,22 +121,22 @@ void EventReset(OVERLAPPED& overlap)
 
 void logDeviceState(DCB deviceCtrlBlk)
 {
-    std::cout << cInfo
+    std::cout << Term.cInfo
               << "DCB["      << (int)deviceCtrlBlk.DCBlength << "]:= "
               << "BaudRate=" << (int)deviceCtrlBlk.BaudRate << " |"
               << "ByteSize=" << (int)deviceCtrlBlk.ByteSize << " |"
               << "Parity="   << (int)deviceCtrlBlk.Parity   << " |" 
               << "StopBits=" << (int)deviceCtrlBlk.StopBits
-              << cReset;
+              << Term.cReset;
 }
 
 void logIOCompletion(DWORD errorCode, DWORD nrOfBytes, LPOVERLAPPED overlaped)
 {
-    std::cout << cError
+    std::cout << Term.cError
               << "ErrorCode: " << std::bitset<32>(errorCode)
               << " | Number of bytes: " << nrOfBytes
               << " | Overlap: " << static_cast<void*>(overlaped)
-              << cReset;
+              << Term.cReset;
 }
 
 void CALLBACK onReadIOCompletion(
@@ -181,29 +170,31 @@ int main(int argc, const char* argv[], const char* envp[])
     // NOTE: Refractor, Refractor, Refractor
      
     // Print Debug Info
-    std::cout << cInfo
+    std::cout << Term.cInfo
               <<"(* programm Started *)"
-              << cReset;
+              << Term.cReset;
     std::initializer_list<Message<int>> infc = {{"Argument Count: ", argc}};
-    //logInfos<int>({{"Argument Count: ", &argc}});
     logInfos<int>(infc);
+
+    // Activate verborse logging
+    if(!strcmp(argv[argc-1], "-v") || !strcmp(argv[argc-1], "--verbose"))
+    {
+        Term.Debug = true;            
+    }
     
     std::string devicePort = "COM1";
     for (int i = 0; i < argc; i++)
-    {        
-        //std::cout << "argv: " << argv[i] << std::endl;
-        std::initializer_list<Message<const char*>> infv = {{"Argument Value: ", argv[i]}};
-        logInfos<const char*>(infv);
-        std::initializer_list<Message<const char*>> infp = {{"Environment Param: ", envp[i]}};
-        //logInfos<const char*>(infp);
-
+    {       
         if (!strcmp(argv[i], "-c") || !strcmp(argv[i],"--com"))
         {
-            if ((i+1 <= argc) && (strlen(argv[i+1]) > 0))
+            if ((i+1 < argc) && (strlen(argv[i+1]) > 0))
             {
                 devicePort = "COM" + static_cast<std::string>(argv[i+1]);
             }            
         }
+
+        std::initializer_list<Message<const char*>> infv = {{"Argument Value: ", argv[i]}};
+        logInfos<const char*>(infv);
     } 
 
     char deviceBuffer[BUFFERSIZE] = {0};
@@ -215,6 +206,8 @@ int main(int argc, const char* argv[], const char* envp[])
     DWORD eventMask = 0;
     DWORD eventError = 0;
     BOOL eventResult;
+    BOOL eventOverlapResult = 0;
+
     BOOL result;
     
     //  Open a handle to the specified com port.
@@ -241,9 +234,9 @@ int main(int argc, const char* argv[], const char* envp[])
     result = GetCommState(deviceHandle, &deviceCtrlBlk);
     if (!result)
     {
-        std::cout << cError
+        std::cout << Term.cError
                   << "GetCommState failed with error " << GetLastError()
-                  << cReset;
+                  << Term.cReset;
         CloseHandle(deviceHandle);
         return (2);
     }
@@ -252,22 +245,20 @@ int main(int argc, const char* argv[], const char* envp[])
     deviceCtrlBlk.ByteSize = 8;          //  data size, xmit and rcv
     deviceCtrlBlk.Parity   = NOPARITY;     //  parity bit
     deviceCtrlBlk.StopBits = ONESTOPBIT; //  stop bit
-    deviceCtrlBlk.XonChar  = '='; // The value of the XON character for both transmission and reception.
-    //deviceCtrlBlk.EvtChar  = '='; // The value of the character used to signal an event.
 
     result = SetCommState(deviceHandle, &deviceCtrlBlk);
     if (!result)
     {
-        std::cout << cError
+        std::cout << Term.cError
                   << "SetCommState failed with error " << GetLastError()
-                  << cReset;
+                  << Term.cReset;
         CloseHandle(deviceHandle);
         return (3);
     }
     //std::initializer_list<Info<string>> infs = { }
-    std::cout << cInfo
+    std::cout << Term.cInfo
               << "Serial port " << devicePort  << " successfully reconfigured."
-              << cReset;
+              << Term.cReset;
     logDeviceState(deviceCtrlBlk);
 
     result = SetCommMask(deviceHandle,
@@ -280,9 +271,9 @@ int main(int argc, const char* argv[], const char* envp[])
     );
     if (!result)
     {
-        std::cout << cError
+        std::cout << Term.cError
                   << "SetCommMask failed with error " << GetLastError()
-                  << cReset;
+                  << Term.cReset;
         CloseHandle(deviceHandle);
         return (4);
     }
@@ -340,36 +331,74 @@ int main(int argc, const char* argv[], const char* envp[])
             
             case ComState::Idel:
             {
-                // Check for Incoming data
+                // Init Keyboard State
                 vKeyStatus = GetKeyState(0);
-                eventResult = WaitCommEvent(deviceHandle,
-                                                 &eventMask,
-                                                 &eventOverlap);
-                if(eventResult)
+                
+                // Check for Incoming data
+                eventError = GetLastError();
+                if(eventError != ERROR_IO_PENDING)
+                {                    
+                    // logInfo("Jesus Is Lord");
+                    eventResult = WaitCommEvent(deviceHandle,
+                                                &eventMask,
+                                                &eventOverlap);
+                }
+                if (eventError == ERROR_IO_PENDING)
+                { 
+                    eventOverlapResult = GetOverlappedResult(
+                        deviceHandle,  // Handle Hfile
+                        &eventOverlap, // Overlapped
+                        &bytesRead,    // NumberOfBytesTransferred EventMask
+                        false);        // Alertable
+
+                    
+                }
+                if(eventOverlapResult)
                 {
-                    logInfo("Jesus Is Lord");
-                    break;
+                    if(eventMask)
+                    {                        
+                        eventOverlapResult = false;
+                        cStep.Next = ComState::InputFinished;
+                        pendingCycleCount = 0;
+                        logInfo("Event Error: " + std::to_string(eventError) +
+                                " Event Mask: " + std::to_string(eventMask));
+                    
+                        break; 
+                    }
                 }
                 else
                 {
-                    eventError = GetLastError();
-                    if (eventError == ERROR_IO_PENDING)
+                    eventError = GetLastError();                
+                    switch (eventError)
                     {
-                        logError("Event Error: " + std::to_string(eventError));
-                        pendingCycleCount = 0;
-
-                        //ClearCommError(deviceHandle, &eventError, &comState);
-                        //eventError = GetLastError();
-                        
-                        cStep.Next = ComState::InputPending;
-                        break;
+                        case ERROR_IO_INCOMPLETE:
+                        {            
+                            if (pendingCycleCount <= 0)
+                            {
+                                std::cout << Term.cInfo
+                                          << "IO Completion ... "
+                                          << pendingCycleCount
+                                          << Term.cReset;
+                            }
+                            else
+                            {
+                                std::cout << "\x1b[1A"  // Move cursor up one
+                                          << "\x1b[2K" // Delete the entire line
+                                          << Term.cInfo
+                                          << "IO Completion ... "
+                                          << pendingCycleCount
+                                          << Term.cReset;
+                            }
+                            pendingCycleCount += 1;
+                            break;
+                        }
                     }
                 }
-
+                
                 // Get keyboard Input
                 if (!GetKeyboardState(vKeyBoardState))
                 {
-                    logGetLastError("Get Key Board State failed with error:  ", cWarn);
+                    logGetLastError("Get Key Board State failed with error:  ", Term.cWarn);
                 }
                 for (int i = 48; i <= 90; i++)
                 {                    
@@ -393,22 +422,16 @@ int main(int argc, const char* argv[], const char* envp[])
                 }
                 else
                 {
-                    std::cout << cRed << "I\\O pending failed with error "
+                    std::cout << Term.cRed << "I\\O pending failed with error "
                               << eventError
-                              << cReset << std::endl;    
+                              << Term.cReset << std::endl;    
                 } 
                 break;                
             }
                 
             case ComState::InputPending:
             {
-                cStep.Next = ComState::InputFinished;                
-                BOOL overlapResult = GetOverlappedResult(
-                    deviceHandle,  // Handle Hfile
-                    &eventOverlap, // Overlapped
-                    &bytesRead,    // NumberOfBytesTransferred EventMask
-                    false);        // Alertable
-                if (!overlapResult)
+                if (!eventOverlapResult)
                 {
                     eventError = GetLastError();                
                     switch (eventError)
@@ -418,47 +441,62 @@ int main(int argc, const char* argv[], const char* envp[])
                             // Force Input to Console or IO-Completion Time-One                             
                             cStep.Next = ComState::InputPending;
                             
-                            vKeyStatus = GetKeyState(VK_SPACE);
-                            if (vKeyStatus & KeyDown || pendingCycleCount >= 100)
+                            if (pendingCycleCount > 100)
                             {
                                 EventReset(eventOverlap);
                                 cStep.Next = ComState::Idel;
                                 break;
                             }
 
-                            if (pendingCycleCount <= 1)
+                            if (pendingCycleCount <= 0)
                             {
-                                std::cout << cInfo
-                                          << "IO Completion... "
-                                          << pendingCycleCount << cReset;
+                                std::cout << Term.cInfo
+                                          << "IO Completion ... "
+                                          << pendingCycleCount
+                                          << Term.cReset;
                             }
                             else
                             {
                                 std::cout << "\x1b[1A"  // Move cursor up one
                                           << "\x1b[2K" // Delete the entire line
-                                          << cInfo
-                                          << "IO Completion... "
-                                          << pendingCycleCount << cReset;
+                                          << Term.cInfo
+                                          << "IO Completion ... "
+                                          << pendingCycleCount
+                                          << Term.cReset;
                             }
                             pendingCycleCount += 1;
                             break;
                         }
                         default:
                         {
-                            std::cout << cError
+                            std::cout << Term.cError
                                       << "Undefined Error: " << eventError
-                                      << cReset;
+                                      << Term.cReset;
                         }
                     }                        
                 }
-                overlapResult = false;
-                EventReset(eventOverlap);
+
+                vKeyStatus = GetKeyState(VK_SPACE);
+                if (vKeyStatus & KeyDown)
+                {
+                    EventReset(eventOverlap);
+                    cStep.Next = ComState::Idel;
+                    break;
+                }
+                
+                if (eventMask)
+                {
+                    cStep.Next = ComState::InputFinished;
+                    ClearCommError(deviceHandle, &eventError, &comState);
+                    EventReset(eventOverlap);                    
+                }
+                SetLastError(0);
                 break;
             }
 
-            case ComState::InputFinished:
-            {
-                cStep.Next = ComState::Idel;
+            case ComState::InputFinished: 
+           { 
+               cStep.Next = ComState::Idel;
                 if (eventMask & EV_CTS)
                 {
                     logInfo("CTS changed state detected");
@@ -469,18 +507,19 @@ int main(int argc, const char* argv[], const char* envp[])
                 }
                 if (eventMask & EV_RXFLAG)
                 {
-                    clog("RXFLAG changed state detected", cBlue);
+                    clog("RXFLAG changed state detected", Term.cBlue);
                     cStep.Next = ComState::InputReadBuffer;
                 }
                 if (eventMask & EV_RXCHAR)
                 {
-                    clog("RXCHAR changed detected", cBlue);
+                    clog("RXCHAR changed detected", Term.cBlue);
                     cStep.Next = ComState::InputReadBuffer;
                 }
                 if (eventMask & EV_RLSD)
                 {
-                    clog("EV_RLSD detectec§", cBlue);
-                }                
+                    clog("EV_RLSD detectec§", Term.cBlue);
+                }
+                eventMask = 0;
                 break;
             }
 
@@ -490,7 +529,7 @@ int main(int argc, const char* argv[], const char* envp[])
                 if (ClearCommError(deviceHandle, &eventError, &comState))
                 {
                     bufferSize = comState.cbInQue;
-                    logInfo("Comm Error Size: " + std::to_string(bufferSize));
+                    logWarn("Comm Error Size: " + std::to_string(bufferSize));
                 }
                 else
                 {
@@ -507,9 +546,9 @@ int main(int argc, const char* argv[], const char* envp[])
                         
                 if (!readResult)
                 {
-                    std::cout << cError
+                    std::cout << Term.cError
                               << "Termnal failure: Unable to read from File: " << GetLastError()
-                              << cReset;
+                              << Term.cReset;
                     CloseHandle(deviceHandle);
                     return (5);
                 }
@@ -526,10 +565,12 @@ int main(int argc, const char* argv[], const char* envp[])
                 // logInfo("Inpute Write to Console");
                 cStep.Next = ComState::Idel;
                 if (bytesRead > 0 && bytesRead <= bufferSize - 1)
-                {                                
-                    std::cout << cCyan
+                {
+                    
+                    std::cout << Term.cCyan
                               << deviceBuffer
-                              << cReset;
+                              << Term.cReset;
+                
                     bytesRead = 0;
                     
                     // NOTE: this is temporary
@@ -564,7 +605,7 @@ int main(int argc, const char* argv[], const char* envp[])
             case ComState::Output:
             {
                 cStep.Next = ComState::Idel;
-                std::cout << cWarn;
+                std::cout << Term.cWarn;
                 std::getline(std::cin, ConsoleInput);
                     
                 if (!ConsoleInput.length())
@@ -588,14 +629,14 @@ int main(int argc, const char* argv[], const char* envp[])
                 );
                 if (!writeResult)
                 {
-                    std::cout << cError
+                    std::cout << Term.cError
                               << "Termnal failure: Unable to write from File " << GetLastError()
-                              << cReset;
+                              << Term.cReset;
                     CloseHandle(deviceHandle);
                     return (6);
                 }
                     
-                SleepEx(INFINITE, TRUE);
+                SleepEx(10000, TRUE);
                 // NOTE: RXCAHR Mask is triggerd When we Write Files
                 //       therefor eventOverlap ought to be reseted
                 EventReset(eventOverlap);
@@ -622,232 +663,11 @@ int main(int argc, const char* argv[], const char* envp[])
             std::string stp = "Step: " + logStep(cStep);
             logInfo(stp);
         }
-        
-        /////////////////////////////////////////////////////////////////////
-        // Reading Input Data and Signals
-        /////////////////////////////////////////////////////////////////////        
-        
-        /*
-        // Evaluate Keyboard and Console Input
-        if (!idle && !init)
-        {
-            vKeyStatus = GetKeyState(0);
-            if (!GetKeyboardState(vKeyBoardState))
-            {
-                logGetLastError("Get Key Board State failed with error:  ", cWarn);
-            }
-            for (int i = 48; i <= 90; i++)
-            {                    
-                if (vKeyBoardState[i] & KeyDown)
-                {
-                    std::cout << cWarn;
-                    std::getline(std::cin, ConsoleInput);
-                    
-                    if (!ConsoleInput.length())
-                    {
-                        break;
-                    }
-                    if (ConsoleInput == "exit")
-                    {
-                        goto Terminate;
-                    }
 
-                    // Remove Empty line caused by Enter Key
-                    std::cout << "\x1b[1A";  // Move cursor up one
-                                            
-                    BOOL writeResult = WriteFileEx(
-                        deviceHandle,
-                        ConsoleInput.data(),
-                        static_cast<DWORD>(ConsoleInput.length()),
-                        &writeOverlap,
-                        onWriteIOCompletion
-                    );
-                    if (!writeResult)
-                    {
-                        std::cout << cError
-                                  << "Termnal failure: Unable to write from File " << GetLastError()
-                                  << cReset;
-                        CloseHandle(deviceHandle);
-                        return (6);
-                    }
-                    
-                    SleepEx(INFINITE, TRUE);
-                    // NOTE: RXCAHR Mask is triggerd When we Write Files
-                    //       therefor eventOverlap ought to be reseted
-                    EventReset(eventOverlap);
-
-                    idle = true;
-                    break;
-                }
-            }
-        }
-        
-        // Evaluate Incoming Data
-        BOOL eventResult = WaitCommEvent(deviceHandle, &eventMask, &eventOverlap);
-        if (!eventResult && idle)
-        {
-            DWORD eventError = GetLastError();
-            if (eventError == ERROR_IO_PENDING)
-            {
-                idle = false;
-                BOOL eventPending = true;
-                long cycleCounter = 0;
-                while(eventPending)
-                {
-                    eventPending = false;
-                    cycleCounter += 1;
-
-                    BOOL overlapResult = GetOverlappedResult(deviceHandle,
-                                                             &eventOverlap,
-                                                             &bytesRead,
-                                                             false);
-                    eventError = GetLastError();
-                
-                    if (!overlapResult)
-                    {
-                        switch (eventError)
-                        {
-                            case ERROR_IO_INCOMPLETE:
-                            {                                
-                                // Force Input to Console
-                                vKeyStatus = GetKeyState(VK_SPACE);
-                                if (vKeyStatus & KeyDown)
-                                {
-                                    eventPending = false;
-                                    EventReset(eventOverlap);
-                                    idle = false;
-                                    break;
-                                }
-                                
-                                //if (cycleCounter <= 1)
-                                //{
-                                //    std::cout << cInfo
-                                //              << "IO Completion... "
-                                //              << cycleCounter << cReset;
-                                //}
-                                //else
-                                //{
-                                //    std::cout << "\x1b[1A"  // Move cursor up one
-                                //              << "\x1b[2K" // Delete the entire line
-                                //              << cInfo
-                                //              << "IO Completion... "
-                                //              << cycleCounter << cReset;
-                                //}
-
-                                // NOTE: eventPending ought to be true
-                                // and we ought to use Mutlthreading to make
-                                // this it work :)
-                                eventPending = true;
-                                
-                                // IO-Completion Time-One 
-                                if (cycleCounter >= 100)
-                                {
-                                    eventPending = false;
-                                    EventReset(eventOverlap);
-                                }                                
-                                break;
-                            }
-                            default:
-                            {
-                                std::cout << cError
-                                          << "Undefined Error: " << eventError
-                                          << cReset;
-                            }
-                        }
-                    }
-                    else
-                    {
-                        EventReset(eventOverlap);
-                    
-                        if (eventMask & EV_CTS)
-                        {
-                            std::cout << "CTS changed state detected" << std::endl;
-                        }
-                        if (eventMask & EV_DSR)
-                        {
-                            std::cout << "DSR changed State detected" << std::endl;   
-                        }
-                        if (eventMask & EV_RXFLAG)
-                        {
-                            logInfo("RXFLAG changed state detected");
-                        }
-                        if (eventMask & EV_RXCHAR)
-                        {
-                            //logInfo("RXCHAR changed detected");
-                            COMSTAT comState;
-                            DWORD BufferSize = BUFFERSIZE;
-                            if (ClearCommError(deviceHandle, &eventError, &comState))
-                            {
-                                BufferSize = comState.cbInQue;
-                            }                            
-
-                            BOOL readResult = ReadFileEx(
-                                deviceHandle,
-                                deviceBuffer,
-                                BufferSize - 1,
-                                &readOverlap,
-                                onReadIOCompletion
-                            );
-                        
-                            if (!readResult)
-                            {
-                                std::cout << cError
-                                          << "Termnal failure: Unable to read from File: " << GetLastError()
-                                          << cReset;
-                                CloseHandle(deviceHandle);
-                                return (5);
-                            }
-
-                            // Asynchronous Wait starts hier
-                            SleepEx(INFINITE, TRUE);
-                            bytesRead = ReadBytesTransferred;
-        
-                            if (bytesRead > 0 && bytesRead <= BufferSize -1)
-                            {                                
-                                std::cout << cCyan
-                                          << deviceBuffer
-                                          << cReset;
-                                bytesRead = 0;
-                                
-                                // NOTE: this is temporary
-                                std::memset(deviceBuffer, 0, BUFFERSIZE);
-
-                                init = false;
-                                idle = true;
-                            }
-                            else if (bytesRead == 0)
-                            {
-                                // FIXME: NUll byte has to be handled better than
-                                // verbose logging.
-                                
-                                //logInfo(std::format("\nNo data read from {}", devicePort));
-                            }
-                            else
-                            {
-                                logWarn("\n ** Unexpected value for dwBytesRead ** \n");
-                            }
-                        }                        
-                    }
-                    Sleep(5);
-                }
-            }
-            else
-            {
-                // FIXME: Logging is to verbose, can to be done better
-                //std::cout << cRed << "I\\O pending failed with error "
-                //          << eventError
-                //          << cReset << std::endl; 
-            }  
-        }
-        else
-        {
-            //logWarn("Wow i really got here");
-        }
-        */
-        Sleep(100);
+        Sleep(50);
     }
 
-    Terminate:
+Terminate:
     logInfo("Programm Terminating");
     CloseHandle(deviceHandle);
     return (0);
