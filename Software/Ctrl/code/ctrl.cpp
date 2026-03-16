@@ -34,7 +34,7 @@ short vKeyStatus = 0;
 ///       2) Add timestamps with ctime or chrono
 ///       3) Refactor / Pull out code chunks in seprate functions
 ///       4) Auto set Baudrate
-///       5) Consider using a state Maschine
+///       5) Consider using a state Maschine (DONE)
 ///       6) Encalsulate dangling attributes within Namespaces
 ///       x) Refactor, Refactor, Refactor
 /////////////////////////////////////////////////////////////////////////////
@@ -476,7 +476,7 @@ int main(int argc, const char* argv[])
                 }
 
                 // Asynchronous Wait starts hier
-                SleepEx(INFINITE, TRUE);
+                SleepEx(IO_TIMEOUT, TRUE);
                 bytesRead = ReadBytesTransferred;
                 cStep.Next = ComState::InputWriteConsole;
                 break;
@@ -542,10 +542,7 @@ int main(int argc, const char* argv[])
                 {
                     goto Terminate;
                 }
-
-                // Remove Empty line caused by Enter Key
-                //std::cout << "\x1b[1A";  // Move cursor up one
-                                            
+                           
                 BOOL writeResult = WriteFileEx(
                     deviceHandle,
                     ConsoleInput.data(),
@@ -560,7 +557,7 @@ int main(int argc, const char* argv[])
                     return (6);
                 }
                     
-                SleepEx(10000, TRUE);
+                SleepEx(IO_TIMEOUT, TRUE);
                 // NOTE: RXCAHR Mask is triggerd When we Write Files
                 //       therefor eventOverlap ought to be reseted
                 EventReset(eventOverlap);
@@ -594,8 +591,6 @@ int main(int argc, const char* argv[])
                 logInfo(stp);                
             }
         }
-
-        //Sleep(50);
     }
 
 Terminate:

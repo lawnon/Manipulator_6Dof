@@ -16,6 +16,7 @@
 #define BUFFERSIZE 32768
 #define KeyDown    0x00000080
 #define KeyEnabled 0x00000001
+#define IO_TIMEOUT 5000
 
 struct Terminal //
 {
