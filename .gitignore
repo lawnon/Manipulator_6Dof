@@ -35,6 +35,10 @@ Software/.gitignore
 *.asv
 *.mat
 
+#Emacs
+*~
+*#
+
 # Expert Files
 [Aa]rchive/
 [Aa]rchiv/
