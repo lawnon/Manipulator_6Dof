@@ -8,9 +8,9 @@
 #ifndef CTRL_H_
 #define CTRL_H_
 
-#include <windows.h>
-#include <winuser.h>
-#include <tchar.h>
+//#include <windows.h>
+//#include <winuser.h>
+//#include <tchar.h>
 #include <assert.h>
 
 #define BUFFERSIZE 32768
@@ -37,8 +37,8 @@ struct Terminal //
     const char* cGetLine = "\033[35m<-\033[34m ";
 
     // Debug Info
-    BOOL Debug = false;
-    BOOL DebugSM = false;
+    bool Debug = false;
+    bool DebugSM = false;
 };
 
 /// State Steps
