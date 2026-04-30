@@ -17,15 +17,15 @@
 #include <bitset>
 
 
-DWORD ReadBytesTransferred = 0;
-DWORD WriteBytesTransferred = 0;
+//DWORD ReadBytesTransferred = 0;
+//DWORD WriteBytesTransferred = 0;
 
-std::time_t TimeStamp = std::time(NULL);
+time_t TimeStamp = time(NULL);
 std::string ConsoleInput = "";
 char TimeStampBuffer[32];
 Terminal Term;
 
-BYTE  vKeyBoardState[256] = {};
+//BYTE  vKeyBoardState[256] = {};
 short vKeyStatus = 0;
 
 /////////////////////////////////////////////////////////////////////////////
