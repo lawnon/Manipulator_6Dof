@@ -14,6 +14,7 @@
 *.zip
 *.7z
 *.bak
+*.bak.*
 
 #Vs-Config Folders
 .vscode
@@ -35,6 +36,10 @@ Software/.gitignore
 *.asv
 *.mat
 
+#Emacs
+*~*
+*#*
+
 # Expert Files
 [Aa]rchive/
 [Aa]rchiv/
@@ -42,4 +47,3 @@ Software/.gitignore
 [Dd]ata/
 [Dd]okumentation/
 [Dd]ocumentation/
-
