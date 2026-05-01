@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Jesus is Lord !!"
+
+clang++-22 -std=c++20 -O2 -Wall  -o ./build/ctrl.o -c ./code/ctrl.cpp
+
