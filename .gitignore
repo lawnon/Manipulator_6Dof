@@ -40,6 +40,9 @@ Software/.gitignore
 *~*
 *#*
 
+#MacOs
+.DS_Store
+
 # Expert Files
 [Aa]rchive/
 [Aa]rchiv/

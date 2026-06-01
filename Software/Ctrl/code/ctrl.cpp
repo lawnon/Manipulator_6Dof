@@ -1,11 +1,9 @@
 /////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////
 /// File: ctrl.hpp
 /// Data: 03.01.2026
 /// Autor: Chukwunonso Bob-Anyeji
 /// Description: This file contains the 'main' function.
 ///              Program execution begins and ends there. 
-/////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////
 
 #include "ctrl.hpp"
@@ -88,27 +86,7 @@ void logError(const std::string &text)
 void logGetLastError(const char* text, const char* msgType = Term.cError)
 {
     std::cout << msgType
-              << text << GetLastError()
-              << Term.cReset;
-}
-
-void logDeviceState(DCB deviceCtrlBlk)
-{
-    std::cout << Term.cInfo
-              << "DCB["      << (int)deviceCtrlBlk.DCBlength << "]:= "
-              << "BaudRate=" << (int)deviceCtrlBlk.BaudRate << " |"
-              << "ByteSize=" << (int)deviceCtrlBlk.ByteSize << " |"
-              << "Parity="   << (int)deviceCtrlBlk.Parity   << " |" 
-              << "StopBits=" << (int)deviceCtrlBlk.StopBits
-              << Term.cReset;
-}
-
-void logIOCompletion(DWORD errorCode, DWORD nrOfBytes, LPOVERLAPPED overlaped)
-{
-    std::cout << Term.cError
-              << "ErrorCode: " << std::bitset<32>(errorCode)
-              << " | Number of bytes: " << nrOfBytes
-              << " | Overlap: " << static_cast<void*>(overlaped)
+      //<< text << GetLastError()
               << Term.cReset;
 }
 
@@ -133,6 +111,27 @@ std::string  StepToString(Step stp)
     }
 }
 
+/*
+void logDeviceState(DCB deviceCtrlBlk)
+{
+    std::cout << Term.cInfo
+              << "DCB["      << (int)deviceCtrlBlk.DCBlength << "]:= "
+              << "BaudRate=" << (int)deviceCtrlBlk.BaudRate << " |"
+              << "ByteSize=" << (int)deviceCtrlBlk.ByteSize << " |"
+              << "Parity="   << (int)deviceCtrlBlk.Parity   << " |"
+              << "StopBits=" << (int)deviceCtrlBlk.StopBits
+              << Term.cReset;
+}
+
+void logIOCompletion(DWORD errorCode, DWORD nrOfBytes, LPOVERLAPPED overlaped)
+{
+    std::cout << Term.cError
+              << "ErrorCode: " << std::bitset<32>(errorCode)
+              << " | Number of bytes: " << nrOfBytes
+              << " | Overlap: " << static_cast<void*>(overlaped)
+              << Term.cReset;
+}
+
 void EventReset(OVERLAPPED& overlap)
 {
     if(!ResetEvent(overlap.hEvent))
@@ -144,7 +143,7 @@ void EventReset(OVERLAPPED& overlap)
     overlap.InternalHigh = 0;
 }
 
-BOOL KeyboardPressed(BOOL Init = true)
+BOOL  KeyboardPressed(BOOL Init = true)
 {
     // Init Keyboard State
     if(Init)
@@ -192,6 +191,7 @@ void CALLBACK onWriteIOCompletion(
     WriteBytesTransferred = nrOfBytes;
     EventReset(*overlaped);
 }
+*/
 
 int main(int argc, const char* argv[])
 {
@@ -228,8 +228,12 @@ int main(int argc, const char* argv[])
                 devicePort = "COM" + static_cast<std::string>(argv[i+1]);
             }            
         }
-    } 
+    }
 
+    int x;
+    std::cin >> x;
+
+    /*    
     char deviceBuffer[BUFFERSIZE] = {0};
     DCB deviceCtrlBlk; 
     HANDLE deviceHandle;
@@ -352,72 +356,7 @@ int main(int argc, const char* argv[])
             
             case ComState::Idel:
             {
-                // Init Keyboard State
-                vKeyStatus = GetKeyState(0);
-
-                // Get keyboard Input
-                if (KeyboardPressed())
-                {
-                    cStep.Next = ComState::Output;                    
-                    break;                
-                }
-                
-                // Check for Incoming data
-                eventError = GetLastError();
-                if(eventError != ERROR_IO_PENDING)
-                {                    
-                    // logInfo("Jesus Is Lord");
-                    eventResult = WaitCommEvent(deviceHandle,
-                                                &eventMask,
-                                                &eventOverlap);
-                }
-                if (eventError == ERROR_IO_PENDING)
-                { 
-                    cStep.Next = ComState::InputPending;                    
-                }
-                break;
-            }
-
-            case ComState::InputPending:
-            {
-                cStep.Next = ComState::Idel;
-                eventOverlapResult = GetOverlappedResult(
-                    deviceHandle,  // Handle Hfile
-                    &eventOverlap, // Overlapped
-                    &bytesRead,    // NumberOfBytesTransferred EventMask
-                    false);        // Alertable
-
-                if(eventOverlapResult)
-                {
-                    if(eventMask)
-                    {                        
-                        eventOverlapResult = false;
-                        cStep.Next = ComState::InputReady;
-                        pendingCycleCount = 0;
-                        break; 
-                    }
-                }
-                else
-                {
-                    eventError = GetLastError();                
-                    switch (eventError)
-                    {
-                        case ERROR_IO_INCOMPLETE:
-                        {
-                            ClearCommError(deviceHandle, &eventError, &comState);                                
-                            if (comState.cbInQue >= 8)
-                            {
-                                cStep.Next = ComState::InputPending;
-                            }
-                            pendingCycleCount += 1;
-                            break;
-                        }
-                    }
-                }
-                break;
-            }
-            
-            case ComState::InputReady: 
+       case ComState::InputReady: 
             { 
                cStep.Next = ComState::Idel;
                 if (eventMask & EV_CTS)
@@ -592,11 +531,11 @@ int main(int argc, const char* argv[])
             }
         }
     }
-
 Terminate:
     std::cout << Term.cInfo
               << "(* Programm Terminating *)"
               << Term.cReset;
     CloseHandle(deviceHandle);
     return (0);
+    */
 }
